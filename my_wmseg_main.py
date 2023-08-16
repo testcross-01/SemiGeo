@@ -10,14 +10,16 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
+from data_preprocessing.my_preprocessing import MyPrepro
 from pytorch_pretrained_bert.optimization import BertAdam, WarmupLinearSchedule
 
 from tqdm import tqdm, trange
 from seqeval.metrics import classification_report
-from wmseg_helper import get_word2id, get_gram2id
+from my_wmseg_helper import get_word2id, get_gram2id
 from my_wmseg_eval import eval_sentence, cws_evaluate_word_PRF, cws_evaluate_OOV
-from wmseg_model import WMSeg
+from my_wmseg_model import WMSeg
 import datetime
+from tool import statistics
 
 
 def train(args):
@@ -335,7 +337,9 @@ def train(args):
                             uncoop_rate=uncoop_count/wrong_count
                             writer.write("\n %d" % wrong_count)
                             writer.write("\nP: %f, R: %f, F: %f, OOV: %f" % (best_p, best_r, best_f, best_oov))
-
+                        word_count,geo_word_count,geo_wrong_word_count,Rgeo=statistics.stat_all(args.eval_data_path, os.path.join(output_model_dir, 'CWS_result.txt'))
+                        with open(os.path.join(output_model_dir, 'CWS_result.txt'), "a") as writer:
+                            writer.write("\nword_num: %d, geo_word_num: %d, geo_wrong_word_num: %d,R_geo %f"%(word_count,geo_word_count,geo_wrong_word_count,Rgeo))
 
                         best_eval_model_path = os.path.join(output_model_dir, 'model.pt')
 
@@ -732,7 +736,9 @@ def self_train(args):
                             uncoop_rate = uncoop_count / wrong_count
                             writer.write("\n %f" % wrong_count)
                             writer.write("\nP: %f, R: %f, F: %f, OOV: %f" % (best_p, best_r, best_f, best_oov))
-
+                        word_count,geo_word_count,geo_wrong_word_count,Rgeo=statistics.stat_all(args.eval_data_path, os.path.join(output_model_dir, 'CWS_result.txt'))
+                        with open(os.path.join(output_model_dir, 'CWS_result.txt'), "a") as writer:
+                            writer.write("\nword_num: %d, geo_word_num: %d, geo_wrong_word_num: %d, R_geo %f"%(word_count,geo_word_count,geo_wrong_word_count,Rgeo))
                         best_eval_model_path = os.path.join(output_model_dir, 'model.pt')
 
                         if n_gpu > 1:
@@ -885,7 +891,9 @@ def test(args):
         uncoop_rate = uncoop_count / wrong_count
         writer.write("\n %d" % wrong_count)
         writer.write("\nP: %f, R: %f, F: %f, OOV: %f" % (p, r, f, oov))
-
+    word_count, geo_word_count, geo_wrong_word_count,Rgeo = statistics.stat_all(args.eval_data_path,os.path.join('./','CWS_result_{0}.txt'.format(now_time)))
+    with open(os.path.join('./', 'CWS_result_{0}.txt'.format(now_time)), "a") as writer:
+        writer.write("\nword_num: %d, geo_word_num: %d, geo_wrong_word_num: %d,R_geo: %f" % (word_count, geo_word_count, geo_wrong_word_count,Rgeo))
 
 
     print(args.eval_data_path)
@@ -963,12 +971,25 @@ def predict(args):
                 else:
                     temp.append(label_map[logits[i][j]])
 
+
+    out_tsv=""
     print('write results to %s' % str(args.output_file))
     with open(args.output_file, 'w', encoding='utf8') as writer:
         for i in range(len(y_pred)):
             sentence = eval_examples[i].text_a
             _, seg_pred_str,seg_wrong_str,label_seg_true_str,label_seg_pred_str,wrong_num,uncoop_num = eval_sentence(y_pred[i], None, sentence, word2id)
+            for idx in range(len(seg_pred_str)):
+                if seg_pred_str[idx]==' ':
+                    continue
+                out_tsv+="%s\t%s\n"%(seg_pred_str[idx],label_seg_pred_str[idx])
+            out_tsv+='\n'
             writer.write('%s\n' % seg_pred_str)
+
+    if args.output_file_tsv==None:
+        return
+    print('write results tsv to %s' % str(args.output_file_tsv))
+    with open(args.output_file_tsv, 'w', encoding='utf8') as writer:
+        writer.write(out_tsv)
 
 
 def main():
@@ -1003,6 +1024,10 @@ def main():
                         default=None,
                         type=str,
                         help="The output path of segmented file")
+    parser.add_argument("--output_file_tsv",
+                        default=None,
+                        type=str,
+                        help="The output path of tsv file")
     parser.add_argument("--use_bert",
                         action='store_true',
                         help="Whether to use BERT.")

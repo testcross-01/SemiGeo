@@ -21,7 +21,7 @@ class MyPrepro(object):
             if not os.path.isfile(path.join(self.data_dir,file_name)):
                 continue;
             file_path=path.join(self.data_dir,file_name);
-            train_data,test_data=self._se_train_test(file_path);
+            train_data,test_data=self._se_train_test(file_path,7);
 
             output_train_file = path.join(self.data_dir,self.data_dir_dict['train'], 'train_'+file_name)
             output_test_file =path.join(self.data_dir,self.data_dir_dict['test'],'test_'+file_name)
@@ -30,7 +30,7 @@ class MyPrepro(object):
 
 
 
-    def _se_train_test(self,file_path):
+    def _se_train_test(self,file_path,thr):
 
         with open(file_path, 'r', encoding='utf-8-sig') as f:
             train = []
@@ -40,7 +40,7 @@ class MyPrepro(object):
                 line = line.strip()
                 if line == '':
                     continue
-                if random.randint(0,9)>7:
+                if random.randint(0,9)>thr:
                     test.append(line)
                 else:
                     train.append(line)
@@ -103,6 +103,26 @@ if __name__ == '__main__':
    preprocessor = MyPrepro();
    # preprocessor.se_train_test();
    #preprocessor.process();
-   data=preprocessor._process_file('/opt/Projects/Python/GeoWeakly/data/my_geo.seg')
-   preprocessor._write_file(data,'/opt/Projects/Python/WMSeg/data/mydata/self_traing/train.tsv')
+   #train,test=preprocessor._se_train_test('/opt/Projects/Python/GeoWeakly/data/南昌多要素-区域地质.seg.ann',6)
+   #训练数据
+   # preprocessor._write_file(train,'/opt/Projects/Python/WMSeg/data_preprocessing/mydata/large/train.txt')
+   #
+   #train_seg,train_unseg=preprocessor._se_train_test('/opt/Projects/Python/WMSeg/data_preprocessing/mydata/large/train.txt',5)
+   #preprocessor._write_file(train_seg,'/opt/Projects/Python/WMSeg/data_preprocessing/mydata/large/train_seg.txt')
+   #preprocessor._write_file(train_unseg,'/opt/Projects/Python/WMSeg/data_preprocessing/mydata/large/train_unseg.txt')
+
+   # 测试测试
+   # preprocessor._write_file(test,'/opt/Projects/Python/WMSeg/data_preprocessing/mydata/large/test.txt')
+   #
+   #
+   #train_data = preprocessor._process_file('/opt/Projects/Python/WMSeg/data_preprocessing/mydata/large/train_seg.txt')
+   # test_data=preprocessor._process_file('/opt/Projects/Python/WMSeg/data_preprocessing/mydata/large/test.txt')
+   #
+   #preprocessor._write_file(train_data, '/opt/Projects/Python/WMSeg/data/mydata/large/train.tsv')
+   # preprocessor._write_file(test_data,'/opt/Projects/Python/WMSeg/data/mydata/large/test.tsv')
+
+   self_train_data=preprocessor._process_file('/opt/Projects/Python/WMSeg/data_preprocessing/mydata/large/self_train.txt')
+   preprocessor._write_file(self_train_data,'/opt/Projects/Python/WMSeg/data/mydata/large/self_train.tsv')
+
+
 

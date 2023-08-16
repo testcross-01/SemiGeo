@@ -16,6 +16,8 @@ from pytorch_pretrained_bert.tokenization import BertTokenizer
 import pytorch_pretrained_zen as zen
 
 from torch.nn import CrossEntropyLoss
+from torch.nn.parameter import Parameter
+from torch.nn.modules.module import Module
 
 from pytorch_pretrained_bert.crf import CRF
 
@@ -30,6 +32,65 @@ DEFAULT_HPARA = {
     'decoder': 'crf'
 }
 
+
+
+'''
+ 图卷积层
+'''
+class GraphConvolution(Module):
+    """
+    Simple GCN layer, similar to https://arxiv.org/abs/1609.02907
+    """
+
+    def __init__(self, in_features, out_features, bias=True):
+        super(GraphConvolution, self).__init__()
+        self.in_features = in_features
+        self.out_features = out_features
+        self.weight = Parameter(torch.FloatTensor(in_features, out_features))
+        if bias:
+            self.bias = Parameter(torch.FloatTensor(out_features))
+        else:
+            self.register_parameter('bias', None)
+        self.reset_parameters()
+
+    def reset_parameters(self):
+        stdv = 1. / math.sqrt(self.weight.size(1))
+        self.weight.data.uniform_(-stdv, stdv)
+        if self.bias is not None:
+            self.bias.data.uniform_(-stdv, stdv)
+
+    def forward(self, input, adj):
+        support = torch.mm(input, self.weight)
+        output = torch.spmm(adj, support)
+        if self.bias is not None:
+            return output + self.bias
+        else:
+            return output
+
+    def __repr__(self):
+        return self.__class__.__name__ + ' (' \
+               + str(self.in_features) + ' -> ' \
+               + str(self.out_features) + ')'
+
+'''
+图卷积s
+'''
+class GCN(nn.Module):
+    def __init__(self, nfeat, nhid, nclass, dropout):
+        super(GCN, self).__init__()
+
+        self.gc1 = GraphConvolution(nfeat, nhid)
+        self.gc2 = GraphConvolution(nhid, nclass)
+        self.dropout = dropout
+
+    def forward(self, x, adj):
+        x = F.relu(self.gc1(x, adj))
+        # 暂时不做dropout操作
+        #x = F.dropout(x, self.dropout, training=self.training)
+        x = self.gc2(x, adj)
+        #return F.log_softmax(x, dim=1)
+        return x
+
 class WordKVMN(nn.Module):
     def __init__(self, hidden_size, word_size):
         super(WordKVMN, self).__init__()
@@ -37,6 +98,10 @@ class WordKVMN(nn.Module):
         self.word_embedding_a = nn.Embedding(word_size, hidden_size)
         self.word_embedding_c = nn.Embedding(10, hidden_size)
 
+    '''
+    word_seq 表示ngramc对应的id
+    label_value_matrix 代表char到label的y
+    '''
     def forward(self, word_seq, hidden_state, label_value_matrix, word_mask_metrix):
         embedding_a = self.word_embedding_a(word_seq)
         embedding_c = self.word_embedding_c(label_value_matrix)

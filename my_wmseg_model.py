@@ -20,6 +20,7 @@ from torch.nn.parameter import Parameter
 from torch.nn.modules.module import Module
 
 from pytorch_pretrained_bert.crf import CRF
+#from torchcrf import CRF
 
 DEFAULT_HPARA = {
     'max_seq_length': 128,
@@ -73,7 +74,7 @@ class GraphConvolution(Module):
                + str(self.out_features) + ')'
 
 '''
-图卷积s
+图卷积神经网络
 '''
 class GCN(nn.Module):
     def __init__(self, nfeat, nhid, nclass, dropout):
@@ -142,7 +143,7 @@ class WMSeg(nn.Module):
         self.gram2id = gram2id
         self.labelmap = labelmap
         self.hpara = hpara
-        self.num_labels = len(self.labelmap) + 1
+        self.num_labels = len(self.labelmap)
         self.max_seq_length = self.hpara['max_seq_length']
         self.max_ngram_size = self.hpara['max_ngram_size']
         self.max_ngram_length = self.hpara['max_ngram_length']
@@ -190,10 +191,18 @@ class WMSeg(nn.Module):
         else:
             self.kv_memory = None
 
+        #self.lstm=nn.LSTM(hidden_size,int(hidden_size/2),batch_first=True,bidirectional=True)
+        #gcn模块
+        # if self.hpara['use_gcn']:
+        #     self.gcn=GCN(hidden_size,hidden_size,hidden_size,None)
+        # else:
+        #     self.gcn = None
+
         self.classifier = nn.Linear(hidden_size, self.num_labels, bias=False)
 
         if self.hpara['decoder'] == 'crf':
             self.crf = CRF(tagset_size=self.num_labels - 3, gpu=True)
+            #self.crf=CRF(self.num_labels, batch_first=True)
         else:
             self.crf = None
 
@@ -214,6 +223,8 @@ class WMSeg(nn.Module):
         else:
             raise ValueError()
 
+        #sequence_output, _ = self.lstm(sequence_output)
+
         if self.kv_memory is not None:
             sequence_output = self.kv_memory(word_seq, sequence_output, label_value_matrix, word_mask)
 
@@ -223,6 +234,8 @@ class WMSeg(nn.Module):
 
         if self.crf is not None:
             # crf = CRF(tagset_size=number_of_labels+1, gpu=True)
+            #total_loss = self.crf(logits, labels,attention_mask.gt(0) )
+            #tag_seq=self.crf.decode(logits, mask=attention_mask.gt(0))
             total_loss = self.crf.neg_log_likelihood_loss(logits, attention_mask, labels)
             scores, tag_seq = self.crf._viterbi_decode(logits, attention_mask)
             # Only keep active parts of the loss
@@ -230,7 +243,47 @@ class WMSeg(nn.Module):
             loss_fct = CrossEntropyLoss(ignore_index=0)
             total_loss = loss_fct(logits.view(-1, self.num_labels), labels.view(-1))
             tag_seq = torch.argmax(F.log_softmax(logits, dim=2), dim=2)
+        return total_loss, tag_seq
 
+    def forward_uc(self, input_ids, token_type_ids=None, attention_mask=None, labels=None, valid_ids=None,
+                attention_mask_label=None, word_seq=None, label_value_matrix=None, word_mask=None,
+                input_ngram_ids=None, ngram_position_matrix=None,uc_mask=None):
+
+        if self.bert is not None:
+            sequence_output, _ = self.bert(input_ids, token_type_ids, attention_mask, output_all_encoded_layers=False)
+        elif self.zen is not None:
+            sequence_output, _ = self.zen(input_ids, input_ngram_ids=input_ngram_ids,
+                                          ngram_position_matrix=ngram_position_matrix,
+                                          token_type_ids=token_type_ids, attention_mask=attention_mask,
+                                          output_all_encoded_layers=False)
+        else:
+            raise ValueError()
+
+        # sequence_output, _ = self.lstm(sequence_output)
+
+        if self.kv_memory is not None:
+            sequence_output = self.kv_memory(word_seq, sequence_output, label_value_matrix, word_mask)
+
+        sequence_output = self.dropout(sequence_output)
+
+        logits = self.classifier(sequence_output)
+
+        if self.crf is not None:
+            # crf = CRF(tagset_size=number_of_labels+1, gpu=True)
+            # total_loss = self.crf(logits, labels,attention_mask.gt(0) )
+            # tag_seq=self.crf.decode(logits, mask=attention_mask.gt(0))
+            total_loss = self.crf.neg_log_likelihood_loss(logits, attention_mask, labels)
+            scores, tag_seq = self.crf._viterbi_decode(logits, attention_mask)
+            # Only keep active parts of the loss
+        else:
+            loss_fct = CrossEntropyLoss(ignore_index=0)
+            total_loss = loss_fct(logits.view(-1, self.num_labels), labels.view(-1))
+            con_mask = F.softmax(logits, dim=2)
+            con_mask[con_mask<0.6]=0
+            tag_seq = torch.argmax(con_mask, dim=2)
+            tag_seq[tag_seq==0]=1
+            uncen_mask =  F.softmax(logits, dim=2)
+            #tag_seq = torch.argmax(F.log_softmax(logits, dim=2), dim=2)
         return total_loss, tag_seq
 
     @staticmethod
@@ -363,7 +416,11 @@ class WMSeg(nn.Module):
                 ntokens.append(token)
                 segment_ids.append(0)
                 if len(labels) > i:
-                    label_ids.append(self.labelmap[labels[i]])
+                    #对O的值进行修改
+                    if labels[i]=='O':
+                        label_ids.append(0)
+                    else:
+                        label_ids.append(self.labelmap[labels[i]])
             ntokens.append("[SEP]")
 
             segment_ids.append(0)
@@ -471,6 +528,8 @@ class WMSeg(nn.Module):
                 ngram_seg_ids = None
                 ngram_mask_array = None
 
+
+
             features.append(
                 InputFeatures(input_ids=input_ids,
                               input_mask=input_mask,
@@ -488,6 +547,14 @@ class WMSeg(nn.Module):
                               ngram_masks=ngram_mask_array
                               ))
         return features
+
+    def feature2unmask(self,device,feature):
+        all_label_ids = torch.tensor([ f.label_id for f in feature], dtype=torch.long)
+        un_mask=torch.ones(all_label_ids.size())
+        un_mask[all_label_ids==1]=0
+        un_mask[all_label_ids!=1]=1
+        un_mask = un_mask.to(device)
+        return un_mask
 
     def feature2input(self, device, feature):
         all_input_ids = torch.tensor([f.input_ids for f in feature], dtype=torch.long)

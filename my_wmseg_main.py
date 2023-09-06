@@ -3,6 +3,7 @@ from __future__ import absolute_import, division, print_function
 import argparse
 import json
 import logging
+import math
 import os
 import random
 
@@ -96,8 +97,8 @@ def train(args):
     else:
         gram2id = None
 
-    label_list = ["O", "B", "I", "E", "S", "[CLS]", "[SEP]"]
-    label_map = {label: i for i, label in enumerate(label_list, 1)}
+    label_list = ["[UNKONW]","O", "B", "I", "E", "S", "[CLS]", "[SEP]"]
+    label_map = {label: i for i, label in enumerate(label_list, 0)}
 
     hpara = WMSeg.init_hyper_parameters(args)
     seg_model = WMSeg(word2id, gram2id, label_map, hpara, args)
@@ -232,7 +233,7 @@ def train(args):
                 nb_eval_steps, nb_eval_examples = 0, 0
                 y_true = []
                 y_pred = []
-                label_map = {i: label for i, label in enumerate(label_list, 1)}
+                label_map = {i: label for i, label in enumerate(label_list, 0)}
                 for start_index in range(0, len(eval_examples), args.eval_batch_size):
                     eval_batch_examples = eval_examples[start_index: min(start_index + args.eval_batch_size,
                                                                          len(eval_examples))]
@@ -445,8 +446,8 @@ def self_train(args):
     else:
         gram2id = None
 
-    label_list = ["O", "B", "I", "E", "S", "[CLS]", "[SEP]"]
-    label_map = {label: i for i, label in enumerate(label_list, 1)}
+    label_list = ["[UNKONW]","O", "B", "I", "E", "S", "[CLS]", "[SEP]"]
+    label_map = {label: i for i, label in enumerate(label_list, 0)}
 
     hpara = WMSeg.init_hyper_parameters(args)
     seg_model = WMSeg(word2id, gram2id, label_map, hpara, args)
@@ -583,6 +584,53 @@ def self_train(args):
                     optimizer.zero_grad()
                     global_step += 1
 
+                #self-train in this batch
+                r=int(len(self_train_examples)/len(train_examples))
+
+                #logger.info("\n self-train batch num in this step = %d", math.ceil((int(r*(start_index+args.train_batch_size))-int(r*start_index))/args.train_batch_size ))
+
+                # for  start_index1 in range(r*start_index, r*(start_index+args.train_batch_size), args.train_batch_size):
+                #     seg_model.train()
+                #     batch_examples = self_train_examples[start_index1: min(start_index1 +
+                #                                                           args.train_batch_size,
+                #                                                           len(self_train_examples))]
+                #     if len(batch_examples) == 0:
+                #         continue
+                #     train_features = convert_examples_to_features(batch_examples)
+                #     input_ids, input_mask, l_mask, label_ids, matching_matrix, ngram_ids, ngram_positions, \
+                #     segment_ids, valid_ids, word_ids, word_mask = feature2input(device, train_features)
+                #
+                #     loss, _ = seg_model(input_ids, segment_ids, input_mask, label_ids, valid_ids, l_mask, word_ids,
+                #                         matching_matrix, word_mask, ngram_ids, ngram_positions)
+                #     if n_gpu > 1:
+                #         loss = loss.mean()  # mean() to average on multi-gpu.
+                #     if args.gradient_accumulation_steps > 1:
+                #         loss = loss / args.gradient_accumulation_steps
+                #
+                #     loss *= args.lambda_rate
+                #
+                #     if args.fp16:
+                #         optimizer.backward(loss)
+                #     else:
+                #         loss.backward()
+                #
+                #     tr_loss += loss.item()
+                #     nb_tr_examples += input_ids.size(0)
+                #     nb_tr_steps += 1
+                #     if (step + 1) % args.gradient_accumulation_steps == 0:
+                #         if args.fp16:
+                #             # modify learning rate with special warm up BERT uses
+                #             # if args.fp16 is False, BertAdam is used that handles this automatically
+                #             lr_this_step = args.learning_rate * warmup_linear(
+                #                 global_step / num_train_optimization_steps,
+                #                 args.warmup_proportion)
+                #             for param_group in optimizer.param_groups:
+                #                 param_group['lr'] = lr_this_step
+                #         optimizer.step()
+                #         optimizer.zero_grad()
+                #         global_step += 1
+
+
             for step, start_index in enumerate(tqdm(range(0, len(self_train_examples), args.train_batch_size))):
                 seg_model.train()
                 batch_examples = self_train_examples[start_index: min(start_index +
@@ -592,6 +640,8 @@ def self_train(args):
                 train_features = convert_examples_to_features(batch_examples)
                 input_ids, input_mask, l_mask, label_ids, matching_matrix, ngram_ids, ngram_positions, \
                 segment_ids, valid_ids, word_ids, word_mask = feature2input(device, train_features)
+
+
 
                 loss, _ = seg_model(input_ids, segment_ids, input_mask, label_ids, valid_ids, l_mask, word_ids,
                                     matching_matrix, word_mask, ngram_ids, ngram_positions)
@@ -630,7 +680,7 @@ def self_train(args):
                 nb_eval_steps, nb_eval_examples = 0, 0
                 y_true = []
                 y_pred = []
-                label_map = {i: label for i, label in enumerate(label_list, 1)}
+                label_map = {i: label for i, label in enumerate(label_list, 0)}
                 for start_index in range(0, len(eval_examples), args.eval_batch_size):
                     eval_batch_examples = eval_examples[start_index: min(start_index + args.eval_batch_size,
                                                                          len(eval_examples))]
@@ -899,6 +949,99 @@ def test(args):
     print(args.eval_data_path)
     print("\nP: %f, R: %f, F: %f, OOV: %f" % (p, r, f, oov))
 
+def predict_uc(args):
+    if args.local_rank == -1 or args.no_cuda:
+        device = torch.device("cuda" if torch.cuda.is_available() and not args.no_cuda else "cpu")
+        n_gpu = torch.cuda.device_count()
+    else:
+        torch.cuda.set_device(args.local_rank)
+        device = torch.device("cuda", args.local_rank)
+        n_gpu = 1
+        # Initializes the distributed backend which will take care of sychronizing nodes/GPUs
+        torch.distributed.init_process_group(backend='nccl')
+    print("device: {} n_gpu: {}, distributed training: {}, 16-bits training: {}".format(
+        device, n_gpu, bool(args.local_rank != -1), args.fp16))
+
+    seg_model_checkpoint = torch.load(args.eval_model)
+    seg_model = WMSeg.from_spec(seg_model_checkpoint['spec'], seg_model_checkpoint['state_dict'], args)
+
+    eval_examples = seg_model.load_data(args.input_file, do_predict=True)
+    convert_examples_to_features = seg_model.convert_examples_to_features
+    feature2input = seg_model.feature2input
+    num_labels = seg_model.num_labels
+    word2id = seg_model.word2id
+    label_map = {v: k for k, v in seg_model.labelmap.items()}
+
+    if args.fp16:
+        seg_model.half()
+    seg_model.to(device)
+    if args.local_rank != -1:
+        try:
+            from apex.parallel import DistributedDataParallel as DDP
+        except ImportError:
+            raise ImportError(
+                "Please install apex from https://www.github.com/nvidia/apex to use distributed and fp16 training.")
+
+        seg_model = DDP(seg_model)
+    elif n_gpu > 1:
+        seg_model = torch.nn.DataParallel(seg_model)
+
+    seg_model.to(device)
+
+    seg_model.eval()
+    y_pred = []
+
+    for start_index in tqdm(range(0, len(eval_examples), args.eval_batch_size)):
+        eval_batch_examples = eval_examples[start_index: min(start_index + args.eval_batch_size,
+                                                             len(eval_examples))]
+        eval_features = convert_examples_to_features(eval_batch_examples)
+
+        input_ids, input_mask, l_mask, label_ids, matching_matrix, ngram_ids, ngram_positions, \
+        segment_ids, valid_ids, word_ids, word_mask = feature2input(device, eval_features)
+
+        with torch.no_grad():
+            _, tag_seq = seg_model.forward_uc(input_ids, segment_ids, input_mask, labels=label_ids,
+                                       valid_ids=valid_ids, attention_mask_label=l_mask,
+                                       word_seq=word_ids, label_value_matrix=matching_matrix,
+                                       word_mask=word_mask,
+                                       input_ngram_ids=ngram_ids, ngram_position_matrix=ngram_positions)
+
+        logits = tag_seq.to('cpu').numpy()
+        label_ids = label_ids.to('cpu').numpy()
+
+        for i, label in enumerate(label_ids):
+            temp = []
+            for j, m in enumerate(label):
+                if j == 0:
+                    continue
+                elif label_ids[i][j] == num_labels - 1:
+                    y_pred.append(temp)
+                    break
+                else:
+                    temp.append(label_map[logits[i][j]])
+
+
+    out_tsv=""
+    print('write results to %s' % str(args.output_file))
+    with open(args.output_file, 'w', encoding='utf8') as writer:
+        for i in range(len(y_pred)):
+            sentence = eval_examples[i].text_a
+            #如果预测结果包含O则跳过此句
+            # if 'O' in y_pred[i]:
+            #     continue
+            _, seg_pred_str,seg_wrong_str,label_seg_true_str,label_seg_pred_str,wrong_num,uncoop_num = eval_sentence(y_pred[i], None, sentence, word2id)
+            for idx in range(len(seg_pred_str)):
+                if seg_pred_str[idx]==' ':
+                    continue
+                out_tsv+="%s\t%s\n"%(seg_pred_str[idx],label_seg_pred_str[idx])
+            out_tsv+='\n'
+            writer.write('%s\n' % seg_pred_str)
+
+    if args.output_file_tsv==None:
+        return
+    print('write results tsv to %s' % str(args.output_file_tsv))
+    with open(args.output_file_tsv, 'w', encoding='utf8') as writer:
+        writer.write(out_tsv)
 
 def predict(args):
     if args.local_rank == -1 or args.no_cuda:
@@ -1002,6 +1145,9 @@ def main():
                         action='store_true',
                         help="Whether to run training.")
     parser.add_argument("--do_predict",
+                        action='store_true',
+                        help="Whether to run training.")
+    parser.add_argument("--do_predict_uc",
                         action='store_true',
                         help="Whether to run training.")
     parser.add_argument("--train_data_path",
@@ -1118,6 +1264,9 @@ def main():
     parser.add_argument("--use_memory",
                         action='store_true',
                         help="Whether to run training.")
+    parser.add_argument("--use_gcn",
+                        action='store_true',
+                        help="Whether to run training.")
     parser.add_argument('--decoder', type=str, default='crf',
                         help="the decoder to be used, should be one of softmax and crf.")
     parser.add_argument('--ngram_flag', type=str, default='av', help="")
@@ -1137,6 +1286,8 @@ def main():
         test(args)
     elif args.do_predict:
         predict(args)
+    elif args.do_predict_uc:
+        predict_uc(args)
     else:
         raise ValueError('At least one of `do_train`, `do_eval`, `do_predict` must be True.')
 

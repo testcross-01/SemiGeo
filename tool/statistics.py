@@ -1,10 +1,14 @@
 import re
+import datetime
+now_time = datetime.datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
 
 def stat_all(tsv_file,rsult_file):
+
     words_txt='tool/words.txt'
     geo_words_txt='tool/geo_words.txt'
-    wrong_words_txt='tool/wrong_words.txt'
-    wrong_geo_words_txt='tool/wrong_geo_words.txt'
+    wrong_words_txt='tool/wrong_words_{0}.txt'.format(now_time)
+    wrong_geo_words_txt='tool/wrong_geo_words_{0}.txt'.format(now_time)
+
     dict_path='data/normal_words.txt'
     count=tsv2txt(tsv_file,words_txt)
     geo_count=stat_geo_entity(words_txt,dict_path,geo_words_txt)
@@ -114,9 +118,11 @@ if __name__ == '__main__':
     #stat_wrong_word('/opt/Projects/Python/WMSeg/models/geo_Zen_memory_crf_2023-08-09-14-13-27/CWS_result.txt','/opt/Projects/Python/WMSeg/data/wrong_words2.txt')
     #stat_geo_entity('/opt/Projects/Python/WMSeg/data/wrong_words2.txt','/opt/Projects/Python/WMSeg/data/words.txt','/opt/Projects/Python/WMSeg/data/wrong_geo_words2.txt')
     #count,geo_countstat_all,wrong_geo_count=stat_all('/opt/Projects/Python/WMSeg/data/mydata/geo/my/test.tsv','/opt/Projects/Python/WMSeg/models/self_Zen_memory_crf_2023-07-11-20-25-56/CWS_result.txt')
-    train_en_count= stat_entity('/opt/Projects/Python/WMSeg/data_preprocessing/mydata/large/train.txt')
-    train_ge_count=stat_geo_entity_count('/opt/Projects/Python/WMSeg/data_preprocessing/mydata/large/train.txt','/opt/Projects/Python/WMSeg/data/normal_words.txt')
-    test_en_count= stat_entity('/opt/Projects/Python/WMSeg/data_preprocessing/mydata/large/test.txt')
-    test_ge_count=stat_geo_entity_count('/opt/Projects/Python/WMSeg/data_preprocessing/mydata/large/test.txt','/opt/Projects/Python/WMSeg/data/normal_words.txt')
+    train_path='/opt/Projects/Python/WMSeg/data_preprocessing/mydata/larger/train.seg'
+    test_path='/opt/Projects/Python/WMSeg/data_preprocessing/mydata/larger/test.seg'
+    train_en_count= stat_entity(train_path)
+    train_ge_count=stat_geo_entity_count(train_path,'/opt/Projects/Python/WMSeg/data/normal_words.txt')
+    test_en_count= stat_entity(test_path)
+    test_ge_count=stat_geo_entity_count(test_path,'/opt/Projects/Python/WMSeg/data/normal_words.txt')
     print(train_en_count,train_ge_count,test_en_count,test_ge_count)
     #print(count,geo_countstat_all,wrong_geo_count)

@@ -14,7 +14,15 @@ class MyPrepro(object):
         self.data_dir = './mydata'
         self.data_dir_dict = {'train': 'training', 'test': 'testing'}
 
-
+    def shuffle(self,file_path):
+        lines=[]
+        with open(file_path, 'r', encoding='utf-8-sig') as f:
+            text = f.read()
+            lines = text.split('\n')
+            random.shuffle(lines)
+                
+        return lines
+        
     def se_train_test(self):
         dirs=os.listdir(self.data_dir)
         for file_name in dirs:
@@ -29,7 +37,24 @@ class MyPrepro(object):
             self._write_file(test_data,output_test_file)
 
 
-
+    def se_train_test1(self,file_path,train_num,dev_num,test_num):
+        train = []
+        test=[]
+        dev=[]
+        with open(file_path, 'r', encoding='utf-8-sig') as f:
+            
+            lines = f.readlines()
+            for index in range(len(lines)):
+                line=lines[index]
+                line=line.split('\n')[0]
+                if index<train_num:
+                    train.append(line)
+                elif index<train_num+test_num:
+                    test.append(line)
+                elif index<train_num+test_num+dev_num:
+                    dev.append(line)
+        return train,test,dev
+            
     def _se_train_test(self,file_path,thr):
 
         with open(file_path, 'r', encoding='utf-8-sig') as f:
@@ -120,9 +145,31 @@ if __name__ == '__main__':
    #
    #preprocessor._write_file(train_data, '/opt/Projects/Python/WMSeg/data/mydata/large/train.tsv')
    # preprocessor._write_file(test_data,'/opt/Projects/Python/WMSeg/data/mydata/large/test.tsv')
+   raw_seg_path='/opt/Projects/Python/WMSeg/data_preprocessing/mydata/all_doc.seg'
+   shuffle_seg_path='/opt/Projects/Python/WMSeg/data_preprocessing/mydata/all_doc_shuffle.seg'
+   train_seg_path='/opt/Projects/Python/WMSeg/data_preprocessing/mydata/larger/train.seg'
+   test_seg_path='/opt/Projects/Python/WMSeg/data_preprocessing/mydata/larger/test.seg'
+   train_unseg_path='/opt/Projects/Python/WMSeg/data_preprocessing/mydata/larger/train.unseg'
+   train_tsv_path='/opt/Projects/Python/WMSeg/data/mydata/larger/train.tsv'
+   test_tsv_path='/opt/Projects/Python/WMSeg/data/mydata/larger/test.tsv'
 
-   self_train_data=preprocessor._process_file('/opt/Projects/Python/WMSeg/data_preprocessing/mydata/large/self_train.txt')
-   preprocessor._write_file(self_train_data,'/opt/Projects/Python/WMSeg/data/mydata/large/self_train.tsv')
+   
+   shuffle_lines=preprocessor.shuffle(raw_seg_path)
+   preprocessor._write_file(shuffle_lines,shuffle_seg_path)
+   train,test,dev=preprocessor.se_train_test1(shuffle_seg_path,100,600,300)
+   preprocessor._write_file(train,train_seg_path)
+   preprocessor._write_file(test,test_seg_path)
+   preprocessor._write_file(dev,train_unseg_path)
+
+   
+   train_data=preprocessor._process_file(train_seg_path)
+   test_data=preprocessor._process_file(test_seg_path)
+   preprocessor._write_file(train_data,train_tsv_path)
+   preprocessor._write_file(test_data,test_tsv_path)
+   
+   
+   #self_train_data=preprocessor._process_file('/opt/Projects/Python/WMSeg/data_preprocessing/mydata/large/self_train.txt')
+   #preprocessor._write_file(self_train_data,'/opt/Projects/Python/WMSeg/data/mydata/large/self_train.tsv')
 
 
 

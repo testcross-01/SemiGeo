@@ -17,7 +17,7 @@ from pytorch_pretrained_bert.optimization import BertAdam, WarmupLinearSchedule
 from tqdm import tqdm, trange
 from seqeval.metrics import classification_report
 from my_wmseg_helper import get_word2id, get_gram2id
-from my_wmseg_eval import eval_sentence, cws_evaluate_word_PRF, cws_evaluate_OOV
+from my_wmseg_eval import eval_sentence, cws_evaluate_word_PRF, cws_evaluate_OOV,cws_evaluate_geo
 from my_wmseg_model import WMSeg
 import datetime
 from tool import statistics
@@ -168,8 +168,9 @@ def train(args):
     best_r = -1
     best_f = -1
     best_oov = -1
+    best_geo = -1
 
-    history = {'epoch': [], 'p': [], 'r': [], 'f': [], 'oov': []}
+    history = {'epoch': [], 'p': [], 'r': [], 'f': [], 'oov': [],'geo':[]}
     num_of_no_improvement = 0
     patient = args.patient
 
@@ -285,14 +286,17 @@ def train(args):
                     sentence_all.append(sen)
                 p, r, f = cws_evaluate_word_PRF(y_pred_all, y_true_all)
                 oov = cws_evaluate_OOV(y_pred, y_true, sentence_all, word2id)
+                geo = cws_evaluate_geo(y_pred, y_true, sentence_all)
                 logger.info('OOV: %f' % oov)
+                logger.info('GEO: %f' % geo)
                 history['epoch'].append(epoch)
                 history['p'].append(p)
                 history['r'].append(r)
                 history['f'].append(f)
                 history['oov'].append(oov)
+                history['geo'].append(geo)
                 logger.info("=======entity level========")
-                logger.info("\nEpoch: %d, P: %f, R: %f, F: %f, OOV: %f", epoch + 1, p, r, f, oov)
+                logger.info("\nEpoch: %d, P: %f, R: %f, F: %f, OOV: %f, GEO: %f", epoch + 1, p, r, f, oov, geo)
                 logger.info("=======entity level========")
                 # the evaluation method of NER
                 report = classification_report(y_true, y_pred, digits=4)
@@ -317,6 +321,8 @@ def train(args):
                     best_r = r
                     best_f = f
                     best_oov = oov
+                    best_geo = geo
+
                     num_of_no_improvement = 0
 
                     if args.model_name:
@@ -337,12 +343,16 @@ def train(args):
                                 uncoop_count+=uncoop_num
                             uncoop_rate=uncoop_count/wrong_count
                             writer.write("\n %d" % wrong_count)
-                            writer.write("\nP: %f, R: %f, F: %f, OOV: %f" % (best_p, best_r, best_f, best_oov))
-                        word_count,geo_word_count,geo_wrong_word_count,Rgeo=statistics.stat_all(args.eval_data_path, os.path.join(output_model_dir, 'CWS_result.txt'))
-                        with open(os.path.join(output_model_dir, 'CWS_result.txt'), "a") as writer:
-                            writer.write("\nword_num: %d, geo_word_num: %d, geo_wrong_word_num: %d,R_geo %f"%(word_count,geo_word_count,geo_wrong_word_count,Rgeo))
+                            writer.write("\nP: %f, R: %f, F: %f, OOV: %f, GEO: %f" % (best_p, best_r, best_f, best_oov, best_geo))
+                        word_count,geo_word_count,geo_wrong_word_count,Rgeo=statistics.stat_all(args.eval_data_path, os.path.join(output_model_dir, 'CWS_result.txt'),output_model_dir)
+                        # with open(os.path.join(output_model_dir, 'CWS_result.txt'), "a") as writer:
+                        #     writer.write("\nword_num: %d, geo_word_num: %d, geo_wrong_word_num: %d,R_geo %f"%(word_count,geo_word_count,geo_wrong_word_count,Rgeo))
 
                         best_eval_model_path = os.path.join(output_model_dir, 'model.pt')
+                        #输出当前模型的位置
+                        with open(os.path.join('./models','model_path.txt'),'w') as file:
+                            file.write(best_eval_model_path)
+
 
                         if n_gpu > 1:
                             torch.save({
@@ -364,7 +374,7 @@ def train(args):
                 break
 
         logger.info("\n=======best f entity level========")
-        logger.info("\nEpoch: %d, P: %f, R: %f, F: %f, OOV: %f\n", best_epoch, best_p, best_r, best_f, best_oov)
+        logger.info("\nEpoch: %d, P: %f, R: %f, F: %f, OOV: %f, GEO: %f\n", best_epoch, best_p, best_r, best_f, best_oov, best_geo)
         logger.info("\n=======best f entity level========")
 
         if os.path.exists(output_model_dir):
@@ -442,6 +452,7 @@ def self_train(args):
                           % args.ngram_num_threshold)
         gram2id = get_gram2id(args.train_data_path, args.eval_data_path,
                               args.ngram_num_threshold, args.ngram_flag, args.av_threshold)
+
         logger.info('# of n-gram in memory: %d' % len(gram2id))
     else:
         gram2id = None
@@ -523,8 +534,9 @@ def self_train(args):
     best_r = -1
     best_f = -1
     best_oov = -1
+    best_geo = -1
 
-    history = {'epoch': [], 'p': [], 'r': [], 'f': [], 'oov': []}
+    history = {'epoch': [], 'p': [], 'r': [], 'f': [], 'oov': [],'geo':[]}
     num_of_no_improvement = 0
     patient = args.patient
 
@@ -538,6 +550,8 @@ def self_train(args):
         logger.info("  Num self-train examples = %d", len(self_train_examples))
         logger.info("  Batch size = %d", args.train_batch_size)
         logger.info("  Num steps = %d", num_train_optimization_steps)
+
+        batch_mix=True
 
         for epoch in trange(int(args.num_train_epochs), desc="Epoch"):
             np.random.shuffle(train_examples)
@@ -585,92 +599,93 @@ def self_train(args):
                     global_step += 1
 
                 #self-train in this batch
-                r=int(len(self_train_examples)/len(train_examples))
+                if batch_mix:
+                    r=int(len(self_train_examples)/len(train_examples))
 
-                #logger.info("\n self-train batch num in this step = %d", math.ceil((int(r*(start_index+args.train_batch_size))-int(r*start_index))/args.train_batch_size ))
+                    #logger.info("\n self-train batch num in this step = %d", math.ceil((int(r*(start_index+args.train_batch_size))-int(r*start_index))/args.train_batch_size ))
 
-                # for  start_index1 in range(r*start_index, r*(start_index+args.train_batch_size), args.train_batch_size):
-                #     seg_model.train()
-                #     batch_examples = self_train_examples[start_index1: min(start_index1 +
-                #                                                           args.train_batch_size,
-                #                                                           len(self_train_examples))]
-                #     if len(batch_examples) == 0:
-                #         continue
-                #     train_features = convert_examples_to_features(batch_examples)
-                #     input_ids, input_mask, l_mask, label_ids, matching_matrix, ngram_ids, ngram_positions, \
-                #     segment_ids, valid_ids, word_ids, word_mask = feature2input(device, train_features)
-                #
-                #     loss, _ = seg_model(input_ids, segment_ids, input_mask, label_ids, valid_ids, l_mask, word_ids,
-                #                         matching_matrix, word_mask, ngram_ids, ngram_positions)
-                #     if n_gpu > 1:
-                #         loss = loss.mean()  # mean() to average on multi-gpu.
-                #     if args.gradient_accumulation_steps > 1:
-                #         loss = loss / args.gradient_accumulation_steps
-                #
-                #     loss *= args.lambda_rate
-                #
-                #     if args.fp16:
-                #         optimizer.backward(loss)
-                #     else:
-                #         loss.backward()
-                #
-                #     tr_loss += loss.item()
-                #     nb_tr_examples += input_ids.size(0)
-                #     nb_tr_steps += 1
-                #     if (step + 1) % args.gradient_accumulation_steps == 0:
-                #         if args.fp16:
-                #             # modify learning rate with special warm up BERT uses
-                #             # if args.fp16 is False, BertAdam is used that handles this automatically
-                #             lr_this_step = args.learning_rate * warmup_linear(
-                #                 global_step / num_train_optimization_steps,
-                #                 args.warmup_proportion)
-                #             for param_group in optimizer.param_groups:
-                #                 param_group['lr'] = lr_this_step
-                #         optimizer.step()
-                #         optimizer.zero_grad()
-                #         global_step += 1
+                    for  start_index1 in range(r*start_index, r*(start_index+args.train_batch_size), args.train_batch_size):
+                        seg_model.train()
+                        batch_examples = self_train_examples[start_index1: min(start_index1 +
+                                                                              args.train_batch_size,
+                                                                              len(self_train_examples))]
+                        if len(batch_examples) == 0:
+                            continue
+                        train_features = convert_examples_to_features(batch_examples)
+                        input_ids, input_mask, l_mask, label_ids, matching_matrix, ngram_ids, ngram_positions, \
+                        segment_ids, valid_ids, word_ids, word_mask = feature2input(device, train_features)
+
+                        loss, _ = seg_model(input_ids, segment_ids, input_mask, label_ids, valid_ids, l_mask, word_ids,
+                                            matching_matrix, word_mask, ngram_ids, ngram_positions)
+                        if n_gpu > 1:
+                            loss = loss.mean()  # mean() to average on multi-gpu.
+                        if args.gradient_accumulation_steps > 1:
+                            loss = loss / args.gradient_accumulation_steps
+
+                        loss *= args.lambda_rate
+
+                        if args.fp16:
+                            optimizer.backward(loss)
+                        else:
+                            loss.backward()
+
+                        tr_loss += loss.item()
+                        nb_tr_examples += input_ids.size(0)
+                        nb_tr_steps += 1
+                        if (step + 1) % args.gradient_accumulation_steps == 0:
+                            if args.fp16:
+                                # modify learning rate with special warm up BERT uses
+                                # if args.fp16 is False, BertAdam is used that handles this automatically
+                                lr_this_step = args.learning_rate * warmup_linear(
+                                    global_step / num_train_optimization_steps,
+                                    args.warmup_proportion)
+                                for param_group in optimizer.param_groups:
+                                    param_group['lr'] = lr_this_step
+                            optimizer.step()
+                            optimizer.zero_grad()
+                            global_step += 1
+
+            if not batch_mix:
+                for step, start_index in enumerate(tqdm(range(0, len(self_train_examples), args.train_batch_size))):
+                    seg_model.train()
+                    batch_examples = self_train_examples[start_index: min(start_index +
+                                                                         args.train_batch_size, len(self_train_examples))]
+                    if len(batch_examples) == 0:
+                        continue
+                    train_features = convert_examples_to_features(batch_examples)
+                    input_ids, input_mask, l_mask, label_ids, matching_matrix, ngram_ids, ngram_positions, \
+                    segment_ids, valid_ids, word_ids, word_mask = feature2input(device, train_features)
 
 
-            for step, start_index in enumerate(tqdm(range(0, len(self_train_examples), args.train_batch_size))):
-                seg_model.train()
-                batch_examples = self_train_examples[start_index: min(start_index +
-                                                                     args.train_batch_size, len(self_train_examples))]
-                if len(batch_examples) == 0:
-                    continue
-                train_features = convert_examples_to_features(batch_examples)
-                input_ids, input_mask, l_mask, label_ids, matching_matrix, ngram_ids, ngram_positions, \
-                segment_ids, valid_ids, word_ids, word_mask = feature2input(device, train_features)
 
+                    loss, _ = seg_model(input_ids, segment_ids, input_mask, label_ids, valid_ids, l_mask, word_ids,
+                                        matching_matrix, word_mask, ngram_ids, ngram_positions)
+                    if n_gpu > 1:
+                        loss = loss.mean()  # mean() to average on multi-gpu.
+                    if args.gradient_accumulation_steps > 1:
+                        loss = loss / args.gradient_accumulation_steps
 
+                    loss*=args.lambda_rate
 
-                loss, _ = seg_model(input_ids, segment_ids, input_mask, label_ids, valid_ids, l_mask, word_ids,
-                                    matching_matrix, word_mask, ngram_ids, ngram_positions)
-                if n_gpu > 1:
-                    loss = loss.mean()  # mean() to average on multi-gpu.
-                if args.gradient_accumulation_steps > 1:
-                    loss = loss / args.gradient_accumulation_steps
-
-                loss*=args.lambda_rate
-
-                if args.fp16:
-                    optimizer.backward(loss)
-                else:
-                    loss.backward()
-
-                tr_loss += loss.item()
-                nb_tr_examples += input_ids.size(0)
-                nb_tr_steps += 1
-                if (step + 1) % args.gradient_accumulation_steps == 0:
                     if args.fp16:
-                        # modify learning rate with special warm up BERT uses
-                        # if args.fp16 is False, BertAdam is used that handles this automatically
-                        lr_this_step = args.learning_rate * warmup_linear(global_step / num_train_optimization_steps,
-                                                                          args.warmup_proportion)
-                        for param_group in optimizer.param_groups:
-                            param_group['lr'] = lr_this_step
-                    optimizer.step()
-                    optimizer.zero_grad()
-                    global_step += 1
+                        optimizer.backward(loss)
+                    else:
+                        loss.backward()
+
+                    tr_loss += loss.item()
+                    nb_tr_examples += input_ids.size(0)
+                    nb_tr_steps += 1
+                    if (step + 1) % args.gradient_accumulation_steps == 0:
+                        if args.fp16:
+                            # modify learning rate with special warm up BERT uses
+                            # if args.fp16 is False, BertAdam is used that handles this automatically
+                            lr_this_step = args.learning_rate * warmup_linear(global_step / num_train_optimization_steps,
+                                                                              args.warmup_proportion)
+                            for param_group in optimizer.param_groups:
+                                param_group['lr'] = lr_this_step
+                        optimizer.step()
+                        optimizer.zero_grad()
+                        global_step += 1
 
             seg_model.to(device)
 
@@ -732,14 +747,17 @@ def self_train(args):
                     sentence_all.append(sen)
                 p, r, f = cws_evaluate_word_PRF(y_pred_all, y_true_all)
                 oov = cws_evaluate_OOV(y_pred, y_true, sentence_all, word2id)
+                geo = cws_evaluate_geo(y_pred, y_true, sentence_all)
                 logger.info('OOV: %f' % oov)
+                logger.info('GEO: %f' % geo)
                 history['epoch'].append(epoch)
                 history['p'].append(p)
                 history['r'].append(r)
                 history['f'].append(f)
                 history['oov'].append(oov)
+                history['geo'].append(geo)
                 logger.info("=======entity level========")
-                logger.info("\nEpoch: %d, P: %f, R: %f, F: %f, OOV: %f", epoch + 1, p, r, f, oov)
+                logger.info("\nEpoch: %d, P: %f, R: %f, F: %f, OOV: %f, GEO: %f", epoch + 1, p, r, f, oov, geo)
                 logger.info("=======entity level========")
                 # the evaluation method of NER
                 report = classification_report(y_true, y_pred, digits=4)
@@ -764,6 +782,7 @@ def self_train(args):
                     best_r = r
                     best_f = f
                     best_oov = oov
+                    best_geo = geo
                     num_of_no_improvement = 0
 
                     if args.model_name:
@@ -785,11 +804,14 @@ def self_train(args):
                                 uncoop_count += uncoop_num
                             uncoop_rate = uncoop_count / wrong_count
                             writer.write("\n %f" % wrong_count)
-                            writer.write("\nP: %f, R: %f, F: %f, OOV: %f" % (best_p, best_r, best_f, best_oov))
-                        word_count,geo_word_count,geo_wrong_word_count,Rgeo=statistics.stat_all(args.eval_data_path, os.path.join(output_model_dir, 'CWS_result.txt'))
-                        with open(os.path.join(output_model_dir, 'CWS_result.txt'), "a") as writer:
-                            writer.write("\nword_num: %d, geo_word_num: %d, geo_wrong_word_num: %d, R_geo %f"%(word_count,geo_word_count,geo_wrong_word_count,Rgeo))
+                            writer.write("\nP: %f, R: %f, F: %f, OOV: %f, GEO: %f" % (best_p, best_r, best_f, best_oov,best_geo))
+                        word_count,geo_word_count,geo_wrong_word_count,Rgeo=statistics.stat_all(args.eval_data_path, os.path.join(output_model_dir, 'CWS_result.txt'),output_model_dir)
+                        # with open(os.path.join(output_model_dir, 'CWS_result.txt'), "a") as writer:
+                        #     writer.write("\nword_num: %d, geo_word_num: %d, geo_wrong_word_num: %d, R_geo %f"%(word_count,geo_word_count,geo_wrong_word_count,Rgeo))
                         best_eval_model_path = os.path.join(output_model_dir, 'model.pt')
+                        # 输出当前模型的位置
+                        with open(os.path.join('./models', 'model_path.txt'), 'w') as file:
+                            file.write(best_eval_model_path)
 
                         if n_gpu > 1:
                             torch.save({
@@ -811,7 +833,7 @@ def self_train(args):
                 break
 
         logger.info("\n=======best f entity level========")
-        logger.info("\nEpoch: %d, P: %f, R: %f, F: %f, OOV: %f\n", best_epoch, best_p, best_r, best_f, best_oov)
+        logger.info("\nEpoch: %d, P: %f, R: %f, F: %f, OOV: %f, GEO: %f\n", best_epoch, best_p, best_r, best_f, best_oov,best_geo)
         logger.info("\n=======best f entity level========")
 
         if os.path.exists(output_model_dir):
@@ -918,6 +940,7 @@ def test(args):
 
     p, r, f = cws_evaluate_word_PRF(y_pred_all, y_true_all)
     oov = cws_evaluate_OOV(y_pred, y_true, sentence_all, word2id)
+    geo = cws_evaluate_geo(y_pred, y_true,sentence_all)
 
     now_time = datetime.datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
     with open(os.path.join('./', 'CWS_result_{0}.txt'.format(now_time)), "w") as writer:
@@ -940,14 +963,50 @@ def test(args):
             writer.write('Wrong %d %d: %s\n\n' % (wrong_num, uncoop_num, seg_wrong_str))
         uncoop_rate = uncoop_count / wrong_count
         writer.write("\n %d" % wrong_count)
-        writer.write("\nP: %f, R: %f, F: %f, OOV: %f" % (p, r, f, oov))
-    word_count, geo_word_count, geo_wrong_word_count,Rgeo = statistics.stat_all(args.eval_data_path,os.path.join('./','CWS_result_{0}.txt'.format(now_time)))
-    with open(os.path.join('./', 'CWS_result_{0}.txt'.format(now_time)), "a") as writer:
-        writer.write("\nword_num: %d, geo_word_num: %d, geo_wrong_word_num: %d,R_geo: %f" % (word_count, geo_word_count, geo_wrong_word_count,Rgeo))
+        writer.write("\nP: %f, R: %f, F: %f, OOV: %f, GEO: %f" % (p, r, f, oov,geo))
+    word_count, geo_word_count, geo_wrong_word_count,Rgeo = statistics.stat_all(args.eval_data_path,os.path.join('./','CWS_result_{0}.txt'.format(now_time)),'./')
+    # with open(os.path.join('./', 'CWS_result_{0}.txt'.format(now_time)), "a") as writer:
+    #     writer.write("\nword_num: %d, geo_word_num: %d, geo_wrong_word_num: %d,R_geo: %f" % (word_count, geo_word_count, geo_wrong_word_count,Rgeo))
 
 
     print(args.eval_data_path)
     print("\nP: %f, R: %f, F: %f, OOV: %f" % (p, r, f, oov))
+
+def tags_select(tags,info_gain,conf,u_th,c_th):
+    #选出高置信度的预测
+    conf_max=torch.max(conf,2).values
+    tags[conf_max<c_th]=1
+    tags[info_gain>=u_th]=1
+
+    return  tags
+
+
+
+
+def uc_estimation(probs_list):
+    entropy_sum_predict=0
+    probs_sum=0
+    for probs in probs_list:
+        #计算单个预测概率的log
+        log_probs = torch.log(probs)
+
+        probs_sum+=probs
+
+        #计算单个预测的信息熵
+        entropy= torch.mul(probs,log_probs)
+        entropy_sum= torch.sum(entropy,dim=2)
+        entropy_sum_predict+=entropy_sum
+
+    #先求预测平均值，后计算熵
+    probs_av=probs_sum/len(probs_list)
+    entropy_av = torch.mul(probs_av, torch.log(probs_av)) * -1
+    entropy_av_predict_sum = torch.sum(entropy_av, dim=2)
+
+    #先计算熵，再求平均
+    entropy_sum_predict_av=entropy_sum_predict/len(probs_list)
+
+    info_gain = entropy_av_predict_sum + entropy_sum_predict_av
+    return info_gain,probs_av
 
 def predict_uc(args):
     if args.local_rank == -1 or args.no_cuda:
@@ -961,6 +1020,10 @@ def predict_uc(args):
         torch.distributed.init_process_group(backend='nccl')
     print("device: {} n_gpu: {}, distributed training: {}, 16-bits training: {}".format(
         device, n_gpu, bool(args.local_rank != -1), args.fp16))
+
+
+    #预测的次数
+    predict_num=6
 
     seg_model_checkpoint = torch.load(args.eval_model)
     seg_model = WMSeg.from_spec(seg_model_checkpoint['spec'], seg_model_checkpoint['state_dict'], args)
@@ -988,10 +1051,15 @@ def predict_uc(args):
 
     seg_model.to(device)
 
-    seg_model.eval()
+
+
+
     y_pred = []
 
     for start_index in tqdm(range(0, len(eval_examples), args.eval_batch_size)):
+        # 开启dropout
+        seg_model.train()
+
         eval_batch_examples = eval_examples[start_index: min(start_index + args.eval_batch_size,
                                                              len(eval_examples))]
         eval_features = convert_examples_to_features(eval_batch_examples)
@@ -999,12 +1067,34 @@ def predict_uc(args):
         input_ids, input_mask, l_mask, label_ids, matching_matrix, ngram_ids, ngram_positions, \
         segment_ids, valid_ids, word_ids, word_mask = feature2input(device, eval_features)
 
-        with torch.no_grad():
-            _, tag_seq = seg_model.forward_uc(input_ids, segment_ids, input_mask, labels=label_ids,
-                                       valid_ids=valid_ids, attention_mask_label=l_mask,
-                                       word_seq=word_ids, label_value_matrix=matching_matrix,
-                                       word_mask=word_mask,
-                                       input_ngram_ids=ngram_ids, ngram_position_matrix=ngram_positions)
+        #计算不确定性和置信度
+        con_probs_list=[]
+        u_th, c_th= 1 , 0.5
+
+        for i in range(predict_num):
+            with torch.no_grad():
+                _, _,logits = seg_model.forward_uc(input_ids, segment_ids, input_mask, labels=label_ids,
+                                           valid_ids=valid_ids, attention_mask_label=l_mask,
+                                           word_seq=word_ids, label_value_matrix=matching_matrix,
+                                           word_mask=word_mask,
+                                           input_ngram_ids=ngram_ids, ngram_position_matrix=ngram_positions)
+            con_probs=seg_model.confidence_estimation(logits)
+            con_probs_list.append(con_probs)
+
+        info_gain,probs_av = uc_estimation(con_probs_list)
+
+        # for probs_list in con_probs:
+        #     probs_list.to('cpu')
+
+        #开启预测
+        seg_model.eval()
+        _, tag_seq, _ = seg_model.forward_uc(input_ids, segment_ids, input_mask, labels=label_ids,
+                                            valid_ids=valid_ids, attention_mask_label=l_mask,
+                                            word_seq=word_ids, label_value_matrix=matching_matrix,
+                                            word_mask=word_mask,
+                                            input_ngram_ids=ngram_ids, ngram_position_matrix=ngram_positions)
+        tag_seq=tags_select(tag_seq,info_gain,probs_av,u_th,c_th)
+
 
         logits = tag_seq.to('cpu').numpy()
         label_ids = label_ids.to('cpu').numpy()

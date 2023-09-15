@@ -83,6 +83,39 @@ def cws_evaluate_word_PRF(y_pred, y):
     print('F: ', F)
     return P, R, F
 
+def cws_evaluate_geo(y_pred_list, y_list, sentence_list):
+    dict_path='data_preprocessing/mydata/geo_words_clear.txt'
+    words = []
+    with open(dict_path, 'r') as d:
+        words_raw = d.readlines()
+        words = []
+        output_txt = ''
+        count = 0
+        for word_rwa in words_raw:
+            word = word_rwa.strip()
+            words.append(word)
+
+    cor_num = 0
+    yt_wordnum = 0
+    for y_pred, y, sentence in zip(y_pred_list, y_list, sentence_list):
+        start = 0
+        for i in range(len(y)):
+            if y[i] == 'E' or y[i] == 'S':
+                word = ''.join(sentence[start:i+1])
+                if word not in words:
+                    start = i + 1
+                    continue
+                flag = True
+                yt_wordnum += 1
+                for j in range(start, i+1):
+                    if y[j] != y_pred[j]:
+                        flag = False
+                if flag:
+                    cor_num += 1
+                start = i + 1
+
+    geo = cor_num / float(yt_wordnum) if yt_wordnum > 0 else -1
+    return geo
 
 def cws_evaluate_OOV(y_pred_list, y_list, sentence_list, word2id):
     cor_num = 0

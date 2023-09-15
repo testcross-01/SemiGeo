@@ -7,6 +7,7 @@ import math
 import numpy as np
 import torch
 from torch import nn
+from torch.nn.utils.rnn import  pack_padded_sequence, pad_packed_sequence
 import torch.nn.functional as F
 from pytorch_pretrained_bert.file_utils import PYTORCH_PRETRAINED_BERT_CACHE
 
@@ -191,6 +192,8 @@ class WMSeg(nn.Module):
         else:
             self.kv_memory = None
 
+        self.cov = nn.Conv2d(1,1,kernel_size=(2,hidden_size))
+
         #self.lstm=nn.LSTM(hidden_size,int(hidden_size/2),batch_first=True,bidirectional=True)
         #gcn模块
         # if self.hpara['use_gcn']:
@@ -208,6 +211,20 @@ class WMSeg(nn.Module):
 
         if args.do_train:
             self.spec['hpara'] = self.hpara
+
+    def confidence_estimation(self,logits):
+        con_probs = F.softmax(logits, dim=2)
+        #con_log_probs = torch.log(con_probs)
+
+        #计算信息熵
+        #entropy= torch.mul(con_probs,con_log_probs)*-1
+        #entropy_sum= torch.sum(entropy,dim=2)
+
+        return  con_probs
+
+
+
+
 
     def forward(self, input_ids, token_type_ids=None, attention_mask=None, labels=None, valid_ids=None,
                 attention_mask_label=None, word_seq=None, label_value_matrix=None, word_mask=None,
@@ -227,6 +244,8 @@ class WMSeg(nn.Module):
 
         if self.kv_memory is not None:
             sequence_output = self.kv_memory(word_seq, sequence_output, label_value_matrix, word_mask)
+
+        tmp=self.cov(sequence_output.unsqueeze(1))
 
         sequence_output = self.dropout(sequence_output)
 
@@ -278,13 +297,13 @@ class WMSeg(nn.Module):
         else:
             loss_fct = CrossEntropyLoss(ignore_index=0)
             total_loss = loss_fct(logits.view(-1, self.num_labels), labels.view(-1))
-            con_mask = F.softmax(logits, dim=2)
-            con_mask[con_mask<0.6]=0
-            tag_seq = torch.argmax(con_mask, dim=2)
-            tag_seq[tag_seq==0]=1
-            uncen_mask =  F.softmax(logits, dim=2)
-            #tag_seq = torch.argmax(F.log_softmax(logits, dim=2), dim=2)
-        return total_loss, tag_seq
+            # con_mask = F.softmax(logits, dim=2)
+            # con_mask[con_mask<0.6]=0
+            # tag_seq = torch.argmax(con_mask, dim=2)
+            # tag_seq[tag_seq==0]=1
+            #uncen_mask =  F.softmax(logits, dim=2)
+            tag_seq = torch.argmax(F.log_softmax(logits, dim=2), dim=2)
+        return total_loss, tag_seq,logits
 
     @staticmethod
     def init_hyper_parameters(args):
@@ -367,8 +386,8 @@ class WMSeg(nn.Module):
 
     def convert_examples_to_features(self, examples):
 
-        max_seq_length = min(int(max([len(e.text_a.split(' ')) for e in examples]) * 1.1 + 2), self.max_seq_length)
-
+        #max_seq_length = min(int(max([len(e.text_a.split(' ')) for e in examples]) * 1.1 + 2), self.max_seq_length)
+        max_seq_length=self.max_seq_length
         if self.kv_memory is not None:
             max_word_size = max(min(max([len(e.word.split(' ')) for e in examples]), self.max_ngram_size), 1)
 

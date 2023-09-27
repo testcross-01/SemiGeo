@@ -29,6 +29,7 @@ DEFAULT_HPARA = {
     'max_ngram_length': 5,
     'use_bert': False,
     'use_zen': False,
+    'use_cnn': False,
     'do_lower_case': False,
     'use_memory': False,
     'decoder': 'crf'
@@ -36,62 +37,41 @@ DEFAULT_HPARA = {
 
 
 
-'''
- 图卷积层
-'''
-class GraphConvolution(Module):
-    """
-    Simple GCN layer, similar to https://arxiv.org/abs/1609.02907
-    """
+class CovNet(nn.Module):
+    def __init__(self):
+        super(CovNet, self).__init__()
+        self.layer1 = nn.Sequential(
+            nn.Conv2d(1, 1, kernel_size=3, stride=1, padding=1),
+            nn.ReLU()
+            #nn.MaxPool2d(kernel_size=2, stride=2)
+        )
+        # self.layer2 = nn.Sequential(
+        #     nn.Conv2d(32, 1, kernel_size=1, stride=1),
+        #     nn.Upsample(scale_factor=2, mode='nearest')
+        # )
 
-    def __init__(self, in_features, out_features, bias=True):
-        super(GraphConvolution, self).__init__()
-        self.in_features = in_features
-        self.out_features = out_features
-        self.weight = Parameter(torch.FloatTensor(in_features, out_features))
-        if bias:
-            self.bias = Parameter(torch.FloatTensor(out_features))
-        else:
-            self.register_parameter('bias', None)
-        self.reset_parameters()
 
-    def reset_parameters(self):
-        stdv = 1. / math.sqrt(self.weight.size(1))
-        self.weight.data.uniform_(-stdv, stdv)
-        if self.bias is not None:
-            self.bias.data.uniform_(-stdv, stdv)
+    def forward(self, hidden_state,labels):
+        input=hidden_state.clone()
+        input[labels==6]=0
+        input[labels==7]=0
+        input = input.unsqueeze(1)
+        output = self.layer1(input)
+        #output = self.layer2(output)
+        output = output.squeeze(1)
+        output[labels == 6] = 0
+        output[labels == 7] = 0
 
-    def forward(self, input, adj):
-        support = torch.mm(input, self.weight)
-        output = torch.spmm(adj, support)
-        if self.bias is not None:
-            return output + self.bias
-        else:
-            return output
+        #tmp=output.permute(0,2,1,3).permute(0,1,3,2)
+        #output = tmp.squeeze(2)
+        #tmp = hidden_state[:,1,:].unsqueeze(1).repeat(1,hidden_state.shape[1],1)
 
-    def __repr__(self):
-        return self.__class__.__name__ + ' (' \
-               + str(self.in_features) + ' -> ' \
-               + str(self.out_features) + ')'
+        #output = self.layer2(output).squeeze(1)
+        output = torch.cat((hidden_state, output),2)
 
-'''
-图卷积神经网络
-'''
-class GCN(nn.Module):
-    def __init__(self, nfeat, nhid, nclass, dropout):
-        super(GCN, self).__init__()
+        return output
 
-        self.gc1 = GraphConvolution(nfeat, nhid)
-        self.gc2 = GraphConvolution(nhid, nclass)
-        self.dropout = dropout
 
-    def forward(self, x, adj):
-        x = F.relu(self.gc1(x, adj))
-        # 暂时不做dropout操作
-        #x = F.dropout(x, self.dropout, training=self.training)
-        x = self.gc2(x, adj)
-        #return F.log_softmax(x, dim=1)
-        return x
 
 class WordKVMN(nn.Module):
     def __init__(self, hidden_size, word_size):
@@ -192,20 +172,18 @@ class WMSeg(nn.Module):
         else:
             self.kv_memory = None
 
-        self.cov = nn.Conv2d(1,1,kernel_size=(2,hidden_size))
-
         #self.lstm=nn.LSTM(hidden_size,int(hidden_size/2),batch_first=True,bidirectional=True)
-        #gcn模块
-        # if self.hpara['use_gcn']:
-        #     self.gcn=GCN(hidden_size,hidden_size,hidden_size,None)
-        # else:
-        #     self.gcn = None
 
-        self.classifier = nn.Linear(hidden_size, self.num_labels, bias=False)
+
+        if self.hpara['use_cnn']:
+            self.cnn = CovNet()
+            self.classifier = nn.Linear(hidden_size*2, self.num_labels, bias=False)
+        else:
+            self.cnn = None
+            self.classifier = nn.Linear(hidden_size, self.num_labels, bias=False)
 
         if self.hpara['decoder'] == 'crf':
             self.crf = CRF(tagset_size=self.num_labels - 3, gpu=True)
-            #self.crf=CRF(self.num_labels, batch_first=True)
         else:
             self.crf = None
 
@@ -245,7 +223,9 @@ class WMSeg(nn.Module):
         if self.kv_memory is not None:
             sequence_output = self.kv_memory(word_seq, sequence_output, label_value_matrix, word_mask)
 
-        tmp=self.cov(sequence_output.unsqueeze(1))
+        if self.cnn is not None:
+            sequence_output = self.cnn(sequence_output,labels)
+
 
         sequence_output = self.dropout(sequence_output)
 
@@ -253,8 +233,8 @@ class WMSeg(nn.Module):
 
         if self.crf is not None:
             # crf = CRF(tagset_size=number_of_labels+1, gpu=True)
-            #total_loss = self.crf(logits, labels,attention_mask.gt(0) )
-            #tag_seq=self.crf.decode(logits, mask=attention_mask.gt(0))
+            #将O对应attention_mask改为0
+            attention_mask[labels==0]=0
             total_loss = self.crf.neg_log_likelihood_loss(logits, attention_mask, labels)
             scores, tag_seq = self.crf._viterbi_decode(logits, attention_mask)
             # Only keep active parts of the loss
@@ -278,10 +258,14 @@ class WMSeg(nn.Module):
         else:
             raise ValueError()
 
-        # sequence_output, _ = self.lstm(sequence_output)
 
         if self.kv_memory is not None:
             sequence_output = self.kv_memory(word_seq, sequence_output, label_value_matrix, word_mask)
+
+        #sequence_output, _ = self.lstm(sequence_output)
+
+        if self.cnn is not None:
+            sequence_output = self.cnn(sequence_output,labels)
 
         sequence_output = self.dropout(sequence_output)
 
@@ -313,6 +297,7 @@ class WMSeg(nn.Module):
         hyper_parameters['max_ngram_length'] = args.max_ngram_length
         hyper_parameters['use_bert'] = args.use_bert
         hyper_parameters['use_zen'] = args.use_zen
+        hyper_parameters['use_cnn'] = args.use_cnn
         hyper_parameters['do_lower_case'] = args.do_lower_case
         hyper_parameters['use_memory'] = args.use_memory
         hyper_parameters['decoder'] = args.decoder
@@ -385,9 +370,9 @@ class WMSeg(nn.Module):
         return examples
 
     def convert_examples_to_features(self, examples):
+        max_seq_length = min(int(max([len(e.text_a.split(' ')) for e in examples]) * 1.1 + 2), self.max_seq_length)
+       # max_seq_length= max_seq_length if max_seq_length%2==0  else max_seq_length+1
 
-        #max_seq_length = min(int(max([len(e.text_a.split(' ')) for e in examples]) * 1.1 + 2), self.max_seq_length)
-        max_seq_length=self.max_seq_length
         if self.kv_memory is not None:
             max_word_size = max(min(max([len(e.word.split(' ')) for e in examples]), self.max_ngram_size), 1)
 

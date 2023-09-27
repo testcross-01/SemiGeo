@@ -97,16 +97,24 @@ def cws_evaluate_geo(y_pred_list, y_list, sentence_list):
 
     cor_num = 0
     yt_wordnum = 0
+    yp_wordnum = 0
     for y_pred, y, sentence in zip(y_pred_list, y_list, sentence_list):
         start = 0
         for i in range(len(y)):
             if y[i] == 'E' or y[i] == 'S':
                 word = ''.join(sentence[start:i+1])
+                y_pred_word=y_pred[start:i+1]
+
                 if word not in words:
                     start = i + 1
                     continue
                 flag = True
                 yt_wordnum += 1
+                yp_wordnum += y_pred_word.count('B') + y_pred_word.count('S')
+
+                if y_pred_word[0] != 'B' and y_pred_word[0]!='S':
+                    yp_wordnum += 1
+
                 for j in range(start, i+1):
                     if y[j] != y_pred[j]:
                         flag = False
@@ -114,8 +122,13 @@ def cws_evaluate_geo(y_pred_list, y_list, sentence_list):
                     cor_num += 1
                 start = i + 1
 
-    geo = cor_num / float(yt_wordnum) if yt_wordnum > 0 else -1
-    return geo
+    rgeo = cor_num / float(yt_wordnum) if yt_wordnum > 0 else -1
+    pgeo = cor_num / float(yp_wordnum) if yp_wordnum > 0 else -1
+    if rgeo==0 and pgeo==0:
+        fgeo = 0
+    else:
+        fgeo = 2*pgeo*rgeo/(rgeo+pgeo)
+    return fgeo,rgeo,pgeo
 
 def cws_evaluate_OOV(y_pred_list, y_list, sentence_list, word2id):
     cor_num = 0

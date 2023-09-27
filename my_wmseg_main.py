@@ -169,6 +169,8 @@ def train(args):
     best_f = -1
     best_oov = -1
     best_geo = -1
+    best_r_geo = -1
+    best_p_geo = -1
 
     history = {'epoch': [], 'p': [], 'r': [], 'f': [], 'oov': [],'geo':[]}
     num_of_no_improvement = 0
@@ -225,6 +227,7 @@ def train(args):
                     optimizer.step()
                     optimizer.zero_grad()
                     global_step += 1
+
 
             seg_model.to(device)
 
@@ -286,7 +289,7 @@ def train(args):
                     sentence_all.append(sen)
                 p, r, f = cws_evaluate_word_PRF(y_pred_all, y_true_all)
                 oov = cws_evaluate_OOV(y_pred, y_true, sentence_all, word2id)
-                geo = cws_evaluate_geo(y_pred, y_true, sentence_all)
+                geo,rgeo,pgeo = cws_evaluate_geo(y_pred, y_true, sentence_all)
                 logger.info('OOV: %f' % oov)
                 logger.info('GEO: %f' % geo)
                 history['epoch'].append(epoch)
@@ -322,6 +325,8 @@ def train(args):
                     best_f = f
                     best_oov = oov
                     best_geo = geo
+                    best_r_geo = rgeo
+                    best_p_geo = pgeo
 
                     num_of_no_improvement = 0
 
@@ -344,6 +349,7 @@ def train(args):
                             uncoop_rate=uncoop_count/wrong_count
                             writer.write("\n %d" % wrong_count)
                             writer.write("\nP: %f, R: %f, F: %f, OOV: %f, GEO: %f" % (best_p, best_r, best_f, best_oov, best_geo))
+                            writer.write("\nPgeo: %f, Rgeo: %f, Fgeo: %f" % (best_p_geo,best_r_geo,best_geo))
                         word_count,geo_word_count,geo_wrong_word_count,Rgeo=statistics.stat_all(args.eval_data_path, os.path.join(output_model_dir, 'CWS_result.txt'),output_model_dir)
                         # with open(os.path.join(output_model_dir, 'CWS_result.txt'), "a") as writer:
                         #     writer.write("\nword_num: %d, geo_word_num: %d, geo_wrong_word_num: %d,R_geo %f"%(word_count,geo_word_count,geo_wrong_word_count,Rgeo))
@@ -372,6 +378,8 @@ def train(args):
             if num_of_no_improvement >= patient:
                 logger.info('\nEarly stop triggered at epoch %d\n' % epoch)
                 break
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
 
         logger.info("\n=======best f entity level========")
         logger.info("\nEpoch: %d, P: %f, R: %f, F: %f, OOV: %f, GEO: %f\n", best_epoch, best_p, best_r, best_f, best_oov, best_geo)
@@ -535,6 +543,8 @@ def self_train(args):
     best_f = -1
     best_oov = -1
     best_geo = -1
+    best_r_geo = -1
+    best_p_geo = -1
 
     history = {'epoch': [], 'p': [], 'r': [], 'f': [], 'oov': [],'geo':[]}
     num_of_no_improvement = 0
@@ -598,6 +608,8 @@ def self_train(args):
                     optimizer.zero_grad()
                     global_step += 1
 
+
+
                 #self-train in this batch
                 if batch_mix:
                     r=int(len(self_train_examples)/len(train_examples))
@@ -644,7 +656,8 @@ def self_train(args):
                             optimizer.step()
                             optimizer.zero_grad()
                             global_step += 1
-
+                if torch.cuda.is_available():
+                    torch.cuda.empty_cache()
             if not batch_mix:
                 for step, start_index in enumerate(tqdm(range(0, len(self_train_examples), args.train_batch_size))):
                     seg_model.train()
@@ -747,7 +760,7 @@ def self_train(args):
                     sentence_all.append(sen)
                 p, r, f = cws_evaluate_word_PRF(y_pred_all, y_true_all)
                 oov = cws_evaluate_OOV(y_pred, y_true, sentence_all, word2id)
-                geo = cws_evaluate_geo(y_pred, y_true, sentence_all)
+                geo,rgeo,pgeo = cws_evaluate_geo(y_pred, y_true, sentence_all)
                 logger.info('OOV: %f' % oov)
                 logger.info('GEO: %f' % geo)
                 history['epoch'].append(epoch)
@@ -776,13 +789,16 @@ def self_train(args):
                             logger.info("=======token level========")
                             writer.write(report)
 
-                if f > best_f:
+                if geo > best_geo:
                     best_epoch = epoch + 1
                     best_p = p
                     best_r = r
                     best_f = f
                     best_oov = oov
                     best_geo = geo
+                    best_r_geo = rgeo
+                    best_p_geo = pgeo
+
                     num_of_no_improvement = 0
 
                     if args.model_name:
@@ -805,6 +821,7 @@ def self_train(args):
                             uncoop_rate = uncoop_count / wrong_count
                             writer.write("\n %f" % wrong_count)
                             writer.write("\nP: %f, R: %f, F: %f, OOV: %f, GEO: %f" % (best_p, best_r, best_f, best_oov,best_geo))
+                            writer.write("\nPgeo: %f, Rgeo: %f, Fgeo: %f" % (best_p_geo, best_r_geo, best_geo))
                         word_count,geo_word_count,geo_wrong_word_count,Rgeo=statistics.stat_all(args.eval_data_path, os.path.join(output_model_dir, 'CWS_result.txt'),output_model_dir)
                         # with open(os.path.join(output_model_dir, 'CWS_result.txt'), "a") as writer:
                         #     writer.write("\nword_num: %d, geo_word_num: %d, geo_wrong_word_num: %d, R_geo %f"%(word_count,geo_word_count,geo_wrong_word_count,Rgeo))
@@ -940,7 +957,7 @@ def test(args):
 
     p, r, f = cws_evaluate_word_PRF(y_pred_all, y_true_all)
     oov = cws_evaluate_OOV(y_pred, y_true, sentence_all, word2id)
-    geo = cws_evaluate_geo(y_pred, y_true,sentence_all)
+    geo,rgeo,pgeo = cws_evaluate_geo(y_pred, y_true,sentence_all)
 
     now_time = datetime.datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
     with open(os.path.join('./', 'CWS_result_{0}.txt'.format(now_time)), "w") as writer:
@@ -964,6 +981,7 @@ def test(args):
         uncoop_rate = uncoop_count / wrong_count
         writer.write("\n %d" % wrong_count)
         writer.write("\nP: %f, R: %f, F: %f, OOV: %f, GEO: %f" % (p, r, f, oov,geo))
+        writer.write("\nPgeo: %f, Rgeo: %f, Fgeo: %f" % (pgeo, rgeo, geo))
     word_count, geo_word_count, geo_wrong_word_count,Rgeo = statistics.stat_all(args.eval_data_path,os.path.join('./','CWS_result_{0}.txt'.format(now_time)),'./')
     # with open(os.path.join('./', 'CWS_result_{0}.txt'.format(now_time)), "a") as writer:
     #     writer.write("\nword_num: %d, geo_word_num: %d, geo_wrong_word_num: %d,R_geo: %f" % (word_count, geo_word_count, geo_wrong_word_count,Rgeo))
@@ -1021,6 +1039,9 @@ def predict_uc(args):
     print("device: {} n_gpu: {}, distributed training: {}, 16-bits training: {}".format(
         device, n_gpu, bool(args.local_rank != -1), args.fp16))
 
+    random.seed(args.seed)
+    np.random.seed(args.seed)
+    torch.manual_seed(args.seed)
 
     #预测的次数
     predict_num=6
@@ -1069,7 +1090,7 @@ def predict_uc(args):
 
         #计算不确定性和置信度
         con_probs_list=[]
-        u_th, c_th= 1 , 0.5
+        u_th, c_th= args.u_th , args.c_th
 
         for i in range(predict_num):
             with torch.no_grad():
@@ -1109,6 +1130,8 @@ def predict_uc(args):
                     break
                 else:
                     temp.append(label_map[logits[i][j]])
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
 
 
     out_tsv=""
@@ -1116,9 +1139,6 @@ def predict_uc(args):
     with open(args.output_file, 'w', encoding='utf8') as writer:
         for i in range(len(y_pred)):
             sentence = eval_examples[i].text_a
-            #如果预测结果包含O则跳过此句
-            # if 'O' in y_pred[i]:
-            #     continue
             _, seg_pred_str,seg_wrong_str,label_seg_true_str,label_seg_pred_str,wrong_num,uncoop_num = eval_sentence(y_pred[i], None, sentence, word2id)
             for idx in range(len(seg_pred_str)):
                 if seg_pred_str[idx]==' ':
@@ -1307,6 +1327,17 @@ def main():
                         default=0.5,
                         type=float,
                         help="The initial lambda_rate for self-train loss.")
+
+    parser.add_argument("--c_th",
+                        default=0.7,
+                        type=float,
+                        help="The initial uncertainty threshold for pseudo-label selection.")
+
+    parser.add_argument("--u_th",
+                        default=0.8,
+                        type=float,
+                        help="The initial uncertainty threshold for pseudo-label selection.")
+
     parser.add_argument("--learning_rate",
                         default=5e-5,
                         type=float,
@@ -1354,7 +1385,7 @@ def main():
     parser.add_argument("--use_memory",
                         action='store_true',
                         help="Whether to run training.")
-    parser.add_argument("--use_gcn",
+    parser.add_argument("--use_cnn",
                         action='store_true',
                         help="Whether to run training.")
     parser.add_argument('--decoder', type=str, default='crf',

@@ -1,30 +1,4 @@
-# WMSeg
-
-This is the implementation of [Improving  Chinese  Word  Segmentation  with  Wordhood  Memory  Networks](https://www.aclweb.org/anthology/2020.acl-main.734/) at ACL2020.
-
-Please contact Yuanhe Tian at `yhtian@uw.edu` if you have any questions.
-
-**Visit our [homepage](https://github.com/synlp/.github) to find more our recent research and softwares for NLP (e.g., pre-trained LM, POS tagging, NER, sentiment analysis, relation extraction, datasets, etc.).**
-
-## Upgrades of WMSeg
-
-We are improving our WMSeg. For updates, please visit [HERE](https://github.com/synlp/WMSeg).
-
-## Citation
-
-If you use or extend our work, please cite our paper at ACL2020.
-
-```
-@inproceedings{tian-etal-2020-improving,
-    title = "Improving Chinese Word Segmentation with Wordhood Memory Networks",
-    author = "Tian, Yuanhe and Song, Yan and Xia, Fei and Zhang, Tong and Wang, Yonggang",
-    booktitle = "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
-    month = jul,
-    year = "2020",
-    address = "Online",
-    pages = "8274--8285",
-}
-```
+# GeoCWS
 
 ## Requirements
 
@@ -32,7 +6,7 @@ Our code works with the following environment.
 * `python=3.6`
 * `pytorch=1.1`
 
-## Downloading BERT, ZEN and WMSeg
+## Downloading BERT, ZEN
 
 In our paper, we use BERT ([paper](https://www.aclweb.org/anthology/N19-1423/)) and ZEN ([paper](https://arxiv.org/abs/1911.00720)) as the encoder.
 
@@ -40,27 +14,19 @@ For BERT, please download pre-trained BERT-Base Chinese from [Google](https://gi
 
 For ZEN, you can download the pre-trained model from [here](https://github.com/sinovation/ZEN).
 
-For WMSeg, you can download the models we trained in our experiments from [here](https://github.com/SVAIGBA/WMSeg/tree/master/models).
-
-## Run on Sample Data
-
-Run `run_sample.sh` to train a model on the small sample data under the `sample_data` directory.
-
 ## Datasets
 
-We use [SIGHAN2005](http://sighan.cs.uchicago.edu/bakeoff2005/) and [CTB6](https://catalog.ldc.upenn.edu/LDC2007T36) in our paper.
-
-To obtain and pre-process the data, please go to `data_preprocessing` directory and run `getdata.sh`. This script will download and process the official data from SIGHAN2005. For CTB6, you need to obtain the official data first, and then put the `LDC07T36` folder under the `data_preprocessing` directory.
-
-All processed data will appear in `data` directory.
+Geo数据集放置在data/mydata/larger中，train.tsv、test.tsv和dev.tsv分别对应着训练集、测试集和开发集，train.unseg对应的未标注数据,self-train.tsv 为伪标签数据（会随着迭代而变化）
 
 ## Training and Testing
 
-You can find the command lines to train and test models on a specific dataset in `run.sh`.
+训练代码的脚本可以参考run_bms_1205.sh
 
 Here are some important parameters:
 
 * `--do_train`: train the model.
+* `--self_train_data_path`: 自训练的伪标签数据位置（tsv）
+* `--lambda_rate`: 自训练伪标签筛选阈值（0-1）
 * `--do_test`: test the model.
 * `--use_bert`: use BERT as encoder.
 * `--use_zen`: use ZEN as encoder.
@@ -74,19 +40,21 @@ Here are some important parameters:
 
 ## Predicting
 
-`run_sample.sh` contains the command line to segment the sentences in an input file (`./sample_data/sentence.txt`).
-
 Here are some important parameters:
 
 * `--do_predict`: segment the sentences using a pre-trained WMSeg model.
+* `--do_predict_uc`:基于不确定性感知的伪标签生成
+* `--output_file_tsv`：伪标签tsv文件输出位置
 * `--input_file`: the file contains sentences to be segmented. Each line contains one sentence; you can refer to [a sample input file](./sample_data/sentence.txt) for the input format.
 * `--output_file`: the path of the output file. Words are segmented by a space.
 * `--eval_model`: the pre-trained WMSeg model to be used to segment the sentences in the input file.
 
-## To-do List
+## LLM-GeoCWS
 
-* Check our new [GitHub Repository](https://github.com/synlp/WMSeg) for upgrades of WMSeg.
+此模块主要是ChatGPT文件夹中chatgpt_cws.py部分，cws_rag()为利用rag功能提示GPT-4o模型进行分词，cws()为直接利用GPT-4o进行分词。此部分可以将数据增强后的切分文本加到self_train_data_path中的数据之后以扩充数据集，此部分与前面几个部分并未做整合，需要单独创建一个python的虚拟环境（openai 1.52.0与pytorch1.1存在冲突）。
 
-You can leave comments in the `Issues` section, if you want us to implement any functions.
+* python 3.9.20
+* pymilvus 2.5.2
+* openai 1.52.0
+* torch 2.5.1
 
-You can check our updates at [updates.md](./updates.md).

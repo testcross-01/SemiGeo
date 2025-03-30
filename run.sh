@@ -19,7 +19,7 @@ mkdir logs
 python wmseg_main.py --do_train --train_data_path=./data/msr/train.tsv --eval_data_path=./data/msr/test.tsv --use_bert --bert_model=/path/to/bert/model --use_memory --decoder=crf --max_seq_length=300 --max_ngram_size=300 --train_batch_size=16 --eval_batch_size=16 --num_train_epochs=50 --warmup_proportion=0.1 --learning_rate=1e-5 --ngram_num_threshold=5 --patient=10 --ngram_flag=av --av_threshold=6 --model_name=msr_bert_memory_crf
 
 # msr zen
-python wmseg_main.py --do_train --train_data_path=./data/msr/train.tsv --eval_data_path=./data/msr/test.tsv --use_zen --bert_model=/path/to/zen/model --use_memory --decoder=crf --max_seq_length=300 --max_ngram_size=300 --train_batch_size=16 --eval_batch_size=16 --num_train_epochs=50 --warmup_proportion=0.1 --learning_rate=1e-5 --ngram_num_threshold=5 --patient=10 --ngram_flag=av --av_threshold=6 --model_name=msr_zen_memory_crf
+python wmseg_main.py --do_train --train_data_path=./data/msr/train.tsv --eval_data_path=./data/msr/test.tsv --use_zen --bert_model=/opt/Projects/Python/WMSeg/models/Zen --use_memory --decoder=crf --max_seq_length=300 --max_ngram_size=300 --train_batch_size=16 --eval_batch_size=16 --num_train_epochs=50 --warmup_proportion=0.1 --learning_rate=1e-5 --ngram_num_threshold=5 --patient=10 --ngram_flag=av --av_threshold=6 --model_name=msr_zen_memory_crf
 
 
 # pku bert

@@ -41,26 +41,56 @@ class CovNet(nn.Module):
     def __init__(self):
         super(CovNet, self).__init__()
         self.layer1 = nn.Sequential(
-            nn.Conv2d(1, 1, kernel_size=3, stride=1, padding=1),
+            # nn.ReplicationPad2d(1),
+            nn.Conv2d(1, 16, kernel_size=(3,1), padding=(1,0),stride=1),
             nn.ReLU()
             #nn.MaxPool2d(kernel_size=2, stride=2)
         )
-        # self.layer2 = nn.Sequential(
-        #     nn.Conv2d(32, 1, kernel_size=1, stride=1),
-        #     nn.Upsample(scale_factor=2, mode='nearest')
+        self.layer2 = nn.Sequential(
+            # nn.ReplicationPad2d(1),
+            nn.Conv2d(16, 32, kernel_size=(3, 1), padding=(1, 0), stride=1),
+            nn.ReLU()
+            # nn.MaxPool2d(kernel_size=2, stride=2)
+        )
+        self.layer3 = nn.Sequential(
+            # nn.ReplicationPad2d(1),
+            nn.Conv2d(32, 1, kernel_size=(3,1),padding=(1,0), stride=1),
+            nn.ReLU()
+            # nn.MaxPool2d(kernel_size=2, stride=2)
+        )
+        # self.layer3 = nn.Sequential(
+        #     # nn.ReplicationPad2d(1),
+        #     nn.Conv2d(32, 32, kernel_size=3, stride=1),
+        #     nn.ReLU()
+        #     # nn.MaxPool2d(kernel_size=2, stride=2)
+        # )
+        # self.layer4 = nn.Sequential(
+        #     nn.ReplicationPad2d(1),
+        #     nn.Conv2d(32, 32, kernel_size=3, stride=1),
+        #     nn.ReLU()
+        #     # nn.MaxPool2d(kernel_size=2, stride=2)
+        # )
+        # self.layer5 = nn.Sequential(
+        #     nn.ReplicationPad2d(1),
+        #     nn.Conv2d(32, 1, kernel_size=3, stride=1),
+        #     nn.ReLU()
         # )
 
 
     def forward(self, hidden_state,labels):
-        input=hidden_state.clone()
-        input[labels==6]=0
-        input[labels==7]=0
+        input=hidden_state
+        # input=hidden_state.clone()
+        # input[labels==6]=0
+        # input[labels==7]=0
         input = input.unsqueeze(1)
         output = self.layer1(input)
-        #output = self.layer2(output)
+        output = self.layer2(output)
+        output = self.layer3(output)
+        # output = self.layer4(output)
+        # output = self.layer5(output)
         output = output.squeeze(1)
-        output[labels == 6] = 0
-        output[labels == 7] = 0
+        #output[labels == 6] = 0
+        #output[labels == 7] = 0
 
         #tmp=output.permute(0,2,1,3).permute(0,1,3,2)
         #output = tmp.squeeze(2)
@@ -201,15 +231,17 @@ class WMSeg(nn.Module):
         return  con_probs
 
 
-
-
-
     def forward(self, input_ids, token_type_ids=None, attention_mask=None, labels=None, valid_ids=None,
                 attention_mask_label=None, word_seq=None, label_value_matrix=None, word_mask=None,
-                input_ngram_ids=None, ngram_position_matrix=None):
-
+                input_ngram_ids=None, ngram_position_matrix=None, uc_enable=False):
+        if uc_enable:
+            total_loss, tag_seq,logits = self.forward_uc(input_ids, token_type_ids, attention_mask, labels, valid_ids,
+                attention_mask_label, word_seq, label_value_matrix, word_mask,
+                input_ngram_ids, ngram_position_matrix)
+            return total_loss, tag_seq,logits
         if self.bert is not None:
             sequence_output, _ = self.bert(input_ids, token_type_ids, attention_mask, output_all_encoded_layers=False)
+            #sequence_output_clone=sequence_output.clone()
         elif self.zen is not None:
             sequence_output, _ = self.zen(input_ids, input_ngram_ids=input_ngram_ids,
                                           ngram_position_matrix=ngram_position_matrix,
@@ -225,7 +257,7 @@ class WMSeg(nn.Module):
 
         if self.cnn is not None:
             sequence_output = self.cnn(sequence_output,labels)
-
+        
 
         sequence_output = self.dropout(sequence_output)
 

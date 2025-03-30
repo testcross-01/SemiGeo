@@ -78,15 +78,19 @@ def cws_evaluate_word_PRF(y_pred, y):
     P = cor_num / float(yp_wordnum) if yp_wordnum > 0 else -1
     R = cor_num / float(yt_wordnum) if yt_wordnum > 0 else -1
     F = 2 * P * R / (P + R)
-    print('P: ', P)
-    print('R: ', R)
-    print('F: ', F)
+    # print('P: ', P)
+    # print('R: ', R)
+    # print('F: ', F)
     return P, R, F
 
-def cws_evaluate_geo(y_pred_list, y_list, sentence_list):
-    dict_path='data_preprocessing/mydata/geo_words_clear.txt'
+def cws_evaluate_geo(y_pred_list, y_list, sentence_list,is_complex=True):
+    if is_complex:
+        dict_path='data_preprocessing/mydata/geo_words_clear.txt'
+    else:
+        dict_path='data_preprocessing/mydata/geo_words_clear_1.txt'
+
     words = []
-    with open(dict_path, 'r') as d:
+    with open(dict_path, 'r',encoding='utf-8', ) as d:
         words_raw = d.readlines()
         words = []
         output_txt = ''

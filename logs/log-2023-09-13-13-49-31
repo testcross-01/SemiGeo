@@ -1,0 +1,294 @@
+09/13/2023 13:49:32 - INFO - pytorch_pretrained_zen.modeling -   Better speed can be achieved with apex installed from https://www.github.com/nvidia/apex .
+09/13/2023 13:49:32 - INFO - __main__ -   {'do_train': True, 'do_test': False, 'do_predict': False, 'do_predict_uc': False, 'train_data_path': './data/mydata/larger/train.tsv', 'self_train_data_path': None, 'eval_data_path': './data/mydata/larger/test.tsv', 'input_file': None, 'output_file': None, 'output_file_tsv': None, 'use_bert': True, 'use_zen': False, 'bert_model': '/opt/Projects/Models/bert-base-chinese', 'eval_model': None, 'cache_dir': '', 'max_seq_length': 300, 'max_ngram_size': 300, 'do_lower_case': False, 'train_batch_size': 16, 'eval_batch_size': 16, 'lambda_rate': 0.5, 'learning_rate': 1e-05, 'num_train_epochs': 50.0, 'warmup_proportion': 0.1, 'no_cuda': False, 'local_rank': -1, 'seed': 42, 'gradient_accumulation_steps': 1, 'fp16': False, 'loss_scale': 0, 'server_ip': '', 'server_port': '', 'patient': 10, 'ngram_num_threshold': 2, 'av_threshold': 3, 'max_ngram_length': 5, 'model_name': 'bert_memory_softmax', 'use_memory': True, 'use_gcn': False, 'decoder': 'softmax', 'ngram_flag': 'av', 'save_top': 1}
+09/13/2023 13:49:32 - INFO - __main__ -   device: cuda n_gpu: 1, distributed training: False, 16-bits training: False
+09/13/2023 13:49:32 - INFO - __main__ -   # of word in train: 642: 
+09/13/2023 13:49:32 - INFO - __main__ -   # of n-gram in memory: 1110
+09/13/2023 13:49:32 - INFO - pytorch_pretrained_bert.tokenization -   loading vocabulary file /opt/Projects/Models/bert-base-chinese/vocab.txt
+09/13/2023 13:49:32 - INFO - pytorch_pretrained_bert.modeling -   loading weights file /opt/Projects/Models/bert-base-chinese/pytorch_model.bin
+09/13/2023 13:49:32 - INFO - pytorch_pretrained_bert.modeling -   loading configuration file /opt/Projects/Models/bert-base-chinese/config.json
+09/13/2023 13:49:32 - INFO - pytorch_pretrained_bert.modeling -   Model config {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 21128
+}
+
+09/13/2023 13:49:33 - INFO - __main__ -   # of trainable parameters: 103133952
+09/13/2023 13:49:33 - INFO - __main__ -   ***** Running training *****
+09/13/2023 13:49:33 - INFO - __main__ -     Num examples = 63
+09/13/2023 13:49:33 - INFO - __main__ -     Batch size = 16
+09/13/2023 13:49:33 - INFO - __main__ -     Num steps = 150
+09/13/2023 13:49:37 - INFO - __main__ -   OOV: 0.031746
+09/13/2023 13:49:37 - INFO - __main__ -   =======entity level========
+09/13/2023 13:49:37 - INFO - __main__ -   
+Epoch: 1, P: 0.150216, R: 0.145644, F: 0.147894, OOV: 0.031746
+09/13/2023 13:49:37 - INFO - __main__ -   =======entity level========
+09/13/2023 13:49:41 - INFO - __main__ -   OOV: 0.019101
+09/13/2023 13:49:41 - INFO - __main__ -   =======entity level========
+09/13/2023 13:49:41 - INFO - __main__ -   
+Epoch: 2, P: 0.402640, R: 0.196120, F: 0.263765, OOV: 0.019101
+09/13/2023 13:49:41 - INFO - __main__ -   =======entity level========
+09/13/2023 13:49:45 - INFO - __main__ -   OOV: 0.293247
+09/13/2023 13:49:45 - INFO - __main__ -   =======entity level========
+09/13/2023 13:49:45 - INFO - __main__ -   
+Epoch: 3, P: 0.473341, R: 0.544207, F: 0.506306, OOV: 0.293247
+09/13/2023 13:49:45 - INFO - __main__ -   =======entity level========
+09/13/2023 13:49:50 - INFO - __main__ -   OOV: 0.613936
+09/13/2023 13:49:50 - INFO - __main__ -   =======entity level========
+09/13/2023 13:49:50 - INFO - __main__ -   
+Epoch: 4, P: 0.768945, R: 0.753617, F: 0.761204, OOV: 0.613936
+09/13/2023 13:49:50 - INFO - __main__ -   =======entity level========
+09/13/2023 13:49:54 - INFO - __main__ -   OOV: 0.697875
+09/13/2023 13:49:54 - INFO - __main__ -   =======entity level========
+09/13/2023 13:49:54 - INFO - __main__ -   
+Epoch: 5, P: 0.849339, R: 0.819848, F: 0.834333, OOV: 0.697875
+09/13/2023 13:49:54 - INFO - __main__ -   =======entity level========
+09/13/2023 13:49:59 - INFO - __main__ -   OOV: 0.739575
+09/13/2023 13:49:59 - INFO - __main__ -   =======entity level========
+09/13/2023 13:49:59 - INFO - __main__ -   
+Epoch: 6, P: 0.852273, R: 0.860036, F: 0.856137, OOV: 0.739575
+09/13/2023 13:49:59 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:03 - INFO - __main__ -   OOV: 0.767824
+09/13/2023 13:50:03 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:03 - INFO - __main__ -   
+Epoch: 7, P: 0.892333, R: 0.866895, F: 0.879430, OOV: 0.767824
+09/13/2023 13:50:03 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:08 - INFO - __main__ -   OOV: 0.768631
+09/13/2023 13:50:08 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:08 - INFO - __main__ -   
+Epoch: 8, P: 0.880137, R: 0.879005, F: 0.879571, OOV: 0.768631
+09/13/2023 13:50:08 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:12 - INFO - __main__ -   OOV: 0.775895
+09/13/2023 13:50:12 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:12 - INFO - __main__ -   
+Epoch: 9, P: 0.896934, R: 0.874826, F: 0.885742, OOV: 0.775895
+09/13/2023 13:50:12 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:16 - INFO - __main__ -   OOV: 0.778585
+09/13/2023 13:50:16 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:16 - INFO - __main__ -   
+Epoch: 10, P: 0.901024, R: 0.877076, F: 0.888889, OOV: 0.778585
+09/13/2023 13:50:16 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:21 - INFO - __main__ -   OOV: 0.784773
+09/13/2023 13:50:21 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:21 - INFO - __main__ -   
+Epoch: 11, P: 0.898436, R: 0.886400, F: 0.892377, OOV: 0.784773
+09/13/2023 13:50:21 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:25 - INFO - __main__ -   OOV: 0.784773
+09/13/2023 13:50:25 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:25 - INFO - __main__ -   
+Epoch: 12, P: 0.905257, R: 0.885757, F: 0.895401, OOV: 0.784773
+09/13/2023 13:50:25 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:30 - INFO - __main__ -   OOV: 0.771052
+09/13/2023 13:50:30 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:30 - INFO - __main__ -   
+Epoch: 13, P: 0.905404, R: 0.870861, F: 0.887796, OOV: 0.771052
+09/13/2023 13:50:30 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:33 - INFO - __main__ -   OOV: 0.775087
+09/13/2023 13:50:33 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:33 - INFO - __main__ -   
+Epoch: 14, P: 0.904667, R: 0.876648, F: 0.890437, OOV: 0.775087
+09/13/2023 13:50:33 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:37 - INFO - __main__ -   OOV: 0.791499
+09/13/2023 13:50:37 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:37 - INFO - __main__ -   
+Epoch: 15, P: 0.891979, R: 0.890258, F: 0.891118, OOV: 0.791499
+09/13/2023 13:50:37 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:41 - INFO - __main__ -   OOV: 0.793382
+09/13/2023 13:50:41 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:41 - INFO - __main__ -   
+Epoch: 16, P: 0.893912, R: 0.892187, F: 0.893049, OOV: 0.793382
+09/13/2023 13:50:41 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:44 - INFO - __main__ -   OOV: 0.792575
+09/13/2023 13:50:44 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:44 - INFO - __main__ -   
+Epoch: 17, P: 0.899805, R: 0.889294, F: 0.894518, OOV: 0.792575
+09/13/2023 13:50:44 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:48 - INFO - __main__ -   OOV: 0.785311
+09/13/2023 13:50:48 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:48 - INFO - __main__ -   
+Epoch: 18, P: 0.902250, R: 0.885328, F: 0.893709, OOV: 0.785311
+09/13/2023 13:50:48 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:51 - INFO - __main__ -   OOV: 0.782082
+09/13/2023 13:50:51 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:51 - INFO - __main__ -   
+Epoch: 19, P: 0.904496, R: 0.884042, F: 0.894152, OOV: 0.782082
+09/13/2023 13:50:51 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:55 - INFO - __main__ -   OOV: 0.782351
+09/13/2023 13:50:55 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:55 - INFO - __main__ -   
+Epoch: 20, P: 0.904569, R: 0.884793, F: 0.894571, OOV: 0.782351
+09/13/2023 13:50:55 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:58 - INFO - __main__ -   OOV: 0.790691
+09/13/2023 13:50:58 - INFO - __main__ -   =======entity level========
+09/13/2023 13:50:58 - INFO - __main__ -   
+Epoch: 21, P: 0.903057, R: 0.889508, F: 0.896232, OOV: 0.790691
+09/13/2023 13:50:58 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:03 - INFO - __main__ -   OOV: 0.794458
+09/13/2023 13:51:03 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:03 - INFO - __main__ -   
+Epoch: 22, P: 0.896389, R: 0.893795, F: 0.895090, OOV: 0.794458
+09/13/2023 13:51:03 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:06 - INFO - __main__ -   OOV: 0.795265
+09/13/2023 13:51:06 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:06 - INFO - __main__ -   
+Epoch: 23, P: 0.903285, R: 0.892830, F: 0.898027, OOV: 0.795265
+09/13/2023 13:51:06 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:11 - INFO - __main__ -   OOV: 0.790422
+09/13/2023 13:51:11 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:11 - INFO - __main__ -   
+Epoch: 24, P: 0.908435, R: 0.889937, F: 0.899091, OOV: 0.790422
+09/13/2023 13:51:11 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:15 - INFO - __main__ -   OOV: 0.786656
+09/13/2023 13:51:15 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:15 - INFO - __main__ -   
+Epoch: 25, P: 0.911273, R: 0.887150, F: 0.899050, OOV: 0.786656
+09/13/2023 13:51:15 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:19 - INFO - __main__ -   OOV: 0.786387
+09/13/2023 13:51:19 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:19 - INFO - __main__ -   
+Epoch: 26, P: 0.912099, R: 0.886293, F: 0.899011, OOV: 0.786387
+09/13/2023 13:51:19 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:22 - INFO - __main__ -   OOV: 0.787194
+09/13/2023 13:51:22 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:22 - INFO - __main__ -   
+Epoch: 27, P: 0.911826, R: 0.886615, F: 0.899044, OOV: 0.787194
+09/13/2023 13:51:22 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:26 - INFO - __main__ -   OOV: 0.787194
+09/13/2023 13:51:26 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:26 - INFO - __main__ -   
+Epoch: 28, P: 0.911613, R: 0.887579, F: 0.899435, OOV: 0.787194
+09/13/2023 13:51:26 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:30 - INFO - __main__ -   OOV: 0.788539
+09/13/2023 13:51:30 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:30 - INFO - __main__ -   
+Epoch: 29, P: 0.911380, R: 0.888329, F: 0.899707, OOV: 0.788539
+09/13/2023 13:51:30 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:35 - INFO - __main__ -   OOV: 0.788270
+09/13/2023 13:51:35 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:35 - INFO - __main__ -   
+Epoch: 30, P: 0.910808, R: 0.888651, F: 0.899593, OOV: 0.788270
+09/13/2023 13:51:35 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:38 - INFO - __main__ -   OOV: 0.789077
+09/13/2023 13:51:38 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:38 - INFO - __main__ -   
+Epoch: 31, P: 0.910657, R: 0.889187, F: 0.899794, OOV: 0.789077
+09/13/2023 13:51:38 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:43 - INFO - __main__ -   OOV: 0.789615
+09/13/2023 13:51:43 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:43 - INFO - __main__ -   
+Epoch: 32, P: 0.910487, R: 0.889508, F: 0.899875, OOV: 0.789615
+09/13/2023 13:51:43 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:47 - INFO - __main__ -   OOV: 0.790691
+09/13/2023 13:51:47 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:47 - INFO - __main__ -   
+Epoch: 33, P: 0.910426, R: 0.889937, F: 0.900065, OOV: 0.790691
+09/13/2023 13:51:47 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:51 - INFO - __main__ -   OOV: 0.791229
+09/13/2023 13:51:51 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:51 - INFO - __main__ -   
+Epoch: 34, P: 0.910346, R: 0.890151, F: 0.900135, OOV: 0.791229
+09/13/2023 13:51:51 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:56 - INFO - __main__ -   OOV: 0.790422
+09/13/2023 13:51:56 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:56 - INFO - __main__ -   
+Epoch: 35, P: 0.909918, R: 0.889830, F: 0.899762, OOV: 0.790422
+09/13/2023 13:51:56 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:59 - INFO - __main__ -   OOV: 0.790153
+09/13/2023 13:51:59 - INFO - __main__ -   =======entity level========
+09/13/2023 13:51:59 - INFO - __main__ -   
+Epoch: 36, P: 0.909709, R: 0.889722, F: 0.899604, OOV: 0.790153
+09/13/2023 13:51:59 - INFO - __main__ -   =======entity level========
+09/13/2023 13:52:03 - INFO - __main__ -   OOV: 0.790691
+09/13/2023 13:52:03 - INFO - __main__ -   =======entity level========
+09/13/2023 13:52:03 - INFO - __main__ -   
+Epoch: 37, P: 0.909828, R: 0.889937, F: 0.899772, OOV: 0.790691
+09/13/2023 13:52:03 - INFO - __main__ -   =======entity level========
+09/13/2023 13:52:04 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:06 - INFO - __main__ -   OOV: 0.790960
+09/13/2023 13:52:06 - INFO - __main__ -   =======entity level========
+09/13/2023 13:52:06 - INFO - __main__ -   
+Epoch: 38, P: 0.909838, R: 0.890044, F: 0.899832, OOV: 0.790960
+09/13/2023 13:52:06 - INFO - __main__ -   =======entity level========
+09/13/2023 13:52:07 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:07 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:08 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:08 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:10 - INFO - __main__ -   OOV: 0.790960
+09/13/2023 13:52:10 - INFO - __main__ -   =======entity level========
+09/13/2023 13:52:10 - INFO - __main__ -   
+Epoch: 39, P: 0.909838, R: 0.890044, F: 0.899832, OOV: 0.790960
+09/13/2023 13:52:10 - INFO - __main__ -   =======entity level========
+09/13/2023 13:52:10 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:11 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:11 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:11 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:14 - INFO - __main__ -   OOV: 0.790960
+09/13/2023 13:52:14 - INFO - __main__ -   =======entity level========
+09/13/2023 13:52:14 - INFO - __main__ -   
+Epoch: 40, P: 0.909838, R: 0.890044, F: 0.899832, OOV: 0.790960
+09/13/2023 13:52:14 - INFO - __main__ -   =======entity level========
+09/13/2023 13:52:14 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:14 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:15 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:15 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:17 - INFO - __main__ -   OOV: 0.790960
+09/13/2023 13:52:17 - INFO - __main__ -   =======entity level========
+09/13/2023 13:52:17 - INFO - __main__ -   
+Epoch: 41, P: 0.909838, R: 0.890044, F: 0.899832, OOV: 0.790960
+09/13/2023 13:52:17 - INFO - __main__ -   =======entity level========
+09/13/2023 13:52:18 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:18 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:18 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:19 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:21 - INFO - __main__ -   OOV: 0.790960
+09/13/2023 13:52:21 - INFO - __main__ -   =======entity level========
+09/13/2023 13:52:21 - INFO - __main__ -   
+Epoch: 42, P: 0.909838, R: 0.890044, F: 0.899832, OOV: 0.790960
+09/13/2023 13:52:21 - INFO - __main__ -   =======entity level========
+09/13/2023 13:52:21 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:22 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:22 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:22 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:24 - INFO - __main__ -   OOV: 0.790960
+09/13/2023 13:52:24 - INFO - __main__ -   =======entity level========
+09/13/2023 13:52:24 - INFO - __main__ -   
+Epoch: 43, P: 0.909838, R: 0.890044, F: 0.899832, OOV: 0.790960
+09/13/2023 13:52:24 - INFO - __main__ -   =======entity level========
+09/13/2023 13:52:25 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:25 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:26 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:26 - WARNING - pytorch_pretrained_bert.optimization -   Training beyond specified 't_total'. Learning rate multiplier set to 0.0. Please set 't_total' of WarmupLinearSchedule correctly.
+09/13/2023 13:52:28 - INFO - __main__ -   OOV: 0.790960
+09/13/2023 13:52:28 - INFO - __main__ -   =======entity level========
+09/13/2023 13:52:28 - INFO - __main__ -   
+Epoch: 44, P: 0.909838, R: 0.890044, F: 0.899832, OOV: 0.790960
+09/13/2023 13:52:28 - INFO - __main__ -   =======entity level========
+09/13/2023 13:52:28 - INFO - __main__ -   
+Early stop triggered at epoch 43
+
+09/13/2023 13:52:28 - INFO - __main__ -   
+=======best f entity level========
+09/13/2023 13:52:28 - INFO - __main__ -   
+Epoch: 34, P: 0.910346, R: 0.890151, F: 0.900135, OOV: 0.791229
+
+09/13/2023 13:52:28 - INFO - __main__ -   
+=======best f entity level========

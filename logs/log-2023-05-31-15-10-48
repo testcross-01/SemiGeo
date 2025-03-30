@@ -1,0 +1,162 @@
+05/31/2023 15:10:48 - INFO - pytorch_pretrained_zen.modeling -   Better speed can be achieved with apex installed from https://www.github.com/nvidia/apex .
+05/31/2023 15:10:48 - INFO - __main__ -   {'do_train': True, 'do_test': False, 'do_predict': False, 'train_data_path': './data/mydata/geo/my/train.tsv', 'eval_data_path': './data/mydata/geo/my/test.tsv', 'input_file': None, 'output_file': None, 'use_bert': True, 'use_zen': False, 'bert_model': '/opt/Projects/Python/WMSeg/models/Zen', 'eval_model': None, 'cache_dir': '', 'max_seq_length': 300, 'max_ngram_size': 300, 'do_lower_case': False, 'train_batch_size': 16, 'eval_batch_size': 16, 'learning_rate': 1e-05, 'num_train_epochs': 50.0, 'warmup_proportion': 0.1, 'no_cuda': False, 'local_rank': -1, 'seed': 42, 'gradient_accumulation_steps': 1, 'fp16': False, 'loss_scale': 0, 'server_ip': '', 'server_port': '', 'patient': 10, 'ngram_num_threshold': 2, 'av_threshold': 3, 'max_ngram_length': 5, 'model_name': 'geo_bert_memory_crf', 'use_memory': True, 'decoder': 'crf', 'ngram_flag': 'av', 'save_top': 1}
+05/31/2023 15:10:48 - INFO - __main__ -   device: cuda n_gpu: 1, distributed training: False, 16-bits training: False
+05/31/2023 15:10:48 - INFO - __main__ -   # of word in train: 378: 
+05/31/2023 15:10:48 - INFO - __main__ -   # of n-gram in memory: 205
+05/31/2023 15:10:48 - INFO - pytorch_pretrained_bert.tokenization -   loading vocabulary file /opt/Projects/Python/WMSeg/models/Zen/vocab.txt
+05/31/2023 15:10:48 - INFO - pytorch_pretrained_bert.modeling -   loading weights file /opt/Projects/Python/WMSeg/models/Zen/pytorch_model.bin
+05/31/2023 15:10:48 - INFO - pytorch_pretrained_bert.modeling -   loading configuration file /opt/Projects/Python/WMSeg/models/Zen/config.json
+05/31/2023 15:10:48 - INFO - pytorch_pretrained_bert.modeling -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "num_hidden_word_layers": 6,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 21128,
+  "word_size": 104089
+}
+
+05/31/2023 15:10:49 - INFO - pytorch_pretrained_bert.modeling -   Weights from pretrained model not used in BertModel: ['bert.word_embeddings.word_embeddings.weight', 'bert.word_embeddings.token_type_embeddings.weight', 'bert.word_embeddings.LayerNorm.weight', 'bert.word_embeddings.LayerNorm.bias', 'bert.encoder.word_layers.0.attention.self.query.weight', 'bert.encoder.word_layers.0.attention.self.query.bias', 'bert.encoder.word_layers.0.attention.self.key.weight', 'bert.encoder.word_layers.0.attention.self.key.bias', 'bert.encoder.word_layers.0.attention.self.value.weight', 'bert.encoder.word_layers.0.attention.self.value.bias', 'bert.encoder.word_layers.0.attention.output.dense.weight', 'bert.encoder.word_layers.0.attention.output.dense.bias', 'bert.encoder.word_layers.0.attention.output.LayerNorm.weight', 'bert.encoder.word_layers.0.attention.output.LayerNorm.bias', 'bert.encoder.word_layers.0.intermediate.dense.weight', 'bert.encoder.word_layers.0.intermediate.dense.bias', 'bert.encoder.word_layers.0.output.dense.weight', 'bert.encoder.word_layers.0.output.dense.bias', 'bert.encoder.word_layers.0.output.LayerNorm.weight', 'bert.encoder.word_layers.0.output.LayerNorm.bias', 'bert.encoder.word_layers.1.attention.self.query.weight', 'bert.encoder.word_layers.1.attention.self.query.bias', 'bert.encoder.word_layers.1.attention.self.key.weight', 'bert.encoder.word_layers.1.attention.self.key.bias', 'bert.encoder.word_layers.1.attention.self.value.weight', 'bert.encoder.word_layers.1.attention.self.value.bias', 'bert.encoder.word_layers.1.attention.output.dense.weight', 'bert.encoder.word_layers.1.attention.output.dense.bias', 'bert.encoder.word_layers.1.attention.output.LayerNorm.weight', 'bert.encoder.word_layers.1.attention.output.LayerNorm.bias', 'bert.encoder.word_layers.1.intermediate.dense.weight', 'bert.encoder.word_layers.1.intermediate.dense.bias', 'bert.encoder.word_layers.1.output.dense.weight', 'bert.encoder.word_layers.1.output.dense.bias', 'bert.encoder.word_layers.1.output.LayerNorm.weight', 'bert.encoder.word_layers.1.output.LayerNorm.bias', 'bert.encoder.word_layers.2.attention.self.query.weight', 'bert.encoder.word_layers.2.attention.self.query.bias', 'bert.encoder.word_layers.2.attention.self.key.weight', 'bert.encoder.word_layers.2.attention.self.key.bias', 'bert.encoder.word_layers.2.attention.self.value.weight', 'bert.encoder.word_layers.2.attention.self.value.bias', 'bert.encoder.word_layers.2.attention.output.dense.weight', 'bert.encoder.word_layers.2.attention.output.dense.bias', 'bert.encoder.word_layers.2.attention.output.LayerNorm.weight', 'bert.encoder.word_layers.2.attention.output.LayerNorm.bias', 'bert.encoder.word_layers.2.intermediate.dense.weight', 'bert.encoder.word_layers.2.intermediate.dense.bias', 'bert.encoder.word_layers.2.output.dense.weight', 'bert.encoder.word_layers.2.output.dense.bias', 'bert.encoder.word_layers.2.output.LayerNorm.weight', 'bert.encoder.word_layers.2.output.LayerNorm.bias', 'bert.encoder.word_layers.3.attention.self.query.weight', 'bert.encoder.word_layers.3.attention.self.query.bias', 'bert.encoder.word_layers.3.attention.self.key.weight', 'bert.encoder.word_layers.3.attention.self.key.bias', 'bert.encoder.word_layers.3.attention.self.value.weight', 'bert.encoder.word_layers.3.attention.self.value.bias', 'bert.encoder.word_layers.3.attention.output.dense.weight', 'bert.encoder.word_layers.3.attention.output.dense.bias', 'bert.encoder.word_layers.3.attention.output.LayerNorm.weight', 'bert.encoder.word_layers.3.attention.output.LayerNorm.bias', 'bert.encoder.word_layers.3.intermediate.dense.weight', 'bert.encoder.word_layers.3.intermediate.dense.bias', 'bert.encoder.word_layers.3.output.dense.weight', 'bert.encoder.word_layers.3.output.dense.bias', 'bert.encoder.word_layers.3.output.LayerNorm.weight', 'bert.encoder.word_layers.3.output.LayerNorm.bias', 'bert.encoder.word_layers.4.attention.self.query.weight', 'bert.encoder.word_layers.4.attention.self.query.bias', 'bert.encoder.word_layers.4.attention.self.key.weight', 'bert.encoder.word_layers.4.attention.self.key.bias', 'bert.encoder.word_layers.4.attention.self.value.weight', 'bert.encoder.word_layers.4.attention.self.value.bias', 'bert.encoder.word_layers.4.attention.output.dense.weight', 'bert.encoder.word_layers.4.attention.output.dense.bias', 'bert.encoder.word_layers.4.attention.output.LayerNorm.weight', 'bert.encoder.word_layers.4.attention.output.LayerNorm.bias', 'bert.encoder.word_layers.4.intermediate.dense.weight', 'bert.encoder.word_layers.4.intermediate.dense.bias', 'bert.encoder.word_layers.4.output.dense.weight', 'bert.encoder.word_layers.4.output.dense.bias', 'bert.encoder.word_layers.4.output.LayerNorm.weight', 'bert.encoder.word_layers.4.output.LayerNorm.bias', 'bert.encoder.word_layers.5.attention.self.query.weight', 'bert.encoder.word_layers.5.attention.self.query.bias', 'bert.encoder.word_layers.5.attention.self.key.weight', 'bert.encoder.word_layers.5.attention.self.key.bias', 'bert.encoder.word_layers.5.attention.self.value.weight', 'bert.encoder.word_layers.5.attention.self.value.bias', 'bert.encoder.word_layers.5.attention.output.dense.weight', 'bert.encoder.word_layers.5.attention.output.dense.bias', 'bert.encoder.word_layers.5.attention.output.LayerNorm.weight', 'bert.encoder.word_layers.5.attention.output.LayerNorm.bias', 'bert.encoder.word_layers.5.intermediate.dense.weight', 'bert.encoder.word_layers.5.intermediate.dense.bias', 'bert.encoder.word_layers.5.output.dense.weight', 'bert.encoder.word_layers.5.output.dense.bias', 'bert.encoder.word_layers.5.output.LayerNorm.weight', 'bert.encoder.word_layers.5.output.LayerNorm.bias']
+05/31/2023 15:10:50 - INFO - __main__ -   # of trainable parameters: 102438976
+05/31/2023 15:10:50 - INFO - __main__ -   ***** Running training *****
+05/31/2023 15:10:50 - INFO - __main__ -     Num examples = 41
+05/31/2023 15:10:50 - INFO - __main__ -     Batch size = 16
+05/31/2023 15:10:50 - INFO - __main__ -     Num steps = 100
+05/31/2023 15:10:51 - INFO - __main__ -   OOV: 0.046575
+05/31/2023 15:10:51 - INFO - __main__ -   =======entity level========
+05/31/2023 15:10:51 - INFO - __main__ -   
+Epoch: 1, P: 0.108401, R: 0.078508, F: 0.091064, OOV: 0.046575
+05/31/2023 15:10:51 - INFO - __main__ -   =======entity level========
+05/31/2023 15:10:53 - INFO - __main__ -   OOV: 0.098630
+05/31/2023 15:10:53 - INFO - __main__ -   =======entity level========
+05/31/2023 15:10:53 - INFO - __main__ -   
+Epoch: 2, P: 0.298120, R: 0.326791, F: 0.311798, OOV: 0.098630
+05/31/2023 15:10:53 - INFO - __main__ -   =======entity level========
+05/31/2023 15:10:54 - INFO - __main__ -   OOV: 0.235616
+05/31/2023 15:10:54 - INFO - __main__ -   =======entity level========
+05/31/2023 15:10:54 - INFO - __main__ -   
+Epoch: 3, P: 0.512671, R: 0.516192, F: 0.514425, OOV: 0.235616
+05/31/2023 15:10:54 - INFO - __main__ -   =======entity level========
+05/31/2023 15:10:56 - INFO - __main__ -   OOV: 0.542466
+05/31/2023 15:10:56 - INFO - __main__ -   =======entity level========
+05/31/2023 15:10:56 - INFO - __main__ -   
+Epoch: 4, P: 0.723404, R: 0.734053, F: 0.728690, OOV: 0.542466
+05/31/2023 15:10:56 - INFO - __main__ -   =======entity level========
+05/31/2023 15:10:57 - INFO - __main__ -   OOV: 0.649315
+05/31/2023 15:10:57 - INFO - __main__ -   =======entity level========
+05/31/2023 15:10:57 - INFO - __main__ -   
+Epoch: 5, P: 0.803427, R: 0.782139, F: 0.792640, OOV: 0.649315
+05/31/2023 15:10:57 - INFO - __main__ -   =======entity level========
+05/31/2023 15:10:59 - INFO - __main__ -   OOV: 0.723288
+05/31/2023 15:10:59 - INFO - __main__ -   =======entity level========
+05/31/2023 15:10:59 - INFO - __main__ -   
+Epoch: 6, P: 0.831361, R: 0.827282, F: 0.829316, OOV: 0.723288
+05/31/2023 15:10:59 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:01 - INFO - __main__ -   OOV: 0.726027
+05/31/2023 15:11:01 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:01 - INFO - __main__ -   
+Epoch: 7, P: 0.832195, R: 0.837095, F: 0.834638, OOV: 0.726027
+05/31/2023 15:11:01 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:02 - INFO - __main__ -   OOV: 0.745205
+05/31/2023 15:11:02 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:02 - INFO - __main__ -   
+Epoch: 8, P: 0.866733, R: 0.848871, F: 0.857709, OOV: 0.745205
+05/31/2023 15:11:02 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:04 - INFO - __main__ -   OOV: 0.772603
+05/31/2023 15:11:04 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:04 - INFO - __main__ -   
+Epoch: 9, P: 0.870155, R: 0.881256, F: 0.875670, OOV: 0.772603
+05/31/2023 15:11:04 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:05 - INFO - __main__ -   OOV: 0.758904
+05/31/2023 15:11:05 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:05 - INFO - __main__ -   
+Epoch: 10, P: 0.876877, R: 0.859666, F: 0.868186, OOV: 0.758904
+05/31/2023 15:11:05 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:06 - INFO - __main__ -   OOV: 0.769863
+05/31/2023 15:11:06 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:06 - INFO - __main__ -   
+Epoch: 11, P: 0.871032, R: 0.861629, F: 0.866305, OOV: 0.769863
+05/31/2023 15:11:06 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:08 - INFO - __main__ -   OOV: 0.767123
+05/31/2023 15:11:08 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:08 - INFO - __main__ -   
+Epoch: 12, P: 0.885772, R: 0.867517, F: 0.876549, OOV: 0.767123
+05/31/2023 15:11:08 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:09 - INFO - __main__ -   OOV: 0.767123
+05/31/2023 15:11:09 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:09 - INFO - __main__ -   
+Epoch: 13, P: 0.894416, R: 0.864573, F: 0.879242, OOV: 0.767123
+05/31/2023 15:11:09 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:11 - INFO - __main__ -   OOV: 0.756164
+05/31/2023 15:11:11 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:11 - INFO - __main__ -   
+Epoch: 14, P: 0.873393, R: 0.866536, F: 0.869951, OOV: 0.756164
+05/31/2023 15:11:11 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:12 - INFO - __main__ -   OOV: 0.764384
+05/31/2023 15:11:12 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:12 - INFO - __main__ -   
+Epoch: 15, P: 0.870588, R: 0.871443, F: 0.871015, OOV: 0.764384
+05/31/2023 15:11:12 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:14 - INFO - __main__ -   OOV: 0.767123
+05/31/2023 15:11:14 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:14 - INFO - __main__ -   
+Epoch: 16, P: 0.866536, R: 0.866536, F: 0.866536, OOV: 0.767123
+05/31/2023 15:11:14 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:15 - INFO - __main__ -   OOV: 0.753425
+05/31/2023 15:11:15 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:15 - INFO - __main__ -   
+Epoch: 17, P: 0.859113, R: 0.855741, F: 0.857424, OOV: 0.753425
+05/31/2023 15:11:15 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:16 - INFO - __main__ -   OOV: 0.756164
+05/31/2023 15:11:16 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:16 - INFO - __main__ -   
+Epoch: 18, P: 0.861933, R: 0.857704, F: 0.859813, OOV: 0.756164
+05/31/2023 15:11:16 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:17 - INFO - __main__ -   OOV: 0.750685
+05/31/2023 15:11:17 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:17 - INFO - __main__ -   
+Epoch: 19, P: 0.869870, R: 0.852797, F: 0.861249, OOV: 0.750685
+05/31/2023 15:11:17 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:19 - INFO - __main__ -   OOV: 0.756164
+05/31/2023 15:11:19 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:19 - INFO - __main__ -   
+Epoch: 20, P: 0.870741, R: 0.852797, F: 0.861676, OOV: 0.756164
+05/31/2023 15:11:19 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:20 - INFO - __main__ -   OOV: 0.753425
+05/31/2023 15:11:20 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:20 - INFO - __main__ -   
+Epoch: 21, P: 0.862784, R: 0.857704, F: 0.860236, OOV: 0.753425
+05/31/2023 15:11:20 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:21 - INFO - __main__ -   OOV: 0.750685
+05/31/2023 15:11:21 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:21 - INFO - __main__ -   
+Epoch: 22, P: 0.862512, R: 0.855741, F: 0.859113, OOV: 0.750685
+05/31/2023 15:11:21 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:22 - INFO - __main__ -   OOV: 0.747945
+05/31/2023 15:11:22 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:22 - INFO - __main__ -   
+Epoch: 23, P: 0.864542, R: 0.851816, F: 0.858131, OOV: 0.747945
+05/31/2023 15:11:22 - INFO - __main__ -   =======entity level========
+05/31/2023 15:11:22 - INFO - __main__ -   
+Early stop triggered at epoch 22
+
+05/31/2023 15:11:22 - INFO - __main__ -   
+=======best f entity level========
+05/31/2023 15:11:22 - INFO - __main__ -   
+Epoch: 13, P: 0.894416, R: 0.864573, F: 0.879242, OOV: 0.767123
+
+05/31/2023 15:11:22 - INFO - __main__ -   
+=======best f entity level========

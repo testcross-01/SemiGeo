@@ -1,0 +1,2740 @@
+True: *图2-2-14* *潜山县余井柴阁庙桐城‐太湖断裂剖面* 。
+Pred: 图2-2-14潜山县余井柴阁庙桐城‐太湖断裂剖面 。
+Label True: BIIIIIE BIIIIIIIIIIIIIIIE S
+Label Pred: BIIIIIIIIIIIIIIIIIIIIIIE S
+Wrong 2 0: 图2-2-14 潜山县余井柴阁庙桐城‐太湖断裂剖面
+
+True: 岩性 以 *砖红色泥质粉砂岩* 、 *细砂岩* 为主 夹 *含砾砂岩* 、 砂砾岩 及 少量 泥灰岩 等 ， *最大* 厚度 约 *3000m* 。
+Pred: 岩性 以 砖红色泥质粉砂岩 、 细砂岩 为主 夹 含砾砂岩 、 砂砾岩 及 少量泥灰岩 等 ， 最大 厚度 约 3000m 。
+Label True: BE S BIIIIIIE S BIE BE S BIIE S BIE S BE BIE S S BE BE S BIIIE S
+Label Pred: BE S BIIIIIIE S BIE BE S IIIE S BIE S BIIIE S S BE BE S BIIIE S
+Wrong 3 0: 含砾砂岩 少量 泥灰岩
+
+True: *成因类型* 属 *冲洪积相* ， *黄土物质* 主要 *来源于* *风积* ， 为 堆积 后 经 *洪水* 搬运 沉积 而 *成* 。
+Pred: 成因类型 属 冲洪积相 ， 黄土物质 主要 来 源于 风积 ， 为 堆积 后 经 洪水搬运 沉积 而成 。
+Label True: BIIE S BIIE S BIIE BE BIE BE S S BE S S BE BE BE S S S
+Label Pred: IIIE S BIIE S BIIE BE S BE BE S S BE S S BIIE BE BE S
+Wrong 6 0: 成因类型 来源于 洪水 搬运 而 成
+
+True: （ 3 ） *北北东向* 断裂 。 *坪上熊家—老鹰脑一带断层* ： 长 约 *3.5km* ， 总体 *走* 向 *20°* ， 倾角 *陡峻* ， 地貌 上 为 一 *平直* 的 *沟谷陡崖* ， 两侧 *花岗质岩* 岩石 具有 强烈 *硅化* 、
+Pred: （3 ） 北北东向 断裂 。 坪上熊家—老鹰脑 一带 断层 ： 长 约 3.5km ， 总体 走向 20° ， 倾角 陡峻 ， 地貌 上 为 一平直 的 沟谷陡崖 ， 两侧 花岗质岩岩石具 有 强烈硅化 、
+Label True: S S S BIIE BE S BIIIIIIIIIIE S S S BIIIE S BE S S BIE S BE BE S BE S S S BE S BIIE S BE BIIE BE BE BE BE S
+Label Pred: BS S BIIE BE S BIIIIIIE BE BE S S S BIIIE S BE BE BIE S BE BE S BE S S BIE S BIIE S BE BIIIIIE S BIIE S
+Wrong 11 0: （ 坪上熊家—老鹰脑一带断层 走 向 一 平直 花岗质岩 岩石 具有 强烈 硅化
+
+True: *退色化* 和 *糜棱岩化* 。
+Pred: 退色化 和 糜棱岩化 。
+Label True: BIE S BIIE S
+Label Pred: BIE S BIIE S
+Wrong 0 0: 
+
+True: *燕山旋回* 主要 表现 为 *晚侏罗世火山喷发* 和 *岩体* 的 *相继* 侵入 ， *其后* 受 北西向 的 *构造挤压* ， 形成 *轴向* 为 北东向 的 *宽缓褶皱构造* 。 具体 表现 在 *上侏罗统满克头鄂博组* 、
+Pred: 燕山旋回 主要 表现 为 晚侏罗世火山喷发 和 岩体 的 相继侵入 ， 其后 受 北西向 的 构造挤压 ， 形成 轴 向 为 北东向 的 宽缓褶皱构造 。 具体 表现 在 上侏罗统满克头鄂博组 、
+Label True: BIIE BE BE S BIIIIIIE S BE S BE BE S BE S BIE S BIIE S BE BE S BIE S BIIIIE S BE BE S BIIIIIIIIE S
+Label Pred: BIIE BE BE S BIIIIIIE S BE S BIIE S BE S BIE S BIIE S BE S S S BIE S BIIIIE S BE BE S BIIIIIIIIE S
+Wrong 3 0: 相继 侵入 轴向
+
+True: *玛尼吐组* 、 *白音高老组* 、 下白垩统梅勒图组 的 *相继* 沉积 。
+Pred: 玛尼吐组 、 白音高老组 、 下白垩统梅勒图组 的 相继沉积 。
+Label True: BIIE S BIIIE S BIIIIIIE S BE BE S
+Label Pred: BIIE S BIIIE S BIIIIIIE S BIIE S
+Wrong 2 0: 相继 沉积
+
+True: 北部 *脆性断层* *自* 北 向 南 沿着 *嘉山盆地* 的 东 、 西 边界 和 *合肥盆地* 的 *西界* 展布 ， 而 南部 沿着 大别造山带 东 界 展布 。
+Pred: 北部 脆性断层 自北向 南沿 着 嘉山盆地 的 东 、 西边界 和 合肥盆地 的 西界 展布 ， 而 南部 沿着 大别造山带 东界 展布 。
+Label True: BE BIIE S S S S BE BIIE S S S S BE S BIIE S BE BE S S BE BE BIIIE S S BE S
+Label Pred: BE BIIE IBS BE S BIIE S S S BIE S BIIE S BE BE S S BE BE BIIIE BE BE S
+Wrong 8 0: 自 北 南 沿着 西 边界 东 界
+
+True: 根据 太湖县幅 （ H50C002002 ） 1∶250000 区域 *地质调查* ， *桐城–太湖断裂* 具 *长期* 复杂 的 多 期 活动 特征 。
+Pred: 根据 太湖县幅 （ H50C002002 ） 1∶250000 区域地质调查 ， 桐城–太湖断裂具 长期 复杂 的 多期 活动 特征 。
+Label True: BE BIIE S BIIIIIIIIE S BIIIIIIE BE BIIE S BIIIIIE S BE BE S S S BE BE S
+Label Pred: BE BIIE S BIIIIIIIIE S BIIIIIIE BIIIIE S BIIIIIIE BE BE S BE BE BE S
+Wrong 6 0: 区域 地质调查 桐城–太湖断裂 具 多 期
+
+True: 其 岩性 受 下伏 基岩 影响 较大 ， 主要 为 灰黄色 、 *棕黄色* 含 *砾砂质粘土* 或 *粘土质砂* ， *胶结疏松* 。
+Pred: 其 岩性 受 下伏基岩 影响 较大 ， 主要 为 灰黄色 、 棕黄色含砾砂质粘土 或 粘土质砂 ， 胶结疏松 。
+Label True: S BE S BE BE BE BE S BE S BIE S BIE S BIIIE S BIIE S BIIE S
+Label Pred: S BE S BIIE BE BE S BE S BIE S BIIIIIIIE S BIIE S BIIE S
+Wrong 5 0: 下伏 基岩 棕黄色 含 砾砂质粘土
+
+True: 主要 由于 在 不同 方向 *节理切割* 下 ， *分割* *成* *众多* *多面体* 的 *小块* ； 在 *温度* 、 *水溶液* 及 *气体* 等 *因素* *长时间* *作用* 下 ， *岩体* 其 *棱角* *逐渐* *圆化* ， *变成* *球形* 或 *椭球形* 。
+Pred: 主要 由于 在 不同 方向 节理切 割下 ， 分割 成众 多 多 面体 的 小块 ； 在 温度 、 水溶液 及 气体 等 因素长时间作用下 ， 岩体 其棱 角 逐渐圆化 ， 变成 球形 或 椭球形 。
+Label True: BE BE S BE BE BIIE S S BE S BE BIE S BE S S BE S BIE S BE S BE BIE BE S S BE S BE BE BE S BE BE S BIE S
+Label Pred: BE BE S BE BE BIE BE S BE BS S S BE S BE S S BE S BIE S BE S BIIIIIIE S BE BE E BIIE S BE BE S BIE S
+Wrong 13 0: 节理切割 下 成 众多 多面体 因素 长时间 作用 下 其 棱角 逐渐 圆化
+
+True: 据 钻孔资料 ， 组成 *背* 、 *向斜* 的 *古新世底部砾岩标志层* ， *海拔* *标高* 分别 为 *-450* 、 *-250* 及 *-290m* 左右 ， *产* *状* *都* 较为 平缓 ， 属 *波状平缓褶皱* 。
+Pred: 据 钻孔资料 ， 组成 背 、 向斜 的 古新世底部砾岩标志层 ， 海拔标高 分别 为 -450 、 -250 及 -290m 左右 ， 产状 都较为 平缓 ， 属 波状平缓褶皱 。
+Label True: S BIIE S BE S S BE S BIIIIIIIIE S BE BE BE S BIIE S BIIE S BIIIE BE S S S S BE BE S S BIIIIE S
+Label Pred: S BIIE S BE S S BE S BIIIIIIIIE S BIIE BE S BIIE S BIIE S BIIIE BE S BE BBE BE S S BIIIIE S
+Wrong 5 0: 海拔 标高 产 状 都
+
+True: 但 据 钻孔 和 *地震剖面资料* ， 在 *第四纪覆盖层* *以下* 之 *盆地* 中 ， *尚* 有 广泛 分布 。 出露 面积 *10.28km2* 。
+Pred: 但 据 钻孔 和 地震 剖面资料 ， 在 第四纪 覆 盖层 以 下之盆地 中 ， 尚 有 广泛 分布 。 出露 面积 10.28km2 。
+Label True: S S BE S BIIIIE S S BIIIIE BE S BE S S S S BE BE S BE BE BIIIIIIE S
+Label Pred: S S BE S BE BIIE S S BIE S BE S BIIE S S S S BE BE S BE BE BIIIIIIE S
+Wrong 5 0: 地震剖面资料 第四纪覆盖层 以下 之 盆地
+
+True: 断裂 带 总体 呈 310° ， 长 约 *50km* ， *实际* 出露 长 *21km* ， *两条* 断裂 *间隔* *1~2km* 。
+Pred: 断裂带 总体 呈 310° ， 长 约 50km ， 实际 出露 长 21km ， 两 条 断裂 间隔1~2km 。
+Label True: BE S BE S BIIE S S S BIIE S BE BE S BIIE S BE BE BE BIIIE S
+Label Pred: BIE BE S BIIE S S S BIIE S BE BE S BIIE S S E BE BIIIIIE S
+Wrong 5 0: 断裂 带 两条 间隔 1~2km
+
+True: *栖霞组* 与 孤峰组 ， *以及* 孤峰组 与 *龙潭组* 之间 为 *平行不整合接触* 。
+Pred: 栖霞组 与 孤峰组 ， 以 及 孤峰组 与 龙潭组 之间 为 平行不整合接触 。
+Label True: BIE S BIE S BE BIE S BIE BE S BIIIIIE S
+Label Pred: BIE S BIE S S S BIE S BIE BE S BIIIIIE S
+Wrong 1 0: 以及
+
+True: 上侏罗统玛尼吐组 该 套 地层 主要 分布 在 *罕山鹿场幅格尔楚鲁* *北西测* 、 *甘珠尔敖包* *南东侧* ， 出露 面积 *10km2* ， 厚度 *>1600m* ， 岩层 产状 较 平缓 。
+Pred: 上侏罗统玛尼吐组 该 套 地层 主要 分布 在 罕山鹿场幅 格尔楚鲁北西测 、 甘珠尔敖包南东侧 ， 出露 面积 10km2 ， 厚度 >1600m ， 岩层 产状 较 平缓 。
+Label True: BIIIIIIE S S BE BE BE S BIIIIIIIE BIE S BIIIE BIE S BE BE BIIIE S BE BIIIIE S BE BE S BE S
+Label Pred: BIIIIIIE S S BE BE BE S BIIIE BIIIIIE S BIIIIIIE S BE BE BIIIE S BE BIIIIE S BE BE S BE S
+Wrong 4 0: 罕山鹿场幅格尔楚鲁 北西测 甘珠尔敖包 南东侧
+
+True: 岩石 组合 为 *绿灰色* 、 *灰色安山岩* 、 *紫灰色安山质含角砾岩屑晶屑熔结凝灰岩* 等 ， 该 套 地层 *整合* 于 满克头鄂博组 之上 ， 被 *上侏罗统白音高老组地层* 火山喷发 不整合 覆盖 。
+Pred: 岩石 组合 为 绿灰色 、 灰色安山岩 、 紫灰色安山质含角砾岩屑晶屑熔结凝灰岩 等 ， 该 套 地层整合 于 满克头鄂博组 之上 ， 被 上侏罗统白音高老组地层火山喷发不整合 覆盖 。
+Label True: BE BE S BIE S BIIIE S BIIIIIIIIIIIIIIIIE S S S S BE BE S BIIIIE BE S S BIIIIIIIIIE BIIE BIE BE S
+Label Pred: BE BE S BIE S BIIIE S BIIIIIIIIIIIIIIIIE S S S S BIIE S BIIIIE BE S S BIIIIIIIIIIIIIIIIE BE S
+Wrong 5 0: 地层 整合 上侏罗统白音高老组地层 火山喷发 不整合
+
+True: （ 1 ） *长江冲积河漫滩地质单元* 主要 分布 于 *长江* *沿岸* *平原地区* ， 地层 *自下而上* 形成 了 “ *河床-边滩-河漫滩* ” 沉积物 粒度 由 粗 到 细 的 完整 的 *粒序旋回* ，
+Pred: （ 1 ） 长江冲积河漫滩地质单元 主要 分布 于 长江沿岸平原地区 ， 地层 自下 而上 形成 了 “河床 -边滩-河漫 滩” 沉积物粒度 由 粗到 细 的 完整 的 粒序旋回 ，
+Label True: S S S BIIIIIIIIIE BE BE S BE BE BIIE S BE BIIE BE S S BIIIIIIIE S BIE BE S S S S S BE S BIIE S
+Label Pred: S S S BIIIIIIIIIE BE BE S BIIIIIIE S BE BE BE BE S BIE BIIIIE BE BIIIE S BE S S BE S BIIE S
+Wrong 11 0: 长江 沿岸 平原地区 自下而上 “ 河床-边滩-河漫滩 ” 沉积物 粒度 粗 到
+
+True: 呈现 的 一个 沉积旋回 的 *结构特征* 。
+Pred: 呈现 的 一个 沉积旋回 的 结构 特征 。
+Label True: BE S BE BIIE S BIIE S
+Label Pred: BE S BE BIIE S BE BE S
+Wrong 1 0: 结构特征
+
+True: （ *上图* 为 *地理位置图* ） 本 次 *二维地震测线* 位于 大别造山带段 。
+Pred: （ 上图 为 地理位置图 ） 本 次二维地震测线 位于 大别造山带段 。
+Label True: S BE S BIIIE S S S BIIIIE BE BIIIIE S
+Label Pred: S BE S BIIIS S S BIIIIIE BE BIIIIE S
+Wrong 3 0: 地理位置图 次 二维地震测线
+
+True: （ 一 ） *晚华力西旋回* 。
+Pred: （ 一 ） 晚华力西旋回 。
+Label True: S S S BIIIIE S
+Label Pred: S S S BIIIIE S
+Wrong 0 0: 
+
+True: *新生界测区* *新生界* 分布 相对 *较多* ， *约占* 总 面积 , 尤其是 *北沙拉* 及 *得勒斯台防火站* 北部 地区 分布 广泛 , 厚度 大于 *20米* 。
+Pred: 新生界测区 新生界分布 相对 较多 ， 约 占总 面积 ,尤其是 北沙拉 及 得勒斯台防火站北部 地区 分布 广泛 , 厚度 大于 20米 。
+Label True: BIIIE BIE BE BE BE S BE S BE S BIE BIE S BIIIIIE BE BE BE BE S BE BE BIE S
+Label Pred: BIIIE BIIIE BE BE S S BS BE BIIE BIE S BIIIIIIIE BE BE BE S BE BE BIE S
+Wrong 7 0: 新生界 分布 约占 , 尤其是 得勒斯台防火站 北部
+
+True: *第五节* ， *区域地质构造* 。 一 、 构造单元 划分 及 特征 。
+Pred: 第五节 ， 区域 地质构造 。 一 、 构造单元 划分 及 特征 。
+Label True: BIE S BIIIIE S S S BIIE BE S BE S
+Label Pred: BIE S BE BIIE S S S BIIE BE S BE S
+Wrong 1 0: 区域地质构造
+
+True: 根据 *葛宁洁* （ *1999* ） 对 *岳西沙村辉长岩* 所 *做* 的 *锆石U–Pb同位素年龄* 为 *128Ma* ， *以及* *桃园寨旋回潜火山岩* 侵入 *中关–沙村岩体* ， *桃园寨旋回火山岩* *锆石U–Pb年龄* 为 *129～136Ma* （
+Pred: 根据 葛宁洁 （ 1999 ） 对 岳西沙村辉长岩所做 的 锆石U– P b同位素 年龄 为 128Ma ， 以 及 桃园寨旋回潜火山岩 侵入 中关–沙村岩体 ， 桃园寨旋回火山岩锆石U–Pb 年龄 为 129～136Ma （
+Label True: BE BIE S BIIE S S BIIIIIE S S S BIIIIIIIIIE S BIIIE S BE BIIIIIIIE BE BIIIIIE S BIIIIIIE BIIIIIIE S BIIIIIIIE S
+Label Pred: BE BIE S BIIE S S BIIIIIIIE S BIIE S BBIE BE S BIIIE S S S BIIIIIIIE BE BIIIIIE S BIIIIIIIIIIIIE BE S BIIIIIIIE S
+Wrong 7 0: 岳西沙村辉长岩 所 做 锆石U–Pb同位素年龄 以及 桃园寨旋回火山岩 锆石U–Pb年龄
+
+True: *刘敦一* ， *1999* ） *，因此* *可知* *中关–沙村岩体* *应* 属 *燕山期岩浆活动产物* ， 其 *时代* *应* 为 *晚侏罗世-早白垩世* （ *J-K* ） 。
+Pred: 刘敦一 ， 1999 ） ， 因此 可 知中关–沙村岩体应 属 燕山期岩浆活动 产物 ， 其时 代应 为 晚侏罗世-早白垩世 （ J-K ） 。
+Label True: BIE S BIIE S BIE BE BIIIIIE S S BIIIIIIIE S S BE S S BIIIIIIIE S BIE S S
+Label Pred: BIS S BIIE S S BE S BIIIIIIIE S BIIIIIE BE S BE BE S BIIIIIIIE S BIE S S
+Wrong 9 0: 刘敦一 ，因此 可知 中关–沙村岩体 应 燕山期岩浆活动产物 其 时代 应
+
+True: 其 代表性 *接触* 变质 矿物 *平衡* 组合 如下 ： （ 1 ） *石英+黑云母+绢云母* （ 2 ） *石英+黑云母+白云母属红柱石* （ *极低压接触变质作用* ） *钠长石—绿帘石角岩相* ，
+Pred: 其 代表性 接触变质矿物平衡组合 如下 ： （1）石英+黑云母+绢云母（2）石英+黑云母+白云母属红柱石 （ 极 低压 接触变质作用 ） 钠长石—绿帘石角岩相 ，
+Label True: S BIE BE BE BE BE BE BE S S S S BIIIIIIIIE S S S BIIIIIIIIIIIIE S BIIIIIIIE S BIIIIIIIIE S
+Label Pred: S BIE BIIIIIIIIE BE S BIIIIIIIIIIIIIIIIIIIIIIIIIIIIE S S BE BIIIIE S BIIIIIIIIE S
+Wrong 14 0: 接触 变质 矿物 平衡 组合 （ 1 ） 石英+黑云母+绢云母 （ 2 ） 石英+黑云母+白云母属红柱石 极低压接触变质作用
+
+True: 形成 *压力* 为 *0.3GPa±* ， *温度* *350℃* *±* 。
+Pred: 形成 压 力 为 0.3GPa± ， 温度 350℃± 。
+Label True: BE BE S BIIIIIE S BE BIIE S S
+Label Pred: BE S S S BIIIIIE S BE BIIIE S
+Wrong 3 0: 压力 350℃ ±
+
+True: *太古宙区域变质表壳岩* 分布 于 *辽河群地层* *之中* ， *变质作用* 程度 为 *低绿片岩相-低角闪岩相* 。
+Pred: 太古宙 区域变质表壳岩 分布 于 辽 河群 地层 之中 ， 变质作用 程度 为 低绿片岩相-低角闪岩相 。
+Label True: BIIIIIIIIE BE S BIIIE BE S BIIE BE S BIIIIIIIIIE S
+Label Pred: BIE BIIIIIE BE S S BE BE BE S BIIE BE S BIIIIIIIIIE S
+Wrong 2 0: 太古宙区域变质表壳岩 辽河群地层
+
+True: 区 内 *山丘* 面积 *4950km2* ， 占 总 面积 的 *45.40%* ， *平原* 洼地 *5620km2* ， 占 *5* *1.55%* ， *滩涂* *岛屿* *249km2* ， 占 *2.28%* ， 其他 *84km2* ，
+Pred: 区 内 山丘面积 4950km2 ， 占 总 面积 的 45.40% ， 平原洼地5 620km2 ， 占 51.55% ， 滩涂岛屿249km2 ， 占 2.28% ， 其他 84km2 ，
+Label True: S S BE BE BIIIIIE S S S BE S BIIIIE S BE BE BIIIIIE S S S BIIIE S BE BE BIIIIE S S BIIIE S BE BIIIE S
+Label Pred: S S BIIE BIIIIIE S S S BE S BIIIIE S BIIIE BIIIIE S S BIIIIE S BIIIIIIIIE S S BBIIE S BE BIIIE S
+Wrong 11 0: 山丘 面积 平原 洼地 5620km2 5 1.55% 滩涂 岛屿 249km2 2.28%
+
+True: 占 *0.77%* 。
+Pred: 占 0.77% 。
+Label True: S BIIIE S
+Label Pred: S BIIIE S
+Wrong 0 0: 
+
+True: 岩性 主要 为 *黄绿色薄-中厚层含云母长石石英杂砂岩* 、 *灰绿色薄板状泥质粉砂岩* 、 *黄绿色厚-中厚层铁质胶结细粒砂屑石英杂砂岩* ， 见 *灰色薄-中厚层生物碎屑灰岩* ；
+Pred: 岩性 主要 为 黄绿色薄-中厚层含云母长石石英杂砂岩 、 灰绿色薄板状泥质粉砂岩 、 黄绿色厚-中厚层铁质胶结细粒砂屑石英杂砂岩 ， 见灰色薄-中厚层生物碎屑灰岩 ；
+Label True: BE BE S BIIIIIIIIIIIIIIIIE S BIIIIIIIIIE S BIIIIIIIIIIIIIIIIIIIE S S BIIIIIIIIIIIE S
+Label Pred: BE BE S BIIIIIIIIIIIIIIIIE S BIIIIIIIIIE S BIIIIIIIIIIIIIIIIIIIE S BIIIIIIIIIIIIE S
+Wrong 2 0: 见 灰色薄-中厚层生物碎屑灰岩
+
+True: 局部 夹 *薄煤层* 。
+Pred: 局部 夹薄煤层 。
+Label True: BE S BIE S
+Label Pred: BE BIIE S
+Wrong 2 0: 夹 薄煤层
+
+True: （ 4 ） 断裂 具 张性活动 。 *营房* 至 *罗家营* 地区 ， *大沽河流域* ， 形成 宽 *4km* 的 *负地形* ， 两侧 为 *陡崖* ， 显示 *断陷* 特征 ， *证明* 断裂 具 *张性* 特征 。
+Pred: （ 4 ） 断裂具 张性活动 。 营 房 至 罗家营地区 ， 大沽 河流域 ， 形成 宽 4km 的 负地形 ， 两侧 为 陡崖 ， 显示 断陷特征 ， 证明 断裂 具张性特征 。
+Label True: S S S BE S BIIE S BE S BIE BE S BIIIE S BE S BIE S BIE S BE S BE S BE BE BE S BE BE S BE BE S
+Label Pred: S S S BIE BIIE S S S S BIIIE S BE BIE S BE S BIE S BIE S BE S BE S BE BIIE S BE BE BBIIE S
+Wrong 11 0: 断裂 具 营房 罗家营 地区 大沽河流域 断陷 特征 具 张性 特征
+
+True: 该 火山口 位于 *阿拉坦达巴道班幅* 的 *毛希嘎达巴* 一带 ， *平面形态* *近似* *椭圆形* ， 长 *轴* 约 *7公里* ， *短* *轴* 约 *4公里* ， 火山喷发 基底 为 上二叠统林西组 ， 火山机构 主体 部分 由 满克头鄂博组 的 地层 组成 。
+Pred: 该 火山口 位于 阿拉坦达巴道班幅 的 毛希嘎 达 巴一带 ， 平面形 态近 似椭圆形 ， 长 轴 约 7公里 ， 短轴 约 4公里 ， 火山喷发基底 为 上二叠统林西组 ， 火山机构 主体 部分 由 满克头鄂博组 的 地层 组成 。
+Label True: S BIE BE BIIIIIIE S BIIIE BE S BIIE BE BIE S S S S BIE S S S S BIE S BIIE BE S BIIIIIE S BIIE BE BE S BIIIIE S BE BE S
+Label Pred: S BIE BE BIIIIIIE S BIS S BIE S BIE BE BIIE S S E S BIE S BE S BIE S BIIIIE S BIIIIIE S BIIE BE BE S BIIIIE S BE BE S
+Wrong 10 0: 毛希嘎达巴 一带 平面形态 近似 椭圆形 轴 短 轴 火山喷发 基底
+
+True: 北东向 *压扭性断裂带* 的 *主干* 断裂 常 沿 *岩体接触带* 展布 ， 具 明显 的 *压扭特征* ， 它 与 *构造* 的 *交汇部位* 是 *矿床* *定位* 的 重要 *构造标志* 。
+Pred: 北东向 压扭性断裂带 的 主干 断裂 常沿 岩体接触带 展布 ， 具 明显 的 压扭特征 ， 它 与 构造 的 交汇 部位 是 矿床 定位 的 重要 构造标志 。
+Label True: BIE BIIIIE S BE BE S S BIIIE BE S S BE S BIIE S S S BE S BIIE S BE BE S BE BIIE S
+Label Pred: BIE BIIIIE S BS BE BE BIIIE BE S S BE S BIIE S S S BE S BE BE S BE BE S BE BIIE S
+Wrong 4 0: 主干 常 沿 交汇部位
+
+True: 2 、 *花岗闪长岩* *(* *γδPt1b-2* *)* *黑云花岗闪长岩* 主要 由 *向坊幅牛岭岩体* 向 北东 延伸 至 *南昌市规划区* 。
+Pred: 2 、 花岗闪长岩(γδPt1b-2)黑云花岗闪长岩 主要 由 向坊幅牛岭岩体 向 北东 延伸 至 南昌市规划区 。
+Label True: S S BIIIE S BIIIIIIE S BIIIIIE BE S BIIIIIE S BE BE S BIIIIE S
+Label Pred: S S BIIIIIIIIIIIIIIIIIIIIE BE S BIIBIIE S BE BE S BIIIIE S
+Wrong 6 0: 花岗闪长岩 ( γδPt1b-2 ) 黑云花岗闪长岩 向坊幅牛岭岩体
+
+True: *6* . *二叠系* （ *P* ） 。 沿 *大龙山* *南麓* *集贤关* 、 *白鹿山* 一线 *断续分布* 。
+Pred: 6 .二叠系（P ） 。 沿 大龙山南麓集贤关 、 白鹿山 一线 断续 分布 。
+Label True: S S BIE S S S S S BIE BE BIE S BIE BE BIIE S
+Label Pred: S IIIIIE S S S BIIIIIIE S BIE IE BE BE S
+Wrong 9 0: . 二叠系 （ P 大龙山 南麓 集贤关 一线 断续分布
+
+True: 呈 *小包体* 分布 于 *中生代雨山超单元* 中 ， 主要 为 *陡崖组* ， 出露 于 区域 *东北侧* *双甲山* 一带 ， 岩性 以 *灰色石榴矽线黑云片岩* 为主 。
+Pred: 呈小 包体 分布 于 中生代雨山超单元 中 ， 主要 为 陡崖组 ， 出露 于 区域 东北侧 双甲山 一带 ， 岩性 以 灰色石榴矽线黑云片岩 为主 。
+Label True: S BIE BE S BIIIIIIE S S BE S BIE S BE S BE BIE BIE BE S BE S BIIIIIIIIE BE S
+Label Pred: BE BE BE S BIIIIIIE S S BE S BIE S BE S BE BIE BIE BE S BE S BIIIIIIIIE BE S
+Wrong 2 0: 呈 小包体
+
+True: *埋藏* 深度 在 *-130至-140m* ， *最* 下部 *底板* 埋深 *-200至-300m* ， 直接 覆盖 于 基岩 之上 。
+Pred: 埋藏 深度 在 -130 至 -140m ， 最 下部 底板 埋深 -200 至 -300m ， 直接 覆盖 于 基岩 之上 。
+Label True: BE BE S BIIIIIIIIE S S BE BE BE BIIIIIIIIE S BE BE S BE BE S
+Label Pred: BE BE S BIIE S BIIIE S S BE BE BE BIIE S BIIIE S BE BE S BE BE S
+Wrong 2 0: -130至-140m -200至-300m
+
+True: *归属* 于 *东南* *沿海* *中生代岩浆岩带* 、 *鲁东构造岩浆区* 。
+Pred: 归 属于 东南沿海中生代岩浆岩带 、 鲁东构造岩浆区 。
+Label True: BE S BE BE BIIIIIE S BIIIIIE S
+Label Pred: S BE BIIIBIIIIIE S BIIIIIE S
+Wrong 4 0: 归属 于 东南 沿海
+
+True: 其 *岩石类型* 为 *中细粒白云母二长黑云花岗岩* ， 它 呈 *不规则长条状* 呈 北东向 分布 ， 与 北东向 断裂 走向 基本 *一致* 。
+Pred: 其 岩石类型 为 中细粒白云母二长黑云花岗岩 ， 它 呈 不 规则长 条状 呈 北东向 分布 ， 与 北东向 断裂 走向 基本 一致 。
+Label True: S BIIE S BIIIIIIIIIIIE S S S BIIIIE S BIE BE S S BIE BE BE BE BE S
+Label Pred: S BIIE S BIIIIIIIIIIIE S S S S BIS BE S BIE BE S S BIE BE BE BE BE S
+Wrong 1 0: 不规则长条状
+
+True: 矿区 内 未 见 *岩浆岩体* 出露 ， 经 *物探资料* *解释* ， 推测 本 区 *麻渠―曹家埠* 一带 有 一 *隐伏* *岩体* 。 岩性 为 *片麻状* 、 *中粒含角闪黑云英云闪长岩* ， *岩石片麻理* 发育 ，
+Pred: 矿区 内 未 见 岩浆岩体 出露 ， 经 物探 资料 解释 ， 推测 本 区麻渠―曹家埠 一带 有 一隐伏岩体 。 岩性 为 片麻状 、 中粒含角闪黑云英云闪长岩 ， 岩石片麻理 发育 ，
+Label True: BE S S S BIIE BE S S BIIE BE S BE S S BIIIIE BE S S BE BE S BE S BIE S BIIIIIIIIIIE S BIIIE BE S
+Label Pred: BE S S S BIIE BE S S BE IE BE S BE S BIIIIIS BE S BIIIE S BE S BIE S BIIIIIIIIIIE S BIIIE BE S
+Wrong 6 0: 物探资料 区 麻渠―曹家埠 一 隐伏 岩体
+
+True: 呈 灰色 、 *灰黑色* ， *鳞片状变晶结构* ， *片麻状构造* 。
+Pred: 呈 灰色 、 灰黑色 ， 鳞片状变晶结构 ， 片麻状构造 。
+Label True: S BE S BIE S BIIIIIE S BIIIE S
+Label Pred: S BE S BIE S BIIIIIE S BIIIE S
+Wrong 0 0: 
+
+True: 其 原岩 为 *灰岩* 、 *富* *镁泥灰岩夹粘土岩* ， 反映 较 稳定 的 *浅海沉积环境* 。
+Pred: 其 原岩 为 灰岩 、 富镁泥灰岩夹粘土岩 ， 反映 较 稳定 的 浅海 沉积环境 。
+Label True: S BE S BE S S BIIIIIIE S BE S BE S BIIIIE S
+Label Pred: S IE S BE S BIIIIIIIE S BE S BE S BE BIIE S
+Wrong 4 0: 原岩 富 镁泥灰岩夹粘土岩 浅海沉积环境
+
+True: *郯庐断裂带安徽段* 呈 北东向 延伸 ， 长 约 为 *400km* 。
+Pred: 郯庐断裂带 安徽段 呈 北东向 延伸 ， 长 约 为 400km 。
+Label True: BIIIIIIE S BIE BE S S S S BIIIE S
+Label Pred: BIIIE BIE S BIE BE S S S S BIIIE S
+Wrong 1 0: 郯庐断裂带安徽段
+
+True: 自上而下 *粉砂* 含量 *逐渐* *升高* ， *淤泥质* 含量 *逐渐* *降低* 。
+Pred: 自上而下 粉砂 含量 逐渐升高 ， 淤泥质 含量 逐渐 降低 。
+Label True: BIIE BE BE BE BE S BIE BE BE BE S
+Label Pred: BIIE BE BE BIIE S BIE BE BE BE S
+Wrong 2 0: 逐渐 升高
+
+True: 红土崖组 是 *王氏群* 的 *代表层位* ， 是 *盆地* *晚期* 河流 和 *浅湖* *交互作用* 的 产物 ， 以 *河流相沉积* 为主 ， 由 河流 *频繁* *改道作用* 形成 明显 的 二元结构 ， 洪积 和 *天然堤沉积* 也 很 发育 。
+Pred: 红土崖组 是 王氏群 的 代表层位 ， 是 盆地晚期河流 和 浅湖交互作用 的 产物 ， 以 河流相沉积 为主 ， 由 河流 频繁 改道作用 形成 明显 的 二元结构 ， 洪积 和 天然堤 沉积 也 很 发育 。
+Label True: BIIE S BIE S BIIE S S BE BE BE S BE BIIE S BE S S BIIIE BE S S BE BE BIIE BE BE S BIIE S BE S BIIIE S S BE S
+Label Pred: BIIE S BIE S BIIE S S BIIIIE S BIIIIE S BE S S BIIIE BE S S BE BE BIIE BE BE S BIIE S BE S BIE BE S S BE S
+Wrong 6 0: 盆地 晚期 河流 浅湖 交互作用 天然堤沉积
+
+True: *轴面* 产状 *346°* *∠* *77°* ， *枢纽* *76°* *∠* *7°* ， *翼间角* *∠* *102°* ， 为 *轴迹* *76°* 展布 的 *开阔褶皱* 。
+Pred: 轴面 产状 346° ∠ 77° ， 枢纽 76° ∠7° ， 翼间角∠102° ， 为 轴迹76° 展布 的 开阔褶皱 。
+Label True: BE BE BIIE S BIE S BE BIE S BE S BIE S BIIE S S BE BIE BE S BIIE S
+Label Pred: BE BE BIIE S BIE S BE BIE BIE S BIIIIIIE S S BIIIE BE S BIIE S
+Wrong 7 0: ∠ 7° 翼间角 ∠ 102° 轴迹 76°
+
+True: *结合* *1︰5万* *区域地质调查资料* ， *桐城–太湖断裂* 为 *郯–庐断裂带* *南端* *西侧* 的 *主干* 断裂 。
+Pred: 结合 1︰5万 区域地质调查资料 ， 桐城–太湖断裂 为 郯–庐断裂带 南端 西侧 的 主干断裂 。
+Label True: BE BIIE BIIIIIIE S BIIIIIE S BIIIIE BE BE S BE BE S
+Label Pred: IE BIIE BIIIIIIE S BIIIIIE S BIIIIE BE BE S BIIE S
+Wrong 3 0: 结合 主干 断裂
+
+True: *宿松岩群* ， *指* 从 *原宿松群* *解体* *出来* 的 *变质火山岩组合* 和 *变质含磷岩系* 。
+Pred: 宿松岩群 ， 指从原宿 松群 解体 出来 的 变质火山岩组合 和 变质含磷岩系 。
+Label True: BIIE S S S BIIE BE BE S BIIIIIE S BIIIIE S
+Label Pred: BIIE S BIBS BE BE BE S BIIIIIE S BIIIIE S
+Wrong 3 0: 指 从 原宿松群
+
+True: （ 一 ） *第四纪地层标志* 。 *胶州湾第四纪地层* 的 *划分标志* 主要 有 *海相层标志* 、 *沉积间断面标注* 和 *14C年代学标志* 。
+Pred: （ 一 ） 第四纪地层标志 。 胶州湾 第四纪地层 的 划分 标志 主要 有 海相层标志 、 沉积间断面标注 和 14C年代学标志 。
+Label True: S S S BIIIIIE S BIIIIIIE S BIIE BE S BIIIE S BIIIIIE S BIIIIIIE S
+Label Pred: S S S BIIIIIE S BIE BIIIE S BE BE BE S BIIIE S BIIIIIE S BIIIIIIE S
+Wrong 2 0: 胶州湾第四纪地层 划分标志
+
+True: *五* 、 *脉岩类* 。 工作区 脉岩 较为 发育 ， 多 以 *酸性花岗岩脉* 为主 ， 出露 面积 约 *3.52km2* ， 占 工作区 总 面积 的 *0.29%* ， 占 全 区 岩浆岩 面积 的 *0.98%* 。
+Pred: 五 、 脉岩类 。 工作区 脉岩 较 为 发育 ， 多 以 酸性花岗岩脉 为主 ， 出露 面积 约 3.52km2 ， 占 工作区 总 面积 的 0.29% ， 占 全区岩浆岩 面积 的 0.98% 。
+Label True: S S BIE S BIE BE BE BE S S S BIIIIE BE S BE BE S BIIIIIE S S BIE S BE S BIIIE S S S S BIE BE S BIIIE S
+Label Pred: S S BIE S BIE BE S S BE S S S BIIIIE BE S BE BE S BIIIIIE S S BIE S BE S BIIIE S S BIIIE BE S BIIIE S
+Wrong 4 0: 较为 全 区 岩浆岩
+
+True: 二 、 *东南部* *基岩区* 。 （ 一 ） 地层 。
+Pred: 二 、 东南部 基岩区 。 （ 一 ）地层 。
+Label True: S S BIE BIE S S S S BE S
+Label Pred: S S BIE BIE S S S BIE S
+Wrong 2 0: ） 地层
+
+True: 区 内 *上侏罗统白音高老组* 与 *下白垩统* 的 *梅勒图组中性火山岩* 建造 角度不整合 是 *这* 一 *造山运动* 的 产物 ， 本 次 *造山运动* *强化* 了 *北东南西* 方向 的 挤压 , 在 区 内 形成 *一系列* 的 北东向 、
+Pred: 区 内 上侏罗统白音高老组 与 下白垩统 的 梅勒图组中性火山岩 建造 角度不整合 是 这 一造山运动 的 产物 ， 本 次 造山运动 强化 了 北东南西 方向 的 挤压 ,在 区 内 形成 一 系列 的 北东向 、
+Label True: S S BIIIIIIIE S BIIE S BIIIIIIIE BE BIIIE S S S BIIE S BE S S S BIIE BE S BIIE BE S BE S S S S BE BIE S BIE S
+Label Pred: S S BIIIIIIIE S BIIE S BIIIIIIIE BE BIIIE S S BIIIE S BE S S S BIIE BE S BIIE BE S BE BS S S BE S BE S BIE S
+Wrong 4 0: 一 造山运动 , 一系列
+
+True: 北西向 断裂带 ， 和 北东向 的 *低缓褶皱* ， *本次* *造山运动* 伴随 有 强烈 的 岩浆活动 ， 形成 以 *花岗质* 为主 的 北东向 *岩浆带* 。
+Pred: 北西向 断裂带 ， 和 北东向 的 低缓褶皱 ， 本 次 造山运动 伴随 有 强烈 的 岩浆活动 ， 形成 以 花岗质 为主 的 北东向 岩浆带 。
+Label True: BIE BIE S S BIE S BIIE S BE BIIE BE S BE S BIIE S BE S BIE BE S BIE BIE S
+Label Pred: BIE BIE S S BIE S BIIE S S S BIIE BE S BE S BIIE S BE S BIE BE S BIE BIE S
+Wrong 1 0: 本次
+
+True: *梅岭片麻岩* ， 仅 局部 出露 于 *梅岭张家* 、 黄杨村 、 *风坡河树老* 及 *旺家* 等 *地* 。
+Pred: 梅岭片麻岩 ， 仅 局部 出露 于 梅岭张家 、 黄杨村 、 风坡河树老 及 旺家等地 。
+Label True: BIIIE S S BE BE S BIIE S BIE S BIIIE S BE S S S
+Label Pred: BIIIE S S BE BE S BIIE S BIE S BIIIE S BIIE S
+Wrong 3 0: 旺家 等 地
+
+True: 本 幅 仅 *涉及* *超浩尔图-北查干楚鲁特乌拉银多金属成矿区* 的 *南东段* ， 在 该 *成矿区* 内 分布 有 *9个* *矿化点* ， 该 *类* *矿化点* 主要 受 北西向 *控矿构造* 影响 。 *大多数* 分布 在 *晚侏罗世粗粒黑云母花岗岩* 中 ，
+Pred: 本 幅 仅涉 及 超浩尔图-北查干 楚鲁特乌拉银多金属成矿区 的 南东段 ， 在 该 成矿区 内 分布 有 9个 矿化点 ， 该 类 矿化点 主要 受 北西向 控矿构造影响 。 大 多 数 分布 在 晚侏罗世粗粒黑云母花岗岩 中 ，
+Label True: S S S BE BIIIIIIIIIIIIIIIIIIE S BIE S S S BIE S BE S BE BIE S S S BIE BE S BIE BIIE BE S BIE BE S BIIIIIIIIIIE S S
+Label Pred: S S BE S BIIIIIIE BIIIIIIIIIIE S BIE S S S BIE S BE S BE BIE S S S BIE BE S BIE BIIIIE S S S S BE S BIIIIIIIIIIE S S
+Wrong 6 0: 仅 涉及 超浩尔图-北查干楚鲁特乌拉银多金属成矿区 控矿构造 影响 大多数
+
+True: 其中 发育 有 石英脉 和 伟晶岩脉 。 矿化 *产生* 在 这类 *脉体* *之中* 。
+Pred: 其中 发育 有 石英脉 和 伟晶岩脉 。 矿化产生 在 这类 脉体 之中 。
+Label True: BE BE S BIE S BIIE S BE BE S BE BE BE S
+Label Pred: BE BE S BIE S BIIE S BIIE S BE BE BE S
+Wrong 2 0: 矿化 产生
+
+True: 岩石 的 *碎裂程度* 受 原岩 *性质* 控制 ， 断裂 *上盘* 之 *胶州组正常沉积碎屑岩* 表现 为 *碎裂岩* 、 *泥岩* 为主 ； 断裂 的 *下盘* *红土崖组块状玄武岩* 表现 为 *构造角砾岩* 为主 。
+Pred: 岩石 的 碎裂 程度 受 原岩性质 控制 ， 断裂 上盘 之 胶州组 正常 沉积碎屑岩 表现 为 碎裂岩 、 泥岩 为主 ； 断裂 的 下盘 红土崖组块状玄武岩 表现 为 构造角砾岩 为主 。
+Label True: BE S BIIE S BE BE BE S BE BE S BIIIIIIIIE BE S BIE S BE BE S BE S BE BIIIIIIIE BE S BIIIE BE S
+Label Pred: BE S BE BE S BIIE BE S BE BE S BIE BE BIIIE BE S BIE S BE BE S BE S BE BIIIIIIIE BE S BIIIE BE S
+Wrong 4 0: 碎裂程度 原岩 性质 胶州组正常沉积碎屑岩
+
+True: *罗田片麻岩套* 主要 分布 于 *水吼–英山剪切带* 以北 地区 。
+Pred: 罗田片麻岩 套 主要 分布 于 水吼–英山剪切带 以 北地区 。
+Label True: BIIIIE BE BE S BIIIIIIE BE BE S
+Label Pred: BIIIE E BE BE S BIIIIIIE S BIE S
+Wrong 3 0: 罗田片麻岩套 以北 地区
+
+True: 位于 *三山岛～仓上* 一带 ， *两端* *延* 至 *渤海* ， *陆地* 总 *长度* *11km* 。 该 断裂 发育 在 *崔召单元* 、 *上庄单元* 、 *芦家单元接触带* 附近 。 断裂 多 被 第四系 覆盖 ， *只* 在 *三山岛村* 北 小 *山丘* 上 有所 出露 。
+Pred: 位于 三山岛～仓上 一带 ， 两端 延至 渤海 ， 陆地 总 长度 11km 。 该 断裂 发育 在 崔召单元 、 上庄单元 、 芦家单元接触带 附近 。 断裂 多 被 第四系 覆盖 ， 只 在 三山岛村北小山丘上 有 所 出露 。
+Label True: BE BIIIIE BE S BE S S BE S BE S BE BIIE S S BE BE S BIIE S BIIE S BIIIIIE BE S BE S S BIE BE S S S BIIE S S BE S BE BE S
+Label Pred: BE BIIIIE BE S BE BS BE S BE S BE BIIE S S BE BE S BIIE S BIIE S BIIIIIE BE S BE S S BIE BE S S S BIIIIIIIS S S BE S
+Wrong 6 0: 延 三山岛村 北 小 山丘 有所
+
+True: 主要 分布 三个 火山喷发中心 ， 其中 有 罕山麓场火山喷发中心 、 菜园子火山喷发中心 、 包括 三个 有 巴代艾来火山结构 和 菜园子火山机构 和 巴音楚鲁火山机构 。
+Pred: 主要 分布 三个 火山喷发中心 ， 其中 有 罕山麓场火山喷发中心 、 菜园子火山喷发中心 、 包括 三个 有 巴代艾来火山结构 和 菜园子火山机构 和 巴音楚鲁火山机构 。
+Label True: BE BE BE BIIIIE S BE S BIIIIIIIIE S BIIIIIIIE S BE BE S BIIIIIIE S BIIIIIE S BIIIIIIE S
+Label Pred: BE BE BE BIIIIE S BE S BIIIIIIIIE S BIIIIIIIE S BE BE S BIIIIIIE S BIIIIIE S BIIIIIIE S
+Wrong 0 0: 
+
+True: 具体 火山构造特征 在 火山岩 中 详细 介绍 。
+Pred: 具体 火山构造特征 在 火山岩 中 详细 介绍 。
+Label True: BE BIIIIE S BIE S BE BE S
+Label Pred: BE BIIIIE S BIE S BE BE S
+Wrong 0 0: 
+
+True: （ 2 ） *莲荷组* *(* *K2l* *)* 。 仅 零星 出露 于 *生米镇上下洲* 等 地区 。
+Pred: （ 2 ） 莲荷组 ( K2l) 。 仅 零星 出露 于 生米镇上下洲 等 地区 。
+Label True: S S S BIE S BIE S S S BE BE S BIIIIE S BE S
+Label Pred: S S S BIE S BIIE S S BE BE S BIIIIE S BE S
+Wrong 2 0: K2l )
+
+True: 具 *辉长辉绿结构* 和 块状构造 。
+Pred: 具 辉长辉绿结构 和 块状构造 。
+Label True: S BIIIIE S BIIE S
+Label Pred: S BIIIIE S BIIE S
+Wrong 0 0: 
+
+True: 3 . *近岸断裂带* 。 该 断裂 为 区域 *泗阳-海洲断裂* 的 *北延* 区段 ， 是 *胶南造山带* 的 *内部* *分划性断裂* 。
+Pred: 3 .近岸断裂带 。 该 断裂 为 区域 泗阳-海洲断裂 的 北延区段 ， 是 胶南造山带 的 内部分 划性断裂 。
+Label True: S S BIIIE S S BE S BE BIIIIIE S BE BE S S BIIIE S BE BIIIE S
+Label Pred: S BIIIIE S S BE S BE BIIIIIE S BIIE S S BIIIE S BIE BIIE S
+Wrong 6 0: . 近岸断裂带 北延 区段 内部 分划性断裂
+
+True: *东南* 属 *千山山脉* *西麓* *低山丘陵地带* ； *东北部* 位于 *龙岗山脉* *尾部* *丘陵地带* ； 西部 位于 *下辽河平原* 东侧 *边缘地带* 。
+Pred: 东南属千山山脉西麓 低山丘陵地带 ； 东北 部 位于 龙岗山脉 尾部 丘陵地带 ； 西部 位于 下辽 河平原东侧 边缘地带 。
+Label True: BE S BIIE BE BIIIIE S BIE BE BIIE BE BIIE S BE BE BIIIE BE BIIE S
+Label Pred: BIIBIIIIE BIIIIE S BE E BE BIIE BE BIIE S BE BE BE BIIIE BIIE S
+Wrong 7 0: 东南 属 千山山脉 西麓 东北部 下辽河平原 东侧
+
+True: 该 火山口 位于 *罕山鹿场幅* 的 *巴代艾来* 附近 ， 是 晚侏罗世 早期 *旋徊产物* ， *破火山口* 总体 受 北东 及 北西向 *两* 组 *基地断裂* 控制 ， 在 *远离* 火山口 附近 见 有 *上二叠统林西组地层* 。
+Pred: 该 火山口 位于 罕山鹿场幅 的 巴代艾来 附近 ， 是 晚侏罗世早期旋徊 产物 ， 破火山口 总体 受 北东 及 北西向 两组 基地断裂 控制 ， 在 远离火山口 附近 见 有 上二叠统林西组地层 。
+Label True: S BIE BE BIIIE S BIIE BE S S BIIE BE BIIE S BIIE BE S BE S BIE S S BIIE BE S S BE BIE BE S S BIIIIIIIE S
+Label Pred: S BIE BE BIIIE S BIIE BE S S BIIIIIIE IE S BIIE BE S BE S BIE BE BIIE BE S S BIIIE BE S S BIIIIIIIE S
+Wrong 7 0: 晚侏罗世 早期 旋徊产物 两 组 远离 火山口
+
+True: 资料 显示 ， *调查区* *地震动峰值* *加速度* 为 *0.1～0.15g* ， *相当于* *地震基本烈度* *Ⅶ度* 。
+Pred: 资料 显示 ， 调查区地震动峰 值 加 速度 为 0.1～0.15g ， 相 当于 地震 基本 烈度 Ⅶ度 。
+Label True: BE BE S BIE BIIIE BIE S BIIIIIIIE S BIE BIIIIE BE S
+Label Pred: BE BE S BIIIIIE S S BE S BIIIIIIIE S S BS BE BE BE BE S
+Wrong 5 0: 调查区 地震动峰值 加速度 相当于 地震基本烈度
+
+True: *黑土湖组* 在 *山地丘陵区* 常 直接 *覆* 于 基岩 之上 ， 与 *山前组* 常 呈 *渐变过渡关系* 。
+Pred: 黑土湖组 在 山地丘陵区 常 直接 覆于 基岩 之上 ， 与 山前组 常呈 渐 变过渡关系 。
+Label True: BIIE S BIIIE S BE S S BE BE S S BIE S S BIIIIE S
+Label Pred: BIIE S BIIIE S BE BE BE BE S S BIE BS S BIIIE S
+Wrong 4 0: 覆 于 常 渐变过渡关系
+
+True: （ 2 ） *青山南背斜* 位于 *青山村* 北部 ， 长 *250m* ， 宽 *150m* ， *北翼* 地层 产状 *350°∠25°* ， *南翼* 地层 产状 *248°∠66°* 。
+Pred: （ 2 ）青山南背斜位于 青山村 北部 ， 长 250m ， 宽 150m ， 北翼地层 产状 350° ∠ 25° ， 南翼地层 产状 248° ∠ 66° 。
+Label True: S S S BIIIE BE BIE BE S S BIIE S S BIIE S BE BE BE BIIIIIIE S BE BE BE BIIIIIIE S
+Label Pred: S S BIIIIIBE BIE IE S S BIIE S S BIIE S BIIE BE BIIE S BIE S BIIE BE BIIE S BIE S
+Wrong 9 0: ） 青山南背斜 北部 北翼 地层 350°∠25° 南翼 地层 248°∠66°
+
+True: 与 下部 *砂砾石层* 为 *渐变过渡* 。
+Pred: 与 下部 砂砾石层 为 渐变 过渡 。
+Label True: S BE BIIE S BIIE S
+Label Pred: S BE BIIE S BE IE S
+Wrong 1 0: 渐变过渡
+
+True: *中晚更新世大桥镇组* （ *Qpd* ） *淤泥质粉质粘土* ， 青灰色 ， 主要 由 粘粒 、 *粉粒* ， 少量 *淤泥质* 等 组成 ， *可塑状* 。
+Pred: 中晚更新世大桥镇组 （ Qpd ） 淤泥质粉质粘土 ， 青灰色 ， 主要 由 粘粒 、 粉粒 ， 少量 淤泥质 等 组成 ， 可 塑状 。
+Label True: BIIIIIIIE S BIE S BIIIIIE S BIE S BE S BE S BE S BE BIE S BE S BIE S
+Label Pred: BIIIIIIIE S BIE S BIIIIIE S BIE S BE S BE S BE S BE BIE S BE S S BE S
+Wrong 1 0: 可塑状
+
+True: 测区 *已经* *火山活动* 较为 *频繁* ， 侵入岩 、 火山岩 十分 发育 ， 区域 *成矿* *地质条件* 较好 ， 是 一个 很好 的 *找矿远景区域* ， *现* 将 地层 、 岩浆岩 和 *构造* 等 *成矿条件* 介绍 如下 。
+Pred: 测区 已 经 火山活动 较为 频繁 ， 侵入岩 、 火山岩 十分 发育 ， 区域 成矿地质 条件 较好 ， 是 一个 很好 的 找矿远景 区域 ， 现 将 地层 、 岩浆岩 和 构造 等 成矿条件 介绍 如下 。
+Label True: BE BE BIIE BE BE S BIE S BIE BE BE S BE BE BIIE BE S S BE BE S BIIIIE S S S BE S BIE S BE S BIIE BE BE S
+Label Pred: BE S S BIIE BE BE S BIE S BIE BE BE S BE BIIE BE BE S S BE BE S BIIE BE S S S BE S BIE S BE S BIIE BE BE S
+Wrong 4 0: 已经 成矿 地质条件 找矿远景区域
+
+True: 第四系 主要 分布 于 中 西部 及 *山间凹地* 、 *海岸带* 、 河流 两侧 等 *地* ， 其 沉积物 岩性 及 *成因类型* 与 *近代* *地貌形态* 密切相关 ， 区 内 复杂 的 *地貌形态* ， 导致 了 *第四系堆积物* 的 *多样化* 。
+Pred: 第四系 主要 分布 于 中西部 及 山间凹地 、 海岸带 、 河流 两侧 等地 ， 其 沉积物岩性 及 成因类型 与 近代地貌形态 密切相关 ， 区 内 复杂 的 地貌形态 ， 导致 了 第四系堆积物 的 多 样化 。
+Label True: BIE BE BE S S BE S BIIE S BIE S BE BE S S S S BIE BE S BIIE S BE BIIE BIIE S S S BE S BIIE S BE S BIIIIE S BIE S
+Label Pred: BIE BE BE S BIE S BIIE S BIE S BE BE BE S S BIIIE S BIIE S BIIIIE BIIE S S S BE S BIIE S BE S BIIIIE S S BE S
+Wrong 9 0: 中 西部 等 地 沉积物 岩性 近代 地貌形态 多样化
+
+True: *遍布* 于 *整个* 区域 ， 岩性 主要 为 *含斑粗中粒二长花岗岩* 、 弱片麻状二长花岗岩 、 *英云闪长岩* 、 *绢英岩化碎裂状花岗岩* 等 。
+Pred: 遍布 于 整个 区域 ， 岩性 主要 为 含斑粗中粒二长花岗岩 、 弱片麻状二长花岗岩 、 英云闪长岩 、 绢英岩化碎裂状花岗岩 等 。
+Label True: BE S BE BE S BE BE S BIIIIIIIIE S BIIIIIIIE S BIIIE S BIIIIIIIIE S S
+Label Pred: BE S BE BE S BE BE S BIIIIIIIIE S BIIIIIIIE S BIIIE S BIIIIIIIIE S S
+Wrong 0 0: 
+
+True: 2 . *奥陶系* （ *O* ） 。 分布 于 本 区 西部 的 *大观区山口乡* 。
+Pred: 2.奥陶系（ O ） 。 分布 于 本 区 西部 的 大观区山口乡 。
+Label True: S S BIE S S S S BE S S S BE S BIIIIE S
+Label Pred: IIIIIS S S S BE S S S BE S BIIIIE S
+Wrong 3 0: 2 . 奥陶系
+
+True: *冲积相地层* （ Qpal ） 主要 分布 在 本 区 *山前冲积扇地带* ， 埋深 *-70m至-150m* ， *层厚* 约 *50m* ， 岩性 在 *扇* 顶 部位 为 *砾卵石* 、 *砂砾石层* （ *砾径* *2-5mm* ，
+Pred: 冲积相地层 （ Qpal ） 主要 分布 在 本 区 山前冲积扇地带 ， 埋深 -70m 至 -150m ， 层 厚 约 50m ， 岩性 在 扇顶 部位 为 砾卵石 、 砂砾石层 （ 砾径2-5mm ，
+Label True: BIIIE S BIIE S BE BE S S S BIIIIIE S BE BIIIIIIIIE S BE S BIE S BE S S S BE S BIE S BIIE S BE BIIIE S
+Label Pred: BIIIE S BIIE S BE BE S S S BIIIIIE S BE BIIE S BIIIE S S S S BIE S BE S BE BE S BIE S BIIE S BIIIIIE S
+Wrong 6 0: -70m至-150m 层厚 扇 顶 砾径 2-5mm
+
+True: 局部 *150mm* ， *石英岩砾* 为主 ） ； 在 *扇* 中 向 西 ， 岩性 *变* 细 ， 以 *中粗砂* 、 *中砂层* 为主 ； 至 *扇* *缘* 为 *细颗粒黏性土* 。
+Pred: 局部 150mm ， 石英岩砾 为主 ） ； 在 扇中向西 ， 岩性 变细 ， 以 中粗砂 、 中砂层 为主 ； 至 扇缘 为 细颗粒黏性土 。
+Label True: BE BIIIE S BIIE BE S S S S S S S S BE S S S S BIE S BIE BE S S S S S BIIIIE S
+Label Pred: BE BIIIE S BIIE BE S S S BIIE S BE BE S S BIE S BIE BE S S BE S BIIIIE S
+Wrong 8 0: 扇 中 向 西 变 细 扇 缘
+
+True: 二 、 沉积环境 *演化* 。
+Pred: 二 、 沉积环境 演化 。
+Label True: S S BIIE BE S
+Label Pred: S S BIIE BE S
+Wrong 0 0: 
+
+True: *5* . *辽河群盖县组* （ *Ptgx* ） 。
+Pred: 5.辽河群 盖县组 （ Ptgx ） 。
+Label True: S S BIIIIE S BIIE S S
+Label Pred: BIIIE BIE S BIIE S S
+Wrong 3 0: 5 . 辽河群盖县组
+
+True: 同时 ， 受 *气候* *大幅度* 变化 ， *太子河* *洪水量* 基本 大于 *中更新世* ， *从而* 形成 *更* 厚 的 *砾卵石* 、 *砂砾石层* ， 也 *成为* *鞍辽地区* 重要 的 *地下水* *供水* *水源地* 。
+Pred: 同时 ， 受 气候 大 幅度 变化 ， 太子河洪水量 基本 大于 中更新世 ， 从而 形成 更 厚 的 砾卵石 、 砂砾石层 ， 也成 为 鞍辽地区 重要 的 地下水供水水源地 。
+Label True: BE S S BE BIE BE S BIE BIE BE BE BIIE S BE BE S S S BIE S BIIE S S BE BIIE BE S BIE BE BIE S
+Label Pred: IE S S BE E BE BE S BIIIIE BE BE BIIE S BS BE S S S BIE S BIIE S BE S BIIE BE S BIIIIIIE S
+Wrong 10 0: 同时 大幅度 太子河 洪水量 从而 也 成为 地下水 供水 水源地
+
+True: 岩性 上 ： 主要 为 *浅黄-褐黄-浅红色* *以及* *杂色含碎石* 、 *块石亚黏土* 、 *亚砂土* ， *其次* 为 *碎石土* ； *碎石* 及 *块石* *多数* 呈 *棱角—次棱角状* ， *磨圆度* *差* ； 其 成分 与 下伏 或 *相邻* *位置* 基岩 基本 *一致* ，
+Pred: 岩性 上 ： 主要 为 浅黄-褐黄-浅红色以 及 杂色含碎石 、 块石亚黏土 、 亚砂土 ， 其次 为 碎石土 ； 碎石 及 块石 多 数 呈 棱角—次棱角状 ， 磨圆度差 ； 其 成分 与 下伏 或 相邻位置基岩 基本 一致 ，
+Label True: BE S S BE S BIIIIIIIE BE BIIIE S BIIIE S BIE S BE S BIE S BE S BE BE S BIIIIIE S BIE S S S BE S BE S BE BE BE BE BE S
+Label Pred: BE S S BE S BIIIIIIIIE S BIIIE S BIIIE S BIE S BE S BIE S BE S BE S S S BIIIIIE S BIIS S S BE S BE S BIIIIE BE BE S
+Wrong 7 0: 浅黄-褐黄-浅红色 以及 多数 磨圆度 相邻 位置 基岩
+
+True: *颜色* 上 *通常* 也 和 下伏 基岩 *风化颜色* *相* *一致* ； 在 *碎石* 及 *块石* 的 含量 及 *粒径* 上 *差异* 较大 ； 厚度 由 *坡顶* 向 *坡脚* *递增* ， 不整合 *覆* 于 下伏 *风化面* 之上 。
+Pred: 颜色 上通 常也 和 下伏基岩 风化颜色相 一致 ； 在 碎石 及 块石 的 含量 及 粒径上差异 较大 ； 厚度 由 坡顶向坡脚递 增 ， 不整合 覆于 下伏 风化面 之上 。
+Label True: BE S BE S S BE BE BIIE S BE S S BE S BE S BE S BE S BE BE S BE S BE S BE BE S BIE S S BE BIE BE S
+Label Pred: BE IE BE S BIIE BIIIE BE S S BE S BE S BE S BIIIE BE S BE S BIIIIE S S BIE BE BE BIE BE S
+Wrong 16 0: 上 通常 也 下伏 基岩 风化颜色 相 粒径 上 差异 坡顶 向 坡脚 递增 覆 于
+
+True: 受 *沂沭深大断裂* 的 影响 ， 区域 内 *北北东向* 断裂构造 *最为* 发育 ， *其次* 为 北东向 、 近 东西向 、 北西向 断裂构造 。 区域 内 多 为 第四系 所 *覆* ， 部分 *构造* 为 *遥感* 、
+Pred: 受 沂沭 深大断裂 的 影响 ， 区域 内 北北东向 断裂构造 最 为 发育 ， 其次 为 北东向 、 近 东西向 、 北西向 断裂构造 。 区域 内 多 为 第四系所覆 ， 部分构造 为 遥感 、
+Label True: S BIIIIE S BE S BE S BIIE BIIE BE BE S BE S BIE S S BIE S BIE BIIE S BE S S S BIE S S S BE BE S BE S
+Label Pred: S BE BIIE S BE S BE S BIIE BIIE S S BE S BE S BIE S S BIE S BIE BIIE S BE S S S BIIIE S BIIE S BE S
+Wrong 7 0: 沂沭深大断裂 最为 第四系 所 覆 部分 构造
+
+True: *物探推断* 断裂 ， *在此* *不再* *赘述* 。
+Pred: 物探 推断断裂 ， 在 此 不 再赘述 。
+Label True: BIIE BE S BE BE BE S
+Label Pred: BE BIIE S S E S BIE S
+Wrong 5 0: 物探推断 断裂 在此 不再 赘述
+
+True: （ 1 ） *黑尖子向斜* 位于 *黄山口褶皱* 的 北部 ， 长 *1250m* ， 宽 *300m* ， *北翼* 地层 产状 *158°∠40°* ， *南翼* 地层 产状 *334°∠64°* 。
+Pred: （1）黑尖子向斜位于 黄山口褶皱 的 北部 ， 长 1250m ， 宽 300m ， 北翼地层 产状 158° ∠ 40° ， 南翼地层 产状 334° ∠ 64° 。
+Label True: S S S BIIIE BE BIIIE S BE S S BIIIE S S BIIE S BE BE BE BIIIIIIE S BE BE BE BIIIIIIE S
+Label Pred: BIIIIIIIBE BIIIE S BE S S BIIIE S S BIIE S BIIE BE BIIE S BIE S BIIE BE BIIE S BIE S
+Wrong 10 0: （ 1 ） 黑尖子向斜 北翼 地层 158°∠40° 南翼 地层 334°∠64°
+
+True: 为 一套 河湖相紫红色碎屑岩 建造 。 厚度 大于 *1062m* 。
+Pred: 为 一套 河湖相紫红色碎屑岩 建造 。 厚度 大于 1062m 。
+Label True: S BE BIIIIIIIE BE S BE BE BIIIE S
+Label Pred: S BE BIIIIIIIE BE S BE BE BIIIE S
+Wrong 0 0: 
+
+True: 下部 为 *冰碛* 、 *冰水堆积* ， 分布 于 *刘二堡* 、 *烟郎寨* *以西* 的 *平原* 区 ； *埋* 深 *-140至-250m* ， 厚 *10-50m* 左右 ， 由 东 至 西 *逐渐* *变* 薄 ； 岩性 为 *棕黄色* 、
+Pred: 下部 为 冰碛 、 冰水堆积 ， 分布 于 刘二堡 、 烟郎寨 以西 的 平原区 ； 埋深 -140 至 -250m ， 厚 10-50m 左右 ， 由 东 至 西逐 渐 变薄 ； 岩性 为 棕黄色 、
+Label True: BE S BE S BIIE S BE S BIE S BIE BE S BE S S S S BIIIIIIIIE S S BIIIIE BE S S S S S BE S S S BE S BIE S
+Label Pred: BE S BE S BIIE S BE S BIE S BIE BE S BIE S BE BIIE S BIIIE S S BIIIIE BE S S S S BE S BE S BE S BIE S
+Wrong 9 0: 平原 区 埋 深 -140至-250m 西 逐渐 变 薄
+
+True: *棕红色黏土* 含 *砾石层* 或 *混土砂砾石层* ， 砾石 以 *磨圆* 较差 的 *石英砂岩* 为主 ， *砾径* *2至4cm* ， *最大* 至 *13cm* *以上* ； 其中 *佟二堡-黄泥洼* 上部 为 *河湖相堆积* ，
+Pred: 棕红色黏土含砾石层 或 混土砂砾石层 ， 砾石 以 磨圆 较差 的 石英砂岩 为主 ， 砾径 2 至 4cm ， 最 大 至 13cm 以 上 ； 其中 佟 二堡-黄泥洼 上部 为 河湖相堆积 ，
+Label True: BIIIE S BIE S BIIIIE S BE S BE BE S BIIE BE S BE BIIIE S BE S BIIE BE S BE BIIIIIE BE S BIIIE S
+Label Pred: BIIIIIIIE S BIIIIE S BE S BE BE S BIIE BE S BS S S BIE S S S S BIIE S S S BE S BIIIIE BE S BIIIE S
+Wrong 8 0: 棕红色黏土 含 砾石层 砾径 2至4cm 最大 以上 佟二堡-黄泥洼
+
+True: 在 *佟二堡-柳壕* *以西* 地区 ， 埋深 *-40至-220m* ， 厚 *50余m* ， 岩性 为 灰 、 *深灰色中细砂* 与 *粉细砂层* ， 夹 *黏土* 或 *粉质黏土薄* 层 ， *往* 东 *则* 为 *黄色* 或 *浅黄色砂砾石层* 。
+Pred: 在 佟二堡-柳壕 以 西地区 ， 埋深 -40 至 -220m ， 厚 50余m ， 岩性 为 灰 、 深灰色中细砂 与 粉细砂层 ， 夹黏土 或 粉质黏土薄层 ， 往东则 为 黄色 或 浅黄色砂砾石层 。
+Label True: S BIIIIE BE BE S BE BIIIIIIIE S S BIIE S BE S S S BIIIIE S BIIE S S BE S BIIIE S S S S S S BE S BIIIIIE S
+Label Pred: S BIIIIE S BIE S BE BIE S BIIIE S S BIIE S BE S S S BIIIIE S BIIE S BIE S BIIIIE S BIE S BE S BIIIIIE S
+Wrong 10 0: 以西 地区 -40至-220m 夹 黏土 粉质黏土薄 层 往 东 则
+
+True: 由于 *地壳运动* 的 *差异* *以及* 后期 *外营力作用* 的 结果 ， 形成 了 较大 的 *内陆湖泊* ， 即 *索伦-老龙头湖盆* 、 *林西湖盆* ， 沉积 了 一套 *湖相堆积物* ， 主要 有 粉砂岩 、
+Pred: 由于 地壳运动 的 差异以 及 后期 外营力作用 的 结果 ， 形成 了 较大 的 内陆湖泊 ， 即 索伦-老龙头湖盆 、 林西湖盆 ， 沉积 了 一套 湖相堆积物 ， 主要 有 粉砂岩 、
+Label True: BE BIIE S BE BE BE BIIIE S BE S BE S BE S BIIE S S BIIIIIIE S BIIE S BE S BE BIIIE S BE S BIE S
+Label Pred: BE BIIE S BIS S BE BIIIE S BE S BE S BE S BIIE S S BIIIIIIE S BIIE S BE S BE BIIIE S BE S BIE S
+Wrong 2 0: 差异 以及
+
+True: *泥岩* 等 ， *现在* *已经* 变质 为 *变质粉砂岩* 、 *绢云母板岩* 等 ， 在 区域 上 发育 了 *安哥拉植物群* 和 *西伯利亚淡水双壳类动物群* 。
+Pred: 泥岩 等 ， 现 在 已 经 变质 为 变质粉砂岩 、 绢云母板岩 等 ， 在 区域 上 发育 了 安哥拉植物群 和 西伯利亚淡水双壳类动物群 。
+Label True: BE S S BE BE BE S BIIIE S BIIIE S S S BE S BE S BIIIIE S BIIIIIIIIIIE S
+Label Pred: BE S S S S S S BE S BIIIE S BIIIE S S S BE S BE S BIIIIE S BIIIIIIIIIIE S
+Wrong 2 0: 现在 已经
+
+True: 沿 区域性 北东向 断裂带 呈 *岩墙状* 侵入 。 *围岩* 为 *青白口纪牛头岭组* 。
+Pred: 沿 区域性 北东向 断裂带 呈 岩墙状侵入 。 围岩 为 青白口纪牛头岭组 。
+Label True: S BIE BIE BIE S BIE BE S BE S BIIIIIIE S
+Label Pred: E BIE BIE BIE S BIIIE S BE S BIIIIIIE S
+Wrong 3 0: 沿 岩墙状 侵入
+
+True: 3 . *志留系* （ *S* ） 。 分布 于 本 区 西部 的 *大观区山口乡* ， 少量 分布 在 *宜秀区杨桥镇* 。
+Pred: 3.志留系 （ S ） 。 分布 于 本 区 西部 的 大观区山口乡 ， 少量 分布 在 宜秀区杨桥镇 。
+Label True: S S BIE S S S S BE S S S BE S BIIIIE S BE BE S BIIIIE S
+Label Pred: BIIIE S S S S BE S S S BE S BIIIIE S BE BE S BIIIIE S
+Wrong 3 0: 3 . 志留系
+
+True: 郯庐断裂带 *起源* 于 *印支期华北* 与 *华南板块* 的 *碰撞造山* *之中* ， 晚侏罗世 *期间* *再次* *左行平移* 。
+Pred: 郯庐断裂带 起 源于 印支期 华北 与 华南板块 的 碰撞造山之中 ， 晚侏罗世期间 再 次 左行平移 。
+Label True: BIIIE BE S BIIIE S BIIE S BIIE BE S BIIE BE BE BIIE S
+Label Pred: BIIIE S BE BIE BE S BIIE S BIIIIE S BIIIIE S S BIIE S
+Wrong 8 0: 起源 于 印支期华北 碰撞造山 之中 晚侏罗世 期间 再次
+
+True: *F2断层* ： 位于 *测线* *西北段* ， *F1断层* 东南侧 ， 基本 *平行* *F1断层* ， *两者* *共同* *组面* 郯庐断裂带 早期 的 *深大断裂带* ， *宽度* 约 *4公里* ， 从 *变质岩基岩面* *以及* 浅部 地层 关系 *来看* ，
+Pred: F2断层 ： 位于 测线 西北段 ， F1断层东南侧 ， 基本 平行F1断层 ， 两者 共同组面郯庐断裂带 早期 的 深大断裂带 ， 宽度 约 4公里 ， 从 变质岩基岩面以 及 浅部地层 关系 来看 ，
+Label True: BIIE S BE BE BIE S BIIE BIE S BE BE BIIE S BE BE BE BIIIE BE S BIIIE S BE S BIE S S BIIIIE BE BE BE BE BE S
+Label Pred: BIIE S BE BE BIE S BIIIIIE S BE BIIIIE S BE BIIIBIIIE BE S BIIIE S BE S BIE S S BIIIIIE S BIIE BE BE S
+Wrong 10 0: F1断层 东南侧 平行 F1断层 共同 组面 变质岩基岩面 以及 浅部 地层
+
+True: *断层性质* 为 *正断层* ， 早期 与 *F1断层* *同时期* *产生* ， *正断性质* 是 区域 后期 *拉张期* 形成 的 ， 断层 走向 *NE* ， 倾向 *SE* ， 倾角 *64度* （ *图2-2-9* ） 。
+Pred: 断层性质 为 正断层 ， 早期 与 F1断层 同时期 产生 ， 正断性质是 区域 后期 拉张期 形成 的 ， 断层 走向 NE ， 倾向 SE ， 倾角 64度 （ 图2-2-9 ） 。
+Label True: BIIE S BIE S BE S BIIE BIE BE S BIIE S BE BE BIE BE S S BE BE BE S BE BE S BE BIE S BIIIIE S S
+Label Pred: BIIE S BIE S BE S BIIE BIE BE S BIIIE BE BE BIE BE S S BE BE BE S BE BE S BE BIE S BIIIIE S S
+Wrong 2 2: 正断性质 是
+
+True: *沉火山碎屑岩* 有 凝灰质砂砾岩 、 *凝灰质细砂岩* 和 *沉凝灰岩* 。 该 *类* 岩石 主要 分布 在 *白音高老组* ， 在 满克头鄂博组 中 有 少量 分布 。
+Pred: 沉火山碎屑岩 有 凝灰质砂砾岩 、 凝灰质细砂岩 和 沉凝灰岩 。 该 类 岩石 主要 分布 在 白音高老组 ， 在 满克头鄂博组 中 有 少量 分布 。
+Label True: BIIIIE S BIIIIE S BIIIIE S BIIE S S S BE BE BE S BIIIE S S BIIIIE S S BE BE S
+Label Pred: BIIIIE S BIIIIE S BIIIIE S BIIE S S S BE BE BE S BIIIE S S BIIIIE S S BE BE S
+Wrong 0 0: 
+
+True: （ 二 ） 近 东西向 断裂 。 近 东西向 断裂构造 地表 出露 比较 零星 ， *连续性* *差* ， 一般 延伸 *数千米* 至 *几十千米* ， 发育 *几十米* 至 *数百米* *甚至* *千余米* 宽 的 *断裂破碎带* 。
+Pred: （ 二 ） 近 东西向 断裂 。 近 东西向 断裂构造 地表 出露 比较 零星 ， 连续性差 ， 一般 延伸 数 千米 至 几十千米 ， 发育 几 十米 至 数百米 甚 至 千余米 宽 的 断裂破碎带 。
+Label True: S S S S BIE BE S S BIE BIIE BE BE BE BE S BIE S S BE BE BIE S BIIE S BE BIE S BIE BE BIE S S BIIIE S
+Label Pred: S S S S BIE BE S S BIE BIIE BE BE BE BE S BIIE S BE BE S BE S BIIE S BE S BE S BIE S S BIE S S BIIIE S
+Wrong 5 0: 连续性 差 数千米 几十米 甚至
+
+True: 该 套 地层 主要 分布 在 *格日吐防火站* 和 *敦德哈布其勒南山* ， 出露 面积 达 *1.5* 。 岩层 产状 较 平缓 。
+Pred: 该 套 地层 主要 分布 在 格日吐防火站 和 敦德哈布其勒南山 ， 出露 面积 达 1.5 。 岩层 产状 较 平缓 。
+Label True: S S BE BE BE S BIIIIE S BIIIIIIE S BE BE S BIE S BE BE S BE S
+Label Pred: S S BE BE BE S BIIIIE S BIIIIIIE S BE BE S BIE S BE BE S BE S
+Wrong 0 0: 
+
+True: 出露 于 *南昌市规划区* 北西部 坪上熊家 、 *申家* 、 *梅树坑* 、 *塔下* 、 *马子岭* 、 *梅岭村* 、 *东昌村* 、 *半岭村* 、 *申家村* 一带 。
+Pred: 出露 于 南昌市规划区 北西部 坪上熊家 、 申家 、 梅树坑 、 塔下 、 马子岭 、 梅岭村 、 东昌村 、 半岭村 、 申家村 一带 。
+Label True: BE S BIIIIE BIE BIIE S BE S BIE S BE S BIE S BIE S BIE S BIE S BIE BE S
+Label Pred: BE S BIIIIE BIE BIIE S BE S BIE S BE S BIE S BIE S BIE S BIE S BIE BE S
+Wrong 0 0: 
+
+True: 上部 为 *灰黑色炭质页岩夹微晶灰岩透镜体* 。
+Pred: 上部 为 灰黑色炭质页岩夹微晶灰岩透镜体 。
+Label True: BE S BIIIIIIIIIIIIIE S
+Label Pred: BE S BIIIIIIIIIIIIIE S
+Wrong 0 0: 
+
+True: 下蜀组 *残留* 厚度 区域 *差别* 较大 ， *2～5m* 不等 ， 厚度 较大 的 *下蜀土沉积区* 可 *见到* 多 层 *古土壤层* ， 下蜀组 底部 呈 *起伏状* 平行不整合 于 戚家矶组 之上 ， 显示 *两套* 地层 之间 *有着* *较长* *时间* 的 *沉积间断* ，
+Pred: 下蜀组 残留厚度 区域 差别 较大 ， 2～5m 不等 ， 厚度 较大 的 下蜀土沉积区 可 见 到 多 层古土壤层 ， 下蜀组 底部 呈 起伏状平行不整合 于 戚家矶组 之上 ， 显示 两套 地层 之间 有 着 较 长时间 的 沉积间断 ，
+Label True: BIE BE BE BE BE BE S BIIE BE S BE BE S BIIIIE S BE S S BIIE S BIE BE S BIE BIIIE S BIIE BE S BE BE BE BE BE BE BE S BIIE S
+Label Pred: BIE IIIE BE BE BE S BIIE BE S BE BE S BIIIIE S S S S BIIIE S BIE BE S BIIIIIIE S BIIE BE S BE BE BE BE S S S BIE S BIIE S
+Wrong 10 0: 残留 厚度 见到 层 古土壤层 起伏状 平行不整合 有着 较长 时间
+
+True: 戚家矶组 遭受 *剥蚀* 。
+Pred: 戚家矶组 遭 受 剥蚀 。
+Label True: BIIE BE BE S
+Label Pred: BIIE S S BE S
+Wrong 1 0: 遭受
+
+True: *糜棱岩化花岗岩* ： 岩石 具 *糜棱结构* ， *片麻状构造* 。 *碎斑* 含量 *92～95%* 。
+Pred: 糜棱岩化花岗岩 ： 岩石具糜棱结构 ， 片麻状构造 。 碎斑 含量 92～95% 。
+Label True: BIIIIIE S BE S BIIE S BIIIE S BE BE BIIIIE S
+Label Pred: BIIIIIE S BIIBIIE S BIIIE S BE BE BIIIIE S
+Wrong 2 0: 岩石 具
+
+True: 矿物 *粒径* *1～2mm* ， 其中 的 *斜长石* 为 *半自行板状* ， 具 *泥化* 和 *绢云母化* ， *An=6* ， 属 *钠长石* 。
+Pred: 矿物粒径1～2mm ， 其中 的 斜长石 为 半自行板状 ， 具泥化 和 绢云母化 ， An=6 ， 属 钠长石 。
+Label True: BE BE BIIIE S BE S BIE S BIIIE S S BE S BIIE S BIIE S S BIE S
+Label Pred: BIIIIIIIE S BE S BIE S BIIIE S BIE S BIIE S BIIE S S BIE S
+Wrong 5 0: 矿物 粒径 1～2mm 具 泥化
+
+True: 该 *超单元* 主要 分布 于 *杨桥-罗岭* 一带 。
+Pred: 该 超 单元 主要 分布 于 杨桥-罗岭 一带 。
+Label True: S BIE BE BE S BIIIE BE S
+Label Pred: S S BE BE BE S BIIIE BE S
+Wrong 1 0: 超单元
+
+True: *涉及* 本 幅 的 构造单元 为 *巴音楚鲁-罕山林场火山隆起* 的 带 和 *阿拉坦达巴道班中生代火山喷发盆地* 。 具体 特征 *陈述* 如下 。
+Pred: 涉 及 本 幅 的 构造单元 为 巴音楚鲁-罕山林场火山隆起 的 带 和 阿拉坦达巴道班中生代火山喷发盆地 。 具体 特征 陈述 如下 。
+Label True: BE S S S BIIE S BIIIIIIIIIIIE S S S BIIIIIIIIIIIIIIE S BE BE BE BE S
+Label Pred: S S S S S BIIE S BIIIIIIIIIIIE S S S BIIIIIIIIIIIIIIE S BE BE BE BE S
+Wrong 1 0: 涉及
+
+True: 同时 在 *遥感影象* 和 地貌 上 均 有 明显 的 反映 ， 部分 反映 为 *赋水断裂带* 。
+Pred: 同时 在 遥感影象 和 地貌 上 均 有 明显 的 反映 ， 部分 反映 为 赋水断裂带 。
+Label True: BE S BIIE S BE S S S BE S BE S BE BE S BIIIE S
+Label Pred: BE S BIIE S BE S S S BE S BE S BE BE S BIIIE S
+Wrong 0 0: 
+
+True: *杨家庄组* 具 明显 的 河流 、 *浅湖* 二元结构 特征 ， 以 *河流相沉积* 为主 、 局部 发育 浅湖相 。
+Pred: 杨家庄组 具 明显 的 河流 、 浅湖二元结构 特征 ， 以 河流相沉积 为 主 、 局部 发育 浅湖相 。
+Label True: BIIE S BE S BE S BE BIIE BE S S BIIIE BE S BE BE BIE S
+Label Pred: BIIE S BE S BE S BIIIIE BE S S BIIIE S S S BE BE BIE S
+Wrong 3 0: 浅湖 二元结构 为主
+
+True: 7 、 *潍北组* （ *Qhw* ） 分布 于 区 南部 *缘* 各 *大河流* *入海口* 处 。
+Pred: 7 、 潍北组 （ Qhw ） 分布 于 区 南部 缘各 大 河流入海口处 。
+Label True: S S BIE S BIE S BE S S BE S S BIE BIE S S
+Label Pred: S S BIE S BIE S BE S S BE BE S BIIIIE S
+Wrong 5 0: 缘 各 大河流 入海口 处
+
+True: *钾长石* 为 *它形粒状* ， 属 *条纹长石* ， *粒径* *1.7～3.0mm* 。
+Pred: 钾长石 为 它形粒状 ， 属 条纹长石 ， 粒径1.7～3.0mm 。
+Label True: BIE S BIIE S S BIIE S BE BIIIIIIIE S
+Label Pred: IIE S BIIE S S BIIE S BIIIIIIIIIE S
+Wrong 3 0: 钾长石 粒径 1.7～3.0mm
+
+True: *山前组* 厚度 一般 *小于* *3m* ， 局部 达 *十几米* 。
+Pred: 山前组 厚度 一般 小于 3m ， 局部 达 十几米 。
+Label True: BIE BE BE BE BE S BE S BIE S
+Label Pred: BIE BE BE BE BE S BE S BIE S
+Wrong 0 0: 
+
+True: *安庆市规划区* 范围 内 ， 下蜀组 分布 广泛 ， 主要 分布 于 在 山前岗地 、 *沿江低丘* 、 *波状-浅丘状平原* 等 *地貌单元* ， 厚度 一般 *小于* 10m ， 个别 达 *15m* 左右 。
+Pred: 安庆市规划区 范围内 ， 下蜀组 分布 广泛 ， 主要 分布 于 在 山前岗地 、 沿江低丘 、 波状-浅丘状平原 等 地貌单元 ， 厚度 一般 小于 10m ， 个 别 达 15m 左右 。
+Label True: BIIIIE BE S S BIE BE BE S BE BE S S BIIE S BIIE S BIIIIIIE S BIIE S BE BE BE BIE S BE S BIE BE S
+Label Pred: BIIIIE BBS S BIE BE BE S BE BE S S BIIE S BIIE S BIIIIIIE S BIIE S BE BE BE BIE S S E S BIE BE S
+Wrong 2 0: 范围 个别
+
+True: *中细粒黑云母花岗岩* 主要 分布 在 本 幅 的 南侧 一带 ， 呈 *岩珠状* 产出 ， 出露 面积 *2km2* 。 岩石 具 灰黄色 ， *中细粒结构* 。
+Pred: 中细粒黑云母花岗岩 主要 分布 在 本 幅 的 南侧 一带 ， 呈 岩珠状 产出 ， 出露 面积 2km2 。 岩石具灰黄色 ， 中细粒结构 。
+Label True: BIIIIIIIE BE BE S S S S BE BE S S BIE BE S BE BE BIIE S BE S BIE S BIIIE S
+Label Pred: IIIIIIIIE BE BE S S S S BE BE S S BIE BE S BE BE BIIE S BIIIIE S BIIIE S
+Wrong 4 0: 中细粒黑云母花岗岩 岩石 具 灰黄色
+
+True: 地貌 上 为 *滨岸砂丘* 、 *沙地* 、 *沙滩* 或 *海积Ⅰ级阶地* ， *大都* 呈 *宽阔* 平缓 的 *新月形展布* 。 属 *滨海积成因* 。
+Pred: 地 貌 上 为 滨岸砂丘 、 沙地 、 沙滩 或 海积Ⅰ级阶地 ， 大都 呈 宽阔平缓 的 新月形 展布 。 属 滨海积 成因 。
+Label True: BE S S BIIE S BE S BE S BIIIIE S BE S BE BE S BIIIE S S BIIIE S
+Label Pred: E E S S BIIE S BE S BE S BIIIIE S BE S BIIE S BIE BE S S BIE BE S
+Wrong 5 0: 地貌 宽阔 平缓 新月形展布 滨海积成因
+
+True: 区 内 地层 发育 不 全 ， 主要 分布 于 *胶莱盆地* *及其* *周边* ， 由 *老* 至 *新* 分别 *太古界-元古界胶东群* ； *元古界荆山群* ， *粉子山群* ； *中生代白垩系* ； *新生界第四系* 等 ；
+Pred: 区 内 地层 发育 不全 ， 主要 分布 于 胶莱盆地 及 其周边 ， 由 老 至 新分别 太古界-元古界胶东群 ； 元古界荆山群 ， 粉子山群 ； 中生代白垩系 ； 新生界第四系 等 ；
+Label True: S S BE BE S S S BE BE S BIIE BE BE S S S S S BE BIIIIIIIIE S BIIIIE S BIIE S BIIIIE S BIIIIE S S
+Label Pred: S S BE BE BE S BE BE S BIIE S BIE S S E S BIE BIIIIIIIIE S BIIIIE S BIIE S BIIIIE S BIIIIE S S
+Wrong 7 0: 不 全 及其 周边 老 新 分别
+
+True: 以 *中生界白垩系* 为主 ， 次 为 *新生界第四系* ， *中太古界* 及 *古元古界* 少量 出露 。
+Pred: 以 中生界白垩系 为主 ， 次 为 新生界第四系 ， 中太古界 及 古元古界 少量 出露 。
+Label True: S BIIIIE BE S S S BIIIIE S BIIE S BIIE BE BE S
+Label Pred: S BIIIIE BE S S S BIIIIE S BIIE S BIIE BE BE S
+Wrong 0 0: 
+
+True: 断裂 带 总体 走向 为 ， 局部 地段 可 达 ， 走向 呈 *波状* ， 倾向 *南东* 。
+Pred: 断裂带 总体 走向 为 ， 局部 地段 可 达 ， 走向 呈 波状 ， 倾向 南东 。
+Label True: BE S BE BE S S BE BE S S S BE S BE S BE BE S
+Label Pred: BIE BE BE S S BE BE S S S BE S BE S BE BE S
+Wrong 2 0: 断裂 带
+
+True: 断裂 总体 产状 为 ： 走向 *60°～70°* ， 倾向 *南东* ， 倾角 *60°～70°* 。
+Pred: 断裂 总体 产状 为 ： 走向 60° ～ 70° ， 倾向 南东 ， 倾角 60° ～ 70° 。
+Label True: BE BE BE S S BE BIIIIIE S BE BE S BE BIIIIIE S
+Label Pred: BE BE BE S S BE BIE S BIE S BE BE S BE BIE S BIE S
+Wrong 2 0: 60°～70° 60°～70°
+
+True: 2 、 *似斑状黑母二长花岗岩* *(* *η* *γ* *J* 2 1 *-2* *)* 。 *二长花岗岩* 主要 *小沙田* *(* *小沙田* *地名* ， 位于 *向坊幅* 内 *)* *岩体* 组成 。
+Pred: 2 、 似斑状黑母二长花岗岩(ηγJ21-2) 。 二长花岗岩 主要 小 沙田(小沙田地名 ， 位于 向坊 幅 内)岩体 组成 。
+Label True: S S BIIIIIIIIE S S S S S S BE S S BIIIE BE BIE S BIE BE S BE BIE S S BE BE S
+Label Pred: S S BIIIIIIIIIIIIIIIIIE S BIIIE BE S BIIIIIIE S BE BE S BIIE BE S
+Wrong 17 0: 似斑状黑母二长花岗岩 ( η γ J 2 1 -2 ) 小沙田 ( 小沙田 地名 向坊幅 内 ) 岩体
+
+True: *北东–北北东向* 的 *磁异常* *过* *宿松* 后 *减弱* *甚至* *消失* ， 在 *广济* 附近 被 *九江* 东西向 的 *负磁异常* *阻挡* 无 向 南 延伸 的 *迹象* （ *王小凤* 等 ， *2000* ） ， 由此 *推断* *郯–庐断裂带* *应* *终止* 于 *长江* *边* ，
+Pred: 北东– 北北东向 的 磁异常 过宿 松 后 减弱 甚 至 消失 ， 在 广济 附近 被 九江东西向 的 负磁异常 阻挡 无 向南 延伸 的 迹象 （ 王小凤 等 ， 2000 ） ， 由此 推断郯–庐断裂带 应终 止于 长江边 ，
+Label True: BIIIIIE S BIE S BE S BE BE BE S S BE BE S BE BIE S BIIE BE S S S BE S BE S BIE S S BIIE S S BE BE BIIIIE S BE S BE S S
+Label Pred: BIE BIIE S BIE BS S S BS S S BE S S BE BE S BIIIE S BIIE BE S BE BE S BE S BIE E S BIIE S S BE BIIIIIIE BE BE BIE S
+Wrong 17 0: 北东–北北东向 过 宿松 减弱 甚至 九江 东西向 向 南 等 推断 郯–庐断裂带 应 终止 于 长江 边
+
+True: *布格重力异常* 也 表现 *出* *类似* 的 特征 。
+Pred: 布格 重力异常 也 表现 出类似 的 特征 。
+Label True: BIIIIE S BE S BE S BE S
+Label Pred: BS BIIE S BE BIE S BE S
+Wrong 3 0: 布格重力异常 出 类似
+
+True: 在 *徐桥* *以东* ， 断裂 的 *重磁特征* 表现 为 *北东东向* 延伸 的 *正负异常交变带* ， *卫片* *线性影像* *清晰* 。
+Pred: 在 徐桥 以东 ， 断裂 的 重磁特征 表现 为 北东东向 延伸 的 正负异常交 变带 ， 卫片线性影像清晰 。
+Label True: S BE BE S BE S BIIE BE S BIIE BE S BIIIIIE S BE BIIE BE S
+Label Pred: S BE BE S BE S BIIE BE S BIIE BE S BIIIE BE S BIIIIIIE S
+Wrong 4 0: 正负异常交变带 卫片 线性影像 清晰
+
+True: *瓦屋夼组* 分布 比较 *局限* ， 属 *盆地* 早期 局部 *洼陷沉积* 。
+Pred: 瓦屋夼组 分布 比较 局限 ， 属 盆地 早期 局部 洼陷沉积 。
+Label True: BIIE BE BE BE S S BE BE BE BIIE S
+Label Pred: BIIE BE BE BE S S BE BE BE BIIE S
+Wrong 0 0: 
+
+True: *第二章* ， 区域 *地质环境条件* 。 *第一节* ， *地形地貌条件* 。
+Pred: 第二章 ， 区域 地质环境 条件 。 第一节 ， 地形地貌 条件 。
+Label True: BIE S BE BIIIIE S BIE S BIIIIE S
+Label Pred: BIE S BE BIIE BE S BIE S BIIE BE S
+Wrong 2 0: 地质环境条件 地形地貌条件
+
+True: *5* 、 *沂河组（Qhy）* 沂河组 发育 于 河流 的 *河床* 及 *低河漫滩* 之上 ， 呈 *带状* 分布 。
+Pred: 5 、 沂河组 （ Qhy ） 沂河组 发育 于 河流 的 河床 及 低河漫滩 之上 ， 呈带状 分布 。
+Label True: S S BIIIIIIE BIE BE S BE S BE S BIIE BE S S BE BE S
+Label Pred: S S BIE S BIE S BIE BE S BE S BE S BIIE BE S BBS BE S
+Wrong 3 0: 沂河组（Qhy） 呈 带状
+
+True: 岩性 *由早到晚* ， 石英 *增多* ， *斜长石* 减少 ， 结构 *依次* 出现 *中细粒花岗结构* ， *中细粒似斑状花岗结构* 和 *细粒花岗结构* 。
+Pred: 岩性 由 早 到 晚 ， 石英 增多 ， 斜长石 减少 ， 结构 依次 出现 中细粒花岗结构 ， 中细粒似斑状花岗结构 和 细粒花岗结构 。
+Label True: BE BIIE S BE BE S BIE BE S BE BE BE BIIIIIE S BIIIIIIIIE S BIIIIE S
+Label Pred: BE S S S S S BE BE S BIE BE S BE BE BE IIIIIIE S BIIIIIIIIE S BIIIIE S
+Wrong 2 0: 由早到晚 中细粒花岗结构
+
+True: *岩体* 边缘 矿物 颗粒 相对 较 细 、 *颜色* *较深* ， *斜长石斑晶* 含量 较少 *(* 一般 约 *5～10％* *)* ， 出露 宽 约 *数米* ， 局部 达 *十余米* ； *往* *内部* 矿物 颗粒 相对 *变* 粗 ， 以 *细～中细粒结构* 为主 ，
+Pred: 岩体 边缘矿物颗粒相 对 较细 、 颜色 较深 ， 斜长石斑晶 含量 较少 ( 一般 约 5～10％) ， 出露 宽 约 数米 ， 局部 达 十余米 ； 往 内部矿物颗粒相 对 变粗 ， 以 细～中细粒结构 为主 ，
+Label True: BE BE BE BE BE S S S BE BE S BIIIE BE BE S BE S BIIIE S S BE S S BE S BE S BIE S S BE BE BE BE S S S S BIIIIIE BE S
+Label Pred: BE BIIIIIE S BE S BE IE S BIIIE BE BE S BE S BIIIIE S BE S S BE S BE S BIE S S BIIIIIE S BE S S BBIIIIE BE S
+Wrong 16 0: 边缘 矿物 颗粒 相对 较 细 较深 5～10％ ) 内部 矿物 颗粒 相对 变 粗 细～中细粒结构
+
+True: *斜长石斑晶* *较多* ， 一般 为 *10％* 左右 ， 局部 可 增 至 *25％* 左右 。
+Pred: 斜 长石斑晶 较多 ， 一般 为 10％ 左右 ， 局部 可 增 至 25％ 左右 。
+Label True: BIIIE BE S BE S BIE BE S BE S S S BIE BE S
+Label Pred: S BIIE BE S BE S BIE BE S BE S S S BIE BE S
+Wrong 1 0: 斜长石斑晶
+
+True: 该 *断裂地貌* 上 显示 *负地形* 河流 *拐弯* 或 *顺* 其 展布 ， *航卫片* 上 *线性构造* 明显 ， 为 *浅色调带* 。
+Pred: 该 断裂 地貌 上显示 负地形 河流 拐弯 或 顺其 展布 ， 航卫片上线性构造 明显 ， 为 浅色调带 。
+Label True: S BIIE S BE BIE BE BE S S S BE S BIE S BIIE BE S S BIIE S
+Label Pred: S BE BE BIE BIE BE BE S BE BE S BIIIIIIE BE S S BIIE S
+Wrong 8 0: 断裂地貌 上 显示 顺 其 航卫片 上 线性构造
+
+True: *枫香驿片麻岩* 主要 分布 在 *马庙–太湖剪切带* *以南* ， *南冲–柳坪–张家塝–方桥剪切带* 以北 地区 ， 呈 北西向 展布 ， 与 区域 *构造线* 方向 *一致* 。
+Pred: 枫香驿片麻岩 主要 分布 在 马庙–太湖剪切带 以南 ， 南冲–柳坪–张家塝–方桥剪切带 以 北地区 ， 呈 北西向 展布 ， 与 区域构造线 方向 一致 。
+Label True: BIIIIE BE BE S BIIIIIIE BE S BIIIIIIIIIIIIIE BE BE S S BIE BE S S BE BIE BE BE S
+Label Pred: BIIIIE BE BE S BIIIIIIE BE S BIIIIIIIIIBIIIE S BIE S S BIE BE S S BIIIE BE BE S
+Wrong 5 0: 南冲–柳坪–张家塝–方桥剪切带 以北 地区 区域 构造线
+
+True: 在 侵入 *顺序* 上 为 ： *罗家岭* （ *二长岩* ） *→* *姥山* （ *二长花岗岩* ） *→* *茅坦* （ *钾长花岗岩* ） *→* *黄梅尖* （ *石英正长岩* ） *→* *大缸窑* （ *正长岩* ） （ 表2-1-3 ） 。
+Pred: 在 侵入 顺序 上 为 ：罗家岭 （ 二长岩 ） →姥山 （ 二长花岗岩 ） →茅坦 （ 钾长花岗岩 ） →黄梅尖 （ 石英正长岩 ） → 大缸窑 （ 正长岩 ） （ 表2-1-3 ） 。
+Label True: S BE BE S S S BIE S BIE S S BE S BIIIE S S BE S BIIIE S S BIE S BIIIE S S BIE S BIE S S BIIIIE S S
+Label Pred: S BE BE S S BBIE S BIE S BIE S BIIIE S BIE S BIIIE S BIIE S BIIIE S S BIE S BIE S S BIIIIE S S
+Wrong 7 0: ： → 姥山 → 茅坦 → 黄梅尖
+
+True: 区 内 主要 为 基岩 *出露区* ， 出露 的 *最* *古老* 的 *岩石时代* 为 古元古代 。
+Pred: 区 内 主要 为 基岩 出露区 ， 出露 的 最古老 的 岩石时代 为 古元古代 。
+Label True: S S BE S BE BIE S BE S S BE S BIIE S BIIE S
+Label Pred: S S BE S BE BIE S BE S BIE S BIIE S BIIE S
+Wrong 2 0: 最 古老
+
+True: 7 . *奥陶系亮甲山组* （ *Ol* ） 。
+Pred: 7 .奥陶系亮甲山组 （ Ol ） 。
+Label True: S S BIIIIIE S BE S S
+Label Pred: S BIIIIIIE S BE S S
+Wrong 2 0: . 奥陶系亮甲山组
+
+True: 断裂带 由 *蚀变构造岩* 构成 ， *主干* 断裂 *下盘* *次级* 的 *分枝断裂* 发育 ， 并 与 *主干* 断裂 *一起* 控制 *着* *金矿床* 的 分布 。 受 *主干断裂* 控制 的 有 新城 、 *焦家特大型金矿床* ，
+Pred: 断裂带 由 蚀变构造岩 构成 ， 主 干 断裂 下盘次级 的 分枝 断裂 发育 ， 并 与 主干 断裂 一起 控制 着 金矿床 的 分布 。 受 主干 断裂 控制 的 有 新城 、 焦家特大型金矿床 ，
+Label True: BIE S BIIIE BE S BE BE BE BE S BIIE BE S S S BE BE BE BE S BIE S BE S S BIIE BE S S BE S BIIIIIIE S
+Label Pred: BIE S BIIIE BE S S S BE BBIE S BE BE BE S S S BS BE BE BE S BIE S BE S S BS BE BE S S BE S BIIIIIIE S
+Wrong 6 0: 主干 下盘 次级 分枝断裂 主干 主干断裂
+
+True: 受 *分枝断裂* 控制 的 有 *上庄* 、 *河东* 、 *河西* 、 *望儿山* 等 *大型金矿床* 。
+Pred: 受 分枝 断裂 控制 的 有 上庄 、 河东 、 河西 、 望儿山 等 大型金矿床 。
+Label True: S BIIE BE S S BE S BE S BE S BIE S BIIIE S
+Label Pred: S BE BE BE S S BE S BE S BE S BIE S BIIIE S
+Wrong 1 0: 分枝断裂
+
+True: *山间沟谷中地层* *自下而上* 为 粉质粘土 ， *淤泥质粉质粘土* ， *粉土-粉细砂* 、 *碎石层* 。
+Pred: 山间沟谷中地层 自下 而 上 为 粉质粘土 ， 淤泥质粉质粘土 ， 粉土-粉细砂 、 碎石层 。
+Label True: BIIIIIE BIIE S BIIE S BIIIIIE S BIIIIE S BIE S
+Label Pred: IIIIIIE BE S S S BIIE S BIIIIIE S BIIIIE S BIE S
+Wrong 2 0: 山间沟谷中地层 自下而上
+
+True: 勘查区 位于 *著名* 的 *招平金矿带* 的 北 段 （ *破头青断裂* ） *玲珑金矿田* 内 。
+Pred: 勘查区 位于 著名 的 招平金矿带 的 北段 （ 破头青断裂 ） 玲珑金矿田内 。
+Label True: BIE BE BE S BIIIE S S S S BIIIE S BIIIE S S
+Label Pred: BIE BE BE S BIIIE S BE S BIIIE S BIIIIE S
+Wrong 4 0: 北 段 玲珑金矿田 内
+
+True: 断层 *带有* *绿泥石化* 和 *铁染现象* ， 并 有 *岩脉侵入* ， 且 明显 *地* 切割 了 *北北东向* 断层 ， 属 *压剪性断层* 。
+Pred: 断层带 有 绿泥石化 和 铁染现象 ， 并 有 岩脉 侵入 ， 且 明显地切割 了 北北东向 断层 ， 属 压剪性断层 。
+Label True: BE BE BIIE S BIIE S S S BIIE S S BE S BE S BIIE BE S S BIIIE S
+Label Pred: BIE S BIIE S BIIE S S S BE BE S S BIIIE S BIIE BE S S BIIIE S
+Wrong 6 0: 断层 带有 岩脉侵入 明显 地 切割
+
+True: 区域 成矿带 划分 ， 测区 成矿背景 处于 *内蒙古大兴安岭成矿省成矿带* ， *突泉-林西华力西* 、 燕山期铁 （ 锡 ） 、 铜 、 铅锌 、 银 、 铌 （ *钽* ） 成矿带 ， *索仑镇-黄岗铁* （
+Pred: 区域 成矿带 划分 ， 测区 成矿背景 处于 内蒙古大兴安岭成矿省成矿带 ， 突泉-林西华力西 、 燕山期铁 （ 锡 ） 、 铜 、 铅锌 、 银 、 铌 （钽） 成矿带 ， 索仑镇-黄岗铁 （
+Label True: BE BIE BE S BE BIIE BE BIIIIIIIIIIIE S BIIIIIIE S BIIE S S S S S S BE S S S S S S S BIE S BIIIIIE S
+Label Pred: BE BIE BE S BE BIIE BE BIIIIIIIIIIIE S BIIIIIIE S BIIE S S S S S S BE S S S S BIE BIE S BIIIIIE S
+Wrong 3 0: （ 钽 ）
+
+True: 锡 ） 、 铜 、 *锌Ⅳ级* 成矿带 ， 沙不楞山铜 、 铅 、 锌 成矿带 。
+Pred: 锡 ） 、 铜 、 锌Ⅳ级成矿带 ， 沙不楞山铜 、 铅 、 锌 成矿带 。
+Label True: S S S S S BIE BIE S BIIIE S S S S BIE S
+Label Pred: S S S S S BIIIIE S BIIIE S S S S BIE S
+Wrong 2 0: 锌Ⅳ级 成矿带
+
+True: 据 *水文工程地质大队* 的 *有关* 资料 ， 在 *PK009* *孔* ， *孔深* *206.66～207.06m* 处 的 *灰色含钙泥岩* 中 ， *Cu* 的 含量 高 达 *0.46％* ， *值得* *今后* 工作 中 *注意* 。
+Pred: 据 水文 工程 地质大队 的 有关资料 ， 在 PK009孔 ， 孔深206.66～207.06m处 的 灰色含钙泥岩 中 ， Cu 的 含量 高 达 0.46％ ， 值 得 今 后 工作 中注意 。
+Label True: S BIIIIIIE S BE BE S S BIIIE S S BE BIIIIIIIIIIIIE S S BIIIIE S S BE S BE S S BIIIE S BE BE BE S BE S
+Label Pred: S BE BE BIIE S BIIE S S BIIIIE S BIIIIIIIIIIIIIIIS S BIIIIE S S BE S BE S S BIIIE S S S S S BE BIE S
+Wrong 11 0: 水文工程地质大队 有关 资料 PK009 孔 孔深 206.66～207.06m 值得 今后 中 注意
+
+True: 本 幅 北东向 断裂构造 主要 为 *阿尔浑德仑郭勒断裂* ， 分布 在 *哲楞* 和 *达巴扎拉格* 和 *阿尔浑德仑郭勒河沟谷* 内 ， 断裂带 长 *20km* ， 宽 约 *10-20m* ， 切割 的 *地质体* 主要 为 ；
+Pred: 本 幅 北东向 断裂构造 主要 为 阿尔浑德仑郭勒断裂 ， 分布 在 哲楞 和 达 巴扎拉格 和 阿尔浑德仑郭勒河沟谷内 ， 断裂带 长 20km ， 宽 约 10-20m ， 切割 的 地质体 主要 为 ；
+Label True: S S BIE BIIE BE S BIIIIIIIE S BE S BE S BIIIE S BIIIIIIIIE S S BIE S BIIE S S S BIIIIE S BE S BIE BE S S
+Label Pred: S S BIE BIIE BE S BIIIIIIIE S BE S BE S S BIIE S BIIIIIIIIIS S BIE S BIIE S S S BIIIIE S BE S BIE BE S S
+Wrong 2 0: 达巴扎拉格 阿尔浑德仑郭勒河沟谷
+
+True: 林西组 、 满克头鄂博组 、 *晚侏罗世中细粒黑云母花岗岩* 、 *粗粒黑云母花岗岩* 。
+Pred: 林西组 、 满克头鄂博组 、 晚侏罗世中细粒黑云母花岗岩 、 粗粒黑云母花岗岩 。
+Label True: BIE S BIIIIE S BIIIIIIIIIIIE S BIIIIIIE S
+Label Pred: BIE S BIIIIE S BIIIIIIIIIIIE S BIIIIIIE S
+Wrong 0 0: 
+
+True: *三山岛地段* （ *北段* ） 走向 ， 呈 *舒缓波状* ； *仓上地段* （ *南段* ） 走向 。 断裂带 由 *断层泥* （ 宽 *6～40cm* ） 、 *糜棱岩* 、 *绢英岩* 、 *角砾岩* 及 *碎裂岩* 等 *蚀变构造岩* 构成 ，
+Pred: 三山岛地段 （ 北段 ） 走向 ， 呈 舒缓波状 ； 仓上地段 （ 南段 ） 走向 。 断裂带 由 断层泥 （ 宽6～40cm ） 、 糜棱岩 、 绢英岩 、 角砾岩 及 碎裂岩 等 蚀变构造岩 构成 ，
+Label True: BIIIE S BE S BE S S BIIE S BIIE S BE S BE S BIE S BIE S S BIIIIE S S BIE S BIE S BIE S BIE S BIIIE BE S
+Label Pred: BIIIE S BE S BE S S BIIE S BIIE S BE S BE S BIE S BIE S BIIIIIE S S BIE S BIE S BIE S BIE S BIIIE BE S
+Wrong 2 0: 宽 6～40cm
+
+True: 宽 *40～200m* 不等 。 *主干* 断裂 *下盘* 发育 有 *次级断裂* ， *性质* 为 *压扭性断裂* 。 该 断裂 控制 *三山岛* （ *特大型* ） 和 *仓上* （ *大型* ） *金矿床* 。
+Pred: 宽 40～200m 不等 。 主 干 断裂 下 盘 发育 有 次级 断裂 ， 性质 为 压扭性断裂 。 该 断裂 控制 三山岛 （ 特大型） 和 仓上 （ 大型）金矿床 。
+Label True: S BIIIIIE BE S BE BE BE BE S BIIE S BE S BIIIE S S BE BE BIE S BIE S S BE S BE S BIE S
+Label Pred: S BIIIIIE BE S S S BE E S BE S BE BE S BE S BIIIE S S BE BE BIE S BIIS S BE S BIIBIE S
+Wrong 6 0: 主干 下盘 次级断裂 特大型 大型 ）
+
+True: 受 *北东-北北东向* 、 近 东西向 和 北西向 断裂 控制 ， 东部 *大兴安岭* 一带 的 *火山活动* *非常* 发育 。
+Pred: 受 北东- 北北东向 、 近 东西向 和 北西向 断裂 控制 ， 东部 大兴安岭 一带 的 火山活动 非常 发育 。
+Label True: S BIIIIIE S S BIE S BIE BE BE S BE BIIE BE S BIIE BE BE S
+Label Pred: S BIE BIIE S S BIE S BIE BE BE S BE BIIE BE S BIIE BS BE S
+Wrong 2 0: 北东-北北东向 非常
+
+True: 测区 断裂构造 主要 表现 为 北东向 断裂构造 和 北西向 断裂构造 ， 北东向 *构造* 以 *花岗岩类岩浆* 沿 北东向 *构造* 的 *侵位* 和 *第四纪大* 的 *沟谷* 为 *代表* ， 同时 伴随 有 *南北向* 和 东西向 断裂构造 。
+Pred: 测区断裂构造 主要 表现 为 北东向 断裂构造 和 北西向 断裂构造 ， 北东向 构造以花岗岩类岩浆沿 北东向 构造 的 侵位 和 第四纪大 的 沟谷 为 代表 ， 同时 伴随 有 南北向 和 东西向 断裂构造 。
+Label True: BE BIIE BE BE S BIE BIIE S BIE BIIE S BIE BE S BIIIIE S BIE BE S BE S BIIE S BE S BE S BE BE S BIE S BIE BIIE S
+Label Pred: BIIIIE BE BE S BIE BIIE S BIE BIIE S BIE BIIIIIIIIS BIE BE S BE S BIIE S BE S BE S BE BE S BIE S BIE BIIE S
+Wrong 5 0: 测区 断裂构造 构造 以 花岗岩类岩浆
+
+True: 岩石 中 的 *暗色包体* 也 受 韧性变形作用 而 呈 *长透镜状* 或 *线脉* 。
+Pred: 岩石 中 的 暗色 包体 也 受 韧性变形作用 而 呈 长 透镜状 或 线脉 。
+Label True: BE S S BIIE S S BIIIIE S S BIIE S BE S
+Label Pred: BE S S BE BE S S BIIIIE S S S BIE S BE S
+Wrong 2 0: 暗色包体 长透镜状
+
+True: 按 *《* *全国* 地层 *指南* *》* （ *2001* ） *推荐* *方案* ， 对 *全新世* 和 *更新世地层* 层 *序* 进行 *厘定* 。
+Pred: 按 《 全国地层 指 南》 （ 2001 ） 推荐 方案 ， 对 全新世 和 更新世地层 层序 进行 厘定 。
+Label True: S S BE BE BE S S BIIE S BE BE S S BIE S BIIIE S S BE BE S
+Label Pred: S S BIIE S BE S BIIE S BE IE S S BIE S BIIIE BE BE BE S
+Wrong 7 0: 全国 地层 指南 》 方案 层 序
+
+True: *依据* *于振江* *等人* （ *2008年* ） 的 第四系 划分 *方案* ， 并 *结合* *新* *《* *安徽省* 地质志 *》* （ *2014年* ） 的 *成果* ， 工作区 内 *第四纪岩石地层* 可 划分 为 *坡麓环境堆积物* 和 *河湖环境堆积物* *两* 大 *类* ，
+Pred: 依 据于 振江 等人 （ 2008年 ） 的 第四系 划分 方案 ， 并 结合 新《安徽省地质志》 （ 2014 年 ） 的 成果 ， 工作区 内 第四纪岩石地层 可 划分 为 坡麓环境 堆积物 和 河湖环境 堆积物 两大类 ，
+Label True: BE BIE BE S BIIIE S S BIE BE BE S S BE S S BIE BIE S S BIIIE S S BE S BIE S BIIIIIE S BE S BIIIIIE S BIIIIIE S S S S
+Label Pred: S BE BE BE S BIIIS S S BIE IE BE S S BE BIIIIIIIE S BIIE E S S BE S BIE S BIIIIIE S BE S BIIE BIE S BIIE BIE BIE S
+Wrong 15 0: 依据 于振江 2008年 划分 新 《 安徽省 地质志 》 2014年 坡麓环境堆积物 河湖环境堆积物 两 大 类
+
+True: 其中 *坡麓环境堆积物* *自下而上* *依次* 划分 为 *下更新统马冲组* 、 *中更新统戚家矶组* 、 *中上更新统下蜀组* 、 *全新统芜湖组* ； *河湖环境堆积物* *自下而上* 划分 为 *下更新统朱冲组* 、
+Pred: 其 中 坡麓环境 堆积物自下 而 上依次 划分 为 下更新统马冲组 、 中更新统戚家矶组 、 中上更新统下蜀组 、 全新统芜湖组 ； 河湖环境 堆积物自下 而上划分 为 下更新统 朱冲组 、
+Label True: BE BIIIIIE BIIE BE BE S BIIIIIE S BIIIIIIE S BIIIIIIE S BIIIIE S BIIIIIE BIIE BE S BIIIIIE S
+Label Pred: S E BIIE BIIIE S BIE BE S BIIIIIE S BIIIIIIE S BIIIIIIE S BIIIIE S BIIE BIIIE BIIE S BIIE BIE S
+Wrong 8 0: 其中 坡麓环境堆积物 自下而上 依次 河湖环境堆积物 自下而上 划分 下更新统朱冲组
+
+True: *中下更新统青弋江组* 、 *中上更新统大桥镇组* 、 *全新统芜湖组* （ *表2-3-1* ） 。
+Pred: 中下更新统青弋江组 、 中上更新统大桥镇组 、 全新统芜湖组 （ 表2-3-1 ） 。
+Label True: BIIIIIIIE S BIIIIIIIE S BIIIIE S BIIIIE S S
+Label Pred: BIIIIIIIE S BIIIIIIIE S BIIIIE S BIIIIE S S
+Wrong 0 0: 
+
+True: 根据 上述 *一级地貌地质单元* *分* 区域 *描述* 如下 ： （ 一 ） *大别山区* 。
+Pred: 根据 上述 一级地貌地质单元分区域 描述 如下 ： （ 一 ） 大别山区 。
+Label True: BE BE BIIIIIIE S BE BE BE S S S S BIIE S
+Label Pred: BE BE BIIIIIIIIIE BE BE S S S S BIIE S
+Wrong 3 0: 一级地貌地质单元 分 区域
+
+True: *太古代末* 到 *早元古代* *初* ， 发生 了 一 次 强烈 的 *褶皱造山运动―胶东运动* ， 伴随 *构造运动* 发生 了 *区域变质作用* ， 形成 了 *新老* *无序* 的 *递进变质带* 。
+Pred: 太古代末到 早元古代初 ， 发生 了 一次 强烈 的 褶皱造山运动 ― 胶东运动 ， 伴随 构造运动 发生 了 区域变质作用 ， 形成 了 新老 无序 的 递进变质带 。
+Label True: BIIE S BIIE S S BE S S S BE S BIIIIIIIIIE S BE BIIE BE S BIIIIE S BE S BE BE S BIIIE S
+Label Pred: BIIIS BIIIE S BE S BE BE S BIIIIE S BIIE S BS BIIE BE S BIIIIE S BE S BE BE S BIIIE S
+Wrong 7 0: 太古代末 早元古代 初 一 次 褶皱造山运动―胶东运动 伴随
+
+True: （ *五* ） *北东东向* 断裂 。 分布 于 胶州湾 周围 的 *北东东向* 断裂 有 *城阳* 、 *庙头-后桃林* 、 *后韩家-西黄埠* 、 *甲角石* 、 *山东头* 等 断裂 。
+Pred: （五 ） 北东东向 断裂 。 分布 于 胶州湾周围 的 北东东向 断裂 有 城阳 、 庙头-后桃林 、 后韩家-西黄埠 、 甲角石 、 山东头 等 断裂 。
+Label True: S S S BIIE BE S BE S BIE BE S BIIE BE S BE S BIIIIE S BIIIIIE S BIE S BIE S BE S
+Label Pred: BS S BIIE BE S BE S BIIIE S BIIE BE S BE S BIIIIE S BIIIIIE S BIE S BIE S BE S
+Wrong 3 0: （ 胶州湾 周围
+
+True: 在 *黄梅* 附近 *重* 被 中 *新生代盆地* 所 覆盖 。
+Pred: 在 黄梅附近 重被 中 新生代盆地所 覆盖 。
+Label True: S BE BE S S S BIIIE S BE S
+Label Pred: S BIIE BE S BIIIIE BE S
+Wrong 6 0: 黄梅 附近 重 被 新生代盆地 所
+
+True: 组 间 为 整合接触 。
+Pred: 组 间 为 整合接触 。
+Label True: S S S BIIE S
+Label Pred: S S S BIIE S
+Wrong 0 0: 
+
+True: 安庆地区 处于 大别造山带 东 段 与 *扬子陆块* *北缘* *交汇处* ， 安庆地区 水系 发育 ， *长江* 沿 *安庆市* *东南部* *贯穿* 而 *过* ， *境内* *河渠* *纵横* *交错* ， 湖泊 、 *池塘* *星罗棋布* ，
+Pred: 安庆地区 处于 大别造山带 东段 与 扬子陆块北缘交汇处 ， 安庆地区水系 发育 ， 长江沿安庆市东南部 贯穿 而过 ， 境内河渠 纵横交错 ， 湖泊 、 池塘星罗棋布 ，
+Label True: BIIE BE BIIIE S S S BIIE BE BIE S BIIE BE BE S BE S BIE BIE BE S S S BE BE BE BE S BE S BE BIIE S
+Label Pred: BIIE BE BIIIE BE S BIIIIIIIE S BIIIIE BE S BIIIIIIIE BE BE S BIIE BIIE S BE S BIIIIE S
+Wrong 19 0: 东 段 扬子陆块 北缘 交汇处 安庆地区 水系 长江 沿 安庆市 东南部 而 过 境内 河渠 纵横 交错 池塘 星罗棋布
+
+True: *加之* 第四纪 以来 *中国* *东部地区* *气候* 变化 强烈 、 安庆地区 *整体* 处于 *抬升状态* ， 导致 *第四纪沉积物* *成因类型* *多样* ， 地层 *接触关系* 复杂 ， 存在 *着* 侵蚀 、 *超覆* 等 *多种* *接触关系* ，
+Pred: 加 之 第四纪 以来 中国东部 地区 气 候 变化强烈 、 安庆地区 整体 处于 抬升状态 ， 导致 第四纪沉积物成因类型 多样 ， 地层接触 关系 复杂 ， 存在 着 侵蚀 、 超覆 等 多 种接触关系 ，
+Label True: BE BIE BE BE BIIE BE BE BE S BIIE BE BE BIIE S BE BIIIIE BIIE BE S BE BIIE BE S BE S BE S BE S BE BIIE S
+Label Pred: S S BIE BE BIIE BE S S BIIE S BIIE BE BE BIIE S BE BIIIIIIIIE BE S BIIE BE BE S BE S BE S BE S S BIIIE S
+Wrong 12 0: 加之 中国 东部地区 气候 变化 强烈 第四纪沉积物 成因类型 地层 接触关系 多种 接触关系
+
+True: 而且 *第四系沉积物* 总体 上 分布 *不均* ， *缺少* *连续性* 较好 的 *沉积记录* ， *这* 对 *研究* 本 区 *第四纪地层* *及其* *蕴藏* 的 本 区 *第四纪气候* 、 *生物* 、 *环境* 的 *变迁* *带来* 了 *很大* 的 *难度* 。
+Pred: 而且 第四系 沉积物 总体 上 分布 不 均 ， 缺少 连 续性 较好 的 沉积记录 ， 这对 研究 本 区 第四纪地层 及 其蕴藏 的 本 区 第四纪气候 、 生物 、 环境 的 变迁带来 了 很大 的 难度 。
+Label True: BE BIIIIE BE S BE BE S BE BIE BE S BIIE S S S BE S S BIIIE BE BE S S S BIIIE S BE S BE S BE BE S BE S BE S
+Label Pred: BE BIE BIE BE S BE S S S BE E BE BE S BIIE S BE BE S S BIIIE S BIS S S S BIIIE S BE S BE S BIIE S BE S BE S
+Wrong 9 0: 第四系沉积物 不均 连续性 这 对 及其 蕴藏 变迁 带来
+
+True: *8* . *塔山-苗家断裂* 。 断裂 北 起 *胶南市苗家* 以北 、 向 南 经 *铁山* 、 *梁家庄* 、 *崖下* 到 *塔山* *东南* ， 在 *冯家坊* 一带 与 日照-青岛断裂 *相交* 。
+Pred: 8.塔山-苗家断裂 。 断裂北 起 胶南市苗家 以 北 、 向 南 经 铁山 、 梁家庄 、 崖下 到 塔山东南 ， 在 冯家坊 一带 与 日照-青岛断裂相交 。
+Label True: S S BIIIIIE S BE S S BIIIE BE S S S S BE S BIE S BE S BE BE S S BIE BE S BIIIIIE BE S
+Label Pred: BIIIIIIIE S BIE S BIIIE S E S S S S BE S BIE S BE S BIIE S S BIE BE S BIIIIIIIE S
+Wrong 10 0: 8 . 塔山-苗家断裂 断裂 北 以北 塔山 东南 日照-青岛断裂 相交
+
+True: 该 段 北 起 *胶南市田庄* ， 经 *大村* 、 *冷家坊* 、 *两城* 、 *河山* 到 *许家官庄* ， 长 *45km* 。
+Pred: 该 段北 起 胶南市田庄 ， 经 大村 、 冷家坊 、 两城 、 河山到许家官庄 ， 长 45km 。
+Label True: S S S S BIIIE S S BE S BIE S BE S BE S BIIE S S BIIE S
+Label Pred: S BS S BIIIE S S BE S BIE S BE S BIIIIIE S S BIIE S
+Wrong 4 0: 段 河山 到 许家官庄
+
+True: 工作区 为 *林牧业区* ， 主要 以 *林业* 为主 ， *牧业* *为辅* 。 *罕山林场* 是 工作区 较大 的 *林业管理部门* 。
+Pred: 工作区 为 林牧业区 ， 主要 以 林业 为主 ， 牧 业 为 辅 。 罕山林场 是 工作区 较大 的 林业管理部门 。
+Label True: BIE S BIIE S BE S BE BE S BE BE S BIIE S BIE BE S BIIIIE S
+Label Pred: BIE S BIIE S BE S BE BE S S S S S S BIIE S BIE BE S BIIIIS S
+Wrong 3 0: 牧业 为辅 林业管理部门
+
+True: *桐潜盆地* 东南侧 为 *巢湖-怀宁褶皱山区* ， 区 内 褶皱构造 十分 发育 ， 可 划分 为 *前南华纪* 、 *印支期* 和 *燕山期褶皱* 。
+Pred: 桐潜盆地东南侧 为 巢湖-怀宁褶皱山区 ， 区 内 褶皱构造十分 发育 ， 可 划分 为 前 南华纪 、 印 支期 和 燕山期褶皱 。
+Label True: BIIE BIE S BIIIIIIIE S S S BIIE BE BE S S BE S BIIE S BIE S BIIIE S
+Label Pred: BIIIIIE S BIIIIIIIE S S S BIIIIE BE S S BE S S BIE S S BE S BIIIE S
+Wrong 6 0: 桐潜盆地 东南侧 褶皱构造 十分 前南华纪 印支期
+
+True: 工作区 北 *距* *霍林郭勒市* 约 *25km* ， *交通条件* *很差* ， 工作区 无 *铁路* , 仅 有 *国道* *304线* （ *扎鲁特旗―霍林郭勒市* ） *柏油路* 从 工作区 *东北部* 通过 （ 见 *交通* *位置图* ）
+Pred: 工作区北 距霍林郭勒市约 25km ， 交 通 条件 很差 ， 工作区 无 铁路,仅 有 国道304线 （ 扎鲁特旗―霍林郭勒市）柏油路 从 工作区 东北部 通过 （ 见交 通位置图 ）
+Label True: BIE S S BIIIE S BIIE S BIIE BE S BIE S BE S S S BE BIIE S BIIIIIIIIE S BIE S BIE BIE BE S S BE BIE S
+Label Pred: BIIE IIIIIIS BIIE S S S BE BS S BIE S BIIE S BIIIIE S BIIIIIIIIIIIIE S BIE BIE BE S BE BIIS S
+Wrong 17 0: 工作区 北 距 霍林郭勒市 交通条件 很差 铁路 , 仅 国道 304线 扎鲁特旗―霍林郭勒市 ） 柏油路 见 交通 位置图
+
+True: 。
+Pred: 。
+Label True: S
+Label Pred: S
+Wrong 0 0: 
+
+True: 厚度 一般 *1~20m* 不等 。
+Pred: 厚度 一般 1~20m 不等 。
+Label True: BE BE BIIIE BE S
+Label Pred: BE BE BIIIE BE S
+Wrong 0 0: 
+
+True: *栖霞组* 与 下伏 的 *船山组* 为 *平行不整合接触* ， 大隆组 与 *上伏* 的 *殷坑组* 为 整合接触 。
+Pred: 栖霞组 与 下伏 的 船山组 为 平行不整合接触 ， 大隆组 与 上伏 的 殷坑组 为 整合接触 。
+Label True: BIE S BE S BIE S BIIIIIE S BIE S BE S BIE S BIIE S
+Label Pred: BIE S BE S BIE S BIIIIIE S BIE S BE S BIE S BIIE S
+Wrong 0 0: 
+
+True: *喷溢相* ： 出露 于 *破火山口* 的 东侧 及 南侧 ， 于 *爆发相* 中 呈 *夹层状* 或 *透镜状* 产出 ， *数量* *少* ， 分布 面积 小 ， 岩性 为 *流纹岩* ， 呈 *灰黄* 、 灰色 ， 岩石 具 *流纹构造* ，
+Pred: 喷溢相 ： 出露 于 破火山口 的 东侧 及 南侧 ， 于 爆发相 中呈 夹层状 或 透镜状 产出 ， 数量 少 ， 分布 面积 小 ， 岩性 为 流纹岩 ， 呈 灰黄 、 灰色 ， 岩石 具 流纹构造 ，
+Label True: BIE S BE S BIIE S BE S BE S S BIE S S BIE S BIE BE S BE S S BE BE S S BE S BIE S S BE S BE S BE S BIIE S
+Label Pred: BIE S BE S BIIE S BE S BE S S BIE BS BIE S BIE BE S BE S S BE BE E S BE S BIE S S BE S BE S BE S BIIE S
+Wrong 2 0: 中 小
+
+True: *斑状结构* ， *基质霏细-微晶结构* ， *球粒构造* ， 岩石 *硅化* *较强* 。
+Pred: 斑状结构 ， 基质 霏细-微晶结构 ， 球粒构造 ， 岩石 硅化 较强 。
+Label True: BIIE S BIIIIIIIE S BIIE S BE BE BE S
+Label Pred: BIIE S BE BIIIIIE S BIIE S BE BE BE S
+Wrong 1 0: 基质霏细-微晶结构
+
+True: *另外* 在 该 层 中 有 *4个* *>* *2.5Φ* *粒径* 的 *砂质* *组分* 含量 *较高* 的 区段 ， 分别 为 *0.0~0.2m* 、 *0.7~1.0m* 、 *4.1~4.3m* 和 *7.5~7.8m* 。
+Pred: 另 外 在 该 层 中 有 4个 > 2.5Φ粒径 的 砂质组分 含量 较高 的 区段 ， 分别 为 0.0~0.2m 、 0.7~1.0m 、 4.1~4.3m 和 7.5~7.8m 。
+Label True: BE S S S S S BE S BIIE BE S BE BE BE BE S BE S BE S BIIIIIIE S BIIIIIIE S BIIIIIIE S BIIIIIIE S
+Label Pred: S S S S S S S BE S BIIIIE S BIIE BE BE S BE S BE S BIIIIIIE S BIIIIIIE S BIIIIIIE S BIIIIIIE S
+Wrong 5 0: 另外 2.5Φ 粒径 砂质 组分
+
+True: 在 区 内 广泛 分布 ， 由 下 至 上 主要 有 ： *山前组* 为 *剥蚀堆积平原* 的 *残坡积层* ， 岩性 主要 为 *灰黄色含砾砂质黏土质粉砂* 、 *含砾中砂* 、 *砂砾层* ； 大站组 为 *山坡* 与 *平原* 或 *低洼地* *交界处* 的 *洪冲积层* ，
+Pred: 在 区 内 广泛 分布 ， 由 下 至 上 主要 有 ：山前组 为 剥蚀 堆积平原 的 残坡积层 ， 岩性 主要 为 灰黄色含砾砂质黏土质粉砂 、 含砾中砂 、 砂砾层 ； 大站组 为 山坡 与 平原 或 低 洼地交界 处 的 洪冲积层 ，
+Label True: S S S BE BE S S S S S BE S S BIE S BIIIIE S BIIE S BE BE S BIIIIIIIIIIE S BIIE S BIE S BIE S BE S BE S BIE BIE S BIIE S
+Label Pred: S S S BE BE S S S S S BE S BIIE S BE BIIE S BIIE S BE BE S BIIIIIIIIIIE S BIIE S BIE S BIE S BE S BE S S BIIE S S BBIE S
+Wrong 6 0: ： 山前组 剥蚀堆积平原 低洼地 交界处 洪冲积层
+
+True: 岩性 为 *土黄色含钙质结核粘～亚砂土* ； *临沂组地貌* 为 冲积平原 及 *水系阶地* 、 *河漫滩相冲积层* ， 岩性 为 粘土质粉砂 、 *含砾中* 、 粗砂 ； *旭口组* 为 *滨海相沉积层* ，
+Pred: 岩性 为 土黄色含钙质结核粘～亚砂土 ； 临沂组 地貌 为 冲积平原 及 水系阶地 、 河漫滩相冲积层 ， 岩性 为 粘土质粉砂 、 含砾中 、 粗砂 ； 旭口组 为 滨海相沉积层 ，
+Label True: BE S BIIIIIIIIIIIE S BIIIE S BIIE S BIIE S BIIIIIE S BE S BIIIE S BIE S BE S BIE S BIIIIE S
+Label Pred: BE S BIIIIIIIIIIIE S BIE IE S BIIE S BIIE S BIIIIIE S BE S BIIIE S BIE S BE S BIE S BIIIIE S
+Wrong 1 0: 临沂组地貌
+
+True: 岩性 为 *浅黄色细砂* 、 *中细砂夹粗砂* 及 少量 *淤泥* ； 沂河组 为 *现代河床相冲积堆积层* ， 岩性 为 *含砾混砾砂* 、 *砾石堆积物* 。
+Pred: 岩性 为 浅黄色细砂 、 中细砂夹粗砂 及 少量 淤泥 ； 沂河组 为 现代河床相冲积堆积层 ， 岩性 为 含砾混砾砂 、 砾石堆积物 。
+Label True: BE S BIIIE S BIIIIE S BE BE S BIE S BIIIIIIIIE S BE S BIIIE S BIIIE S
+Label Pred: BE S BIIIE S BIIIIE S BE BE S BIE S BIIIIIIIIE S BE S BIIIE S BIIIE S
+Wrong 0 0: 
+
+True: 综上所述 ， 本 *矿床* 属 *交代―重熔岩浆* 期 后 *中低温热液* 充填 、 *交代蚀变岩型金矿床* （ *焦家式金矿床* ） 。
+Pred: 综上所述 ， 本 矿床 属 交代―重熔岩浆期 后 中低温热 液充填 、 交代蚀变岩型金矿床 （ 焦家式金矿床 ） 。
+Label True: BIIE S S BE S BIIIIIE S S BIIIE BE S BIIIIIIIE S BIIIIE S S
+Label Pred: BIIE S S BE S BIIIIIIE S BIIS BIE S BIIIIIIIE S BIIIIE S S
+Wrong 4 0: 交代―重熔岩浆 期 中低温热液 充填
+
+True: *团山岩体* 岩性 为 *中细粒似斑状钾长石花岗岩* ， 岩石 为 *浅肉红色* ， *似斑状结构* ， 块状构造 ， *斑晶* 含量 *5%* ， 为 *钾长石* ， 大小 *6.5×3mm* 。
+Pred: 团山岩体岩性 为 中细粒似斑状钾长石花岗岩 ， 岩石 为 浅肉红色 ， 似 斑状结构 ， 块状构造 ， 斑晶 含量 5% ， 为 钾长石 ， 大小 6.5×3mm 。
+Label True: BIIE BE S BIIIIIIIIIIE S BE S BIIE S BIIIE S BIIE S BE BE BE S S BIE S BE BIIIIIE S
+Label Pred: BIIIIE S BIIIIIIIIIIE S BE S BIIE S S BIIE S BIIE S BE BE BE S S BIE S BE BIIIIIE S
+Wrong 3 0: 团山岩体 岩性 似斑状结构
+
+True: 2 、 *山前组* （ *Qŝ* ） 多 零星 出露 于 中 *低山* 的 *山麓* 及 *低缓丘陵* 顶 部 。
+Pred: 2 、 山前组 （ Qŝ ） 多 零星 出露 于 中低山 的 山麓 及 低缓 丘陵顶部 。
+Label True: S S BIE S BE S S BE BE S S BE S BE S BIIE S S S
+Label Pred: S S BIE S BE S S BE BE S BIE S BE S BE BIIE S
+Wrong 5 0: 中 低山 低缓丘陵 顶 部
+
+True: *团山花岗岩类* 由 *团山* 和 *毛窝北* 两个 *侵入体* （ *1:5万* *向坊幅* ） 组成 ， 在 *南昌市规划区* 仅 出露 少量 *团山岩* *体* ， 为 *向坊幅毛窝北岩体* 呈 北东向 延伸 *至此* ，
+Pred: 团山花岗岩类由 团山 和 毛 窝北 两个 侵入体 （ 1:5万向 坊 幅 ） 组成 ， 在 南昌市规划区 仅 出露 少量 团山岩体 ， 为 向 坊 幅 毛 窝北岩体 呈 北东向 延伸 至 此 ，
+Label True: BIIIIE S BE S BIE BE BIE S BIIE BIE S BE S S BIIIIE S BE BE BIE S S S BIIIIIIE S BIE BE BE S
+Label Pred: BIIIIIS BE S S BE BE BIE S BIIIE S S S BE S S BIIIIE S BE BE BIIE S S S S S S BIIE S BIE BE S E S
+Wrong 8 0: 团山花岗岩类 毛窝北 1:5万 向坊幅 团山岩 体 向坊幅毛窝北岩体 至此
+
+True: *现* 将 该 *岩体* *地质特征* 和 *地球化学特征* *简介* 如下 ： 1 、 *钾* 长 *花岗岩* *(* *η* *γ* *J* 2 1 - 2 *)* *钾长花岗岩* 主要 由 *毛窝北* *(* *毛窝北* *地名* ， 位于 *向坊幅* 内 出露 于 规划区 *梅岭村* *以西* 一带 。
+Pred: 现将 该 岩体 地质特征 和 地球化学特征简 介如下 ： 1 、 钾长花岗岩(ηγJ21-2)钾长花岗岩 主要 由 毛窝北(毛 窝北地名 ， 位于 向坊 幅 内 出露 于 规划区 梅岭村 以 西 一带 。
+Label True: S S S BE BIIE S BIIIIE BE BE S S S S S BIE S S S S S S S S S BIIIE BE S BIE S BIE BE S BE BIE S BE S BIE BIE BE BE S
+Label Pred: BS S BE BIIE S BIIIIIE BIE S S S BIIIIIIIIIIIIIIIIIE BE S BIIIE BIIE S BE BS S S BE S BIE BIE S E BE S
+Wrong 23 0: 现 地球化学特征 简介 如下 钾 长 花岗岩 ( η γ J 2 1 - 2 ) 钾长花岗岩 毛窝北 ( 毛窝北 地名 向坊幅 以西
+
+True: 同时 在 *每* 条 *次级* 断层 中 ， 均 可 由 *中心* 向 两侧 ， 分为 *四个* 带 ， 即 : （ 1 ） *断层泥化带* ， 宽 约 *0.3m* ， *细致* *光滑* 、 *质* *软* ， *手* *捏* 之 呈 *团粒状* . *显微镜* 下 *观察* ，
+Pred: 同时 在 每条次级 断层 中 ， 均 可 由 中心向 两侧 ， 分 为 四个带 ， 即: （1 ） 断层泥化带 ， 宽 约 0.3m ， 细致 光滑 、 质软 ， 手 捏 之 呈 团粒状.显微镜下观察 ，
+Label True: BE S S S BE BE S S S S S BE S BE S BE BE S S S S S S S BIIIE S S S BIIE S BE BE S S S S S S S S BIE S BIE S BE S
+Label Pred: BE S BIIE BE S S S S S BIE BE S S S BIE S BE BS S BIIIE S S S BIIE S BE BE S BE S S E E S BIIIIIIIIE S
+Wrong 20 0: 每 条 次级 中心 向 分为 四个 带 即 : （ 质 软 捏 之 团粒状 . 显微镜 下 观察
+
+True: *绢云母* 具 *定向* *排列* ， 石英 呈 *细微粒状* ， *均匀分布* ； （ 2 ） *挤压透镜体带* ， 宽 约 *1m* ， *靠近* *断层泥化带* ， *透镜体* 较 *扁* 、 较小 ， 向 两侧 *逐渐*
+Pred: 绢云母具定 向 排列 ， 石英 呈 细微粒状 ， 均 匀 分布 ； （ 2 ） 挤压 透镜体带 ， 宽 约 1m ， 靠近 断层泥化带 ， 透镜体 较扁 、 较小 ， 向 两侧 逐渐
+Label True: BIE S BE BE S BE S BIIE S BIIE S S S S BIIIIE S S S BE S BE BIIIE S BIE S S S BE S S BE BE
+Label Pred: BIIIE S BE S BE S BIIE S S S BE S S S S BE BIIE S S S BE S BS BIIIE S BIE BE S BE S S BE BS
+Wrong 9 0: 绢云母 具 定向 均匀分布 挤压透镜体带 靠近 较 扁 逐渐
+
+True: （ 四 ） *下古生界* 。 1 . *寒武系碱厂组* （ *∈j* ） 。
+Pred: （ 四 ） 下古生界 。 1 . 寒武系碱厂组 （ ∈j ） 。
+Label True: S S S BIIE S S S BIIIIE S BE S S
+Label Pred: S S S BIIE S S S BIIIIE S BE S S
+Wrong 0 0: 
+
+True: 总体 呈 *40°* 方向 展布 。
+Pred: 总体 呈 40° 方向 展布 。
+Label True: BE S BIE BE BE S
+Label Pred: BE S BIE BE BE S
+Wrong 0 0: 
+
+True: （ 一 ） 莱阳群 （ *K1L* ） 。 莱阳群 主要 分布 于 工作区 西 、 北部 *莱盆地* 中 ， *自下而上* *共* 划分 为 *9个* 组 ， 各 组 间 均 为 *整合* 或 *相变接触* 。
+Pred: （ 一 ） 莱阳群 （ K1L ） 。 莱阳群 主要 分布 于 工作区西 、 北部 莱盆地 中 ， 自下 而 上共 划分 为 9个组 ， 各组 间 均 为 整合 或 相变接触 。
+Label True: S S S BIE S BIE S S BIE BE BE S BIE S S BE BIE S S BIIE S BE S BE S S S S S S S BE S BIIE S
+Label Pred: S S S BIE S BIE S S BIE BE BE S BIIE S BE BIE S S BE S BE BE S BIE S BE S S S BE S BIIE S
+Wrong 8 0: 工作区 西 自下而上 共 9个 组 各 组
+
+True: *和龙山组* ： 下部 为 *灰黑色泥质条带灰岩夹灰岩* ， 或 *泥质条带* 和 *灰岩互层* ， 下部 为 *灰黑色灰岩夹钙质页岩* ， 泥灰岩 、 灰黑色页岩 。
+Pred: 和 龙山组 ： 下部 为 灰黑色泥质条带灰岩夹灰岩 ， 或 泥质条带 和 灰岩互层 ， 下部 为 灰黑色灰岩夹钙质页岩 ， 泥灰岩 、 灰黑色页岩 。
+Label True: BIIE S BE S BIIIIIIIIIIE S S BIIE S BIIE S BE S BIIIIIIIIE S BIE S BIIIE S
+Label Pred: S BIE S BE S BIIIIIIIIIIE S S BIIE S BIIE S BE S BIIIIIIIIE S BIE S BIIIE S
+Wrong 1 0: 和龙山组
+
+True: 根据 *岩石结构特点* 和 *形变强度* ， 大致 可 分为 三个 带 ： A 、 *糜棱岩化混合片麻岩* 带 ， 位于 韧性剪切带 的 *南东侧* ， 宽 约 *500～700m* ， 其中 *长英质矿物* 多 *已* *压扁* *拉长* 呈 *眼球状* 或 *透镜状* ，
+Pred: 根据 岩石结构 特点 和 形变 强度 ， 大致 可 分为 三个 带 ： A 、 糜棱岩化混合片麻岩带 ， 位于 韧性剪切带 的 南东侧 ， 宽 约 500～700m ， 其中 长英质矿物 多 已压 扁拉长 呈眼球状 或 透镜状 ，
+Label True: BE BIIIIE S BIIE S BE S BE BE S S S S BIIIIIIIE S S BE BIIIE S BIE S S S BIIIIIIE S BE BIIIE S S BE BE S BIE S BIE S
+Label Pred: BE BIIE BE S BE IE S BE S BE BE S S S S BIIIIIIIIE S BE BIIIE S BIE S S S BIIIIIIE S BE BIIIE S BE BIE IBIE S BIE S
+Wrong 8 0: 岩石结构特点 形变强度 糜棱岩化混合片麻岩 带 已 压扁 拉长 呈
+
+True: 石英 具 *波状消光* ， *片状黑云母* 具 *定向* *排列* ， 同时 *可见* *滑动片理* ； B 、 *糜棱岩化花岗岩质混合片麻岩带* ，
+Pred: 石英具波状消光 ， 片状黑云母具定 向 排列 ， 同时 可 见 滑动片理 ； B 、 糜棱岩化花岗岩质混合片麻岩带 ，
+Label True: BE S BIIE S BIIIE S BE BE S BE BE BIIE S S S BIIIIIIIIIIIIE S
+Label Pred: BIIIIIE S BIIIIIE S BE S BE S S BIIE S S S BIIIIIIIIIIIIE S
+Wrong 7 0: 石英 具 波状消光 片状黑云母 具 定向 可见
+
+True: 在 *1900m* 处 ， *电性层* *横向* 不 *连续* ， *等值线* 有 一个 *下潜* 的 过程 ， *原本* *近乎* *水平* 的 *等值线* 在 *此* 处 呈 *竖直状态* ， *推断* *此* 处 有 *断点* 。
+Pred: 在 1900m处 ， 电性层横向 不连续 ， 等 值线 有 一个 下潜 的 过程 ， 原 本 近 乎水平 的 等 值线 在 此处 呈竖直状态 ， 推断此 处 有 断点 。
+Label True: S BIIIE S S BIE BE S BE S BIE S BE BE S BE S BE BE BE S BIE S S S S BIIE S BE S S S BE S
+Label Pred: S BIIIIE S BIIIE BIE S S BE S BE BE S BE S S S S BIE S S BE S BS BBIIE S BIE S S BE S
+Wrong 15 0: 1900m 处 电性层 横向 不 连续 等值线 原本 近乎 水平 等值线 此 呈 推断 此
+
+True: 青岛市 *东南* *濒临* *黄海* ， *地形* 总 的 特征 是 南北 *两翼* *隆起* ， 东 高 西 低 ， 中部 低 *陷* 。
+Pred: 青岛市 东南濒 临黄海 ， 地形 总 的 特征 是 南北 两翼隆起 ， 东 高 西 低 ， 中部 低陷 。
+Label True: BIE BE BE BE S BE S S BE S BE BE BE S S S S S S BE S S S
+Label Pred: BIE BIE BIE S BE S S BE S BE BIIE S S E E E S BE BE S
+Wrong 10 0: 东南 濒临 黄海 两翼 隆起 高 西 低 低 陷
+
+True: 西 以 *桐城–太湖断裂* 为 界 ， *南东侧* 以 *黄* *（栗树）-破（* *凉亭* ）断裂 为 界 ， *后者* 的 规模 及 *控盆作用* 较弱 ， 形成 *时间* 也 *较晚* ， *桐潜盆地* 西 起 *太湖县白庙* 经 *潜山* 、
+Pred: 西 以 桐城–太湖断裂 为 界 ， 南东侧 以 黄 （ 栗树 ） -破 （ 凉亭 ） 断裂 为 界 ， 后 者 的 规模 及 控盆作用 较弱 ， 形成 时间 也 较晚 ， 桐潜盆地西 起 太湖县白庙经 潜山 、
+Label True: S S BIIIIIE S S S BIE S S BIIIIIE BE BIE S S S BE S BE S BIIE BE S BE BE S BE S BIIE S S BIIIE S BE S
+Label Pred: S S BIIIIIE S S S BIE S S S BE S BS S BE S BE S S S S S S BE S BIIE BE S BE BE S BE S BIIIE S BIIIIS BE S
+Wrong 6 0: （栗树）-破（ ）断裂 后者 桐潜盆地 西 太湖县白庙
+
+True: *高河* ， 向 北东 延伸 ， 总体 呈 北东向 展布 ， 长 约 *90km* ， 宽 *12～25km* 。
+Pred: 高河 ， 向 北东 延伸 ， 总体 呈 北东向 展布 ， 长 约 90km ， 宽 12～25km 。
+Label True: BE S S BE BE S BE S BIE BE S S S BIIE S S BIIIIIE S
+Label Pred: BE S S BE BE S BE S BIE BE S S S BIIE S S BIIIIIE S
+Wrong 0 0: 
+
+True: *英安质含角砾岩屑晶屑凝灰岩* 、 *英安质含角砾熔结凝灰岩* ； *流纹质集块岩* 、 *流纹质含集块角砾岩屑晶屑凝灰岩* 、 *流纹质含角砾岩屑晶屑熔结凝灰岩* 。
+Pred: 英安质含角砾岩屑晶屑凝灰岩 、 英安质含角砾熔结凝灰岩 ； 流纹质集块岩 、 流纹质含集块角砾岩屑晶屑凝灰岩 、 流纹质含角砾岩屑晶屑熔结凝灰岩 。
+Label True: BIIIIIIIIIIIE S BIIIIIIIIIE S BIIIIE S BIIIIIIIIIIIIIE S BIIIIIIIIIIIIIE S
+Label Pred: BIIIIIIIIIIIE S BIIIIIIIIIE S BIIIIE S BIIIIIIIIIIIIIE S BIIIIIIIIIIIIIE S
+Wrong 0 0: 
+
+True: 该 *类* *岩石类型* 主要 分布 于 测区 的 满克头鄂博组 和 *白音高老组地层* 中 。
+Pred: 该 类 岩石类型 主要 分布 于 测区 的 满克头鄂博组 和 白音高老组地层 中 。
+Label True: S S BIIE BE BE S BE S BIIIIE S BIIIIIE S S
+Label Pred: S S BIIE BE BE S BE S BIIIIE S BIIIIIE S S
+Wrong 0 0: 
+
+True: 郯庐断裂带 *自* 南 起 于 *湖北* 的 *武穴地区* ， 向 北 *贯穿* *安徽* 、 *江苏* 、 *山东* ， *跨越* *渤海* ， 经 *东北* *三省* ， *直至* 进入 *俄罗斯* *境内* ， 其 在 *中国* *境内* 的 *长度* 达 *2400多公里* （
+Pred: 郯庐断裂带 自 南 起于 湖北 的 武穴地区 ， 向 北贯穿安徽 、 江苏 、 山东 ， 跨越渤海 ， 经 东北三省 ， 直至 进入 俄罗斯境内 ， 其在 中国境 内 的 长度 达 2400 多 公里 （
+Label True: BIIIE S S S S BE S BIIE S S S BE BE S BE S BE S BE BE S S BE BE S BE BE BIE BE S S S BE BE S BE S BIIIIIE S
+Label Pred: BIIIE S S BS BE S BIIE S S BIIIE S BE S BE S BIIE S S BIIE S BE BE BIIIE S BE BIE S S BE S BIIE S BE S
+Wrong 15 0: 起 北 贯穿 安徽 跨越 渤海 东北 三省 俄罗斯 境内 其 在 中国 境内 2400多公里
+
+True: *李彤霞* 等 ， *2011* ） 。
+Pred: 李彤霞 等 ， 2011 ） 。
+Label True: BIE S S BIIE S S
+Label Pred: BIE S S BIIE S S
+Wrong 0 0: 
+
+True: 总体 走向 *13°* ， 倾向 西 ， 为 *左旋张扭运动* *性质* 。
+Pred: 总体 走向 13° ， 倾向 西 ， 为 左旋张扭运动性质 。
+Label True: BE BE BIE S BE S S S BIIIIE BE S
+Label Pred: BE BE BIE S BE S S S BIIIIIIE S
+Wrong 2 0: 左旋张扭运动 性质
+
+True: *年* *平均* *降水量* 为 *400-500mm* ， 集中 在 *7-8月份* ， *年* *平均* *蒸发量* 大于 *2000mm* ， *蒸发量* *远远* 大于 *降水量* ， *7月份* *最高* ，
+Pred: 年平 均降水量 为 400-500mm ， 集中 在 7-8月份 ， 年平 均蒸 发量 大于 2000mm ， 蒸 发量 远远 大于 降水量 ， 7月份最高 ，
+Label True: S BE BIE S BIIIIIIIE S BE S BIIIE S S BE BIE BE BIIIIE S BIE BE BE BIE S BIE BE S
+Label Pred: BE BBIE S BIIIIIIIE S BE S BIIIE S BE BE BE BE BIIIIE S S BE BE BE BIE S BIIIS S
+Wrong 8 0: 年 平均 年 平均 蒸发量 蒸发量 7月份 最高
+
+True: 分布 在 *辽阳* *市区* 北部 、 *太子河* 南 *岸* 的 *下平州* 、 *花牛堡子* 、 *下缸窑* 、 *后境山* 等 *地* ， 厚度 *40-170m* 。
+Pred: 分布 在 辽阳市区 北部 、 太子河南岸 的 下平州 、 花牛堡子 、 下缸窑 、 后境山等地 ， 厚度 40-170m 。
+Label True: BE S BE BE BE S BIE S S S BIE S BIIE S BIE S BIE S S S BE BIIIIIE S
+Label Pred: BE S BIIE BE S BIIIE S BIE S BIIE S BIE S BIIIE S BE BIIIIIE S
+Wrong 8 0: 辽阳 市区 太子河 南 岸 后境山 等 地
+
+True: 区域 *地势* *低洼* 处 易 形成 水库 ， 较大 的 有 *罗山水库* 等 ， 位于 *矿床* 的 南部 。
+Pred: 区域 地势 低洼 处 易 形成 水库 ， 较大 的 有 罗山水库 等 ， 位于 矿床 的 南部 。
+Label True: BE BE BE S S BE BE S BE S S BIIE S S BE BE S BE S
+Label Pred: BE BE BE S S BE BE S BE S S BIIE S S BE BE S BE S
+Wrong 0 0: 
+
+True: 断裂 南 段 发育 在 *太古代花岗质岩石* 中 ， 北 段 发育 在 *新元古代崔召单元花岗岩* 中 。 该 断裂 *普遍* 发育 *绢英岩化蚀变* ， 在 *西由* 一带 *尤为* 强烈 ， 是 *金矿* 找矿 重要 的 *潜在* *靶地* 。
+Pred: 断裂 南段 发育 在 太古代花岗质岩石 中 ， 北 段 发育 在 新元古代崔召单元花岗岩 中 。 该 断裂 普遍 发育 绢英岩化蚀变 ， 在 西 由 一带 尤为 强烈 ， 是 金矿找矿 重要 的 潜在靶地 。
+Label True: BE S S BE S BIIIIIIE S S S S BE S BIIIIIIIIIE S S S BE BE BE BIIIIE S S BE BE BE BE S S BE BE BE S BE BE S
+Label Pred: BE BS BE S BIIIIIIE S S S S BE S BIIIIIIIIIE S S S BE BS BE BIIIIE S S S S BE BS BE S S BIIE BE S BIIE S
+Wrong 8 0: 南 普遍 西由 尤为 金矿 找矿 潜在 靶地
+
+True: *岩体裂隙* 较 发育 ， 但 多 呈 *闭合状态* 或 被 *碳酸盐* 、 *绿泥石* 、 *高岭土* 充填 ， 为 透水性 、 富水性 较弱 。
+Pred: 岩体裂隙 较 发育 ， 但 多 呈 闭合状态 或 被 碳酸盐 、 绿泥石 、 高岭土充填 ， 为 透水性 、 富水性 较弱 。
+Label True: BIIE S BE S S S S BIIE S S BIE S BIE S BIE BE S S BIE S BIE BE S
+Label Pred: BIIE S BE S S S S BIIE S S BIE S BIE S BIIIE S S BIE S BIE BE S
+Wrong 2 0: 高岭土 充填
+
+True: *特尼格尔扎拉格背斜* 该 *背斜* 位于 *哈尔图格勒向斜* 的 南侧 , *中心* *坐标* *x* : *4990.5* , *y* : *20734* ， *向斜* *轴* 长 约 *5km* ， 走向 呈 *北东东向* ， *东端* 快速 *收敛* ，
+Pred: 特尼格尔扎拉格背斜 该 背斜 位于 哈尔图格勒向斜 的 南侧 ,中心坐标x : 4990.5,y:20734 ， 向斜 轴 长 约 5km ， 走向 呈 北东东向 ， 东端 快速 收敛 ，
+Label True: BIIIIIIIE S BE BE BIIIIIE S BE S BE BE S S BIIIIE S S S BIIIE S BE S S S BIE S BE S BIIE S BE BE BE S
+Label Pred: BIIIIIIIE S BE BE BIIIIIE S BE BIIIIE S BIIIIIIIIIIIIE S BS S S S BIE S BE S BIIE S BE BE BE S
+Wrong 10 0: , 中心 坐标 x 4990.5 , y : 20734 向斜
+
+True: *向斜地层* 为 满克头鄂博组 ， 两侧 地层 倾角 ， 为 一 *低缓* 的 *背斜构造* 。 *背斜* 范围 内 矿化蚀变 *不太* 发育 ， 仅 见 有 少量 的 *沸石化* 和 *高岭石化* 。
+Pred: 向斜地层 为 满克头鄂博组 ， 两侧 地层 倾角 ， 为 一 低缓 的 背斜构造 。 背斜 范围 内 矿化蚀变 不 太 发育 ， 仅 见 有 少量 的 沸石化 和 高岭石化 。
+Label True: BIIE S BIIIIE S BE BE BE S S S BE S BIIE S BE BE S BIIE BE BE S S S S BE S BIE S BIIE S
+Label Pred: BIIE S BIIIIE S BE BE BE S S S BE S BIIE S BE BE S BIIE S S BE S S S S BE S BIE S BIIE S
+Wrong 1 0: 不太
+
+True: *安庆市规划区* 内 *芜湖组* 主要 分布 于 *长江* *沿岸* ， 以 *河流沉积作用* 为主 ， *皖河* 等 *支流* *流域* 和 *破罡湖* 、 *青草湖* 等 湖泊 *周边* 浅部 也 有 *芜湖组沉积物* ， 厚度 较 薄 。
+Pred: 安庆市规划区 内 芜湖组 主要 分布 于 长江沿岸 ， 以 河流 沉积作用 为主 ， 皖 河等 支 流 流域 和 破罡湖 、 青草湖等湖泊周边 浅部 也 有 芜湖组沉积物 ， 厚度 较 薄 。
+Label True: BIIIIE S BIE BE BE S BE BE S S BIIIIE BE S BE S BE BE S BIE S BIE S BE BE BE S S BIIIIE S BE S S S
+Label Pred: BIIIIE S BIE BE BE S BIIE S S BE BIIE BE S S BS S S BE S BIE S BIIIIIIE BE S S BIIIIE S BE S S S
+Wrong 9 0: 长江 沿岸 河流沉积作用 皖河 支流 青草湖 等 湖泊 周边
+
+True: *现* 将 各 组 断裂 的 *综合特征* *简述* 如下 。
+Pred: 现 将各 组 断裂 的 综合特征 简述 如下 。
+Label True: S S S S BE S BIIE BE BE S
+Label Pred: E BS S BE S BIIE BE BE S
+Wrong 2 0: 现 将
+
+True: 主要 由 *泥质* 充填 ， 含量 占 *20-35%* ， 少量 *砂质* ， 局部 夹 有 *粗砂透镜体* 。 厚 一般 *1-3m* 。
+Pred: 主要 由 泥质充填 ， 含量 占20-35% ， 少量 砂质 ， 局部 夹 有 粗砂透镜体 。 厚 一般 1-3m 。
+Label True: BE S BE BE S BE S BIIIIE S BE BE S BE S S BIIIE S S BE BIIE S
+Label Pred: BE S BIIE S BE BIIIIIE S BE BE S BE S S BIIIE S S BE BIIE S
+Wrong 4 0: 泥质 充填 占 20-35%
+
+True: *物探资料* 也 有 北东向 的 *磁异常带* 出现 。
+Pred: 物探资料 也 有 北东向 的 磁异常带 出现 。
+Label True: BIIE S S BIE S BIIE BE S
+Label Pred: BIIE S S BIE S BIIE BE S
+Wrong 0 0: 
+
+True: *安庆组* 与 下伏 的 *宣南组地层* 呈 *不整合接触* 。
+Pred: 安庆组 与 下伏 的 宣南组地层 呈 不整合接触 。
+Label True: BIE S BE S BIIIE S BIIIE S
+Label Pred: BIE S BE S BIIIE S BIIIE S
+Wrong 0 0: 
+
+True: 呈 北东向 展布 ， 出露 面积 *62.05km2* ， 占 规划区 *境内* 规划区 的 总 面积 *4.43%* 。
+Pred: 呈 北东向 展布 ， 出露 面积 62.05km2 ， 占 规划区 境 内规划区 的 总 面积 4.43% 。
+Label True: S BIE BE S BE BE BIIIIIIE S S BIE BE BIE S S BE BIIIE S
+Label Pred: S BIE BE S BE BE BIIIIIIE S S BIE S BIIE S S BE BIIIE S
+Wrong 2 0: 境内 规划区
+
+True: 工作区 属 *高寒山区* ， 属 *亚热带大陆性气候* ， *冬* 长 *夏* *短* ， *寒暑* 变化 *剧烈* 、 *昼夜* *温差* 大 ， *年* *温差* *相差* *很大* 。
+Pred: 工作区 属 高寒山区 ， 属 亚热带 大陆性气候 ， 冬长夏短 ， 寒暑 变化剧烈 、 昼夜温差大 ， 年温 差相差 很大 。
+Label True: BIE S BIIE S S BIIIIIIE S S S S S S BE BE BE S BE BE S S S BE BE BE S
+Label Pred: BIE S BIIE S S BIE BBIIE S BIIE S BE BIIE S BIIIE S BE BIE BS S
+Wrong 14 0: 亚热带大陆性气候 冬 长 夏 短 变化 剧烈 昼夜 温差 大 年 温差 相差 很大
+
+True: *宣南组* ： 岩性 为 *紫红色中厚层砾岩* 、 砂砾岩 。
+Pred: 宣南组 ： 岩性 为 紫红色中厚层砾岩 、 砂砾岩 。
+Label True: BIE S BE S BIIIIIIE S BIE S
+Label Pred: BIE S BE S BIIIIIIE S BIE S
+Wrong 0 0: 
+
+True: 岩石 中 *普遍* 具 *显微鳞片变晶结构* ， *千枚状构造* 。
+Pred: 岩石 中 普 遍 具显微鳞片变晶结构 ， 千枚状构造 。
+Label True: BE S BE S BIIIIIIE S BIIIE S
+Label Pred: BE S S S BIIIIBIIE S BIIIE S
+Wrong 3 0: 普遍 具 显微鳞片变晶结构
+
+True: *岩石组合* 为 *浅灰色流纹质含角砾岩屑晶屑凝灰岩* 、 *浅灰色流纹质含角砾岩屑晶屑熔结凝灰岩* 、 *流纹岩* 、 *沉凝灰岩* 和 凝灰质砂砾岩 等 ， 该 套 地层 被 下白垩统梅勒图组 *微角度不整合* 覆盖 。
+Pred: 岩石 组合 为 浅灰色流纹质含角砾岩屑晶屑凝灰岩 、 浅灰色流纹质含角砾岩屑晶屑熔结凝灰岩 、 流纹岩 、 沉凝灰岩 和 凝灰质砂砾岩 等 ， 该 套 地层 被 下白垩统梅勒图组微角度不整合 覆盖 。
+Label True: BIIE S BIIIIIIIIIIIIIIE S BIIIIIIIIIIIIIIIIE S BIE S BIIE S BIIIIE S S S S BE S BIIIIIIE BIIIIE BE S
+Label Pred: BE BE S BIIIIIIIIIIIIIIE S BIIIIIIIIIIIIIIIIE S BIE S BIIE S BIIIIE S S S S BE S BIIIIIIIIBIIIE BE S
+Wrong 3 0: 岩石组合 下白垩统梅勒图组 微角度不整合
+
+True: *因为* 本 幅 *白音高老组* 发育 不 全 ， 基岩 *露头* 较差 ， 剖面 *借用* 剖面 控制 。
+Pred: 因 为 本 幅 白音高老组 发育 不全 ， 基岩 露头 较差 ， 剖面 借 用 剖面 控制 。
+Label True: BE S S BIIIE BE S S S BE BE BE S BE BE BE BE S
+Label Pred: S S S S BIIIE BE BE S BE BE BE S BE S S BE IE S
+Wrong 5 0: 因为 不 全 借用 控制
+
+True: *第四系全新统冲洪积堆积物* ： 主要 分布 在 、 *达勒林高勒* 等 *河谷* 中 ， 面积 约 *150km2* ， 厚度 大于 *30m* 。 其 岩性 主要 为 ： *灰褐色粘砂土* 、 *杂色砂砾石* 。
+Pred: 第四系全新统冲洪积堆积物 ： 主要 分布 在 、 达 勒林高勒等河谷 中 ， 面积 约 150km2 ， 厚度 大于 30m 。 其 岩性 主要 为 ：灰褐色粘砂土 、 杂色砂砾石 。
+Label True: BIIIIIIIIIIE S BE BE S S BIIIE S BE S S BE S BIIIIE S BE BE BIE S S BE BE S S BIIIIE S BIIIE S
+Label Pred: BIIIIIIIIIIE S BE BE S S S BIIIIIE E S BE S BIIIIE S BE BE BIE S S BE BE S BIIIIIE S BIIIE S
+Wrong 6 0: 达勒林高勒 等 河谷 中 ： 灰褐色粘砂土
+
+True: 区 内 火山岩 *按照* *岩石类型* 划分 为 *火山碎屑岩* 、 *沉火山碎屑岩* 、 *次火山岩* 。
+Pred: 区 内 火山岩按照岩石类型 划分 为 火山碎屑岩 、 沉火山碎屑岩 、 次火山岩 。
+Label True: S S BIE BE BIIE BE S BIIIE S BIIIIE S BIIE S
+Label Pred: S S BIIIIIIIE BE S BIIIE S BIIIIE S BIIE S
+Wrong 3 0: 火山岩 按照 岩石类型
+
+True: （ 一 ） *中度切割* 的 *中山区* 。 位于 区 内 的 中 、 *低山区* ， 以 *构造作用* 为主 ， 受 *长期强烈剥蚀切割作用* ， 一般 *标高* 为 *500~1000m* ， *切割深度* 大于 *500m* ，
+Pred: （ 一 ） 中度切割 的 中山区 。 位于 区 内 的 中 、 低山区 ， 以 构造作用 为主 ， 受 长期 强烈剥蚀 切割作用 ， 一般 标 高 为 500~1000m ， 切割 深度 大于 500m ，
+Label True: S S S BIIE S BIE S BE S S S S S BIE S S BIIE BE S S BIIIIIIIIE S BE BE S BIIIIIIIE S BIIE BE BIIE S
+Label Pred: S S E BIIE S BIE S BE S S S S S BIE S S BIIE BE S S BE BIIE BIIE S BE S S S BIIIIIIIE S BE BE BE BIIE S
+Wrong 4 0: ） 长期强烈剥蚀切割作用 标高 切割深度
+
+True: 主要 分布 在 *崂山* 、 *大小珠山* 、 *铁镢山* 、 *大泽山* 等 *地* ， *山体* 主要 由 *花岗岩* 组成 ， *山峰* *陡峻* ， 呈 *尖脊状* ， *谷* 深 *壁* *陡* 呈 *“V”字型* ， *谷底堆积物* 不 发育 ， 基岩 *裸露* 。
+Pred: 主要 分布 在 崂山 、 大小珠山 、 铁镢山 、 大泽山等地 ， 山体 主要 由 花岗岩 组成 ， 山峰陡峻 ， 呈 尖脊状 ， 谷深 壁陡 呈 “V”字型 ， 谷底堆积物 不 发育 ， 基岩 裸露 。
+Label True: BE BE S BE S BIIE S BIE S BIE S S S BE BE S BIE BE S BE BE S S BIE S S S S S S BIIIE S BIIIE S BE S BE BE S
+Label Pred: BE BE S BE S BIIE S BIE S BIIIE S BE BE S BIE BE S BIIE S S BIE S BE BE S BIIIE S BIIIE S BE S BE BE S
+Wrong 9 0: 大泽山 等 地 山峰 陡峻 谷 深 壁 陡
+
+True: *中关–沙村岩体* 可 分为 *四个* *岩性单位* ， 即 *辉闪岩* 、 *角闪辉石岩* 、 *角闪石岩* 、 *闪长岩* 。
+Pred: 中关–沙村岩体 可 分为 四个 岩性单位 ， 即辉闪岩 、 角闪辉石岩 、 角闪石岩 、 闪长岩 。
+Label True: BIIIIIE S BE BE BIIE S S BIE S BIIIE S BIIE S BIE S
+Label Pred: BIIIIIE S BE BE BIIE S BIIE S BIIIE S BIIE S BIE S
+Wrong 2 0: 即 辉闪岩
+
+True: *自* 西 向 东 可 划分 为 *多个* *密集* 的 *断裂构造带* ， *这些* 断裂带 在 *航磁* 、 重力 及 *遥感影像* 上 *多数* *都* 有 *清晰* 的 显示 ， 在 地貌 上 多 控制 水系 的 *延展* 。
+Pred: 自西向 东可划分 为 多个 密集 的 断裂构造带 ， 这些 断裂带 在 航磁 、 重力 及 遥感影像上 多 数都 有 清晰 的 显示 ， 在 地貌 上 多 控制 水系 的 延展 。
+Label True: S S S S S BE S BE BE S BIIIE S BE BIE S BE S BE S BIIE S BE S S BE S BE S S BE S S BE BE S BE S
+Label Pred: BIE BIIE S BE BE S BIIIE S BE BIE S BE S BE S BIIIS S BE S BE S BE S S BE S S BE BE S BE S
+Wrong 9 0: 自 西 向 东 可 划分 遥感影像 多数 都
+
+True: *第二章* ， 基础 *地质条件* 。
+Pred: 第二章 ， 基础 地质条件 。
+Label True: BIE S BE BIIE S
+Label Pred: BIE S BE BIIE S
+Wrong 0 0: 
+
+True: 二 、 *构造形迹* 。 1 、 褶皱构造 特征 。
+Pred: 二 、 构造形迹 。 1 、 褶皱构造特征 。
+Label True: S S BIIE S S S BIIE BE S
+Label Pred: S S BIIE S S S BIIIIE S
+Wrong 2 0: 褶皱构造 特征
+
+True: *新生代古近纪五图群朱壁店组* 呈 小 范围 分布 于 区域 北部 *小庄家村* 西 ， 主要 岩性 为 *含砾长石砂岩* 、 *硬砂岩* 及 *粘土质砂岩* 。
+Pred: 新生代古近纪五图群 朱 壁店组 呈 小范围分布 于 区域 北部 小庄家村西 ， 主要 岩性 为 含砾长石砂岩 、 硬砂岩 及 粘土质砂岩 。
+Label True: BIIIIIIIIIIIE S S BE BE S BE BE BIIE S S BE BE S BIIIIE S BIE S BIIIE S
+Label Pred: BIIIIIIIS S BIE S BIIIE S BE BE BIIIE S BE BE S BIIIIE S BIE S BIIIE S
+Wrong 6 0: 新生代古近纪五图群朱壁店组 小 范围 分布 小庄家村 西
+
+True: *成矿期* 石英脉 ： 多 含 多 金属硫化物 而 呈 灰色 、 烟灰色 ， 粒状结构 ， 团块状 、 脉状 、 网脉状构造 ， 石英 含量 80～95% ， 金属硫化物 含量 一般 少于 20% ，
+Pred: 成矿期石英脉 ： 多 含 多 金属硫化物 而 呈 灰色 、 烟灰色 ， 粒状结构 ， 团块状 、 脉状 、 网脉状构造 ， 石英 含量 80～95% ， 金属硫化物 含量 一般 少于 20% ，
+Label True: BIE BIE S S S S BIIIE S S BE S BIE S BIIE S BIE S BE S BIIIE S BE BE BIIIIE S BIIIE BE BE BE BIE S
+Label Pred: BIIIIE S S S S BIIIE S S BE S BIE S BIIE S BIE S BE S BIIIE S BE BE BIIIIE S BIIIE BE BE BE BIE S
+Wrong 2 0: 成矿期 石英脉
+
+True: 主要 为 黄铁矿 、 黄铜矿 、 方铅矿 、 闪锌矿 。 这类 石英脉 受 成矿断裂构造 控制 ， 规模 较大 ， 与 金矿成矿 关系 密切 。
+Pred: 主要 为 黄铁矿 、 黄铜矿 、 方铅矿 、 闪锌矿 。 这类 石英脉 受 成矿断裂构造 控制 ， 规模 较大 ， 与 金矿成矿 关系 密切 。
+Label True: BE S BIE S BIE S BIE S BIE S BE BIE S BIIIIE BE S BE BE S S BIIE BE BE S
+Label Pred: BE S BIE S BIE S BIE S BIE S BE BIE S BIIIIE BE S BE BE S S BIIE BE BE S
+Wrong 0 0: 
+
+True: *芜湖组* 上部 以 灰黄色 、 *青灰色黏土质粉砂* 、 *含粉砂黏土* ， *粉砂* 与 *含粉砂黏土互层* 等 为主 。
+Pred: 芜湖组 上部 以 灰黄色 、 青灰色黏土质粉砂 、 含粉砂黏土 ， 粉砂 与 含粉砂黏土互层 等 为主 。
+Label True: BIE BE S BIE S BIIIIIIE S BIIIE S BE S BIIIIIE S BE S
+Label Pred: BIE BE S BIE S BIIIIIIE S BIIIE S BE S BIIIIIE S BE S
+Wrong 0 0: 
+
+True: 测区地层 隶属 华北地层大区 ， 内蒙古草原地层区 ， 乌兰浩特-哈尔滨地层分区 ; 中生代地层 属 滨太平洋地层区 ， 大兴安岭-燕山地层分区 ， 乌兰浩特-赤峰地层小区 。
+Pred: 测区地层 隶属 华北地层大区 ， 内蒙古草原地层区 ， 乌兰浩特-哈尔滨地层分区 ; 中生代地层 属 滨太平洋地层区 ， 大兴安岭-燕山地层分区 ， 乌兰浩特-赤峰地层小区 。
+Label True: BIIE BE BIIIIE S BIIIIIIE S BIIIIIIIIIIE S BIIIE S BIIIIIE S BIIIIIIIIIE S BIIIIIIIIIE S
+Label Pred: BIIE BE BIIIIE S BIIIIIIE S BIIIIIIIIIIE S BIIIE S BIIIIIE S BIIIIIIIIIE S BIIIIIIIIIE S
+Wrong 0 0: 
+
+True: 受 *农业灌溉* 和 *矿山排水* 的 影响 ， *地下水* 的 *径流* 、 *排泄条件* 发生 了 明显 改变 ， *矿坑排水* 和 *农业灌溉汲水* 是 *目前* 区域 *地下水* 的 主要 *排泄* *途径* 。
+Pred: 受 农业灌溉 和 矿山排水 的 影响 ， 地 下水 的 径流 、 排泄条件 发生 了 明显 改变 ， 矿坑 排水 和 农业灌溉 汲水 是 目前 区域地 下水 的 主要 排 泄途径 。
+Label True: S BIIE S BIIE S BE S BIE S BE S BIIE BE S BE BE S BIIE S BIIIIE S BE BE BIE S BE BE BE S
+Label Pred: S BIIE S BIIE S BE S S BE S BE S BIIS BE S BE IE S BE BE S BIIS BE S BE BIE BE S BE S BIE S
+Wrong 9 0: 地下水 排泄条件 改变 矿坑排水 农业灌溉汲水 区域 地下水 排泄 途径
+
+True: 德勒斯台防火站火山喷发盆地 ： 位于 *北沙拉大队罕山林场-罕山鹿场* 一线 的 *北西侧* ， *盆地* 面积 约 *500km2* ， *盆地* 呈 北东向 延伸 ， 主要 由 *超浩尔图火山机构* 和 *特格音罕乌拉火山机构* 组成 。
+Pred: 德勒斯台防火站火山喷发盆地 ： 位于 北沙拉大队罕山林场-罕山鹿场 一线 的 北西侧 ， 盆地 面积 约 500km2 ， 盆地 呈 北东向 延伸 ， 主要 由 超浩尔图火山机构 和 特格音罕乌拉火山机构 组成 。
+Label True: BIIIIIIIIIIIE S BE BIIIIIIIIIIIIE BE S BIE S BE BE S BIIIIE S BE S BIE BE S BE S BIIIIIIE S BIIIIIIIIE BE S
+Label Pred: BIIIIIIIIIIIE S BE BIIIIIIIIIIIIE BE S BIE S BE BE S BIIIIE S BE S BIE BE S BE S BIIIIIIE S BIIIIIIIIE BE S
+Wrong 0 0: 
+
+True: 具体 *火山构造* 在 火山岩 *章节* 中 详细 介绍 。
+Pred: 具体 火山构造 在 火山岩章节 中 详细 介绍 。
+Label True: BE BIIE S BIE BE S BE BE S
+Label Pred: BE BIIE S BIIIE S BE BE S
+Wrong 2 0: 火山岩 章节
+
+True: *巢湖-怀宁褶皱山区* 的 *洪镇伸展构造* 分布 于 *洪镇-月山* 一带 ， 是 以 *洪镇变质杂岩* 为 主体 的 多 *层次* *滑脱剥离断层系* 。
+Pred: 巢湖-怀宁褶皱山区 的 洪镇伸展构造分布 于 洪镇-月山 一带 ， 是 以 洪镇变质杂岩 为 主体 的 多层 次滑脱 剥 离 断层系 。
+Label True: BIIIIIIIE S BIIIIE BE S BIIIE BE S S S BIIIIE S BE S S BE BIIIIIE S
+Label Pred: BIIIIIIIE S BIIIIIIE S BIIIE BE S S S BIIIIE S BE S BE BBS S S BIE S
+Wrong 5 0: 洪镇伸展构造 分布 多 层次 滑脱剥离断层系
+
+True: *沉火山碎屑岩* 有 凝灰质砂砾岩 、 *凝灰质细砂岩* 和 *沉凝灰岩* 。
+Pred: 沉火山碎屑岩 有 凝灰质砂砾岩 、 凝灰质细砂岩 和 沉凝灰岩 。
+Label True: BIIIIE S BIIIIE S BIIIIE S BIIE S
+Label Pred: BIIIIE S BIIIIE S BIIIIE S BIIE S
+Wrong 0 0: 
+
+True: （ 2 ） *沧口公园沧口断裂剖面* 。 在 *沧口公园* 一带 ， *沧口断裂* 出露 *宽度* 达 *100m* ， 主 *断面* *北西* 倾 ， 倾角 *75°~85°* ， *断裂带内岩石* 呈 *强烈挤压破碎状态*
+Pred: （ 2 ） 沧口公园沧口断裂剖面 。 在 沧口公园 一带 ， 沧口断裂 出露 宽度 达 100m ， 主断面北西倾 ， 倾角 75° ~ 85° ， 断裂带 内 岩石 呈 强烈 挤压 破碎状态 ，
+Label True: S S S BIIIIIIIIE S S BIIE BE S BIIE BE BE S BIIE S S BE BE S S BE BIIIIIE S BIIIIE S BIIIIIIE
+Label Pred: S S S BIIIIIIIIE S S BBIE BE S BIIE BE BE S BIIE S BIIBIE S BE BIE S BIE S BIE S BE S BE BE BIIE S
+Wrong 8 0: 沧口公园 主 断面 北西 倾 75°~85° 断裂带内岩石 强烈挤压破碎状态
+
+True: 并 发育 *糜棱岩带* *，根据* *内部* *构造* 及 *构造* *发育特征* 可 分为 三个 带 。
+Pred: 并 发育 糜棱岩带 ， 根据 内部构造 及 构造 发育 特征 可 分为 三个带 。
+Label True: E BE BIIE BIE BE BE S BE BIIE S BE BE S S
+Label Pred: S BE BIIE S BE BIIE S BE BE BE S BE BIE S
+Wrong 7 0: 并 ，根据 内部 构造 发育特征 三个 带
+
+True: 按 *成因类型* 划分 为 *全新统坡洪积堆积物* 、 *全新统冲洪积堆积物* *2个* *填图单元* 。 由 *老* 至 *新* *分* *述* 如下 。
+Pred: 按成因类型 划分 为 全新统坡洪积堆积物 、 全新统冲洪积堆积物 2个 填图单元 。 由老 至 新分述 如下 。
+Label True: S BIIE BE S BIIIIIIIE S BIIIIIIIE BE BIIE S S S S S S S BE S
+Label Pred: BBIIE BE S BIIIIIIIE S BIIIIIIIE BE BIIE S BE S BIE BE S
+Wrong 6 0: 按 由 老 新 分 述
+
+True: 矿区 *地处* *罗山* *东南麓* ， 属 *剥蚀丘陵区* ， *地势* *起伏* 较大 ， *坡度* *陡* ， *沟谷* 发育 ， *植被* *广布* 。
+Pred: 矿区 地处 罗山东南麓 ， 属 剥蚀丘陵区 ， 地势 起伏 较大 ， 坡度陡 ， 沟谷 发育 ， 植被 广布 。
+Label True: BE BE BE BIE S S BIIIE S BE BE BE S BE S S BE BE S BE BE S
+Label Pred: BE BS BIIIE S S BIIIE S BE BE BE S BIE S BE BE S BS BE S
+Wrong 6 0: 地处 罗山 东南麓 坡度 陡 植被
+
+True: 从 *岩性变质特征* 分析 ， *野头组* 以 *高角闪岩* *相* 为主 ， 局部 达 *麻粒岩相变质* 。
+Pred: 从 岩性变质特征 分析 ， 野头组 以 高角闪岩相 为主 ， 局部 达 麻粒岩相变质 。
+Label True: S BIIIIE BE S BIE S BIIE S BE S BE S BIIIIE S
+Label Pred: S BIIIIE BE S BIE S BIIIE BE S BE S BIIIIE S
+Wrong 2 0: 高角闪岩 相
+
+True: *地球物理场* 特征 ： 沿 断裂带 为 *重* 、 *磁异常梯度带* ， 总体 表现 为 *西侧* *磁* 高 *重* 低 、 东侧 *磁* *平* *重* 高 的 *特征异常带* ， 两侧 *重磁异常展布* 方向 明显 不同 ， *西侧* *异常* 呈 近 东西向 展布 ，
+Pred: 地球物理场特征 ： 沿断裂带 为 重 、 磁异常梯度带 ， 总体 表现 为 西侧 磁高重低 、 东侧磁平重高 的 特征异常带 ， 两侧 重磁异常 展布 方向 明显 不同 ， 西侧 异常 呈 近 东西向 展布 ，
+Label True: BIIIE BE S S BIE S S S BIIIIE S BE BE S BE S S S S S BE S S S S S BIIIE S BE BIIIIE BE BE BE S BE BE S S BIE BE S
+Label Pred: BIIIIIE S BIIE S S S BIIIIE S BE BE S BE BIIE S BIIIIE S BIIIE S BE BIIE BE BE BE BE S BE BE S S BIE BE S
+Wrong 14 0: 地球物理场 特征 沿 断裂带 磁 高 重 低 东侧 磁 平 重 高 重磁异常展布
+
+True: 东侧 *异常* 总体 表现 为 *一系列* *斜列式* *北东–北北东向* 展布 的 *串珠状磁异常* 和 *椭圆形重力异常带* ， 反映 了 *左行剪切特征* 。
+Pred: 东侧异常 总体 表现 为 一系 列斜列式北东– 北北东向 展布 的 串珠状磁异常 和 椭圆形 重力异常带 ， 反映 了 左行剪切特征 。
+Label True: BE BE BE BE S BIE BIE BIIIIIE BE S BIIIIE S BIIIIIIE S BE S BIIIIE S
+Label Pred: BIIE BE BE S BE IIIIIIE BIIE BE S BIIIIE S BIE BIIIE S BE S BIIIIE S
+Wrong 6 0: 东侧 异常 一系列 斜列式 北东–北北东向 椭圆形重力异常带
+
+True: 岩性 多 以 *中基性* 的 *辉长辉绿岩* 、 *闪长玢岩脉* 和 石英脉 为主 。
+Pred: 岩性 多 以中基性 的 辉长辉绿岩 、 闪长玢岩脉 和 石英脉 为主 。
+Label True: BE S S BIE S BIIIE S BIIIE S BIE BE S
+Label Pred: BE S BBIE S BIIIE S BIIIE S BIE BE S
+Wrong 1 0: 以
+
+True: 其中 *每个* 构造单元 *普遍* 经历 了 *3~4次* *构造变形* ， *剪切带* 内 主要 发育 *两期构造* 。
+Pred: 其中 每个构造单元 普 遍 经历 了 3~ 4次构造变形 ， 剪切带 内 主要 发育 两期构造 。
+Label True: BE BE BIIE BE BE S BIIE BIIE S BIE S BE BE BIIE S
+Label Pred: BE BIIIIE S S BE S BS BIIIIE S BIE S BS BE BIIE S
+Wrong 6 0: 每个 构造单元 普遍 3~4次 构造变形 主要
+
+True: 由于 *变质作用* ， 均 *变* 为 *大理岩* 、 板岩 、 *角岩* 等 。
+Pred: 由于 变质作用 ， 均 变 为 大理岩 、 板岩 、 角岩 等 。
+Label True: BE BIIE S S S S BIE S BE S BE S S
+Label Pred: BE BIIE S S S S BIE S BE S BE S S
+Wrong 0 0: 
+
+True: 在 *4600m* 处 ， *电性层* *横向* 不 *连续* ， *等值线* 有 一个 *下潜* 的 过程 ， *原本* *近乎* *水平* 的 *等值线* 在 *此* 处 呈 *竖直状态* ， *推断* *此* 处 有 *断点* 。
+Pred: 在 4600m处 ， 电性层横向 不连续 ， 等 值线 有 一个 下潜 的 过程 ， 原 本 近 乎水平 的 等 值线 在 此处 呈竖直状态 ， 推断此 处 有 断点 。
+Label True: S BIIIE S S BIE BE S BE S BIE S BE BE S BE S BE BE BE S BIE S S S S BIIE S BE S S S BE S
+Label Pred: S BIIIIE S BIIIE BIE S S BE S BE BE S BE S S S S BIE S S BE S BS BBIIE S BIE S S BE S
+Wrong 15 0: 4600m 处 电性层 横向 不 连续 等值线 原本 近乎 水平 等值线 此 呈 推断 此
+
+True: 岩性 主要 为 *浅灰色薄板状粉砂质铝土质页岩* 、 *浅灰色薄-中厚层铁质胶结中细粒岩屑石英杂砂岩* 、 *黑色碳质页岩* ， 夹 *数层* *煤线* 。
+Pred: 岩性 主要 为 浅灰色薄板状粉砂质铝土质页岩 、 浅灰色薄-中厚层铁质胶结中细粒岩屑石英杂砂岩 、 黑色碳质页岩 ， 夹 数层煤线 。
+Label True: BE BE S BIIIIIIIIIIIIE S BIIIIIIIIIIIIIIIIIIIIE S BIIIIE S S BE BE S
+Label Pred: BE BE S BIIIIIIIIIIIIE S BIIIIIIIIIIIIIIIIIIIIE S BIIIIE S S BIIE S
+Wrong 2 0: 数层 煤线
+
+True: 详细 见 “ *第三节* 第四纪 *地质* ” *描述* 。
+Pred: 详细 见 “第三节第四纪地质”描述 。
+Label True: BE S S BIE BIE BE S BE S
+Label Pred: IE S BIIIIIIIIIIE S
+Wrong 7 0: 详细 “ 第三节 第四纪 地质 ” 描述
+
+True: *成因* 为 *河流相沉积* ， 具 二元结构 。
+Pred: 成 因 为 河流相沉积 ， 具 二元结构 。
+Label True: BE S BIIIE S S BIIE S
+Label Pred: E S S BIIIE S S BIIE S
+Wrong 1 0: 成因
+
+True: *Ⅱ区* （ *4800* *-11375m* ） 电阻率 属于 高 *阻区* （ *图2-2-18* ） ， *纵向* 上 电阻率 先 *减小* 再 *变* 大 。
+Pred: Ⅱ区 （ 4800-11375m ） 电阻率 属于 高阻区 （ 图2-2-18 ） ， 纵向 上电阻率 先 减小 再 变大 。
+Label True: BE S BIIE BIIIIIE S BIE BE S BE S BIIIIIE S S BE S BIE S BE S S S S
+Label Pred: BE S BIIIIIIIIIE S BIE BE BIE S BIIIIIE S S BE BIIE S BE S IE S
+Wrong 8 0: 4800 -11375m 高 阻区 上 电阻率 变 大
+
+True: *煌斑岩脉* 在 地表 及 *坑道* 中 *偶见* 出露 ， 它 与 *矿脉* 在 *空间关系* 上 比较 密切 ， 多 出现 在 *矿脉* 的 *上下盘* 或 *矿脉尖灭* 的 *相应* *位置* 。 石英脉 ： 根据 *矿物组合* 和 *结构构造* 特点 ，
+Pred: 煌斑岩脉 在 地表 及 坑道中偶 见 出露 ， 它 与 矿脉 在 空间关系 上比 较 密切 ， 多 出现 在 矿脉 的 上下 盘 或 矿脉 尖灭 的 相应位置 。 石英脉 ： 根据 矿物组合 和 结构构造特点 ，
+Label True: BIIE S BE S BE S BE BE S S S BE S BIIE S BE BE S S BE S BE S BIE S BIIE S BE BE S BIE S BE BIIE S BIIE BE S
+Label Pred: BIIE S BE S BIIE S BE S S S BE S BIIE BE E BE S S BE S BE S BE S S BE BE S BIIE S BIE S BE BIIE S BIIIIE S
+Wrong 11 0: 坑道 中 偶见 上 比较 上下盘 矿脉尖灭 相应 位置 结构构造 特点
+
+True: 本 矿区 石英脉 可以 划分 为 *两种* *类型* 。
+Pred: 本矿区 石英脉 可以 划分 为 两种类型 。
+Label True: S BE BIE BE BE S BE BE S
+Label Pred: BIE BIE BE BE S BIIE S
+Wrong 4 0: 本 矿区 两种 类型
+
+True: 区 内 火山岩 *按照* *岩石类型* 划分 为 *火山碎屑岩* 、 *沉火山碎屑岩* 、 *次火山岩* 。
+Pred: 区 内 火山岩按照岩石类型 划分 为 火山碎屑岩 、 沉火山碎屑岩 、 次火山岩 。
+Label True: S S BIE BE BIIE BE S BIIIE S BIIIIE S BIIE S
+Label Pred: S S BIIIIIIIE BE S BIIIE S BIIIIE S BIIE S
+Wrong 3 0: 火山岩 按照 岩石类型
+
+True: 北西向 断裂构造 规模 一般 不 大 ， 但是 有 较好 矿化蚀变 均 为 北西向 构造蚀变 ， 如 超浩尔图北银多金属矿点 、 *吞特尔多金属矿点* 。
+Pred: 北西向 断裂构造 规模 一般 不 大 ， 但是 有 较好 矿化蚀变 均 为 北西向 构造蚀变 ， 如 超浩尔图北银多金属矿点 、 吞特尔多金属矿点 。
+Label True: BIE BIIE BE BE S S S BE S BE BIIE S S BIE BIIE S S BIIIIIIIIIE S BIIIIIIE S
+Label Pred: BIE BIIE BE BE S S S BE S BE BIIE S S BIE BIIE S S BIIIIIIIIIE S BIIIIIIE S
+Wrong 0 0: 
+
+True: *这些* 断裂 多 切割 *古老* 的 东西向 、 北东向 断裂 ， *又* 被 北西向 断裂 切割 。
+Pred: 这些 断裂 多 切割 古老 的 东西向 、 北东向 断裂 ， 又 被 北西向 断裂 切割 。
+Label True: BE BE S BE BE S BIE S BIE BE S S S BIE BE BE S
+Label Pred: BE BE S BE IE S BIE S BIE BE S S S BIE BE BE S
+Wrong 1 0: 古老
+
+True: *早中更新世戚家矶组* （ *Qpq* ） 厚 *12.80m3.* *粘土* ， *棕红色* ， *土质* *均匀* ， *致密* ， 下部 含 少量 *灰白色高岭土条带* ， 呈 *网纹状* 。
+Pred: 早中更新世戚家矶组 （ Qpq ） 厚 12.80m3.粘土 ， 棕红色 ， 土质均匀 ， 致密 ， 下部 含 少量 灰白色高岭土条带 ， 呈 网纹状 。
+Label True: BIIIIIIIE S BIE S S BIIIIIIE BE S BIE S BE BE S BE S BE S BE BIIIIIIE S S BIE S
+Label Pred: BIIIIIIIE S BIE S S BIIIIIIIIE S BIE S BIIE S BE S BE S BE BIIIIIIE S S BIE S
+Wrong 4 0: 12.80m3. 粘土 土质 均匀
+
+True: 工作区 北西向 断裂 可 进一步 分为 *两组* ： 一 组 呈 *280°~290°* 走向 ， 见 有 *田村* 、 *太平庄* 、 *蔚竹庵* 、 *石老人* 等 断裂 ， 规模 小 ， 长 *1~6km* ， 以 *张性* 为主 ，
+Pred: 工作区 北西向 断裂 可 进一步 分 为 两组 ： 一组 呈 280° ~ 290° 走向 ， 见 有 田村 、 太平庄 、 蔚竹庵 、 石老人 等 断裂 ， 规模小 ， 长 1~6km ， 以 张性 为主 ，
+Label True: BIE BIE BE S BIE BE BE S S S S BIIIIIIIE BE S S S BE S BIE S BIE S BIE S BE S BE S S S BIIIE S S BE BE S
+Label Pred: BIE BIE BE S BIE E S BE S BE S BIIE S BIIE BE S S S BE S BIE S BIE S BIE S BE S BIE S S BIIIE S S BE BE S
+Wrong 6 0: 分为 一 组 280°~290° 规模 小
+
+True: 个别 （ 如 *太平庄断裂* ） 呈 *左行压扭* 。
+Pred: 个别 （ 如 太平庄断裂 ） 呈 左行压扭 。
+Label True: BE S S BIIIE S S BIIE S
+Label Pred: BE S S BIIIE S S BIIE S
+Wrong 0 0: 
+
+True: 断裂 NW *侧* 以 发育 *胶南表壳岩组合变质岩系* 为 标志 ， 为 *胶南造山带* 北 带 ； *SE* *侧* 以 发育 *云台岩群浅变质岩系* 为 标志 ， 为 *胶南造山带* 南 带 ， 区 内 该 断裂 为 *黄海海域* 的 *水体* 覆盖 ，
+Pred: 断裂 NW侧 以 发育 胶南表壳岩组合 变质岩系 为 标志 ， 为 胶南造山带北带 ； SE侧 以 发育 云台岩群浅变质岩系 为 标志 ， 为 胶南造山带南带 ， 区 内 该 断裂 为 黄海海域 的 水体 覆盖 ，
+Label True: BE BE S S BE BIIIIIIIIIE S BE S S BIIIE S S S BE S S BE BIIIIIIIE S BE S S BIIIE S S S S S S BE S BIIE S BE BE S
+Label Pred: BE BBE S BE BIIIIIE BIIE S BE S S BIIIIIE S BIE S BE BIIIBIIIE S BE S S BIIIIIE S S S S BE S BIIE S BE BE S
+Wrong 12 1: NW 侧 胶南表壳岩组合变质岩系 胶南造山带 北 带 SE 侧 云台岩群浅变质岩系 胶南造山带 南 带
+
+True: 但 从 区域 *重力图* 上 可以 *判译* 其 存在 及 展布 的 *状况* 。
+Pred: 但 从 区域 重力 图 上可 以 判译其 存在 及 展布 的 状况 。
+Label True: S S BE BIE S BE BE S BE S BE S BE S
+Label Pred: S S BE BE S BE S BIE BE S BE S BE S
+Wrong 5 0: 重力图 上 可以 判译 其
+
+True: 是 一套 *洪冲积* 的 *灰紫* 、 *紫红色调粗碎屑沉积岩系* 。
+Pred: 是 一套 洪冲积 的 灰紫 、 紫红色调粗碎屑沉积岩系 。
+Label True: S BE BIE S BE S BIIIIIIIIIE S
+Label Pred: S BE BIE S BE S BIIIIIIIIIE S
+Wrong 0 0: 
+
+True: *火山活动* 以 *裂隙式* 和 *中心式喷发* 为主 ， *喷溢* 和 *侵出方式* *次之* ， *火山喷发旋回* 从 早期 的 *酸性火山岩* 、 *中性* 、 *中酸性火山岩* （ 形成 了 满克头鄂博组 和 *玛尼吐组* 的 主体 部分 ）
+Pred: 火山活动 以 裂隙式 和 中心式喷发 为主 ， 喷溢 和 侵出方式 次之 ， 火山喷发旋回 从 早期 的 酸性火山岩 、 中性 、 中酸性火山岩 （ 形成 了 满克头鄂博组 和 玛尼吐组 的 主体 部分 ）
+Label True: BIIE S BIE S BIIIE BE S BE S BIIE BE S BIIIIE S BE S BIIIE S BE S BIIIIE S BE S BIIIIE S BIIE S BE BE S
+Label Pred: BIIE S BIE S BIIIE BE S BE S BIIE BE S BIIIIE S BE S BIIIE S BE S BIIIIE S BE S BIIIIE S BIIE S BE BE S
+Wrong 0 0: 
+
+True: 到 *晚期* 的 *酸性火山岩* （ *白音高老组* 的 主体 部分 ） ， *最后* 以 *花岗岩* 的 侵入 和 小 规模 的 *流纹岩* 侵入 而 *告终* 。
+Pred: 到 晚期 的 酸性火山岩 （ 白音高老组 的 主体 部分 ） ， 最后 以 花岗岩 的 侵入 和 小规模 的 流纹岩 侵入 而 告终 。
+Label True: S BE S BIIIE S BIIIE S BE BE S S BE S BIE S BE S S BE S BIE BE S BE S
+Label Pred: S BE S BIIIE S BIIIE S BE BE S S BE S BIE S BE S BIE S BIE BE E BE S
+Wrong 3 0: 小 规模 而
+
+True: 褶皱构造 不 *甚* 发育 ， 规模 *不大* ， *只* 局部 出现 ， 仅 在 莱阳群 和 *王氏群* 中 见 及 ， 多 被 *后期断层* 所 *破坏* 而 *残缺* 不 全 。
+Pred: 褶皱构造 不 甚 发育 ， 规模 不大 ， 只 局部 出现 ， 仅 在 莱阳群 和 王氏群 中 见 及 ， 多 被 后期 断层 所 破坏 而 残缺 不全 。
+Label True: BIIE S S BE S BE BE S S BE BE S S S BIE S BIE S S S S S S BIIE S BE S BE S S S
+Label Pred: BIIE S S BE S BE BE S S BE BE S S S BIE S BIE S S S S S S BE BE S BE S BE BE S
+Wrong 3 0: 后期断层 不 全
+
+True: *殷坑组* 与 下伏 的 大隆组 为 整合接触 ， *拉犁尖组* 与 上覆 的 *磨山组* 呈 *不整合接触* 。
+Pred: 殷坑组 与 下伏 的 大隆组 为 整合接触 ， 拉犁尖组 与 上覆 的 磨山组 呈 不整合接触 。
+Label True: BIE S BE S BIE S BIIE S BIIE S BE S BIE S BIIIE S
+Label Pred: BIE S BE S BIE S BIIE S BIIE S BE S BIE S BIIIE S
+Wrong 0 0: 
+
+True: 主要 分布 于 *怀宁县江镇* 、 *月山* 、 *宗铺* 、 *王居山* 及 *太湖县* 、 *望江县香茗山* 等 *地* ， 由 *15个* *侵入体* 组成 ， 出露 面积 约 *108km2* 。
+Pred: 主要 分布 于 怀宁县江镇 、 月山 、 宗铺 、 王居山 及 太湖县 、 望江县香茗山等地 ， 由 1 5个 侵入体 组成 ， 出露 面积 约 108km2 。
+Label True: BE BE S BIIIE S BE S BE S BIE S BIE S BIIIIE S S S S BIE BIE BE S BE BE S BIIIIE S
+Label Pred: BE BE S BIIIE S BE S BE S BIE S BIE S BIIIIIIE S S E BE BIE BE S BE BE S BIIIIE S
+Wrong 4 0: 望江县香茗山 等 地 15个
+
+True: 总体 走向 *280°* ， 倾向 *S* ， 倾角 *56°~85°* 。
+Pred: 总体 走向 280° ， 倾向 S ， 倾角 56° ~ 85° 。
+Label True: BE BE BIIE S BE S S BE BIIIIIE S
+Label Pred: BE BE BIIE S BE S S BE BIE S BIE S
+Wrong 1 0: 56°~85°
+
+True: 区域 和 附近 矿山 *曾经* *先后* *开展* *过* *较多* *基础性水工环地质工作* ， *矿床* 的 *水文地质* 多 为 简单 ， *工程地质条件* 多 为 *中等* ， 矿区 *地质环境* *质量* 多 为 *良好* ， *虽然* *本次* *水工环地质* *工作量* *布置* 较少 ，
+Pred: 区域 和 附近 矿山 曾 经 先 后 开展 过 较多 基础性水工环 地质 工作 ， 矿床 的 水文地质 多 为 简单 ， 工程 地质条 件 多 为 中 等 ， 矿区 地质环境 质量 多 为 良好 ， 虽 然 本 次 水工环地质 工作量 布置 较少 ，
+Label True: BE S BE BE BE BE BE S BE BIIIIIIIIE S BE S BIIE S S BE S BIIIIE S S BE S BE BIIE BE S S BE S BE BE BIIIE BIE BE BE S
+Label Pred: BE S BE BE S S S S BE E BE BIIIIE BE BE S BE S BIIE S S BE S BE BIE S S S S S S BE BIIE BE S S BE S S S S S BIIBE BIE BE BE S
+Wrong 9 0: 曾经 先后 过 基础性水工环地质工作 工程地质条件 中等 虽然 本次 水工环地质
+
+True: 但 基本 *查明* 了 *矿床* 的 *水文地质* 、 *工程地质条件* 和 *环境地质条件* ， 基本 *达到* *详查* *阶段* *水工环地质工作* 的 *目的* 和 *要求* 。
+Pred: 但 基本 查明 了 矿床 的 水文地质 、 工程 地质条件 和 环境 地质 条件 ， 基本 达 到 详 查阶段 水工环地质 工作 的 目 的 和 要求 。
+Label True: S BE BE S BE S BIIE S BIIIIE S BIIIIE S BE BE BE BE BIIIIIE S BE S BE S
+Label Pred: S BE BE S BE S BIIE S BE IIIE S BE BE BE S BE S S S BIE BIIIE BE S S S S BE S
+Wrong 7 0: 工程地质条件 环境地质条件 达到 详查 阶段 水工环地质工作 目的
+
+True: 岩石 发育 *水平层理* 、 *平行层理* 、 *斜层理* 及 *冲刷面* 。
+Pred: 岩石 发育 水平层理 、 平行层理 、 斜层理 及 冲刷面 。
+Label True: BE BE BIIE S BIIE S BIE S BIE S
+Label Pred: BE BE BIIE S BIIE S BIE S BIE S
+Wrong 0 0: 
+
+True: *姑嫂城-贾彬断裂* ： *N* *E* 延伸 ， 长 约 *13km* ， 倾向 NW ， 倾角 *70°* 。
+Pred: 姑 嫂城-贾彬断裂 ： NE 延伸 ， 长 约 13km ， 倾向 NW ， 倾角 70° 。
+Label True: BIIIIIIE S S S BE S S S BIIE S BE BE S BE BIE S
+Label Pred: S BIIIIIE S BE BE S S S BIIE S BE BE S BE BIE S
+Wrong 3 1: 姑嫂城-贾彬断裂 N E
+
+True: *晚白垩世—古近纪* ， 该 断裂 表现 为 高 *角度张性断裂* ， *断面* 倾向 *南东* （ *图2–2-14* ） ， 控制 了 潜山盆地 的 *北西* 边界 ， *持续* 的 *伸展* 下降 ， 使 *“箕状”潜山盆地* *沉降中心* 在 *盆地* *西侧* ，
+Pred: 晚白垩世—古近纪 ， 该 断裂 表现 为 高角度张性断裂 ， 断面 倾向 南东 （ 图2–2-14 ） ， 控制 了 潜山盆地 的 北西边界 ， 持续 的 伸展下降 ， 使“箕状”潜山盆地 沉降 中心 在 盆地 西侧 ，
+Label True: BIIIIIIE S S BE BE S S BIIIIE S BE BE BE S BIIIIIE S S BE S BIIE S BE BE S BE S BE BE S S BIIIIIIE BIIE S BE BE S
+Label Pred: BIIIIIIS S S BE BE S BIIIIIE S BE BE BE S BIIIIIE S S BE S BIIE S BIIE S BE S BBIE S BIIIIIIIE BE BE S BE BE S
+Wrong 10 0: 晚白垩世—古近纪 高 角度张性断裂 北西 边界 伸展 下降 使 “箕状”潜山盆地 沉降中心
+
+True: *盆地* 内 *晚白垩世赤山组* *及早* *第三纪望虎墩组* 、 *痘姆组岩层产状* 总体 倾向 *西北* 。
+Pred: 盆地 内 晚白垩世赤山组 及 早第三纪望虎墩组 、 痘姆组岩层 产状 总体 倾向 西北 。
+Label True: BE S BIIIIIE BE BIIIIIE S BIIIIIE BE BE BE S
+Label Pred: BE S BIIIIIE S BIIIIIIE S BIIIE BE BE BE BE S
+Wrong 3 0: 及早 第三纪望虎墩组 痘姆组岩层产状
+
+True: 至 *中更新世晚期* ， *气候* *转* *暖* ， *太子河* 、 *浑河* 各 *支流* *汇通* *成* *干流* ， *太子河* 经 *辽阳* *出山口* *逐渐* 形成 冲积扇 ； 该 过程 中 受 东部 *山区* *差异性抬升* 左右 ， 河流 *下切能力* *增强* ，
+Pred: 至 中更新世晚期 ， 气候转暖 ， 太子河 、 浑河各支 流 汇 通成干流 ， 太子河 经 辽阳 出山口逐渐 形成 冲积扇 ； 该 过程 中 受 东部 山区 差 异性抬升 左右 ， 河流 下切 能力 增强 ，
+Label True: S BIIIIE S BE S S S BIE S BE S BE BE S BE S BIE S BE BIE BE BE BIE S S BE S S BE BE BIIIE BE S BE BIIE BE S
+Label Pred: S BIIIIE S BIIE S BIE S BIIS S S BIIE S BIE S BS BIIIE BE BIE S S BE S S BE BE S BIIE BE S BE BE BE BE S
+Wrong 14 0: 气候 转 暖 浑河 各 支流 汇通 成 干流 辽阳 出山口 逐渐 差异性抬升 下切能力
+
+True: 将 大量 *粗碎屑物质* 带 *出* *山* *外* ， 在 *河水搬运能力* 稳定 的 情况 下 ， *造成* *快速沉积* ， 导致 *扇面* 河流 *不断* *改道* ， 形成 *放射性水系* ， 使得 *这* *时期* 在 *丘* *前* 见 *黄土堆积* ，
+Pred: 将 大量 粗碎屑物质带 出山外 ， 在 河水 搬运 能 力 稳定 的 情况下 ， 造成 快速 沉积 ， 导致 扇面 河流 不断 改道 ， 形成 放射性水系 ， 使 得 这时期 在 丘前见黄土堆积 ，
+Label True: S BE BIIIE S S S S S S BIIIIE BE S BE S S BE BIIE S BE BE BE BE BE S BE BIIIE S BE S BE S S S S BIIE S
+Label Pred: S BE BIIIIE BIE S S BE BE S S BE S BIE S BE BE BE S BE BE BE BE BE S BE BIIIE S S S BIE S BIIIIIE S
+Wrong 16 0: 粗碎屑物质 带 出 山 外 河水搬运能力 情况 下 快速沉积 使得 这 时期 丘 前 见 黄土堆积
+
+True: 厚 约 *20m* ； 平原区 为 *冲积相沉积* ， 岩性 为 *砂砾石* 、 *中细砂* 和 *粉细砂层* ， 厚 约 *50m* ， *地层孢粉* 见 松 和 少量 桦 ， *草本* 以 *藜* 、 *蒿* 、 *水龙骨* 为主 。
+Pred: 厚 约 20m ； 平原区 为 冲积相沉积 ， 岩性 为 砂砾石 、 中细砂 和 粉细砂层 ， 厚 约 50m ， 地层孢粉 见 松 和 少量 桦 ， 草本 以 藜 、 蒿 、 水龙骨 为主 。
+Label True: S S BIE S BIE S BIIIE S BE S BIE S BIE S BIIE S S S BIE S BIIE S S S BE S S BE S S S S S BIE BE S
+Label Pred: S S BIE S BIE S BIIIE S BE S BIE S BIE S BIIE S S S BIE S BIIE S S S BE S S BE S S S S S BIE BE S
+Wrong 0 0: 
+
+True: （ 据 *1∶5万* *源潭铺幅* *修改* ） *古近纪* 以来 ， 控制 潜山盆地 *西缘* 的 *桐城–太湖断裂* 多 处 发生 *构造反转* ， 表现 为 规模 不等 的 *逆冲* （ *掩* ） 断层 ， *断面* 倾向 *北西* ，
+Pred: （ 据 1∶5万源 潭 铺幅 修改 ） 古近纪 以来 ， 控制 潜山盆地 西缘 的 桐城–太湖断裂多 处 发生构造反转 ， 表现 为 规模 不等 的 逆冲 （ 掩 ） 断层 ， 断面 倾向 北西 ，
+Label True: S S BIIE BIIE BE S BIE BE S BE BIIE BE S BIIIIIE S S BE BIIE S BE S BE BE S BE S S S BE S BE BE BE S
+Label Pred: S S BIIIE E BE BS S BIE BE S BE BIIE BE S BIIIIIIS S BIIIIE S BE S BE BE S BE S S S BE S BE BE BE S
+Wrong 6 0: 1∶5万 源潭铺幅 修改 桐城–太湖断裂 发生 构造反转
+
+True: 多 条 *次级断层* 常 组合 *成* 规模 不等 的 *逆冲叠瓦扇* ， 使 断裂 *西侧* 的 中 、 *深变质岩系* 由 *盆地* 边缘 向 *盆地* *内部* *依次* *逆冲* ， 直接 构成 *盆地* 的 *反转边界* （ *朱光* ， *2001* ）
+Pred: 多 条 次级断层常组 合成 规模 不等 的 逆冲叠瓦扇 ， 使 断裂 西侧 的 中 、 深变质岩系由盆地边缘 向盆地 内部 依次 逆冲 ， 直接 构成 盆地 的 反转 边界 （ 朱光 ， 2001 ）
+Label True: S S BIIE S BE S BE BE S BIIIE S S BE BE S S S BIIIE S BE BE S BE BE BE BE S BE BE BE S BIIE S BE S BIIE S
+Label Pred: S S BIIIIE BS BE BE S BIIIE S S BE BE S S S BIIIIIIIBE BIE BE BE BE S BE BE BE S BE BE S BE S BIIE S
+Wrong 9 0: 次级断层 常 组合 深变质岩系 由 盆地 向 盆地 反转边界
+
+True: 。
+Pred: 。
+Label True: S
+Label Pred: S
+Wrong 0 0: 
+
+True: 伴随 有 北西向 的 *平移正断层* 和 北东向 的 *逆断层* 。 并且 形成 了 北东向 展布 的 *中生代火山喷发盆地* 。
+Pred: 伴随 有 北西向 的 平移正断层 和 北东向 的 逆断层 。 并且 形成 了 北东向 展布 的 中生代火山喷发盆地 。
+Label True: BE S BIE S BIIIE S BIE S BIE S BE BE S BIE BE S BIIIIIIIE S
+Label Pred: BE S BIE S BIIIE S BIE S BIE S BE BE S BIE BE S BIIIIIIIE S
+Wrong 0 0: 
+
+True: 次 为 石英 ， 含量 *5-50%* ， 一般 为 *5～25%* 。
+Pred: 次 为 石英 ， 含量 5-50% ， 一般 为 5～25% 。
+Label True: S S BE S BE BIIIE S BE S BIIIE S
+Label Pred: S S BE S BE BIIIE S BE S BIIIE S
+Wrong 0 0: 
+
+True: 郯–庐断裂 是 *中国* 东部 重要 的 北东向 断裂 ， 也是 *中国* 东部 影响 *最大* 的 *强震活动带* ， 该 断裂 由 *张文佑* 在 *20世纪50年代* 初期 *编制* *全国性图件* *时* *最早* *发现* 并 *明确* 提出 ，
+Pred: 郯–庐断裂 是 中国东部 重要 的 北东向 断裂 ， 也 是 中国东部 影响 最大 的 强震活动带 ， 该 断裂 由 张文佑 在 20世纪50 年代初期 编 制全 国性 图件时 最 早 发现 并明确 提出 ，
+Label True: BIIIE S BE BE BE S BIE BE S BE BE BE BE BE S BIIIE S S BE S BIE S BIIIIIIE BE BE BIIIE S BE BE S BE BE S
+Label Pred: BIIIE S BIIE BE S BIE BE S S S BIIE BE BE S BIIIE S S BE S BIE S BIIIIE BIIE S BS BE BIE S S BE BBE BE S
+Wrong 12 0: 中国 东部 也是 中国 东部 20世纪50年代 初期 编制 全国性图件 时 最早 并
+
+True: *而后* 由 *杨华* 通过 *航空遥感* *予以* *证实* （ *林宗满* ， *2011* ） 。
+Pred: 而 后 由 杨华通过 航空遥感予 以 证实 （ 林宗满 ， 2011 ） 。
+Label True: BE S BE BE BIIE BE BE S BIE S BIIE S S
+Label Pred: S S S BIIE BIIIE S BE S BIE S BIIE S S
+Wrong 5 0: 而后 杨华 通过 航空遥感 予以
+
+True: *自* *三山岛* 经 *单山* 、 *辛庄* 、 *狼虎埠* 至 *三元镇北西马* ， *断续* 长 达 *30km* 。 在 本 区域 内 分布 的 为 该 断裂 的 *北西段* ， 长 *25km* 。 倾向 北东 ， 局部 *反倾* 。 *断裂破碎带* 宽 *15～20m* ，
+Pred: 自三山岛 经 单山 、 辛庄 、 狼虎埠 至 三元镇北西马 ， 断续长 达 30km 。 在 本 区 域内 分布 的 为 该 断裂 的 北西段 ， 长 25km 。 倾向 北东 ， 局部 反倾 。 断裂 破碎带 宽 15～20m ，
+Label True: S BIE S BE S BE S BIE S BIIIIE S BE S S BIIE S S S BE S BE S S S BE S BIE S S BIIE S BE BE S BE BE S BIIIE S BIIIIE S
+Label Pred: IIIE S BE S BE S BIE S BIIIIE S BIS S BIIE S S S S BS BE S S S BE S BIE S S BIIE S BE BE S BE BE S BE BIE S BIIIIE S
+Wrong 5 0: 自 三山岛 断续 区域 断裂破碎带
+
+True: 具 多次 活动 特征 。
+Pred: 具 多次 活动 特征 。
+Label True: S BE BE BE S
+Label Pred: S BE BE BE S
+Wrong 0 0: 
+
+True: 北东向 *断裂构造幅* 内 北东向 断裂构造 比较 *少* ， 主要 表现 为 北东向 的 脉岩 比较 发育 。
+Pred: 北东向 断裂构造 幅 内 北东向 断裂构造 比较少 ， 主要 表现 为 北东向 的 脉岩 比 较 发育 。
+Label True: BIE BIIIE S BIE BIIE BE S S BE BE S BIE S BE BE BE S
+Label Pred: BIE BIIE S S BIE BIIE BBE S BE BE S BIE S BE S S BE S
+Wrong 4 0: 断裂构造幅 比较 少 比较
+
+True: 2 、 *乐化辉长辉绿(玢)岩* *(* *σβμk1* *)* 。
+Pred: 2 、 乐化辉长辉绿(玢)岩(σβμk1) 。
+Label True: S S BIIIIIIIIE S BIIIE S S
+Label Pred: S S BIIIIIIIIIIIIIIIE S
+Wrong 4 0: 乐化辉长辉绿(玢)岩 ( σβμk1 )
+
+True: *气候* 具有 *海洋* 和 *内陆气候* 特征 ， 属 *暖温带季风区大陆性气候* ， *昼夜* *温差* 较小 ， *四季* *分明* 。 *春夏* 多 *东南风* ， *秋冬季* 多 *西北风* 。
+Pred: 气 候具 有 海洋 和 内陆气候特征 ， 属 暖温带季风区大 陆性气候 ， 昼 夜 温差 较小 ， 四季分明 。 春 夏 多 东南风 ， 秋冬季 多 西北风 。
+Label True: BE BE BE S BIIE BE S S BIIIIIIIIIE S BE BE BE S BE BE S BE S BIE S BIE S BIE S
+Label Pred: E BE S BE S BIIIIE S S BIIIIIS BIIE S S E BE BE S BIIE S S S S BIE S BIS S BIE S
+Wrong 10 0: 气候 具有 内陆气候 特征 暖温带季风区大陆性气候 昼夜 四季 分明 春夏 秋冬季
+
+True: 接触变质岩 按 *矿物成分* 、 结构 、 *构造* 的 *差异* 可 分为 *斑点砂质绢云母千枚岩* 、 *二云母石英角岩* 。
+Pred: 接触变质岩 按 矿物 成分 、 结构 、 构造 的 差异 可 分为 斑点砂质绢云母千枚岩 、 二云母石英角岩 。
+Label True: BIIIE S BIIE S BE S BE S BE S BE BIIIIIIIIE S BIIIIIE S
+Label Pred: BIIIE S BE BE S BE S BE S BE S BE BIIIIIIIIE S BIIIIIE S
+Wrong 1 0: 矿物成分
+
+True: *综合分析* 该 断裂 为 *左旋张性活动* 。
+Pred: 综合 分析 该 断裂 为 左旋张性活动 。
+Label True: BIIE S BE S BIIIIE S
+Label Pred: BE BE S BE S BIIIIE S
+Wrong 1 0: 综合分析
+
+True: *中生代脉岩* 以 *专属性脉岩* 为主 ， *区域性脉岩* *次之* ， 与 火山岩 、 侵入岩 关系 密切 ， 其 *空间展布* 受 构造裂隙 控制 ， 以 北东 、 *北北东向* 为主 ， 规模 由 *几十米至上千米* 不等 。
+Pred: 中生代脉岩 以专 属性脉岩 为主 ， 区域性脉岩次之 ， 与 火山岩 、 侵入岩 关系 密切 ， 其 空间展布 受 构造裂隙 控制 ， 以 北东 、 北北东向 为主 ， 规模 由几 十米 至 上千米 不等 。
+Label True: BIIIE S BIIIE BE S BIIIE BE S S BIE S BIE BE BE S S BIIE S BIIE BE S S BE S BIIE BE S BE S BIIIIIE BE S
+Label Pred: BIIIE BE BIIE BE S BIIIIIE S S BIE S BIE BE BE S S BIIE S BIIE BE S S BE S BIIE BE S BE BE BE S BIE BE S
+Wrong 6 0: 以 专属性脉岩 区域性脉岩 次之 由 几十米至上千米
+
+True: *依据* 钻孔 *揭露* 地层 情况 ， 将 该 组 地层 岩性 划分 为 上 、 中 、 下 *三层* 。
+Pred: 依 据 钻孔揭露 地层 情况 ， 将 该 组 地层 岩性 划分 为 上 、 中 、 下 三层 。
+Label True: BE BE BE BE BE S S S S BE BE BE S S S S S S BE S
+Label Pred: S S BIIE BE BE S S S S BE BE BE S S S S S S IE S
+Wrong 4 0: 依据 钻孔 揭露 三层
+
+True: *前者* *隐伏* 于 *辽阳市* 西部 平原区 ， 形成 于 *早先寒武纪* ， 为 区 内 *主干* 断裂 之一 ， *走* 向 *NE* ； *后者* 出露 于 *辽阳市* *中南部* *首山-弓长岭-寒岭* 一带 ， 活动 于 *晚三叠世-* *早白垩世* ，
+Pred: 前者隐 伏于 辽阳市 西部 平原区 ， 形成 于 早先寒武纪 ， 为 区 内 主干 断裂 之一 ， 走向 NE ； 后 者 出露 于 辽阳市中南部 首山-弓长岭-寒岭 一带 ， 活动 于 晚三叠世-早白垩世 ，
+Label True: BE BE S BIE BE BIE S BE S BIIIE S S S S BE BE BE S S S BE S BE BE S BIE BIE BIIIIIIIE BE S BE S BIIIE BIIE S
+Label Pred: BIS BE BIE BE BIE S BE S BIIIE S S S S BS BE BE S BE BE S S S BE S BIIIIE BIIIIIIIE BE S BE S BIIIIIIIE S
+Wrong 11 1: 前者 隐伏 于 主干 走 向 后者 辽阳市 中南部 晚三叠世- 早白垩世
+
+True: 控制 了 *鞍* 、 *辽-本地区* *现今* 各 *时代* *地质体* 的 *空间分布* 。
+Pred: 控制 了 鞍 、 辽-本地区 现 今各 时代地质体 的 空间分布 。
+Label True: BE S S S BIIIE BE S BE BIE S BIIE S
+Label Pred: BE S S S BIIIE S BE BIIIE S BIIE S
+Wrong 4 0: 现今 各 时代 地质体
+
+True: 上部 为 *灰紫* 、 *紫色中厚层状粉砂岩* 、 *泥质粉砂岩* ， *含粉砂泥岩* 、 *泥岩* 夹 少量 *黄褐色厚层状中粗* 、 *中细粒长石石英砂岩* 及 *浅灰色中薄层沉凝灰岩* 。
+Pred: 上部 为 灰紫 、 紫色中厚层状粉砂岩 、 泥质粉砂岩 ， 含粉砂泥岩 、 泥岩夹 少量 黄褐色厚层状中粗 、 中细粒长石石英砂岩 及 浅灰色中薄层沉凝灰岩 。
+Label True: BE S BE S BIIIIIIIE S BIIIE S BIIIE S BE S BE BIIIIIIE S BIIIIIIIE S BIIIIIIIIE S
+Label Pred: BE S BE S BIIIIIIIE S BIIIE S BIIIE S BIE BE BIIIIIIE S BIIIIIIIE S BIIIIIIIIE S
+Wrong 2 0: 泥岩 夹
+
+True: *砂砾石* ， 灰绿色 ， 杂色 ， 密实 ， 由 砾石 ， 少量 粗砂 、 细砂 等 组成 。
+Pred: 砂砾石 ， 灰绿色 ， 杂色 ， 密实 ， 由 砾石 ， 少量 粗砂 、 细砂 等 组成 。
+Label True: BIE S BIE S BE S BE S S BE S BE BE S BE S BE S
+Label Pred: IIE S BIE S BE S BE S S BE S BE BE S BE S BE S
+Wrong 1 0: 砂砾石
+
+True: *斜长石* ， *粒径* *1～3.2mm* ， *An=±* 属 *更长石* ， *半自形板状* ； 石英 ： *粒径* *1～3mm* ， *普遍* *波状消光* ， *裂纹* 发育 ； *钾长石* ： *粒径* *1.3～2.6mm* ，
+Pred: 斜长石 ， 粒径1～3.2mm ， An=± 属 更长石 ， 半自形板状 ； 石英 ： 粒径1～3mm ， 普遍波状消光 ， 裂纹 发育 ； 钾长石 ： 粒径1.3～2.6mm ，
+Label True: BIE S BE BIIIIIE S BIIE S BIE S BIIIE S BE S BE BIIIE S BE BIIE S BE BE S BIE S BE BIIIIIIIE S
+Label Pred: IIE S BIIIIIIIE S BIIE S BIE S BIIIE S BE S BIIIIIE S BIIIIE S BS BE S BIE S BIIIIIIIIIE S
+Wrong 10 0: 斜长石 粒径 1～3.2mm 粒径 1～3mm 普遍 波状消光 裂纹 粒径 1.3～2.6mm
+
+True: *它形粒状* 。
+Pred: 它形粒状 。
+Label True: BIIE S
+Label Pred: BIIE S
+Wrong 0 0: 
+
+True: *坎上-鱼子背断层* ： 展布 于 *坎上-鱼子背* 一带 ， 长 约 *4km* ， 总体 走向 *20°* ， 倾角 *陡峻* 。
+Pred: 坎上-鱼子背断层 ： 展布 于 坎上-鱼子背 一带 ， 长 约 4km ， 总体 走向 20° ， 倾角 陡峻 。
+Label True: BIIIIIIE S BE S BIIIIE BE S S S BIE S BE BE BIE S BE BE S
+Label Pred: BIIIIIIE S BE S BIIIIE BE S S S BIE S BE BE BIE S BE BE S
+Wrong 0 0: 
+
+True: *综合* 上述 特征 可以 明显 *看出* ： *晚侏罗世火山岩* 分布 受 *盆地* 控制 ， 其 内 火山岩 的 *面貌* 和 *岩化特征* 显示 为 *陆相火山喷发* ， *加之* 多 见 *沉积岩夹层* ， 从 火山岩 分布 *来看* 主要 受 北东向 断裂构造 的 控制 ，
+Pred: 综合 上述 特征 可 以 明显 看 出 ： 晚侏罗世火山岩 分布 受 盆地 控制 ， 其内 火山岩 的 面貌 和 岩化特征 显示 为 陆相火山喷发 ， 加之 多 见 沉积岩夹层 ， 从 火山岩 分布 来看 主要 受 北东向 断裂构造 的 控制 ，
+Label True: BE BE BE BE BE BE S BIIIIIE BE S BE BE S S S BIE S BE S BIIE BE S BIIIIE S BE S S BIIIE S S BIE BE BE BE S BIE BIIE S BE S
+Label Pred: BE BE BE S S BE S S S BIIIIIE BE S BE BE S BE BIE S BE S BIIE BE S BIIIIE S BE S S BIIIE S S BIE BE BE BE S BIE BIIE S BE S
+Wrong 4 0: 可以 看出 其 内
+
+True: 火山喷发 主要 以 *中心式火山喷发* 为主 *或者* *串珠状中心式火山喷发* 。
+Pred: 火山喷发 主要 以 中心式火山喷发 为主 或 者 串珠状中心式火山喷发 。
+Label True: BIIE BE S BIIIIIE BE BE BIIIIIIIIE S
+Label Pred: BIIE BE S BIIIIIE BE S S BIIIIIIIIE S
+Wrong 1 0: 或者
+
+True: *测线* *西北段* *古老变质岩抬升* 出露 ， *东南段* *古老变质岩* 下降 ， 浅部 覆盖 中生代地层 ， 地层 厚度 变化 较大 ， *倾斜地层* ， 与 *古老基岩* *成* *不整合接触关系* ， 呈现 明显 *山前盆地特征* 。
+Pred: 测线 西北段古老变质岩 抬升 出露 ， 东南 段古老变质岩 下降 ， 浅部 覆盖 中生代地层 ， 地层 厚度 变化 较大 ， 倾斜地层 ， 与 古老基岩成不整合接触关系 ， 呈现 明 显山前盆地特征 。
+Label True: BE BIE BIIIIIE BE S BIE BIIIE BE S BE BE BIIIE S BE BE BE BE S BIIE S S BIIE S BIIIIIE S BE BE BIIIIE S
+Label Pred: BE BIIIIIIE BE BE S BE BIIIIE BE S BE BE BIIIE S BE BE BE BE S BIIE S S BIIIIIIIIIIE S BE S BIIIIIE S
+Wrong 9 0: 西北段 古老变质岩抬升 东南段 古老变质岩 古老基岩 成 不整合接触关系 明显 山前盆地特征
+
+True: 由于 受 后期 韧性变形作用 ， *片状矿物* *聚集* *成* *条带状* ， 而 围绕 *长英质矿物* *定向* *排列* 。
+Pred: 由于 受 后期 韧性变形作用 ， 片状矿物聚集 成条带状 ， 而围绕 长英质矿物定向 排列 。
+Label True: BE S BE BIIIIE S BIIE BE S BIE S S BE BIIIE BE BE S
+Label Pred: BE S BE BIIIIE S BIIIIE BIIE S BBS BIIIIBE BE S
+Wrong 7 0: 片状矿物 聚集 成 条带状 而 围绕 长英质矿物
+
+True: 岩性 为 *棕黄色* 、 *灰黄色砾石层* 为 主 *中间* 充填 *粘土* 及 *砂* 等 。
+Pred: 岩性 为 棕黄色 、 灰黄色砾石层 为主 中 间充填粘土 及 砂等 。
+Label True: BE S BIE S BIIIIE S S BE BE BE S S S S
+Label Pred: BE S BIE S BIIIIE BE S BIIIE S BS S
+Wrong 6 0: 为 主 中间 充填 粘土 砂
+
+True: *细晶岩* 、 *花岗伟晶岩脉* *应该* 是 *岩浆期后热液* 。
+Pred: 细晶岩 、 花岗伟晶岩脉应 该 是 岩浆期 后热液 。
+Label True: BIE S BIIIIE BE S BIIIIE S
+Label Pred: BIE S BIIIIIE S S BIE IIE S
+Wrong 3 0: 花岗伟晶岩脉 应该 岩浆期后热液
+
+True: *辽阳市* *上新世* 至 *第四纪新构造运动* 的 重要 特点 是 *垂直运动* ， *东部丘陵-山区新构造运动* 表现 为 *中等* *幅度* 的 上升 ， 呈 *间歇性震荡运动* ； 西部 平原区 属 *下辽河断陷盆地* 边缘 ，
+Pred: 辽阳市上新世 至 第四纪新构造运动 的 重要 特点 是 垂直运动 ， 东部 丘陵-山区新构造运动 表现 为 中 等 幅度 的 上升 ， 呈 间歇性震荡运动 ； 西部 平原区 属 下辽 河断陷盆地边缘 ，
+Label True: BIE BIE S BIIIIIIE S BE BE S BIIE S BIIIIIIIIIIE BE S BE BE S BE S S BIIIIIE S BE BIE S BIIIIIE BE S
+Label Pred: BIIIIE S BIIIIIIE S BE BE S BIIE S BE BIIIIIIIIE BE S S S BE S BE S S BIIIIIE S BE BIE S BE BIIIIIE S
+Wrong 6 0: 辽阳市 上新世 东部丘陵-山区新构造运动 中等 下辽河断陷盆地 边缘
+
+True: *燕山运动* 以来 *新近纪* 开始 *整体性* 下降 ， 形成 *差异性* *升降* 。
+Pred: 燕山运动 以来 新近 纪开始 整体 性 下降 ， 形成 差异性升降 。
+Label True: BIIE BE BIE BE BIE BE S BE BIE BE S
+Label Pred: BIIE BE BE BIE BE S BE S BE BIIIE S
+Wrong 5 0: 新近纪 开始 整体性 差异性 升降
+
+True: （ 4 ） *北东东向* 断裂 。 *熊家岭-小汪家断层* ： 出露 于 *基岩地区* 的 *熊家岭—小汪家* 一带 。
+Pred: （4 ） 北东东向 断裂 。 熊家岭-小汪家断层 ： 出露 于 基岩地区 的 熊家岭—小汪家 一带 。
+Label True: S S S BIIE BE S BIIIIIIIE S BE S BIIE S BIIIIIE BE S
+Label Pred: BS S BIIE BE S BIIIIIIIE S BE S BIIE S BIIIIIE BE S
+Wrong 1 0: （
+
+True: *晚燕山旋回* ， 该 亚旋回 包括 了 白垩纪 的 *全过程* ， 由于 中燕山旋回时期 的 强烈 的 火山喷发 ， 使 地壳 深部 积累 的 能量 得以 大量 释放 。 因而 进入 晚燕山亚旋回时期 ，
+Pred: 晚燕山旋回 ， 该 亚旋回 包括 了 白垩纪 的 全 过程 ， 由于 中燕山旋回时期 的 强烈 的 火山喷发 ， 使 地壳 深部 积累 的 能量 得以 大量 释放 。 因而 进入 晚燕山亚旋回时期 ，
+Label True: BIIIE S S BIE BE S BIE S BIE S BE BIIIIIE S BE S BIIE S S BE BE BE S BE BE BE BE S BE BE BIIIIIIE S
+Label Pred: BIIIE S S BIE BE S BIE S S BE S BE BIIIIIE S BE S BIIE S S BE BE BE S BE BE BE BE S BE BE BIIIIIIE S
+Wrong 1 0: 全过程
+
+True: 以 挤压 转为 拉张 。
+Pred: 以 挤压 转为 拉张 。
+Label True: S BE BE BE S
+Label Pred: S BE BE BE S
+Wrong 0 0: 
+
+True: *煌斑岩* ： 主要 为 *灰石云煌岩* ， *灰绿～暗红色* ， *斑状结构* ， 块状构造 。 *斑晶* 约 占 20% ， 主要 为 *钾长石* 、 *黑云母* 、 *透辉石* 。
+Pred: 煌斑岩 ： 主要 为 灰石云煌岩 ， 灰绿～暗红色 ， 斑状结构 ， 块状构造 。 斑晶 约 占20% ， 主要 为 钾长石 、 黑云母 、 透辉石 。
+Label True: BIE S BE S BIIIE S BIIIIE S BIIE S BIIE S BE S S BIE S BE S BIE S BIE S BIE S
+Label Pred: IIE S BE S BIIIE S BIIIIE S BIIE S BIIE S BE S BIIE S BE S BIE S BIE S BIE S
+Wrong 3 0: 煌斑岩 占 20%
+
+True: 在 其 *压扭性裂隙带* 中 ， *伴生* 有 *斜交* 的 *张扭性裂隙* ， 倾向 北东 ， 倾角 较 *陡* 。 *前者* 发育 ， *后者* *次之* 。
+Pred: 在 其压 扭性裂隙带 中 ， 伴生 有 斜交 的 张扭性裂隙 ， 倾向 北东 ， 倾角 较陡 。 前 者 发育 ， 后 者次之 。
+Label True: S S BIIIIE S S BE S BE S BIIIE S BE BE S BE S S S BE BE S BE BE S
+Label Pred: S BE BIIIE S S BE S BE S BIIIE S BE BE S BE BE S S S BE S S BIE S
+Wrong 7 0: 其 压扭性裂隙带 较 陡 前者 后者 次之
+
+True: 石英 呈 *它形粒* *状* ， *波状消光* *普遍* ， 具 *重结晶* *现象* ， *粒径* *2.4～3.2mm* 。
+Pred: 石英 呈 它形粒状 ， 波状消光普遍 ， 具重 结晶现象 ， 粒径2.4～3.2mm 。
+Label True: BE S BIE S S BIIE BE S S BIE BE S BE BIIIIIIIE S
+Label Pred: BE S BIIE S BIIIIE S BE BIIE S BIIIIIIIIIE S
+Wrong 9 0: 它形粒 状 波状消光 普遍 具 重结晶 现象 粒径 2.4～3.2mm
+
+True: 该 组 一般 角度不整合 于 下伏 基岩 之上 ， 上部 与 *黑土湖组* *平行不整合接触* ， 厚度 一般 *3～15m* 不等 。
+Pred: 该 组 一般 角度不整合 于 下伏基岩 之上 ， 上部 与 黑土湖组平行不整合接触 ， 厚度 一般 3～15m 不等 。
+Label True: S S BE BIIIE S BE BE BE S BE S BIIE BIIIIIE S BE BE BIIIE BE S
+Label Pred: S S BE BIIIE S BIIE BE S BE S BIIIIIIIIIE S BE BE BIIIE BE S
+Wrong 4 0: 下伏 基岩 黑土湖组 平行不整合接触
+
+True: 按 *成因类型* 划分 为 *全新统坡洪积堆积物* 、 *全新统冲洪积堆积物* *2个* *填图单元* 。 由 *老* 至 *新* *分* *述* 如下 。
+Pred: 按成因类型 划分 为 全新统坡洪积堆积物 、 全新统冲洪积堆积物 2个 填图单元 。 由老 至 新分述 如下 。
+Label True: S BIIE BE S BIIIIIIIE S BIIIIIIIE BE BIIE S S S S S S S BE S
+Label Pred: BBIIE BE S BIIIIIIIE S BIIIIIIIE BE BIIE S BE S BIE BE S
+Wrong 6 0: 按 由 老 新 分 述
+
+True: 测区 *已经* *火山活动* 较为 *频繁* ， 侵入岩 、 火山岩 十分 发育 ， 区域 *成矿* *地质条件* 较好 ， 是 一个 很好 的 *找矿远景区域* ， *现* 将 地层 、 岩浆岩 和 *构造* 等 *成矿条件* 。
+Pred: 测区 已 经 火山活动 较为 频繁 ， 侵入岩 、 火山岩 十分 发育 ， 区域 成矿地质 条件 较好 ， 是 一个 很好 的 找矿远景 区域 ， 现 将 地层 、 岩浆岩 和 构造 等 成矿条件 。
+Label True: BE BE BIIE BE BE S BIE S BIE BE BE S BE BE BIIE BE S S BE BE S BIIIIE S S S BE S BIE S BE S BIIE S
+Label Pred: BE S S BIIE BE BE S BIE S BIE BE BE S BE BIIE BE BE S S BE BE S BIIE BE S S S BE S BIE S BE S BIIE S
+Wrong 4 0: 已经 成矿 地质条件 找矿远景区域
+
+True: 石英 具 *塑性变形* 和 *波状消光* ， 在 其 边缘 *除* 见 有 *亚颗粒* *外* ， *尚* 有 部分 *碎裂* 和 *粒化现象* ， *长石* *因* *碎裂* 而 呈 *锯齿状* 或 *碎斑状* ； *C* 、 *糜棱化花岗岩带* ， 位于 韧性剪切带 的 *北西侧* ，
+Pred: 石英具塑性变形 和 波状消光 ， 在 其边缘 除见 有 亚颗粒外 ， 尚有 部分 碎裂 和 粒化现象 ， 长石因碎裂 而 呈 锯齿状 或 碎斑状 ； C 、 糜棱化花岗岩带 ， 位于 韧性剪切带 的 北西侧 ，
+Label True: BE S BIIE S BIIE S S S BE S S S BIE S S S S BE BE S BIIE S BE S BE S S BIE S BIE S S S BIIIIIE S BE BIIIE S BIE S
+Label Pred: BIIIIIE S BIIE S S BBE BE S BIIE S BE BE BE S BIIE S BIIIE S S BIE S BIE S S S BIIIIIE S BE BIIIE S BIE S
+Wrong 13 0: 石英 具 塑性变形 其 除 见 亚颗粒 外 尚 有 长石 因 碎裂
+
+True: 宽 约 *200～300m* 。
+Pred: 宽 约 200～300m 。
+Label True: S S BIIIIIIE S
+Label Pred: S S BIIIIIIE S
+Wrong 0 0: 
+
+True: 该 区 *大地构造* *位置* 属于 *天山―内蒙古―兴安地槽褶皱区* ， *内蒙古中部地槽褶皱系* ， *西乌珠穆沁旗晚华力西地槽褶皱带* 。 *板块构造* *位置* 属于 *华北地台区* 。
+Pred: 该 区 大地构造位置 属于 天山―内蒙古―兴安地槽褶皱区 ， 内蒙古 中部地槽褶皱系 ， 西乌珠穆沁旗晚华力西地槽褶皱带 。 板块构造位置 属于 华北地台区 。
+Label True: S S BIIE BE BE BIIIIIIIIIIIIE S BIIIIIIIIE S BIIIIIIIIIIIIIE S BIIE BE BE BIIIE S
+Label Pred: S S BIIIIE BE BIIIIIIIIIIIIE S BIE BIIIIIE S BIIIIIIIIIIIIIE S BIIIIE BE BIIIE S
+Wrong 5 0: 大地构造 位置 内蒙古中部地槽褶皱系 板块构造 位置
+
+True: 石英 呈 *他形粒状* ， 有 *构造重结晶* ， 呈 *它形* 或 *锯齿状* *相* *嵌生* ， *波状消光* 明显 ， *裂纹* 发育 ； *黑云母* 为 *薄板状* ， *多色性* 明显 ， 多 与 *次生绢云母* 等 沿 *裂隙* *聚晶线状* 分布 。
+Pred: 石英 呈 他形粒状 ， 有 构造重结晶 ， 呈 它形 或 锯齿状相嵌生 ， 波状消光 明显 ， 裂纹 发育 ； 黑云母 为 薄板状 ， 多 色性 明显 ， 多 与 次生绢云母等 沿裂 隙聚晶线状 分布 。
+Label True: BE S BIIE S S BIIIE S S BE S BIE S BE S BIIE BE S BE BE S BIE S BIE S BIE BE S S S BIIIE S S BE BIIE BE S
+Label Pred: BE S BIIE S S BIIIE S S BE S BIIIIE S BIIE BE S BS BE S BIE S BIE S S BS BE S S S BIIIIS BE BIIIE BE S
+Wrong 9 0: 锯齿状 相 嵌生 裂纹 多色性 次生绢云母 沿 裂隙 聚晶线状
+
+True: 该 段 中 、 北部 由 一 条 *主干* 断层 构成 ， 而 南部 *则* *分叉* 为 *两支* 断层 。
+Pred: 该 段 中 、 北部 由 一条 主 干 断层 构成 ， 而 南部 则分 叉 为 两支 断层 。
+Label True: S S S S BE S S S BE BE BE S S BE S BE S BE BE S
+Label Pred: S E S S BE S BE S S BE BE S S BE BE S S BE BE S
+Wrong 6 0: 段 一 条 主干 则 分叉
+
+True: 测区 由于 地表 *露头* 较差 ， *实测* 断裂构造 *不太* 发育 ， *结合* *卫片解译成果* ， 区 内 断裂构造 主要 分为 东西向 断裂构造 、 北西向 断裂构造 和 北东向 *构造* 。
+Pred: 测区 由于 地表 露 头 较差 ， 实 测断裂构造 不 太 发育 ， 结合 卫片 解译成果 ， 区 内 断裂构造 主要 分 为 东西 向 断裂构造 、 北西向 断裂构造 和 北东向 构造 。
+Label True: BE BE BE BE BE S BE BIIE BE BE S BE BIIIIE S S S BIIE BE BE BIE BIIE S BIE BIIE S BIE BE S
+Label Pred: BE BE BE E S BE S S BBIIE S S BE S BE BE BIIE S S S BIIE BE S S BE E BIIE S BIE BIIE S BIE BE S
+Wrong 6 0: 露头 实测 不太 卫片解译成果 分为 东西向
+
+True: 砾石 直径 一般 *0.2～0.4cm* 至 *3～5cm* 不等 ， 大 者 可 达 *9cm* ， 以 *圆-次圆状* 为主 ； 砾石 间 充填 *中粗砂* 。
+Pred: 砾石 直径 一般 0.2～0.4cm 至 3～5cm 不等 ， 大 者 可 达 9cm ， 以 圆-次圆状 为主 ； 砾石 间充填中粗砂 。
+Label True: BE BE BE BIIIIIIIE S BIIIE BE S S S S S BIE S S BIIIE BE S BE S BE BIE S
+Label Pred: BE BE BE BIIIIIIIE S BIIIE BE S S S S S BIE S S BBIIE BE S BE BIIIIE S
+Wrong 4 0: 圆-次圆状 间 充填 中粗砂
+
+True: 四 、 *动力变质岩* 。 区 内 *动力变质岩* 呈 *线状* 或 *带状* 分布 于 *脆性碎裂带* 、 *韧性剪切构造带* 内 或 两侧 ， 按 其 *变形变质特征* 可 划分 *脆性动力变质岩* 和 *韧性动力变质岩* *两* 大 *类* 。
+Pred: 四 、 动力变质岩 。 区 内 动力变质岩 呈 线状 或 带状分布 于 脆性碎裂带 、 韧性剪切构造带 内 或 两侧 ， 按 其 变形 变质特征 可 划分 脆 性动力变质岩 和 韧性动力变质岩 两大类 。
+Label True: S S BIIIE S S S BIIIE S BE S BE BE S BIIIE S BIIIIIE S S BE S S S BIIIIE S BE BIIIIIE S BIIIIIE S S S S
+Label Pred: S S BIIIE S S S BIIIE S BE S BIIE S BIIIE S BIIIIIE S S BE S S S BE BIIE S BE S BIIIIE S BIIIIIE BIE S
+Wrong 7 0: 带状 分布 变形变质特征 脆性动力变质岩 两 大 类
+
+True: 在 *邻* 区 *本溪* 一带 ， *发现* *腕足类化石* 。
+Pred: 在 邻 区 本 溪 一带 ， 发现 腕足类化石 。
+Label True: S S S BE BE S BE BIIIE S
+Label Pred: S S S S E BE S BE BIIIE S
+Wrong 1 0: 本溪
+
+True: *每个* *喷发韵律* 由 *爆发* 、 *喷溢* 或 *喷溢* 开始 ， 到 *喷溢* 或 *爆发* 、 *喷溢* *结束* 。
+Pred: 每个 喷发韵律 由 爆发 、 喷溢 或 喷溢开始 ， 到 喷溢 或 爆发 、 喷溢结束 。
+Label True: BE BIIE S BE S BE S BE BE S S BE S BE S BE BE S
+Label Pred: BE BIIE S BE S BE S BIIE S S BE S BE S BIIE S
+Wrong 4 0: 喷溢 开始 喷溢 结束
+
+True: （ 2 ） *接近* *大沽河断裂* ， 早期 东西向 断裂 *弯曲* ， 显示 *左旋平移* 特征 。
+Pred: （ 2 ） 接近 大沽河断裂 ， 早期 东西向 断裂 弯曲 ， 显示 左旋平移特征 。
+Label True: S S S BE BIIIE S BE BIE BE BE S BE BIIE BE S
+Label Pred: S S S BS BIIIE S BE BIE BE BE S BE BIIIIE S
+Wrong 3 0: 接近 左旋平移 特征
+
+True: 矿区 周围 *人口* *密集* ， *劳动力* *充足* ， *经济* 较为 *发达* ， 工作区 周围 大 、 *中型矿山* *密布* , 有 新城 、 焦家 、 *河东* 、 *河西* 、 *望儿山* 、 *东季* 、 *马塘* 、 *寺庄* 等 矿山 ，
+Pred: 矿区 周 围人口 密集 ， 劳动力充足 ， 经 济 较 为 发达 ， 工作区 周围大 、 中型矿山 密 布 , 有 新城 、 焦家 、 河东 、 河西 、 望儿山 、 东季 、 马塘 、 寺庄 等 矿山 ，
+Label True: BE BE BE BE S BIE BE S BE BE BE S BIE BE S S BIIE BE S S BE S BE S BE S BE S BIE S BE S BE S BE S BE S
+Label Pred: BE S BIE BE S BIIIE S S S E S BE S BIE BBE S BIIE S S S S BE S BE S BE S BE S BIE S BE S BE S BE S BE S
+Wrong 9 0: 周围 人口 劳动力 充足 经济 较为 周围 大 密布
+
+True: *采金业* *发达* , *已* *成为* 本 地区 的 *经济* *支柱* 。
+Pred: 采 金业发 达 ,已成 为 本地区 的 经济支柱 。
+Label True: BIE BE S S BE S BE S BE BE S
+Label Pred: S BIS S BIE S BIE S BIIE S
+Wrong 9 0: 采金业 发达 , 已 成为 本 地区 经济 支柱
+
+True: 火山机构 总体 呈 *围斜* *外倾* ， 火山机构 *中心* 为 *长石斑岩侵入体* ， 在 火山口 的 *外围* *围* *流纹质含角砾岩屑晶屑熔结凝灰岩* 、 *流纹质含角砾岩屑晶屑凝灰岩* 。
+Pred: 火山机构 总体 呈 围斜 外倾 ， 火山机构 中 心 为 长石斑岩 侵入体 ， 在 火山口 的 外围 围流纹质含角砾岩屑晶屑熔结凝灰岩 、 流纹质含角砾岩屑晶屑凝灰岩 。
+Label True: BIIE BE S BE BE S BIIE BE S BIIIIIE S S BIE S BE S BIIIIIIIIIIIIIE S BIIIIIIIIIIIE S
+Label Pred: BIIE BE S BE BS S BIIE S S S BIIE BIE S S BIE S BE BBIIIIIIIIIIIIIE S BIIIIIIIIIIIE S
+Wrong 4 0: 外倾 中心 长石斑岩侵入体 围
+
+True: 3 ） *燕山期褶皱* 分布 *局限* ， 规模 小 ， *轴向* 均 为 北东 *50°～70°* 。
+Pred: 3 ） 燕山期褶 皱 分布 局限 ， 规模小 ， 轴 向 均 为 北东50° ～ 70° 。
+Label True: S S BIIIE BE BE S BE S S BE S S BE BIIIIIE S
+Label Pred: S S BIIE S BE BE S BIE S S S S S BIIIE S BIE S
+Wrong 6 0: 燕山期褶皱 规模 小 轴向 北东 50°～70°
+
+True: 以 *赣江* 为 界 ， 西 及 *西北部* 为 *低山丘陵* 与 *岗地* ， *地面标高* 一般 为 *40～500m* ， *梅岭* *主峰* *海拔标高* 为 *841.4m* 。
+Pred: 以 赣江 为界 ， 西 及 西北部 为 低山丘陵 与 岗地 ， 地面 标高 一般 为 40～500m ， 梅岭主峰海拔标高 为 841.4m 。
+Label True: S BE S S S S S BIE S BIIE S BE S BIIE BE S BIIIIIE S BE BE BIIE S BIIIIE S
+Label Pred: S BE IE S S S BIE S BIIE S BE S BE BE BE S BIIIIIE S BIIIIIIS S BIIIIE S
+Wrong 6 0: 为 界 地面标高 梅岭 主峰 海拔标高
+
+True: *地层岩性* 主要 为 *灰黄-棕黄色粉质粘土* ， 含 少量 *铁锰质* ， 以 *结核状* 为主 ， 大小 *1-8mm* 不等 ， 含量 一般 *3-5%* ， 自上而下 含量 *渐增* ， 局部 *富集* 。
+Pred: 地层 岩性 主要 为 灰黄-棕黄色粉质粘土 ， 含 少量 铁锰质 ， 以 结核状 为主 ， 大小 1-8mm 不等 ， 含量 一般 3-5% ， 自上而下 含量 渐 增 ， 局部 富集 。
+Label True: BIIE BE S BIIIIIIIIE S S BE BIE S S BIE BE S BE BIIIE BE S BE BE BIIE S BIIE BE BE S BE BE S
+Label Pred: BE BE BE S BIIIIIIIIE S S BE BIE S S BIE BE S BE BIIIE BE S BE BE BIIE S BIIE BE S S S BE BE S
+Wrong 2 0: 地层岩性 渐增
+
+True: （ 一 ） 更新统 。 1 . *河湖湘* 。 （ 1 ） 大桥镇组 （ *Qpd* ） 。
+Pred: （ 一 ）更新统 。 1.河湖湘 。 （ 1 ） 大桥镇组 （ Qpd ） 。
+Label True: S S S BIE S S S BIE S S S S BIIE S BIE S S
+Label Pred: S S BIIE S BIIIE S S S S BIIE S BIE S S
+Wrong 5 0: ） 更新统 1 . 河湖湘
+
+True: *9* 、 *寒亭组* （ *Qhht* ） 主要 分布 于 *大沽河* 两侧 及 *五龙河* 东 *岸* 。
+Pred: 9 、 寒亭组 （ Qhht ） 主要 分布 于 大沽河 两侧 及 五龙河东岸 。
+Label True: S S BIE S BIIE S BE BE S BIE BE S BIE S S S
+Label Pred: S S BIE S BIIE S BE BE S BIE BE S BIIIE S
+Wrong 3 0: 五龙河 东 岸
+
+True: 在 *现代* *河道* 边缘 局部 *可见* *细砂层堆积* ， 厚 *1.5-3m* ， 灰黄色 ， *砂质* *均匀* 。
+Pred: 在 现代河道 边缘 局部 可 见 细 砂层堆积 ， 厚 1.5-3m ， 灰黄色 ， 砂质均匀 。
+Label True: S BE BE BE BE BE BIIIE S S BIIIIE S BIE S BE BE S
+Label Pred: S BIIE BE BE S S S BIIE S S BIIIIE S BIE S BIIE S
+Wrong 6 0: 现代 河道 可见 细砂层堆积 砂质 均匀
+
+True: 测区 以 *罕山鹿场-巴音楚鲁隆起带* 为 界 ， *共* 划分 了 两个 *火山喷发盆地* ： 德勒斯台防火站火山喷发盆地 和 阿拉坦达巴道班火山喷发盆地 。 *每个* *盆地* 的 *火山作用* 也 *不太* 相同 。
+Pred: 测区 以 罕山鹿场-巴音楚鲁隆起带 为 界 ， 共 划分 了 两个 火山喷发盆地 ： 德勒斯台防火站火山喷发盆地 和 阿拉坦达巴道班火山喷发盆地 。 每个 盆地 的 火山作用 也不太 相同 。
+Label True: BE S BIIIIIIIIIIE S S S S BE S BE BIIIIE S BIIIIIIIIIIIE S BIIIIIIIIIIIE S BE BE S BIIE S BE BE S
+Label Pred: BE S BIIIIIIIIIIE S S S S BE S BE BIIIIE S BIIIIIIIIIIIE S BIIIIIIIIIIIE S BE BE S BIIE BBE BE S
+Wrong 1 0: 也
+
+True: 区 内 *上侏罗统白音高老组* 与 *下白垩统* 的 *梅勒图组中性火山岩* 建造 角度不整合 是 *这* 一 *造山运动* 的 产物 ， 本 次 *造山运动* *强化* 了 *北东南西* 方向 的 挤压 , 在 区 内 形成 *一系列* 的 北东向 、
+Pred: 区 内 上侏罗统白音高老组 与 下白垩统 的 梅勒图组中性火山岩 建造 角度不整合 是 这 一造山运动 的 产物 ， 本 次 造山运动 强化 了 北东南西 方向 的 挤压 ,在 区 内 形成 一 系列 的 北东向 、
+Label True: S S BIIIIIIIE S BIIE S BIIIIIIIE BE BIIIE S S S BIIE S BE S S S BIIE BE S BIIE BE S BE S S S S BE BIE S BIE S
+Label Pred: S S BIIIIIIIE S BIIE S BIIIIIIIE BE BIIIE S S BIIIE S BE S S S BIIE BE S BIIE BE S BE BS S S BE S BE S BIE S
+Wrong 4 0: 一 造山运动 , 一系列
+
+True: 北西向 断裂带 ， 和 北东向 的 *低缓褶皱* ， *本次* *造山运动* 伴随 有 强烈 的 岩浆活动 ， 形成 以 *花岗质* 为主 的 北东向 *岩浆带* ， 并且 *产* 有 铜 、 铅锌 、 银 等 *矿产* 。 如 *超浩尔图银铜多金属矿* 、
+Pred: 北西向 断裂带 ， 和 北东向 的 低缓褶皱 ， 本 次 造山运动 伴随 有 强烈 的 岩浆活动 ， 形成 以 花岗质 为主 的 北东向 岩浆带 ， 并且 产有 铜 、 铅锌 、 银 等矿产 。 如 超浩尔图银铜多金属矿 、
+Label True: BIE BIE S S BIE S BIIE S BE BIIE BE S BE S BIIE S BE S BIE BE S BIE BIE S BE S S S S BE S S S BE S S BIIIIIIIIE S
+Label Pred: BIE BIE S S BIE S BIIE S S S BIIE BE S BE S BIIE S BE S BIE BE S BIE BIE S BE BS S S BE S S BIE S S BIIIIIIIIE S
+Wrong 4 0: 本次 产 等 矿产
+
+True: *吞特尔多金属矿化* 的 形成 。
+Pred: 吞特尔多金属矿化 的 形成 。
+Label True: BIIIIIIE S BE S
+Label Pred: BIIIIIIE S BE S
+Wrong 0 0: 
+
+True: 石英 、 *长英质* 的 *浅色脉体* 是 *岩石变质作用* 发生 *时* 的 *去水反应* ， 形成 *一类* 具 *交代作用* 的 *H2O* *溶液* ， 开始 出现 于 活动 *元素* *有关* 的 石英 、 *长石脉体* 及 *混合岩化带* 。
+Pred: 石英 、 长英质 的 浅色脉体 是 岩石变质作用 发生时 的 去水 反应 ， 形成 一 类具交代作用 的 H2O溶液 ， 开始 出现 于 活动 元素 有关 的 石英 、 长石脉体 及 混合岩化带 。
+Label True: BE S BIE S BIIE S BIIIIE BE S S BIIE S BE BE S BIIE S BIE BE S BE BE S BE BE BE S BE S BIIE S BIIIE S
+Label Pred: BE S BIE S BIIE S BIIIIE BIE S BE IE S BE S BIBIIE S BIIIE S BE BE E BE BE BE S BE S BIIE S BIIIE S
+Wrong 8 0: 发生 时 去水反应 一类 具 H2O 溶液 于
+
+True: *对于* *这* 套 地层 ， *争议* 较大 ， 上部 为 *山麓-洪积相* *成因* ， 下部 为 *冲洪积相* *成因* ， *暂* *定* 为 *类下蜀组* 。
+Pred: 对于 这套 地层 ， 争议 较大 ， 上部 为 山麓-洪积相成因 ， 下部 为 冲洪积相成因 ， 暂定 为 类下蜀组 。
+Label True: BE S S BE S BE BE S BE S BIIIIE BE S BE S BIIE BE S S S S BIIE S
+Label Pred: BE BE BE S BE BE S BE S BIIIIIIE S BE S BIIIIE S BE S BIIE S
+Wrong 8 0: 这 套 山麓-洪积相 成因 冲洪积相 成因 暂 定
+
+True: 在 与 *青白口纪牛头岭组* *侵入接触* 界线 的 *1～2公里* 范围 ， 发育 *一系列* 石英脉 ， *脉* 宽 *十至几十米* 不等 。
+Pred: 在 与 青白口纪牛头岭组 侵入接触界线 的 1～ 2 公里范围 ， 发育 一系列石英脉 ， 脉宽 十至 几十米 不等 。
+Label True: S S BIIIIIIE BIIE BE S BIIIE BE S BE BIE BIE S S S BIIIE BE S
+Label Pred: S S BIIIIIIE BIIIIE S BS S BIIE S BE BIIIIE S BE BS BIE BE S
+Wrong 9 0: 侵入接触 界线 1～2公里 范围 一系列 石英脉 脉 宽 十至几十米
+
+True: 由 下 至 上 *分* *二段* ， 即 *汤家沟段* （ *Ptgxt* ） 、 *江还山段* （ *Ptgxj* ） 。
+Pred: 由 下 至 上分 二段 ， 即汤家沟段 （ Ptgxt ） 、 江还山段 （ Ptgxj ） 。
+Label True: S S S S S BE S S BIIE S BIIIE S S BIIE S BIIIE S S
+Label Pred: S S S BE BE S BIIIE S BIIIE S S BIIE S BIIIE S S
+Wrong 4 0: 上 分 即 汤家沟段
+
+True: 在 *灯塔市* *西大窑甜水峪* *南山* *发现* *Calvinella* *碎片* 。
+Pred: 在 灯塔市西大窑甜水峪南山 发现Ca lvinella碎片 。
+Label True: S BIE BIIIIE BE BE BIIIIIIIIE BE S
+Label Pred: S BIIIIIIIIIE BIIE BIIIIIIIIE S
+Wrong 6 0: 灯塔市 西大窑甜水峪 南山 发现 Calvinella 碎片
+
+True: 北 段 *武备* 一带 ， *王氏群* 底部 不整合 *面* 被 *左行错断* 达 *8km* 。
+Pred: 北段 武备 一带 ， 王氏群 底部 不整合 面 被 左行错断 达 8km 。
+Label True: S S BE BE S BIE BE BIE S S BIIE S BIE S
+Label Pred: BS BE BE S BIE BE BIE S S BIIE S BIE S
+Wrong 1 0: 北
+
+True: 与 上覆 *寒武系馒头组* （ *∈md* ） 呈 *整合接触关系* 。
+Pred: 与 上覆 寒武系馒头组 （ ∈md ） 呈 整合接触关系 。
+Label True: S BE BIIIIE S BIE S S BIIIIE S
+Label Pred: S BE BIIIIE S BIE S S BIIIIE S
+Wrong 0 0: 
+
+True: *砂金矿* 和 *重砂金异常* 是 *预示* *原生金矿床* 存在 的 *间接* 和 直接 标志 。
+Pred: 砂 金矿 和 重砂金异常 是 预示 原生金矿床存在 的 间接 和 直接标志 。
+Label True: BIE S BIIIE S BE BIIIE BE S BE S BE BE S
+Label Pred: S BE S BIIIE S BE BIIIIIE S BE S BIIE S
+Wrong 5 0: 砂金矿 原生金矿床 存在 直接 标志
+
+True: 局部 *可见* 少量 *灰绿色高岭土* ， 呈 *不规则团块状* 、 浸染状 分布 。
+Pred: 局部 可见 少量 灰绿色高岭土 ， 呈 不 规则团块状 、 浸染状 分布 。
+Label True: BE BE BE BIIIIE S S BIIIIE S BIE BE S
+Label Pred: BE BS BE BIIIIE S S S BIBIE S BIE BE S
+Wrong 2 0: 可见 不规则团块状
+
+True: 中关-沙村岩体 分布 在 *罗田–岳西变质杂岩带* 中 ， 该 *岩体* 呈 *北西–南东向* 展布 ， 出露 面积 约 *3.8km2* 。
+Pred: 中关-沙村岩体 分布 在 罗田–岳西变质杂岩带 中 ， 该 岩体 呈 北西– 南东向 展布 ， 出露 面积 约 3.8km2 。
+Label True: BIIIIIE BE S BIIIIIIIIE S S S BE S BIIIIE BE S BE BE S BIIIIE S
+Label Pred: BIIIIIE BE S BIIIIIIIIE S S S BE S BIE BIE BE S BE BE S BIIIIE S
+Wrong 1 0: 北西–南东向
+
+True: *成矿早期石英脉* ： *乳白色* ， 石英 含量 约 占 *90%* ， 含 少量 的 *斜长石* ， *白云母* ， *裂隙* 发育 ， 石英 多 呈 *柱状结构* ， *块状* 或 *碎裂状构造* 。 石英脉 规模 小 ， 长 *几米* 到 *几十米* 。
+Pred: 成矿早期石英脉 ： 乳白色 ， 石英 含量 约 占90% ， 含 少量 的 斜长石 ， 白云母 ， 裂隙 发育 ， 石英多 呈 柱状结构 ， 块状 或 碎裂状构造 。 石英脉规模小 ， 长 几米 到 几十米 。
+Label True: BIIIIIE S BIE S BE BE S S BIE S S BE S BIE S BIE S BE BE S BE S S BIIE S BE S BIIIE S BIE BE S S S BE S BIE S
+Label Pred: BIIIIIE S BIE S BE BE S BIIE S S BE S BIE S BIE S BS BE S BIS S BIIE S BE S BIIIE S BIIIIE S S BE S BIE S
+Wrong 7 0: 占 90% 裂隙 石英 石英脉 规模 小
+
+True: 与 *成矿* 关系 不 密切 。
+Pred: 与 成矿 关系 不 密切 。
+Label True: S BE BE S BE S
+Label Pred: S BE IE S BE S
+Wrong 1 0: 关系
+
+True: 区 内 地质构造 主要 以 断裂构造 为主 ， 由于 *第四纪覆盖* 广泛 地表 不 见 出露 ， 经 *物化探成果* 推测 *朱桥―平里店断裂* 从 本 矿区 西部 *穿过* 。 该 断裂 也 是 控制 本 矿区 *成矿* 的 主 断裂 。
+Pred: 区 内 地质构造 主要 以 断裂构造 为主 ， 由于 第四纪 覆盖 广泛 地表 不 见 出露 ， 经 物化 探 成果推测 朱桥―平里店断裂 从 本 矿区 西部 穿过 。 该 断裂 也是 控制 本 矿区 成矿 的 主断裂 。
+Label True: S S BIIE BE S BIIE BE S BE BIIIE BE BE S S BE S S BIIIE BE BIIIIIIE S S BE BE BE S S BE S S BE S BE BE S S BE S
+Label Pred: S S BIIE BE S BIIE BE S BE BIE BE BE BE S S BE S S BE E BIIE BIIIIIIE S S BE BE BE S S BE BS BE S BE BE S BIE S
+Wrong 6 0: 第四纪覆盖 物化探成果 推测 也 主 断裂
+
+True: 主要 分为 北东向 、 *北北东向* 、 北西向 、 *北东东* 、 *近东西向* *五组* 。
+Pred: 主要 分 为 北东向 、 北北东向 、 北西向 、 北东东 、 近 东西向 五组 。
+Label True: BE BE BIE S BIIE S BIE S BIE S BIIE BE S
+Label Pred: BE S S BIE S BIIE S BIE S BIE S S BIE BE S
+Wrong 2 0: 分为 近东西向
+
+True: *朱桥―平里店断裂区* 内 出露 *长度* *15km* ， *宽度* *数米～十几米* 不等 ， 倾向 *南东* 。 区 内 断裂构造 发育 ， 主要 *构造* 为 *朱桥-平里店断裂* 。 该 断裂 呈现 *破碎带* 从 矿区 西部 *经过* 。
+Pred: 朱桥―平里店断裂区 内 出露 长度 15km ， 宽度 数米～十几米 不等 ， 倾向 南东 。 区 内 断裂构造 发育 ， 主要 构造 为 朱桥-平里店断裂 。 该 断裂 呈现 破碎带 从 矿区 西部 经过 。
+Label True: BIIIIIIIE S BE BE BIIE S BE BIIIIE BE S BE BE S S S BIIE BE S BE BE S BIIIIIIE S S BE BE BIE S BE BE BE S
+Label Pred: BIIIIIIIE S BE BE BIIE S BE BIIIIE BE S BE BE S S S BIIE BE S BE BE S BIIIIIIE S S BE BE IIE S BE BE BE S
+Wrong 1 0: 破碎带
+
+True: *上更新统下段* ： *红褐色砂质粘土* ， *26.28~29.76m* ， 含 砾 *较多* ， *坚硬* 。
+Pred: 上更新统 下段 ： 红褐色砂质粘土 ， 26 .28~29.76m ， 含砾 较多 ， 坚硬 。
+Label True: BIIIIE S BIIIIIE S BIIIIIIIIIIE S S S BE S BE S
+Label Pred: BIIE BE S BIIIIIE S BE BIIIIIIIIE S BE BE S BE S
+Wrong 4 0: 上更新统下段 26.28~29.76m 含 砾
+
+True: 由 *晚古生代～中三叠世陆表海* *海陆交互* *相* 沉积 *盖层* ， 该 带 *盖* 层 变形 主要 发生 于 *印支* 、 *燕山期* 。
+Pred: 由 晚古生代～中三叠世陆表海海陆交互相沉积盖层 ， 该 带 盖层 变形 主要 发生 于 印支 、 燕山期 。
+Label True: S BIIIIIIIIIIE BIIE S BE BE S S S S S BE BE BE S BE S BIE S
+Label Pred: S BIIIIIIIIIIIIIIIIIIIE S S S BE BE BE BE S BE S BIE S
+Wrong 7 0: 晚古生代～中三叠世陆表海 海陆交互 相 沉积 盖层 盖 层
+
+True: 本 幅 内 由 剖面 控制 ， 根据 *岩石组合* 由 下 至 上 介绍 如下 ： 具体 对比 情况 见 *综合柱状图* 。 *横向* 上 变化 稳定 , 延伸 长 *几十米* 至 *数百米* , *北西侧* *火山碎屑沉积岩夹层* *增多* 。
+Pred: 本 幅 内 由 剖面 控制 ， 根据 岩石 组合 由 下 至 上 介绍 如下 ： 具体 对 比情 况 见 综合柱状图 。 横向 上变化稳定 , 延伸 长 几 十米 至 数百米 , 北西侧火山碎屑沉积岩夹层 增多 。
+Label True: S S S S BE BE S BE BIIE S S S S BE BE S BE BE BE S BIIIE S BE S BE BE S BE S BIE S BIE S BIE BIIIIIIIE BE S
+Label Pred: S S S S BE BE S BE BE BE S S S S BE BE S BE S BE S S BIIIE S BE BIIIE S BE S S BE S BIE S BIIIIIIIIIIE BE S
+Wrong 9 0: 岩石组合 对比 情况 上 变化 稳定 几十米 北西侧 火山碎屑沉积岩夹层
+
+True: *雷公尖岩体* 岩性 为 *中细粒黑云母二长花岗岩* ， 岩石 呈 *灰白色* ， *风化* 后 *浅红色* ， *中细粒结构* ， 块状构造 。
+Pred: 雷 公尖岩体 岩性 为 中细粒黑云母二长花岗岩 ， 岩石 呈 灰白色 ， 风化后浅红色 ， 中细粒结构 ， 块状构造 。
+Label True: BIIIE BE S BIIIIIIIIIE S BE S BIE S BE S BIE S BIIIE S BIIE S
+Label Pred: S BIIE IE S BIIIIIIIIIE S BE S BIE S BIIIIE S BIIIE S BIIE S
+Wrong 5 0: 雷公尖岩体 岩性 风化 后 浅红色
+
+True: 该 *地质单元地貌* 以 *平原* 为主 ， *第四纪沉积物* 以 *长江* *及其* *沿岸* *支流* 、 *湖泊沉积物* 为主 。
+Pred: 该 地质单元地貌 以 平原 为主 ， 第四纪沉积物 以 长江 及 其沿 岸支 流 、 湖泊沉积物 为主 。
+Label True: S BIIIIE S BE BE S BIIIIE S BE BE BE BE S BIIIE BE S
+Label Pred: S BIIIIE S BE BE S BIIIIE S BE S BE BE S S BIIIE BE S
+Wrong 3 0: 及其 沿岸 支流
+
+True: （ 三 ） *王氏群* （ *K1-2W* ） 。 *王氏群* 主要 分布 于 *莱阳市-莱西市-段泊岚-胶州市* 一带 ， *广布* 于 *整个* *胶莱盆地* ， 出露 规模 较大 ； 区域 上 分布 稳定 ；
+Pred: （ 三 ） 王氏群 （ K1-2W ） 。 王氏群 主要 分布 于 莱阳市-莱西市-段泊岚-胶州市 一带 ， 广布 于 整个 胶莱盆地 ， 出露 规模 较大 ； 区域 上分 布 稳定 ；
+Label True: S S S BIE S BIIIE S S BIE BE BE S BIIIIIIIIIIIIIE BE S BE S BE BIIE S BE BE BE S BE S BE BE S
+Label Pred: S S S BIE S BIIIE S S BIE BE BE S BIIIIIIIIIIIIIE BE S BE S BE BIIE S BE BE BE S BE BE E BE S
+Wrong 2 0: 上 分布
+
+True: 由 下 至 上 划分 为 *林家庄组* 、 *辛格庄组* 、 红土崖组 、 *金岗口组* 、 *胶州组* *5个* 组 。
+Pred: 由 下 至 上划分 为 林家庄组 、 辛格庄组 、 红土崖组 、 金岗口组 、 胶州组 5个组 。
+Label True: S S S S BE S BIIE S BIIE S BIIE S BIIE S BIE BE S S
+Label Pred: S S S BIE S BIIE S BIIE S BIIE S BIIE S BIE BIE S
+Wrong 4 0: 上 划分 5个 组
+
+True: 该 组 为 *海陆交互相沉积* ， 由 *冲积* 和 *海积层* *相互* *穿插* *叠加* 而 *成* ， 形成 *冲* 、 *海积平原地貌* 。
+Pred: 该 组 为 海陆交互相沉积 ， 由 冲积 和 海积层相互穿插 叠加 而成 ， 形成 冲 、 海积平原地貌 。
+Label True: S S S BIIIIIE S S BE S BIE BE BE BE S S S BE S S BIIIIE S
+Label Pred: S S S BIIIIIE S S BE S BIIIIIE BE BE S BE S S BIIIIE S
+Wrong 5 0: 海积层 相互 穿插 而 成
+
+True: *磁性特征* ， 大致 可 分为 *三类* ： *流纹质火山碎屑岩类* ， 显示 *弱磁性* ， 其 *磁化值* 均 在 *数十单位* 之间 变化 ， 形成 了 *低缓平静磁场* ， 分布 *地域* *几乎* *遍布* 全 区 。
+Pred: 磁性特征 ， 大致 可 分为 三类 ： 流纹质火山碎屑岩类 ， 显示 弱磁性 ， 其磁 化值 均 在 数十单位 之间 变化 ， 形成 了 低缓 平静磁场 ， 分布 地域 几乎 遍布全区 。
+Label True: BIIE S BE S BE BE S BIIIIIIIE S BE BIE S S BIE S S BIIE BE BE S BE S BIIIIE S BE BE BE BE S S S
+Label Pred: BIIE S BE S BE BE S BIIIIIIIE S BE BIE S BE BE S S BIIE BE BE S BE S BE BIIE S BE BE BE BIIE S
+Wrong 6 0: 其 磁化值 低缓平静磁场 遍布 全 区
+
+True: 但 据 钻孔 和 *地震剖面资料* ， 在 *第四纪覆盖层* *以下* 之 *盆地* 中 ， *尚* 有 广泛 分布 。 出露 面积 *1.7km2* 。
+Pred: 但 据 钻孔 和 地震 剖面资料 ， 在 第四纪 覆 盖层 以 下之盆地 中 ， 尚 有 广泛 分布 。 出露 面积 1.7km2 。
+Label True: S S BE S BIIIIE S S BIIIIE BE S BE S S S S BE BE S BE BE BIIIIE S
+Label Pred: S S BE S BE BIIE S S BIE S BE S BIIE S S S S BE BE S BE BE BIIIIE S
+Wrong 5 0: 地震剖面资料 第四纪覆盖层 以下 之 盆地
+
+True: *燕山* 早期 *挤压运动* ， *产生* *众多* *推覆构造* 。
+Pred: 燕山早期挤压运动 ， 产生众 多 推覆构造 。
+Label True: BE BE BIIE S BE BE BIIE S
+Label Pred: BIIIIIIE S BIE S BIIE S
+Wrong 5 0: 燕山 早期 挤压运动 产生 众多
+
+True: 下部 岩性 为 *黄绿色粉砂质页岩* 、 *薄-微薄层细粒石英砂岩夹薄层泥灰岩透镜体* ， *中部浅灰色薄-中厚层泥灰岩夹灰绿色粉砂质页岩* ， 上部 为 灰紫色 、
+Pred: 下部 岩性 为 黄绿色粉砂质页岩 、 薄-微薄层细粒石英砂岩夹薄层泥灰岩透镜体 ， 中部浅灰色薄-中厚层泥灰岩夹灰绿色粉砂质页岩 ， 上部 为 灰紫色 、
+Label True: BE BE S BIIIIIIE S BIIIIIIIIIIIIIIIIIIE S BIIIIIIIIIIIIIIIIIIIIE S BE S BIE S
+Label Pred: BE BE S BIIIIIIE S BIIIIIIIIIIIIIIIIIIE S BIIIIIIIIIIIIIIIIIIIIE S BE S BIE S
+Wrong 0 0: 
+
+True: *灰绿色粉砂质页岩夹薄层细粒石英砂岩* ， 发育 *震积岩* 和 *滑塌砾岩* 。
+Pred: 灰绿色粉砂质页岩夹薄层细粒石英砂岩 ， 发育 震积岩 和 滑塌砾岩 。
+Label True: BIIIIIIIIIIIIIIIE S BE BIE S BIIE S
+Label Pred: BIIIIIIIIIIIIIIIE S BE BIE S BIIE S
+Wrong 0 0: 
+
+True: 马冲组 （ *Qpm* ） 由 *安徽区域地质调查队* 于 *1988年* *命名* ， 该 地层 *系* *早更新世冲洪积物* 堆积 而 *成* ， 其 主要 特征 为 ： 下部 为 *青红杂色泥砾* ， 或 含 *巨砾粘土* ；
+Pred: 马冲组 （ Qpm ） 由 安徽 区域地质调查队 于 1988年命名 ， 该 地层 系 早更新世冲洪积物堆积 而成 ， 其 主要 特征 为 ： 下部 为 青红杂色泥砾 ， 或 含 巨砾粘土 ；
+Label True: BIE S BIE S S BIIIIIIIE S BIIIE BE S S BE S BIIIIIIE BE S S S S BE BE S S BE S BIIIIE S S S BIIE S
+Label Pred: BIE S BIE S S BE BIIIIIE E BIIIBIE S S BE S BIIIIIIIIE BE S S BE BE S S BE S BIIIIE S S S BIIE S
+Wrong 8 0: 安徽区域地质调查队 于 1988年 命名 早更新世冲洪积物 堆积 而 成
+
+True: 上部 为 *灰黄色沙质粘土* ， 少量 *细砾* ； 下 与 *安庆组* *不整合接触* ； 上 与 戚家矶组 *平行不整合接触* 。
+Pred: 上部 为 灰黄色沙质粘土 ， 少量 细砾 ； 下 与 安庆组 不整合接触 ； 上 与 戚家矶组平行不整合接触 。
+Label True: BE S BIIIIIE S BE BE S S S BIE BIIIE S S S BIIE BIIIIIE S
+Label Pred: BE S BIIIIIE S BE BE S S S BIE IBIIE S S S BIIIIIIIIIE S
+Wrong 3 0: 不整合接触 戚家矶组 平行不整合接触
+
+True: 马冲组 （ *Qpm* ） *砂砾石* ， 灰黄色 ， 杂色 ， 主要 由 砾石 ， 少量 粗砂 、 细砂 、 粘粒 等 组成 。
+Pred: 马冲组 （ Qpm）砂砾石 ， 灰黄色 ， 杂色 ， 主要 由 砾石 ， 少量 粗砂 、 细砂 、 粘粒 等 组成 。
+Label True: BIE S BIE S BIE S BIE S BE S BE S BE S BE BE S BE S BE S BE S
+Label Pred: BIE S BIIIIIE S BIE S BE S BE S BE S BE BE S BE S BE S BE S
+Wrong 3 0: Qpm ） 砂砾石
+
+True: *含矿热液* 在 *断裂裂隙系统* 中 ， 经 早期 *蚀变作用* 和 *晚期* 多次 *叠加* 矿化 ， 形成 了 该 *矿床* 。
+Pred: 含矿热液 在 断裂裂隙系统中 ， 经 早期蚀变作用 和 晚期 多次 叠加 矿化 ， 形成 了 该 矿床 。
+Label True: BIIE S BIIIIE S S S BE BIIE S BE BE BE BE S BE S S BE S
+Label Pred: BIIE S BIIIIIE S S BIIIIE S BE BE BE BE S BE S S BE S
+Wrong 4 0: 断裂裂隙系统 中 早期 蚀变作用
+
+True: *此外* ， 局部 地段 *尚* 发育 有 北西向 断裂 ， *它们* *大都* 经历 *过* *长期活动* ， 断层 *性质* 亦 经 多次 *转变* 。
+Pred: 此外 ， 局部 地段 尚 发育 有 北西向 断裂 ， 它 们 大 都 经历 过 长期活动 ， 断层性质 亦 经 多次 转变 。
+Label True: BE S BE BE S BE S BIE BE S BE BE BE S BIIE S BE BE S S BE BE S
+Label Pred: BE S BE BE S BE S BIE BE S S S S S BE S BIIE S BIIE S S BE BE S
+Wrong 4 0: 它们 大都 断层 性质
+
+True: 北东端 延伸 *出* 图 ， 向 *南西段* 常 *分叉* 呈 *数条* 小 断层 。
+Pred: 北东端 延伸 出图 ， 向 南西段 常分叉 呈 数 条 小 断层 。
+Label True: BIE BE S S S S BIE S BE S BE S BE S
+Label Pred: BIE BE BE S S BIE BBE S S S S IE S
+Wrong 5 0: 出 图 常 数条 断层
+
+True: 根据 钻孔资料 ， *结合* 其它 *调查成果* ， 对 *第四纪地层* *研究* 与 *描述* 。
+Pred: 根据 钻孔资料 ， 结合 其它 调 查成果 ， 对 第四纪地层 研究 与 描述 。
+Label True: BE BIIE S BE BE BIIE S S BIIIE BE S BE S
+Label Pred: BE BIIE S BE BE E BIE S S BIIIE BE S BE S
+Wrong 1 0: 调查成果
+
+True: 2 . *石炭系太原组* （ *Ct）* 。 分布 范围 基本 与 *本溪组* 相同 ， 分布 在 *辽阳灯塔市铧子镇* 、 *西大窑镇* 。
+Pred: 2 .石炭系太原组 （ Ct ） 。 分布 范围 基本 与 本溪组 相同 ， 分布 在 辽阳灯塔市铧子镇 、 西大窑镇 。
+Label True: S S BIIIIE S BIE S BE BE BE S BIE BE S BE S BIIIIIIE S BIIE S
+Label Pred: S BIIIIIE S BE S S BE BE BE S BIE BE S BE S BIIIIIIE S BIIE S
+Wrong 3 0: . 石炭系太原组 Ct）
+
+True: 该 断裂 可 大致 分为 *5段* ： *宝山-田庄段* ， *田庄-许家官庄段* ， *许家官庄-平台段* 等 。
+Pred: 该 断裂 可 大致 分 为 5段 ： 宝山-田庄段 ， 田庄-许家官庄段 ， 许家官庄-平台段 等 。
+Label True: S BE S BE BE BE S BIIIIE S BIIIIIIE S BIIIIIIE S S
+Label Pred: S BE S BE S S BE S BIIIIE S BIIIIIIE S BIIIIIIE S S
+Wrong 1 0: 分为
+
+True: *大别山造山带* 东部 *碰撞* 后 *韧性伸展构造* 表现 为 以 *罗田片麻岩* 为 *穹窿* 的 *变质核杂岩* 为 主体 ， *周边* 为 具 不同 *变形变质* 的 变质表壳岩 与 *变质侵入岩组合* ， 其 内 发育 *一系列* 韧性剪切带 ，
+Pred: 大 别山造山带 东部 碰撞 后 韧性伸展构造 表现 为 以 罗田片麻岩 为 穹窿 的 变质核杂岩 为 主体 ， 周边 为 具不 同 变形 变质 的 变质表壳岩 与 变质侵入岩组合 ， 其内 发育 一 系列韧性剪切带 ，
+Label True: BIIIIE BE BE S BIIIIE BE S S BIIIE S BE S BIIIE S BE S BE S S BE BIIE S BIIIE S BIIIIIE S S S BE BIE BIIIE S
+Label Pred: S BIIIE BE BE S BIIIIE BE S S BIIIE S BE S BIIIE S BE S BE S BE S BE BE S BIIIE S BIIIIIE S BE BE S BIIIIIE S
+Wrong 8 0: 大别山造山带 具 不同 变形变质 其 内 一系列 韧性剪切带
+
+True: *共同* 构成 区 内 多 *层次* *韧性伸展剥离系统* 。
+Pred: 共同 构成 区 内 多 层次 韧性伸展 剥离系统 。
+Label True: BE BE S S S BE BIIIIIIE S
+Label Pred: BE BE S S S BE BIIE BIIE S
+Wrong 1 0: 韧性伸展剥离系统
+
+True: *脉岩类型* 从 *基性—中性—酸性—碱性* 均 有 不同 程度 发育 ， 其中 以 *碱性岩脉* 、 *花岗斑岩脉* *最为* 发育 ， *数量* 多 ， 规模 大 。
+Pred: 脉岩类型 从 基性 — 中性—酸性—碱性 均 有 不同 程度 发育 ， 其中 以 碱性岩脉 、 花岗斑岩脉最 为 发育 ， 数量 多 ， 规模大 。
+Label True: BIIE S BIIIIIIIIIE S S BE BE BE S BE S BIIE S BIIIE BE BE S BE S S BE S S
+Label Pred: BIIE S BE S BIIIIIIE S S BE BE BE S BE S BIIE S BIIIIE S BE S BE S S BIE S
+Wrong 5 0: 基性—中性—酸性—碱性 花岗斑岩脉 最为 规模 大
+
+True: 该 火山口 后期 被 *中细粒黑云母二长岩* 、 *中细粒黑云母二长花岗岩* 和 *粗粒黑云母花岗岩* 侵入 。
+Pred: 该 火山口 后期 被中细粒黑云母二长岩 、 中细粒黑云母二长花岗岩 和 粗粒黑云母花岗岩侵入 。
+Label True: S BIE BE S BIIIIIIIE S BIIIIIIIIIE S BIIIIIIE BE S
+Label Pred: S BIE BE BIIIIIIIIE S BIIIIIIIIIE S BIIIIIIIIE S
+Wrong 4 0: 被 中细粒黑云母二长岩 粗粒黑云母花岗岩 侵入
+
+True: *即墨区* 、 *胶州市* 一带 ， 该 组 与 *八亩地组* 局部 *交替* 出现 ， *二分性* 明显 ， 下部 岩性 为 *流纹质熔结凝灰岩* 、 *球粒流纹岩* ， 厚 *769.5m* ， *中间* 被 *八亩地组* *隔开* ，
+Pred: 即墨区 、 胶州市 一带 ， 该 组 与 八亩地组 局部 交替 出现 ， 二分 性 明显 ， 下部 岩性 为 流纹质熔结凝灰岩 、 球粒流纹岩 ， 厚 769.5m ， 中间被八亩地组 隔开 ，
+Label True: BIE S BIE BE S S S S BIIE BE BE BE S BIE BE S BE BE S BIIIIIIE S BIIIE S S BIIIIE S BE S BIIE BE S
+Label Pred: BIE S BIE BE S S E S BIIE BE BE BE S BE S BE S BE BE S BIIIIIIE S BIIIE S S BIIIIE S BIIIIIE BE S
+Wrong 5 0: 组 二分性 中间 被 八亩地组
+
+True: 上部 为 *紫红色碱流质角砾凝灰岩* ， *灰紫色碱流岩* 、 *碱流质角砾晶屑凝灰岩* ， 厚 约 *246.4m* ， 为 *沸石矿* 的 主要 *含矿层位* 。
+Pred: 上部 为 紫红色碱流质角砾凝灰岩 ， 灰紫色碱流岩 、 碱流质角砾晶屑凝灰岩 ， 厚 约 246.4m ， 为 沸石矿 的 主要 含 矿层位 。
+Label True: BE S BIIIIIIIIIE S BIIIIE S BIIIIIIIIE S S S BIIIIE S S BIE S BE BIIE S
+Label Pred: BE S BIIIIIIIIIE S BIIIIE S BIIIIIIIIE S S S BIIIIE S S BIE S BE S BIE S
+Wrong 1 0: 含矿层位
+
+True: 幅 内 该 旋回 的 沉积物 主要 有 第四系冲洪积堆积物 和 第四系坡洪积堆积物 ， 主要 是 由于 地壳 的 抬升 引起 的 。 该 旋回 沉积 了 一套 冲洪积堆积物 和 坡洪积堆积物 ，
+Pred: 幅 内 该 旋回 的 沉积物 主要 有 第四系冲洪积堆积物 和 第四系坡洪积堆积物 ， 主要 是 由于 地壳 的 抬升 引起 的 。 该 旋回 沉积 了 一套 冲洪积堆积物 和 坡洪积堆积物 ，
+Label True: S S S BE S BIE BE S BIIIIIIIE S BIIIIIIIE S BE S BE BE S BE BE S S S BE BE S BE BIIIIE S BIIIIE S
+Label Pred: S S S BE S BIE BE S BIIIIIIIE S BIIIIIIIE S BE S BE BE S BE BE S S S BE BE S BE BIIIIE S BIIIIE S
+Wrong 0 0: 
+
+True: 主要 分布 在 各 大 冲沟 中 。
+Pred: 主要 分布 在 各 大 冲沟 中 。
+Label True: BE BE S S S BE S S
+Label Pred: BE BE S S S BE S S
+Wrong 0 0: 
+
+True: 二 、 接触变质岩 。 *工区* 内 接触变质岩 不 发育 ， 在 *坪上熊家—老鹰脑—汪家山* 一带 ， 出露 *宽度* 约 *数米* ， 呈 *断* *续* 的 *带状* 沿 *九岭花岗闪长岩* 延伸 ， 延伸 长 约 *3000m* 。
+Pred: 二 、 接触变质岩 。 工区 内 接触变质岩 不 发育 ， 在 坪上熊家—老鹰脑—汪家山 一带 ， 出露 宽度 约 数米 ， 呈 断续 的 带状沿九岭花岗闪长岩 延伸 ， 延伸 长 约 3000m 。
+Label True: S S BIIIE S BE S BIIIE S BE S S BIIIIIIIIIIE BE S BE BE S BE S S S S S BE S BIIIIIE BE S BE S S BIIIE S
+Label Pred: S S BIIIE S BE S BIIIE S BE S S BIIIIIIIIIIE BE S BE BE S BE S S BE S BIIIIIIIIE BE S BE S S BIIIE S
+Wrong 5 0: 断 续 带状 沿 九岭花岗闪长岩
+
+True: 如 *图2-2-31* ， 从 图 中 可以 *看出* ， 头坡断裂 *响应* 明显 ， 断裂 近 *直立* ， 向 南 *倾斜* ， 约 *70°* ， CSAMT *电性层* *横向* 不 *连续* ， *原本* 的 *等值线* 在 *此* 处 *几乎* 呈 *竖直* *状态* ，
+Pred: 如 图2-2-31 ， 从 图中可以 看 出 ， 头坡断裂 响应 明显 ， 断裂 近直立 ， 向 南 倾斜 ， 约 70° ， CS AMT电性层横向 不 连续 ， 原本 的 等 值线 在 此处 几乎 呈 竖直状态 ，
+Label True: S BIIIIIE S S S S BE BE S BIIE BE BE S BE S BE S S S BE S S BIE S BIIIE BIE BE S BE S BE S BIE S S S BE S BE BE S
+Label Pred: S BIIIIIE S S BBIS S S S BIIE BE BE S BE BBE S S S BE S S BIE S BE BIIIIIIE S BE S BE S S BE S BS BE S BIIE S
+Wrong 12 0: 图 中 可以 看出 近 CSAMT 电性层 横向 等值线 此 竖直 状态
+
+True: 推测 有 断层 。
+Pred: 推测 有 断层 。
+Label True: BE S BE S
+Label Pred: BE S BE S
+Wrong 0 0: 
+
+True: 2 . *鞍山岩群大峪沟组* （ *Ard* ） 。
+Pred: 2.鞍山岩群大峪沟组 （ Ard ） 。
+Label True: S S BIIIIIIE S BIE S S
+Label Pred: IIIIIIBIIE S BIE S S
+Wrong 3 0: 2 . 鞍山岩群大峪沟组
+
+True: *矿床* 为 *隐伏性矿床* ， *水文地质类型* 属于 以 *裂隙充水* 为主 ， *矿体* 以 脉状 为主 ， 沿 走向 及 倾向 呈 *舒缓波状* 延伸 ， 具 *膨胀压缩特征* ， *埋藏* 较 深 ， 位于 矿区 *地面* *最低* *标高* *以下* 。
+Pred: 矿床 为 隐伏性矿床 ， 水文地质类型 属于 以 裂隙 充水 为主 ， 矿体 以 脉状 为主 ， 沿 走向 及 倾向 呈 舒缓波状 延伸 ， 具膨 胀压缩特征 ， 埋藏 较深 ， 位于 矿区 地面 最 低 标高 以下 。
+Label True: BE S BIIIE S BIIIIE BE S BIIE BE S BE S BE BE S S BE S BE S BIIE BE S S BIIIIE S BE S S S BE BE BE BE BE BE S
+Label Pred: BE S BIIIE S BIIIIE BE S BS BE BE S BE S BE BE S S BE S BE S BIIE BE S BE BIIIE S BE BE S BE BE BE S S BS BE S
+Wrong 7 0: 裂隙充水 具 膨胀压缩特征 较 深 最低 标高
+
+True: 3 . *南华系桥头组* （ *Nhq* ） 。 与 *南芬组* 分布 范围 大致 相同 ， 在 *磨子沟* 、 *石墨山* 、 *贾彬* 、 *葠窝水库* *以西* 。
+Pred: 3 . 南华系桥头组 （ Nhq ） 。 与 南芬组 分布 范围 大致 相同 ， 在 磨子沟 、 石墨山 、 贾彬 、 葠窝水库 以西 。
+Label True: S S BIIIIE S BIE S S S BIE BE BE BE BE S S BIE S BIE S BE S BIIE BE S
+Label Pred: S S BIIIIE S BIE S S S BIE BE BE BE BE S S BIE S BIE S BE S BIIE BE S
+Wrong 0 0: 
+
+True: 褶皱 的 *西端* 被 *崂山顶亚超单元太清宫单元中粒碱长花岗岩* 侵入 ； 褶皱 的 *东端* 为 海水 所 覆盖 ； 褶皱 的 *南翼* 被 *第四系山前组* 覆盖 ， 出露 不 全 。
+Pred: 褶皱 的 西端 被 崂山顶亚超单元太清宫单元中粒碱长花岗岩 侵入 ； 褶皱 的 东端 为 海水所 覆盖 ； 褶皱 的 南翼 被 第四系山前组 覆盖 ， 出露 不全 。
+Label True: BE S BE S BIIIIIIIIIIIIIIIIIE BE S BE S BE S BE S BE S BE S BE S BIIIIE BE S BE S S S
+Label Pred: BE S BE S BIIIIIIIIIIIIIIIIIE BE S BE S BE S BIE BE S BE S BE S BIIIIE BE S BE BE S
+Wrong 4 0: 海水 所 不 全
+
+True: 与 上 *覆* *石炭-二叠系山西组* （ *CPs^* ） 呈 *整合接触关系* 。
+Pred: 与 上覆 石炭-二叠系山西组 （ CPs^ ） 呈 整合接触关系 。
+Label True: S S S BIIIIIIIE S BIIE S S BIIIIE S
+Label Pred: S BE BIIIIIIIE S BIIE S S BIIIIE S
+Wrong 2 0: 上 覆
+
+True: *向斜核部* 由 *胶州组地层* 组成 ， *翼部* 由 *红土崖组地层* 组成 ， *北翼* 地层 产状 *190°∠20°* ， *南翼* 为 *第四系覆盖* 。
+Pred: 向斜 核部 由 胶州组地层 组成 ， 翼部 由 红土崖组地层 组成 ， 北翼地层 产状 190° ∠ 20° ， 南翼 为 第四系 覆盖 。
+Label True: BIIE S BIIIE BE S BE S BIIIIE BE S BE BE BE BIIIIIIE S BE S BIIIE S
+Label Pred: BE BE S BIIIE BE S BE S BIIIIE BE S BIIE BE BIIE S BIE S BS S BIE BE S
+Wrong 6 0: 向斜核部 北翼 地层 190°∠20° 南翼 第四系覆盖
+
+True: 基本 控制 了 主 *矿体* 的 *矿体特征* 、 *空间分布* ； 基本 *确定* 了 *矿体* 的 *连续性* ； 基本 *查明* *矿石* 的 *物质组成* 、 *矿石质量* ； 基本 *查明* *矿床* 开采 *技术条件* ， *掌握* *矿石* *加工选(冶)* *性能* ，
+Pred: 基本 控制 了 主矿体 的 矿体 特征 、 空间分布 ； 基本 确定 了 矿体 的 连续性 ； 基本 查明 矿石 的 物质 组成 、 矿石质量 ； 基本 查明 矿床 开采 技术条件 ， 掌握 矿石 加 工选 (冶 )性能 ，
+Label True: BE BE S S BE S BIIE S BIIE S BE BE S BE S BIE S BE BE BE S BIIE S BIIE S BE BE BE BE BIIE S BE BE BIIIIE BE S
+Label Pred: BE BE S BIE S BE IE S BIIE S BE BE S BE S BIE S BE BE BE S BE BE S BIIE S BE BE BE BE BIIE S BS BE S BS BE BIE S
+Wrong 7 0: 主 矿体 矿体特征 物质组成 掌握 加工选(冶) 性能
+
+True: 并 进行 *矿床* 的 *概略* *经济技术* *评价* ， 对 *矿床* 的 *工业价值* *做出* *评价* ， *探求* *332+333类* *金矿资源量* 。
+Pred: 并 进行 矿床 的 概 略 经 济技术评价 ， 对 矿床 的 工业 价值 做出评价 ， 探求332+333类 金矿资源 量 。
+Label True: S BE BE S BE BIIE BE S S BE S BIIE BE BE S BE BIIIIIIE BIIIE S
+Label Pred: S BE BE S S S S BIIIE S S BE S BE BE BIIE S BIIIIIIIIE BIIE S S
+Wrong 9 0: 概略 经济技术 评价 工业价值 做出 评价 探求 332+333类 金矿资源量
+
+True: *昌北* 及 *赣江西岸* 之 *丘陵地区* ， 抬升 *幅度* 较小 ， *残坡积物* 发育 。
+Pred: 昌北 及 赣江西岸之丘陵地区 ， 抬升 幅度 较小 ， 残 坡积物 发育 。
+Label True: BE S BIIE S BIIE S BE BE BE S BIIE BE S
+Label Pred: BE S BIIIIIIIE S BE BE BE S S BIE BE S
+Wrong 4 0: 赣江西岸 之 丘陵地区 残坡积物
+
+True: *风力* 较大 ， *每年* *都* *要* 发生 *两季* *大风* ， 集中 在 *当年* 的 *3-5月* 和 *9-12月* ， 该 期 为 *重点* *防火期* ， *此* *期间* *禁止* 在 *林区* *野外作业* 。
+Pred: 风力 较大 ， 每年 都要 发生 两季 大风 ， 集中 在 当年 的 3-5月 和 9-12月 ， 该 期 为 重点防火期 ， 此期 间禁止 在 林区 野外作业 。
+Label True: BE BE S BE S S BE BE BE S BE S BE S BIIE S BIIIE S S S S BE BIE S S BE BE S BE BIIE S
+Label Pred: BE BE S BE BE BE BE BE S BE S BE S BIIE S BIIIE S S S S BIIIE S BE BIE S BE IIIE S
+Wrong 8 0: 都 要 重点 防火期 此 期间 禁止 野外作业
+
+True: 其 *岩石类型* 为 *中细粒含斑黑云花岗闪长岩* （ *图3-4* ） ， 呈 岩株状 产出 。
+Pred: 其 岩石类型 为 中细粒含斑黑云花岗闪长岩 （ 图3-4 ） ， 呈 岩株状 产出 。
+Label True: S BIIE S BIIIIIIIIIIE S BIIE S S S BIE BE S
+Label Pred: S BIIE S BIIIIIIIIIIE S BIIE S S S BIE BE S
+Wrong 0 0: 
+
+True: *单* 条 断裂 走向 *300°~325°* ， 长 *18~21km* ， 宽 *20~30m* 。
+Pred: 单 条 断裂 走向 300° ~ 325° ， 长 18~21km ， 宽 20~30m 。
+Label True: S S BE BE BIIIIIIIE S S BIIIIIE S S BIIIIE S
+Label Pred: S S BE BE BIIE S BIIE S S BIIIIIE S S BIIIIE S
+Wrong 1 0: 300°~325°
+
+True: 区 内 *构造* 以 断裂 为主 ， 且 *极为* 发育 ， 以 北东向 为主 ， 规模 *最大* 的 为 *三山岛～仓上断裂* 、 *后坡～西由断裂* 及 *新城～焦家断裂* ， 其中 *三山岛～仓上断裂* 和 *新城～焦家断裂* *二者* 走向 *近乎* *平行* 。
+Pred: 区 内 构造 以 断裂 为主 ， 且 极 为 发育 ， 以 北东向 为主 ， 规模 最大 的 为 三山岛～仓上断裂 、 后坡～西 由 断裂 及 新城～焦家断裂 ， 其中 三山岛～仓上断裂 和 新城～焦家断裂 二者 走向 近 乎平行 。
+Label True: S S BE S BE BE S S BE BE S S BIE BE S BE BE S S BIIIIIIE S BIIIIIE S BIIIIIE S BE BIIIIIIE S BIIIIIE BE BE BE BE S
+Label Pred: S S BE S BE BE S S S S BE S S BIE BE S BE BE S S BIIIBIIE S BIIE S BE S BIIIIIE S BE BIIIBIIE S BIIIIIE BE BE S BIE S
+Wrong 6 0: 极为 三山岛～仓上断裂 后坡～西由断裂 三山岛～仓上断裂 近乎 平行
+
+True: *全市* *山区* 面积 约 *2376.46km2* ， 占 *全市* 总 面积 的 *50.11%* ； *平原* 区 面积 约 *2270.23km2* ， 占 *全市* 总 面积 的 *47.86%* ； 河流 湖泊 *96.31km2* ，
+Pred: 全 市山区 面积 约 2376.46km2 ， 占 全市 总 面积 的 50.11% ； 平原区 面积 约 2270.23km2 ， 占 全市 总 面积 的 47.86% ； 河流 湖泊96.31km2 ，
+Label True: BE BE BE S BIIIIIIIIE S S BE S BE S BIIIIE S BE S BE S BIIIIIIIIE S S BE S BE S BIIIIE S BE BE BIIIIIIE S
+Label Pred: S BIE BE S BIIIIIIIIE S S BS S BE S BIIIIE S BIE BE S BIIIIIIIIE S S BS S BE S BIIIIE S BE BIIIIIIIIE S
+Wrong 8 0: 全市 山区 全市 平原 区 全市 湖泊 96.31km2
+
+True: 占 *全市* 总 面积 的 *2.03%* 。
+Pred: 占 全市 总 面积 的 2.03% 。
+Label True: S BE S BE S BIIIE S
+Label Pred: S BS S BE S BIIIE S
+Wrong 1 0: 全市
+
+True: *另外* ， *人工堆积层* （ *Qh3ml* ） ， *一类* 分布 在 *辽阳* *大孤山* 、 *齐大山铁矿* 周围 ， 主要 为 *选矿矸石* 、 *废渣* 组成 ， *另* *一类* 广泛 分布 于 *人类* 活动 区域 地表 ，
+Pred: 另外 ， 人工 堆积层 （ Qh3ml ） ， 一类 分布 在 辽阳大孤山 、 齐大山铁矿周围 ， 主要 为 选矿矸石 、 废渣 组成 ， 另 一类 广泛 分布 于 人类 活动 区域 地表 ，
+Label True: BE S BIIIE S BIIIE S S BE BE S BE BIE S BIIIE BE S BE S BIIE S BE BE S S BE BE BE S BE BE BE BE S
+Label Pred: IE S BE BIE S BIIIE S S BE BE S BIIIE S BIIIIIE S BE S BIIE S BE BE S S BE BE BE S BE IE BE BE S
+Wrong 7 0: 另外 人工堆积层 辽阳 大孤山 齐大山铁矿 周围 活动
+
+True: 由 *人为* *扰动* 的 *土* 、 *砂砾石* 及 *建筑废渣* 组成 ， 形成 *年代* 为 近 *几十年* 。
+Pred: 由 人 为 扰动 的 土 、 砂砾石 及 建筑废渣 组成 ， 形成 年代 为 近几十年 。
+Label True: S BE BE S S S BIE S BIIE BE S BE BE S S BIE S
+Label Pred: S S S BE S S S BIE S BIIE BE S BE BS S BIIE S
+Wrong 4 0: 人为 年代 近 几十年
+
+True: 由于 *地壳运动* 的 *差异* *以及* 后期 *外营力作用* 的 结果 ， 形成 了 较大 的 *内陆湖泊* ， 即 *索伦-老龙头湖盆* 、 *林西湖盆* ， 沉积 了 一套 *湖相堆积物* ， 主要 有 粉砂岩 、
+Pred: 由于 地壳运动 的 差异以 及 后期 外营力作用 的 结果 ， 形成 了 较大 的 内陆湖泊 ， 即 索伦-老龙头湖盆 、 林西湖盆 ， 沉积 了 一套 湖相堆积物 ， 主要 有 粉砂岩 、
+Label True: BE BIIE S BE BE BE BIIIE S BE S BE S BE S BIIE S S BIIIIIIE S BIIE S BE S BE BIIIE S BE S BIE S
+Label Pred: BE BIIE S BIS S BE BIIIE S BE S BE S BE S BIIE S S BIIIIIIE S BIIE S BE S BE BIIIE S BE S BIE S
+Wrong 2 0: 差异 以及
+
+True: *泥岩* 等 ， *现在* *已经* 变质 为 *变质粉砂岩* 、 *绢云母板岩* 等 ， 在 区域 上 发育 了 *安哥拉植物群* 和 *西伯利亚淡水双壳类动物群* 。
+Pred: 泥岩 等 ， 现 在 已 经 变质 为 变质粉砂岩 、 绢云母板岩 等 ， 在 区域 上 发育 了 安哥拉植物群 和 西伯利亚淡水双壳类动物群 。
+Label True: BE S S BE BE BE S BIIIE S BIIIE S S S BE S BE S BIIIIE S BIIIIIIIIIIE S
+Label Pred: BE S S S S S S BE S BIIIE S BIIIE S S S BE S BE S BIIIIE S BIIIIIIIIIIE S
+Wrong 2 0: 现在 已经
+
+True: 从 断裂带 内 的 岩性 和 断裂带 *空间* *位置* 及 切割 的 *地质体* 分析 ， 区 内 *北北东向* 断裂 *并非* *同步* 形成 ， 而 具有 *多期性* 。
+Pred: 从 断裂带 内 的 岩性 和 断裂带 空间位置 及 切割 的 地质体 分析 ， 区 内 北北东向 断裂 并非 同步 形成 ， 而具 有 多期性 。
+Label True: S BIE S S BE S BIE BE BE S BE S BIE BE S S S BIIE BE BE BE BE S S BE BIE S
+Label Pred: S BIE S S BE S BIE BIIE S BE S BIE BE S S S BIIE BE BE BE BE S BE E BIE S
+Wrong 4 0: 空间 位置 而 具有
+
+True: 测区 *最* 早期 形成 了 一套 *安山岩* 为主 的 组合 ， *其后* 在 *霍林河地区* 形成 了 一个 *褐煤盆地* ， 局部 有 *安山岩* 的 侵入 。 但 本 幅 不 发育 。
+Pred: 测区 最 早期 形成 了 一套 安山岩 为主 的 组合 ， 其后 在 霍林河地区 形成 了 一个 褐煤盆地 ， 局部 有 安山岩 的 侵入 。 但 本 幅 不 发育 。
+Label True: BE S BE BE S BE BIE BE S BE S BE S BIIIE BE S BE BIIE S BE S BIE S BE S S S S S BE S
+Label Pred: BE S BE BE S BE BIE BE S BE S BE S BIIIE BE S BE BIIE S BE S BIE S BE S S S S S BE S
+Wrong 0 0: 
+
+True: *喜马拉雅亚旋回* 该 亚旋回 从 *第三系* 到 *现代* ， 以 *垂直运动* *占优势* 的 *差异性升降运动* 是 本 旋回 的 重要 特点 。
+Pred: 喜马拉雅亚旋回 该 亚旋回 从 第三系 到现代 ， 以 垂直运动 占优势 的 差异性升降运动 是 本 旋回 的 重要 特点 。
+Label True: BIIIIIE S BIE S BIE S BE S S BIIE BIE S BIIIIIE S S BE S BE BE S
+Label Pred: BIIIIIE S BIE S BIE BIE S S BIIE BBE S BIIIIIE S S BE S BE BE S
+Wrong 3 0: 到 现代 占优势
+
+True: *第三节* ， *地层岩性* 。 本 区 地层 隶属 *华北地层大区-晋冀鲁豫地层区-鲁东地层分区* 。
+Pred: 第三节 ， 地层 岩性 。 本 区 地层 隶属 华北地层大区 -晋冀鲁豫地层区 - 鲁东地层分区 。
+Label True: BIE S BIIE S S S BE BE BIIIIIIIIIIIIIIIIIIIE S
+Label Pred: BIE S BE BE S S S BE BE BIIIIE IIIIIIIE S BIIIIE S
+Wrong 2 0: 地层岩性 华北地层大区-晋冀鲁豫地层区-鲁东地层分区
+
+True: 断裂带 *长度* 为 *15km* ， 宽 *5m~20m* ， 一般 宽 10m ， 呈 *舒缓波状* ， 发育 有 *连续* 的 *主断裂面* ， 沿 *主断面* 分布 有 不 *连续* 的 厚 *几厘米* 至 *几十厘米* 的 *断层角砾岩* 、
+Pred: 断裂带 长度 为 15km ， 宽 5m~20m ， 一般 宽10m ， 呈 舒缓波状 ， 发育 有 连续 的 主断裂面 ， 沿 主断面 分布 有 不连续 的 厚几厘米 至 几十厘米 的 断层角砾岩 、
+Label True: BIE BE S BIIE S S BIIIIE S BE S BIE S S BIIE S BE S BE S BIIE S S BIE BE S S BE S S BIE S BIIE S BIIIE S
+Label Pred: BIE BE S BIIE S S BIIIIE S BE BIIE S S BIIE S BE S BE S BIIE S S BIE BE S BIE S BIIE S BIIE S BIIIE S
+Wrong 6 0: 宽 10m 不 连续 厚 几厘米
+
+True: *碎裂岩* ， 在 *主裂面* *上下盘* 呈 *对称带状* 分布 ， 经 *蚀变* 和 *矿化作用* 形成 了 *矿化带* 。
+Pred: 碎裂岩 ， 在 主裂 面 上下 盘 呈 对 称带状 分布 ， 经 蚀变 和 矿化作用 形成 了 矿化带 。
+Label True: BIE S S BIE BIE S BIIE BE S S BE S BIIE BE S BIE S
+Label Pred: BIE S S BE E BE S S S BIE IE S S BE S BIIE BE S BIE S
+Wrong 4 0: 主裂面 上下盘 对称带状 分布
+
+True: 分布 在 本 幅 的 *大片* 地区 为 满克头鄂博组 ， 磁场特征 *却* *另* 有 表现 ， 或 呈 *跳跃状* ， 或 呈 *抖动形式* ， 表现 *出* *磁性不均匀特征* 。
+Pred: 分布 在 本 幅 的 大片地区 为 满克头鄂博组 ， 磁场特征 却另 有 表现 ， 或 呈 跳跃状 ， 或 呈 抖动 形式 ， 表现 出磁性 不 均 匀特征 。
+Label True: BE S S S S BE BE S BIIIIE S BIIE S S S BE S S S BIE S S S BIIE S BE S BIIIIIE S
+Label Pred: BE S S S S BIIE S BIIIIE S BIIE BE S BE S S S BIE S S S BE BE S BE BIE S S BIE S
+Wrong 7 0: 大片 地区 却 另 抖动形式 出 磁性不均匀特征
+
+True: *片状矿物* *定向* *排列* ， 组成 *糜棱面理* 。
+Pred: 片状矿物定 向 排列 ， 组成 糜棱面理 。
+Label True: BIIE BE BE S BE BIIE S
+Label Pred: IIIIE E BE S BE BIIE S
+Wrong 2 0: 片状矿物 定向
+
+True: （ 1 ） 在 *石牌* 、 *苗竹嘴* 等 *地* 断裂 *造成* 宽 达 *数百米* 的 *断层破碎带* 。
+Pred: （ 1 ） 在 石牌 、 苗竹嘴 等 地断裂 造成 宽 达 数百米 的 断层破碎带 。
+Label True: S S S S BE S BIE S S BE BE S S BIE S BIIIE S
+Label Pred: S S S S BE S BIE S BIE BE S S BIE S BIIIE S
+Wrong 2 0: 地 断裂
+
+True: 根据 *野外* *地质特征* 、 岩石 *化学成分* ， 可 进一步 划分 为 *金家铺片麻岩* 、 *石桥铺片麻岩* 、 *肖家坳片麻岩* 和 *雷家店片麻岩* *四个* *构造–岩石单位* ， 其中 仅 *金家铺片麻岩* 、
+Pred: 根据 野外地质特征 、 岩石化学 成分 ， 可 进一步 划分 为 金家铺片麻岩 、 石桥铺片麻岩 、 肖家坳片麻岩 和 雷家店片麻岩 四个 构造–岩石单位 ， 其中 仅 金家铺片麻岩 、
+Label True: BE BE BIIE S BE BIIE S S BIE BE S BIIIIE S BIIIIE S BIIIIE S BIIIIE BE BIIIIIE S BE S BIIIIE S
+Label Pred: BE BIIIIE S BIIE BE S S BIE BE S BIIIIE S BIIIIE S BIIIIE S BIIIIE BE BIIIIIE S BE S IIIIIE S
+Wrong 5 0: 野外 地质特征 岩石 化学成分 金家铺片麻岩
+
+True: *雷家店片麻岩* 在 *安庆市* 有 分布 。
+Pred: 雷家店片麻岩 在 安庆市 有 分布 。
+Label True: BIIIIE S BIE S BE S
+Label Pred: BIIIIE S BIE S BE S
+Wrong 0 0: 
+
+True: 3 、 *二长花岗岩* *(* *γδPt31b-3* *)* 主要 由 *高家桥* 和 *合水桥* 两个 *侵入体* 组成 。
+Pred: 3 、 二长花岗岩(γδPt31b-3) 主要 由 高家桥 和 合水桥 两个 侵入体 组成 。
+Label True: S S BIIIE S BIIIIIIIE S BE S BIE S BIE BE BIE BE S
+Label Pred: S S BIIIIIIIIIIIIIBE BE S BIE S BIE BE BIE BE S
+Wrong 4 0: 二长花岗岩 ( γδPt31b-3 )
+
+True: *中全新统* 以 冲积层 （ *Qh2al* ） 为主 ， 分布 在 *现代* *河床* 主 *槽* 一侧 或 两侧 ， 多 呈 *带状* 分布 。
+Pred: 中全新统 以 冲积层 （ Qh2al ） 为主 ， 分布 在 现代河床 主槽 一侧 或 两侧 ， 多 呈 带状 分布 。
+Label True: BIIE S BIE S BIIIE S BE S BE S BE BE S S BE S BE S S S BE BE S
+Label Pred: BIIE S BIE S BIIIE S BE S BE S BIIE BE BE S BE S S S BE BE S
+Wrong 4 0: 现代 河床 主 槽
+
+True: *2010年3月* *山东天承矿业有限责任公司* *委托* *山东省第六地质矿产勘查院* 在 其 勘查区 内 *开展* 深部 及 *外围* *金矿* *详查* 工作 ， 在 *前期* *普查* 工作 基础 上 *力求* *查明* 深部 *资源* *状况* ，
+Pred: 2010年3月山东天承矿业 有 限责 任 公司委托山东省第六地质矿产勘查院 在 其勘 查区 内 开展 深部 及 外围 金矿详查 工作 ， 在 前期普 查工作 基础 上力求 查明 深部资源状况 ，
+Label True: BIIIIIE BIIIIIIIIIIE BE BIIIIIIIIIIE S S BIE S BE BE S BE BE BE BE S S BE BE BE BE S BE BE BE BE BE S
+Label Pred: BIIIIIIIIIIIE S BS S BIIIIIIIIIIIIIIE S BE BE S BE BE S BE BIIE BE S S BIS BIE BE BIS BE BIIIIE S
+Wrong 16 0: 2010年3月 山东天承矿业有限责任公司 委托 山东省第六地质矿产勘查院 其 勘查区 金矿 详查 前期 普查 工作 上 力求 深部 资源 状况
+
+True: 为 矿山 的 *持续* 稳定 *发展* *打下* *良好* 基础 。
+Pred: 为 矿山 的 持续 稳定 发展 打 下良好 基础 。
+Label True: S BE S BE BE BE BE BE BE S
+Label Pred: S BE S BE BE BE S BIE BE S
+Wrong 2 0: 打下 良好
+
+True: *中燕山亚旋回* 的 *造山运动* ， 即 *燕山运动* *第Ⅲ幕* ， 发生 在 *侏罗纪末期* 。
+Pred: 中燕山亚旋回 的 造山运动 ， 即 燕山运动 第Ⅲ幕 ， 发生 在 侏罗纪末期 。
+Label True: BIIIIE S BIIE S S BIIE BIE S BE S BIIIE S
+Label Pred: BIIIIE S BIIE S S BIIE IIE S BE S BIIIE S
+Wrong 1 0: 第Ⅲ幕
+
+True: *6* . 粉质粘土 ， 灰黄色 ， 主要 由 粘粒 、 *粉粒* ， 少量 铁锰质结核 等 组成 。
+Pred: 6. 粉质粘土 ， 灰黄色 ， 主要 由 粘粒 、 粉粒 ， 少量 铁锰质结核 等 组成 。
+Label True: S S BIIE S BIE S BE S BE S BE S BE BIIIE S BE S
+Label Pred: IE BIIE S BIE S BE S BE S BE S BE BIIIE S BE S
+Wrong 2 0: 6 .
+
+True: 测区 内 *晚侏罗世火山活动* 十分 强烈 ， 形成 厚度 较大 的 *火山岩系* ， 分布 面积 约 *250km2* ， 占 测区 总 面积 *67%* 。 按 其 *喷发旋回* 及 *岩性组合特征* 划分 为 *上侏罗统满克头鄂博组* 、
+Pred: 测区 内 晚侏罗世火山活动 十分 强烈 ， 形成 厚度 较大 的 火山岩系 ， 分布 面积 约 250km2 ， 占 测区 总 面积 67% 。 按 其 喷发旋回 及 岩性组合特征 划分 为 上侏罗统满克头鄂博组 、
+Label True: BE S BIIIIIIE BE BE S BE BE BE S BIIE S BE BE S BIIIIE S S BE S BE BIE S S S BIIE S BIIIIE BE S BIIIIIIIIE S
+Label Pred: BE S BIIIIIIE BE BE S BE BE BE S BIIE S BE BE S BIIIIE S S BE S BE BIE S S S BIIE S BIIIIE BE S BIIIIIIIIE S
+Wrong 0 0: 
+
+True: *玛尼吐组* 、 *白音高老组* 和 *梅勒图组* *四个* *填图单元* 。
+Pred: 玛尼吐组 、 白音高老组 和 梅勒图组 四个 填图单元 。
+Label True: BIIE S BIIIE S BIIE BE BIIE S
+Label Pred: BIIE S BIIIE S BIIE BE BIIE S
+Wrong 0 0: 
+
+True: 砾石 多 呈 *滚圆* 至 *次滚圆状* ， *砾径* 一般 为 *1～2cm* ， *少数* 为 *4～5cm* ， 属 *基底式* 和 *孔隙式胶结* 。
+Pred: 砾石 多 呈 滚圆 至 次滚圆状 ， 砾径 一般 为 1～2cm ， 少 数 为 4～5cm ， 属 基底式 和 孔隙式胶结 。
+Label True: BE S S BE S BIIE S BE BE S BIIIE S BE S BIIIE S S BIE S BIIIE S
+Label Pred: BE S S BE S BIIE S BE BE S BIIIE S S S S BIIIE S S BIE S BIIIE S
+Wrong 1 0: 少数
+
+True: *太湖* *以南* 段 ， *又* *转变* 为 *断层泥型断层* ， 断层 *宽度* *变* *窄* ， 可能 与 *接近* 郯庐断裂带 *尾端* 而 *活动性* 较弱 *有关* 。
+Pred: 太湖以南 段 ， 又转 变 为 断层泥型断层 ， 断层 宽度 变窄 ， 可能 与 接近 郯庐断裂带 尾端而活动性 较弱 有关 。
+Label True: BE BE S S S BE S BIIIIE S BE BE S S S BE S BE BIIIE BE S BIE BE BE S
+Label Pred: BIIE S S BE E S BIIIIE S BE BE BE S BE S BE BIIIE BBIIIE BE BE S
+Wrong 9 0: 太湖 以南 又 转变 变 窄 尾端 而 活动性
+
+True: 止凤庄组 总体 属于 *山麓洪冲积相* 、 *河流相沉积* 。
+Pred: 止凤庄组 总体 属于 山麓洪冲积相 、 河流相沉积 。
+Label True: BIIE BE BE BIIIIE S BIIIE S
+Label Pred: BIIE BE BE BIIBIE S BIIIE S
+Wrong 1 0: 山麓洪冲积相
+
+True: *结合* *KKY1* 、 *KKY2线* 和 *视电阻率* *垂向电测深剖面* 基本 *确定* 了 头坡断裂 在 *大龙山镇* 的 展布 情况 （ *图2-2-23* ） 。
+Pred: 结合 K KY1 、 KKY2线 和 视电阻率 垂向 电 测深剖面 基本 确定 了 头坡断裂 在 大龙山镇 的 展布 情况 （ 图2-2-23 ） 。
+Label True: BE BIIE S BIIIE S BIIE BIIIIIE BE BE S BIIE S BIIE S BE BE S BIIIIIE S S
+Label Pred: IE S BIE S BIIIE S BIIE BE S BIIE BE BE S BIIE S BIIE S BE BE S BIIIIIE S S
+Wrong 3 0: 结合 KKY1 垂向电测深剖面
+
+True: *中段* ： *浅黄色* 、 *棕红色粗砂* 、 *含砾粗砂* 及 *砾石互层* 。
+Pred: 中段 ： 浅黄色 、 棕红色粗砂 、 含砾粗砂 及 砾石互层 。
+Label True: BE S BIE S BIIIE S BIIE S BIIE S
+Label Pred: BE S BIE S BIIIE S BIIE S BIIE S
+Wrong 0 0: 
+
+True: *接触界面* 内 *侧* *普遍* 见 有 *十至几十厘米* 宽 的 *细粒边* ， 接触带 内 长 见 *九岭花岗岩类—* *中细粒含斑黑云母花岗闪长岩* *(* *γδPt31b～2* *)* 的 *捕虏体* 。
+Pred: 接触界面 内 侧普 遍 见 有 十至 几十厘米 宽 的 细粒边 ， 接触带内 长 见 九岭花岗岩类—中细粒含斑黑云母花岗闪长岩(γδPt31b～2) 的 捕虏体 。
+Label True: BIIE S S BE S S BIIIIE S S BIE S BIE S S S BIIIIIE BIIIIIIIIIIIE S BIIIIIIIE S S BIE S
+Label Pred: BIIE S BE E S S BE BIIE S S BIE S BIIS S S BIIIIIIIIIIIIIIIIIIIIIIIIIIIIIE S BIE S
+Wrong 9 0: 侧 普遍 十至几十厘米 接触带 九岭花岗岩类— 中细粒含斑黑云母花岗闪长岩 ( γδPt31b～2 )
+
+True: *斜长石* 呈 *半自形板状* ， 具 *聚片双晶* 和 *复合双* *晶* ， *可见* *环带构造* 和 “ *净边* ” 结构 ， *An* 属 *中长石* 范围 ， 或 *不规则状* ， *绢云母化* 呈 *假象* ， *有的* *可见* *聚片双晶* 和 *复合双晶* ，
+Pred: 斜长石 呈 半自形板状 ， 具聚片双晶 和 复合双晶 ， 可 见 环带构造 和 “净边”结构 ， An 属 中长石范围 ， 或 不 规则状 ， 绢云母化 呈 假象 ， 有 的 可 见 聚片双晶 和 复合双晶 ，
+Label True: BIE S BIIIE S S BIIE S BIE S S BE BIIE S S BE S BE S BE S BIE BE S S BIIE S BIIE S BE S BE BE BIIE S BIIE S
+Label Pred: IIE S BIIIE S BIIIE S BIIE S S S BIIE S BIIIIE S BE S BIIIE S S S BIE S BIIE S BE S S S S S BIIE S BIIE S
+Wrong 15 0: 斜长石 具 聚片双晶 复合双 晶 可见 “ 净边 ” 结构 中长石 范围 不规则状 有的 可见
+
+True: 具 *环带构造* ， *An32～40* ， 为 中 、 *更长石* 。
+Pred: 具环带构造 ， An 32～40 ， 为 中 、 更长石 。
+Label True: S BIIE S BIIIIIE S S S S BIE S
+Label Pred: BIIIE S BE BIIIE S S S S BIE S
+Wrong 3 0: 具 环带构造 An32～40
+
+True: 2 . *黄山褶皱* 。 分布 于 *太清宫* 北部 的 *黄山口* 一带 ， 包括 *黑尖子向斜* 和 *黄山口背斜* ， *轴迹* *NEE向* 展布 ， *轴面* 近 *直立* ， 均 有 *莱阳群林寺山组地层* 构成 。
+Pred: 2.黄山褶皱 。 分布 于 太清宫 北部 的 黄山口 一带 ， 包括黑尖子向斜 和 黄山口背斜 ， 轴迹NE E向 展布 ， 轴面近 直立 ， 均 有 莱阳群林寺山组地层 构成 。
+Label True: S S BIIE S BE S BIE BE S BIE BE S BE BIIIE S BIIIE S BE BIIE BE S BE S BE S S S BIIIIIIIE BE S
+Label Pred: BIIIIE S BE S BIE BE S BIE BE S BIIIIIE S BIIIE S BIIE BS BE S BBE BE S S S BIIIIIIIE BE S
+Wrong 9 2: 2 . 黄山褶皱 包括 黑尖子向斜 轴迹 NEE向 轴面 近
+
+True: *6* 、 *杨家庄组* （ *Ky）* *杨家庄组* 主要 分布 于 *即墨市-王村镇* 一带 ， *胶州地区* *李家营* 至 *高密市柴沟* 一带 亦 有 分布 。
+Pred: 6 、 杨家庄组 （ Ky）杨家庄组 主要 分布 于 即墨市-王村镇 一带 ， 胶州地区 李 家 营 至 高密市柴沟 一带 亦 有 分布 。
+Label True: S S BIIE S BIE BIIE BE BE S BIIIIIE BE S BIIE BIE S BIIIE BE S S BE S
+Label Pred: S S BIIE S BIIBIIE BE BE S BIIIIIE BE S BIIE S S S S BIIIE BE S S BE S
+Wrong 2 0: Ky） 李家营
+
+True: 7 、 *曲格庄组* （ *Kq）* 分布 于 *莱阳市-海阳市* 一带 ， *即墨区* 北部 、 *胶州市营海* 一带 亦 有 小 面积 出露 。
+Pred: 7 、 曲格庄组 （ Kq ） 分布 于 莱阳市-海阳市 一带 ， 即墨区 北部 、 胶州市营海 一带 亦 有 小 面积 出露 。
+Label True: S S BIIE S BIE BE S BIIIIIE BE S BIE BE S BIIIE BE S S S BE BE S
+Label Pred: S S BIIE S BE S BE S BIIIIIE BE S BIE BE S BIIIE BE S S S BE BE S
+Wrong 1 0: Kq）
+
+True: *光释光年龄值* *2.63±0.15ka* （ *样品* *取自* *河漫滩粉砂层* ） 。
+Pred: 光释光 年龄 值 2.63±0.15ka （ 样品取自河漫滩粉砂层 ） 。
+Label True: BIIIIE BIIIIIIIIIE S BE BE BIIIIE S S
+Label Pred: IIE BE E BIIIIIIIIIE S BIIIIIIIIE S S
+Wrong 4 0: 光释光年龄值 样品 取自 河漫滩粉砂层
+
+True: *擦痕特征* *指示* *南东盘* （ *上盘* ） 向 *东北* *斜冲* ， 显示 断层 具 *逆左行平移* 特征 。
+Pred: 擦痕特征指示 南东盘 （ 上盘 ） 向 东北斜冲 ， 显示 断层 具逆 左行平移特征 。
+Label True: BIIE BE BIE S BE S S BE BE S BE BE S BIIIE BE S
+Label Pred: BIIIIS BIE S BE S S BIIE S BE BE BE BIIIIE S
+Wrong 7 0: 擦痕特征 指示 东北 斜冲 具 逆左行平移 特征
+
+True: 该 *沉积区* 与 *湾东岸* 两个 *沉积中心* 呈 *北北东向* *线性排列* 。
+Pred: 该 沉积区 与 湾东岸 两个 沉积中心 呈 北北东向 线性排列 。
+Label True: S BIE S BIE BE BIIE S BIIE BIIE S
+Label Pred: S BIE S BIE BE BIIE S BIIE BIIE S
+Wrong 0 0: 
+
+True: 其中 ， *1668年* *郯城* *8.5级地震* 是 *中国* 东部 发生 的 有 *历史* *记载* 的 *最* 强烈 *地震* （ *李家灵* 等 ， *1994* ） ， 在 *这* 条 处于 *活动状态* 的 断裂带 上 的 *城市* 存在 *很大* *安全* *隐患* 。
+Pred: 其中 ， 1668年 郯城8.5级地震 是 中国 东部 发生 的 有历史记载 的 最强烈地震 （ 李家灵 等 ， 1994 ） ， 在 这条 处于 活动状态 的 断裂带 上 的 城市存在 很大 安全隐患 。
+Label True: BE S BIIIE BE BIIIIE S BE BE BE S S BE BE S S BE BE S BIE S S BIIE S S S S S BE BIIE S BIE S S BE BE BE BE BE S
+Label Pred: BE S BIIIS BIIIIIIE S BE BE BE S BBIIE S BIIIE S BIE S S BIIE S S S BE BE BIIE S BIE S S BIIS BE BIIE S
+Wrong 15 0: 1668年 郯城 8.5级地震 有 历史 记载 最 强烈 地震 这 条 城市 存在 安全 隐患
+
+True: 区 内 脉岩 较 发育 ， 按 *岩石类型* 可 分为 *闪长岩脉* 、 *正长斑岩脉* 、 *花岗岩脉* 、 *流纹岩脉* 和 石英脉 。
+Pred: 区 内 脉岩 较 发育 ， 按 岩石类型 可 分为 闪长岩脉 、 正长斑岩脉 、 花岗岩脉 、 流纹岩脉 和 石英脉 。
+Label True: S S BE S BE S S BIIE S BE BIIE S BIIIE S BIIE S BIIE S BIE S
+Label Pred: S S BE S BE S S BIIE S BE BIIE S BIIIE S BIIE S BIIE S BIE S
+Wrong 0 0: 
+
+True: 按 其 *喷发旋回* 及 *岩性组合特征* 划分 为 *上侏罗统满克头鄂博组* 、 *玛尼吐组* 、 *白音高老组* 和 *梅勒图组* *四个* *填图单元* 。
+Pred: 按 其 喷发旋回 及 岩性组合特征 划分 为 上侏罗统满克头鄂博组 、 玛尼吐组 、 白音高老组 和 梅勒图组 四个 填图单元 。
+Label True: S S BIIE S BIIIIE BE S BIIIIIIIIE S BIIE S BIIIE S BIIE BE BIIE S
+Label Pred: S S BIIE S BIIIIE BE S BIIIIIIIIE S BIIE S BIIIE S BIIE BE BIIE S
+Wrong 0 0: 
+
+True: 总 的 *看来* ， 各 不同 *方位* 的 断裂 之 形成 *时代* 的 *多期性* 、 *活动性质* *多样性* 是 一 大 特点 。
+Pred: 总 的 看来 ， 各 不同 方位 的 断裂 之形成 时代 的 多期性 、 活动 性质 多 样性 是 一大特点 。
+Label True: S S BE S S BE BE S BE S BE BE S BIE S BIIE BIE S S S BE S
+Label Pred: S S BE S S BE BE S BE BBE BS S BIE S BE BE S BE S BIIE S
+Wrong 7 0: 之 时代 活动性质 多样性 一 大 特点
+
+True: *晚期* *火山通道* *堵塞* 、 地壳 *均衡* *调整* ， 火山机构 *整体* *塌陷* ， *产生* *环状* 、 *放射状断裂* 或 *裂隙* ， *随后* *岩浆* 沿 断裂 或 早期 *通道上升* ， 侵入 或 *侵出* ， 形成 *次火山岩墙* 、
+Pred: 晚期火山通道堵塞 、 地壳 均衡 调整 ， 火山机构 整体 塌陷 ， 产生环状 、 放射状断裂 或 裂隙 ， 随后 岩浆沿断裂 或 早期通道上升 ， 侵入 或 侵出 ， 形成 次火山岩墙 、
+Label True: BE BIIE BE S BE BE BE S BIIE BE BE S BE BE S BIIIE S BE S BE BE S BE S BE BIIE S BE S BE S BE BIIIE S
+Label Pred: BIIIIIIE S BE BE BE S BIIE BE BE S BIIE S BIIIE S BE S BS BIIIE S BIIIIE S BE S BE S BE BIIIE S
+Wrong 11 0: 晚期 火山通道 堵塞 产生 环状 随后 岩浆 沿 断裂 早期 通道上升
+
+True: *岩株* 及 *火山通道* *侵出体* 。
+Pred: 岩株 及 火山通道 侵 出体 。
+Label True: BE S BIIE BIE S
+Label Pred: BE S BIIE S BE S
+Wrong 1 0: 侵出体
+
+True: *航磁平面图* 显示 与 断裂 *同* 方向 的 *磁场负异常带* 。
+Pred: 航磁平面 图 显示 与 断裂同 方向 的 磁场负异常带 。
+Label True: BIIIE BE S BE S BE S BIIIIE S
+Label Pred: BIIE S BE S BIE BE S BIIIIE S
+Wrong 3 0: 航磁平面图 断裂 同
+
+True: *钾长石* : 属 *条纹长石* ， *它形粒状* ， *粒径* *2～4mm* 石英 呈 *他形粒状* ， *波状消光* ， *重结晶* 明显 ， *粒径* *3～5mm* ； *黑云母* 呈 *褐色* ， *鳞片状* ， *最大* *片径* *2mm* ；
+Pred: 钾长石:属条纹长石 ， 它形粒状 ， 粒径2～4mm石英 呈 他形粒状 ， 波状消光 ， 重结晶 明显 ， 粒径3～5mm ； 黑云母呈褐色 ， 鳞片状 ， 最大片径2mm ；
+Label True: BIE S S BIIE S BIIE S BE BIIIE BE S BIIE S BIIE S BIE BE S BE BIIIE S BIE S BE S BIE S BE BE BIE S
+Label Pred: IIIIIBIIE S BIIE S BIIIIIIIE S BIIE S BIIE S BIE BE S BIIIIIE S BIIIIE S BIE S BIIIIIE S
+Wrong 14 0: 钾长石 : 属 粒径 2～4mm 石英 粒径 3～5mm 黑云母 呈 褐色 最大 片径 2mm
+
+True: *白云母* ： *交代* *黑云母* 和 其他 矿物 形成 ， *粒径* *0.2～1mm* ； 并 见 *磷灰石* 、 *榍石* 、 *绿帘石* 、 *锆石包体* 。
+Pred: 白云母 ： 交代黑云母 和 其他 矿物 形成 ， 粒径0.2～1mm ； 并 见 磷灰石 、 榍石 、 绿帘石 、 锆石 包体 。
+Label True: BIE S BE BIE S BE BE BE S BE BIIIIIE S S S BIE S BE S BIE S BIIE S
+Label Pred: BIE S BIIIE S BE BE BE S BIIIIIIIE S S S BIE S BE S BIE S BE BE S
+Wrong 5 0: 交代 黑云母 粒径 0.2～1mm 锆石包体
+
+True: *榍石* *4～5* ， *磁黄铁矿* *0～1* ， 石英 少量 ， *磁铁矿* 、 *钛铁矿* 少量 。
+Pred: 榍石4～5 ， 磁黄铁矿0 ～1 ， 石英 少量 ， 磁铁矿 、 钛铁矿 少量 。
+Label True: BE BIE S BIIE BIE S BE BE S BIE S BIE BE S
+Label Pred: BIIIE S BIIIE BE S BE BE S BIE S BIE BE S
+Wrong 4 0: 榍石 4～5 磁黄铁矿 0～1
+
+True: *花岗质糜棱岩* ： 岩石 具 *糜棱结构* ， *流状构造* 。
+Pred: 花岗质糜棱岩 ： 岩石具糜棱结构 ， 流状构造 。
+Label True: BIIIIE S BE S BIIE S BIIE S
+Label Pred: IIIIIE S BIIBIIE S BIIE S
+Wrong 3 0: 花岗质糜棱岩 岩石 具
+
+True: 该 区 *大地构造* *位置* 属于 *天山―内蒙古―兴安地槽褶皱区* ， *内蒙古中部地槽褶皱系* ， *西乌珠穆沁旗晚华力西地槽褶皱带* ， *板块构造* *位置* 属于 *华北地台* *北缘* 。
+Pred: 该 区 大地构造位置 属于 天山―内蒙古―兴安地槽褶皱区 ， 内蒙古 中部地槽褶皱系 ， 西乌珠穆沁旗晚华力西地槽褶皱带 ， 板块构造位置 属于 华北地台北缘 。
+Label True: S S BIIE BE BE BIIIIIIIIIIIIE S BIIIIIIIIE S BIIIIIIIIIIIIIE S BIIE BE BE BIIE BE S
+Label Pred: S S BIIIIE BE BIIIIIIIIIIIIE S BIE BIIIIIE S BIIIIIIIIIIIIIE S BIIIIE BE BIIIIE S
+Wrong 7 0: 大地构造 位置 内蒙古中部地槽褶皱系 板块构造 位置 华北地台 北缘
+
+True: *林寺山组* 多 发育 于 *盆地* *边* 部 ， 属 *冲洪积扇沉积* 。
+Pred: 林寺山组 多 发育 于 盆地 边部 ， 属 冲洪积扇沉积 。
+Label True: BIIE S BE S BE S S S S BIIIIE S
+Label Pred: BIIE S BE S BE BE S S BIIIIE S
+Wrong 2 0: 边 部
+
+True: 据 *有关* 资料 分析 ， 该 断裂 由 *红石崖* *上岸* 可 与 *五莲-青岛断裂* *链接* 。
+Pred: 据 有关资料 分析 ， 该 断裂 由 红石崖上岸 可 与 五莲-青岛断裂 链接 。
+Label True: S BE BE BE S S BE S BIE BE S S BIIIIIE BE S
+Label Pred: S BBIE BE S S BE S BIIIE S S BIIIIIE BE S
+Wrong 4 0: 有关 资料 红石崖 上岸
+
+True: *长江沿岸地区* 厚度 较大 ， *平均* 厚度 约 *20~40m* ， 岩性 *自下而上* *大体* 上 可 分为 *三段* ： *芜湖组* 下段 地层 以 砾石 （ *卵石* ） 层 及 *含砾-卵石中粗砂* 为主 ，
+Pred: 长江沿岸地区 厚度 较大 ， 平均 厚度 约 20~40m ， 岩性 自下 而 上大体 上 可 分为 三段 ： 芜湖组 下段 地层 以 砾石 （ 卵石 ）层 及 含砾-卵石 中 粗砂 为主 ，
+Label True: BIIIIE BE BE S BE BE S BIIIIE S BE BIIE BE S S BE BE S BIE BE BE S BE S BE S S S BIIIIIIE BE S
+Label Pred: BIIIIE BE BE S BE BE S BIIIIE S BE BE E BIE S S BE BE S BIE BE BE S BE S BE IE S BIIIE S IE BE S
+Wrong 5 0: 自下而上 大体 ） 层 含砾-卵石中粗砂
+
+True: 砾石 、 *卵石* 成分 主要 为 *石英砂岩* 、 石英岩 ， 次 为 *燧石* 等 。
+Pred: 砾石 、 卵石 成分 主要 为 石英砂岩 、 石英岩 ， 次 为 燧石 等 。
+Label True: BE S BE BE BE S BIIE S BIE S S S BE S S
+Label Pred: BE S BE BE BE S BIIE S BIE S S S BE S S
+Wrong 0 0: 
+
+
+ 2064
+P: 0.812889, R: 0.779957, F: 0.796083, OOV: 0.549159, GEO: 0.597975, GEO_N: 0.641970
+Pgeo: 0.535752, Rgeo: 0.676550, Fgeo: 0.597975

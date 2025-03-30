@@ -94,8 +94,8 @@ def train(args):
     else:
         gram2id = None
 
-    label_list = ["O", "B", "I", "E", "S", "[CLS]", "[SEP]"]
-    label_map = {label: i for i, label in enumerate(label_list, 1)}
+    label_list = ["[UNKNOW]","O", "B", "I", "E", "S", "[CLS]", "[SEP]"]
+    label_map = {label: i for i, label in enumerate(label_list, 0)}
 
     hpara = WMSeg.init_hyper_parameters(args)
     seg_model = WMSeg(word2id, gram2id, label_map, hpara, args)
@@ -230,7 +230,7 @@ def train(args):
                 nb_eval_steps, nb_eval_examples = 0, 0
                 y_true = []
                 y_pred = []
-                label_map = {i: label for i, label in enumerate(label_list, 1)}
+                label_map = {i: label for i, label in enumerate(label_list, 0)}
                 for start_index in range(0, len(eval_examples), args.eval_batch_size):
                     eval_batch_examples = eval_examples[start_index: min(start_index + args.eval_batch_size,
                                                                          len(eval_examples))]

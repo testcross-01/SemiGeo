@@ -147,15 +147,17 @@ if __name__ == '__main__':
    #
    #preprocessor._write_file(train_data, '/opt/Projects/Python/WMSeg/data/mydata/large/train.tsv')
    # preprocessor._write_file(test_data,'/opt/Projects/Python/WMSeg/data/mydata/large/test.tsv')
-   raw_seg_path='/opt/Projects/Python/WMSeg/data_preprocessing/mydata/all_doc_1800.seg'
-   shuffle_seg_path='/opt/Projects/Python/WMSeg/data_preprocessing/mydata/all_doc_shuffle_1800.seg'
-   train_seg_path='/opt/Projects/Python/WMSeg/data_preprocessing/mydata/larger/train.seg'
-   train_unseg_path='/opt/Projects/Python/WMSeg/data_preprocessing/mydata/larger/train.unseg'
-   test_seg_path='/opt/Projects/Python/WMSeg/data_preprocessing/mydata/larger/test.seg'
-   dev_seg_path='/opt/Projects/Python/WMSeg/data_preprocessing/mydata/larger/dev.seg'
-   train_tsv_path='/opt/Projects/Python/WMSeg/data/mydata/larger/train.tsv'
-   test_tsv_path='/opt/Projects/Python/WMSeg/data/mydata/larger/test.tsv'
-   dev_tsv_path='/opt/Projects/Python/WMSeg/data/mydata/larger/dev.tsv'
+   raw_seg_path='./mydata/all_doc_1800.seg'
+   shuffle_seg_path='./mydata/all_doc_shuffle_1800.seg'
+   train_seg_path='./mydata/larger/train.seg'
+   train_unseg_path='./mydata/larger/train.unseg'
+   train_unseg_seg_path='./mydata/larger/train_seg.unseg'
+
+   test_seg_path='./mydata/larger/test.seg'
+   dev_seg_path='./mydata/larger/dev.seg'
+   train_tsv_path='../data/mydata/larger/train.tsv'
+   test_tsv_path='../data/mydata/larger/test.tsv'
+   dev_tsv_path='../data/mydata/larger/dev.tsv'
 
    
    shuffle_lines=preprocessor.shuffle(raw_seg_path)
@@ -172,10 +174,12 @@ if __name__ == '__main__':
 
    train_seg=[]
    train_unseg=[]
+   train_unseg_seg=[]
 
    for index in range(len(train)):
        sample=train[index]
        if index>train_rate*train_num:
+           train_unseg_seg.append(sample)
            sample=sample.replace(' ','')
            train_unseg.append(sample)
        else:
@@ -186,6 +190,8 @@ if __name__ == '__main__':
 
    preprocessor._write_file(train_seg,train_seg_path)
    preprocessor._write_file(train_unseg,train_unseg_path)
+   preprocessor._write_file(train_unseg_seg,train_unseg_seg_path)
+
    preprocessor._write_file(test,test_seg_path)
    preprocessor._write_file(dev,dev_seg_path)
 

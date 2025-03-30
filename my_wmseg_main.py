@@ -16,7 +16,7 @@ from pytorch_pretrained_bert.optimization import BertAdam, WarmupLinearSchedule
 
 from tqdm import tqdm, trange
 from seqeval.metrics import classification_report
-from my_wmseg_helper import get_word2id, get_gram2id
+from my_wmseg_helper import get_word2id, get_gram2id, get_gram2id_sf
 from my_wmseg_eval import eval_sentence, cws_evaluate_word_PRF, cws_evaluate_OOV,cws_evaluate_geo
 from my_wmseg_model import WMSeg
 import datetime
@@ -169,6 +169,7 @@ def train(args):
     best_f = -1
     best_oov = -1
     best_geo = -1
+    best_geo_n=-1
     best_r_geo = -1
     best_p_geo = -1
 
@@ -290,6 +291,7 @@ def train(args):
                 p, r, f = cws_evaluate_word_PRF(y_pred_all, y_true_all)
                 oov = cws_evaluate_OOV(y_pred, y_true, sentence_all, word2id)
                 geo,rgeo,pgeo = cws_evaluate_geo(y_pred, y_true, sentence_all)
+                geo_n,rgeo_n,pgeo_n = cws_evaluate_geo(y_pred, y_true, sentence_all,False)
                 logger.info('OOV: %f' % oov)
                 logger.info('GEO: %f' % geo)
                 history['epoch'].append(epoch)
@@ -325,6 +327,7 @@ def train(args):
                     best_f = f
                     best_oov = oov
                     best_geo = geo
+                    best_geo_n = geo_n
                     best_r_geo = rgeo
                     best_p_geo = pgeo
 
@@ -348,7 +351,7 @@ def train(args):
                                 uncoop_count+=uncoop_num
                             uncoop_rate=uncoop_count/wrong_count
                             writer.write("\n %d" % wrong_count)
-                            writer.write("\nP: %f, R: %f, F: %f, OOV: %f, GEO: %f" % (best_p, best_r, best_f, best_oov, best_geo))
+                            writer.write("\nP: %f, R: %f, F: %f, OOV: %f, GEO: %f,GEO_N: %f" % (best_p, best_r, best_f, best_oov, best_geo,best_geo_n))
                             writer.write("\nPgeo: %f, Rgeo: %f, Fgeo: %f" % (best_p_geo,best_r_geo,best_geo))
                         word_count,geo_word_count,geo_wrong_word_count,Rgeo=statistics.stat_all(args.eval_data_path, os.path.join(output_model_dir, 'CWS_result.txt'),output_model_dir)
                         # with open(os.path.join(output_model_dir, 'CWS_result.txt'), "a") as writer:
@@ -378,16 +381,20 @@ def train(args):
             if num_of_no_improvement >= patient:
                 logger.info('\nEarly stop triggered at epoch %d\n' % epoch)
                 break
-            if torch.cuda.is_available():
-                torch.cuda.empty_cache()
+            # if torch.cuda.is_available():
+            #     torch.cuda.empty_cache()
 
         logger.info("\n=======best f entity level========")
-        logger.info("\nEpoch: %d, P: %f, R: %f, F: %f, OOV: %f, GEO: %f\n", best_epoch, best_p, best_r, best_f, best_oov, best_geo)
+        logger.info("\nEpoch: %d, P: %f, R: %f, F: %f, OOV: %f, GEO: %f, GEO_N: %f\n", best_epoch, best_p, best_r, best_f, best_oov, best_geo,best_geo_n)
         logger.info("\n=======best f entity level========")
 
         if os.path.exists(output_model_dir):
             with open(os.path.join(output_model_dir, 'history.json'), 'w', encoding='utf8') as f:
                 json.dump(history, f)
+                f.write('\n')
+            with open('./models/results.txt','a',encoding='utf8') as f:
+                data = str(best_f)+' '+str(best_geo_n)+' '+str(best_geo)
+                f.write(data)
                 f.write('\n')
 
 
@@ -458,7 +465,8 @@ def self_train(args):
                           'No n-grams will be filtered out by frequency. '
                           'We only filter out n-grams whose frequency is lower than that threshold!'
                           % args.ngram_num_threshold)
-        gram2id = get_gram2id(args.train_data_path, args.eval_data_path,
+
+        gram2id = get_gram2id_sf(args.train_data_path, args.self_train_data_path,args.eval_data_path,
                               args.ngram_num_threshold, args.ngram_flag, args.av_threshold)
 
         logger.info('# of n-gram in memory: %d' % len(gram2id))
@@ -543,6 +551,7 @@ def self_train(args):
     best_f = -1
     best_oov = -1
     best_geo = -1
+    best_geo_n = -1
     best_r_geo = -1
     best_p_geo = -1
 
@@ -656,8 +665,8 @@ def self_train(args):
                             optimizer.step()
                             optimizer.zero_grad()
                             global_step += 1
-                if torch.cuda.is_available():
-                    torch.cuda.empty_cache()
+                # if torch.cuda.is_available():
+                #     torch.cuda.empty_cache()
             if not batch_mix:
                 for step, start_index in enumerate(tqdm(range(0, len(self_train_examples), args.train_batch_size))):
                     seg_model.train()
@@ -761,6 +770,7 @@ def self_train(args):
                 p, r, f = cws_evaluate_word_PRF(y_pred_all, y_true_all)
                 oov = cws_evaluate_OOV(y_pred, y_true, sentence_all, word2id)
                 geo,rgeo,pgeo = cws_evaluate_geo(y_pred, y_true, sentence_all)
+                geo_n,rgeo_n,pgeo_n = cws_evaluate_geo(y_pred, y_true, sentence_all,False)
                 logger.info('OOV: %f' % oov)
                 logger.info('GEO: %f' % geo)
                 history['epoch'].append(epoch)
@@ -789,6 +799,7 @@ def self_train(args):
                             logger.info("=======token level========")
                             writer.write(report)
 
+                #if f>best_f:
                 if geo > best_geo:
                     best_epoch = epoch + 1
                     best_p = p
@@ -796,6 +807,7 @@ def self_train(args):
                     best_f = f
                     best_oov = oov
                     best_geo = geo
+                    best_geo_n = geo_n
                     best_r_geo = rgeo
                     best_p_geo = pgeo
 
@@ -820,7 +832,7 @@ def self_train(args):
                                 uncoop_count += uncoop_num
                             uncoop_rate = uncoop_count / wrong_count
                             writer.write("\n %f" % wrong_count)
-                            writer.write("\nP: %f, R: %f, F: %f, OOV: %f, GEO: %f" % (best_p, best_r, best_f, best_oov,best_geo))
+                            writer.write("\nP: %f, R: %f, F: %f, OOV: %f, GEO: %f, GEO_N: %f" % (best_p, best_r, best_f, best_oov,best_geo,best_geo_n))
                             writer.write("\nPgeo: %f, Rgeo: %f, Fgeo: %f" % (best_p_geo, best_r_geo, best_geo))
                         word_count,geo_word_count,geo_wrong_word_count,Rgeo=statistics.stat_all(args.eval_data_path, os.path.join(output_model_dir, 'CWS_result.txt'),output_model_dir)
                         # with open(os.path.join(output_model_dir, 'CWS_result.txt'), "a") as writer:
@@ -850,12 +862,16 @@ def self_train(args):
                 break
 
         logger.info("\n=======best f entity level========")
-        logger.info("\nEpoch: %d, P: %f, R: %f, F: %f, OOV: %f, GEO: %f\n", best_epoch, best_p, best_r, best_f, best_oov,best_geo)
+        logger.info("\nEpoch: %d, P: %f, R: %f, F: %f, OOV: %f, GEO: %f, GEO_N: %f\n", best_epoch, best_p, best_r, best_f, best_oov,best_geo,best_geo_n)
         logger.info("\n=======best f entity level========")
 
         if os.path.exists(output_model_dir):
             with open(os.path.join(output_model_dir, 'history.json'), 'w', encoding='utf8') as f:
                 json.dump(history, f)
+                f.write('\n')
+            with open('./models/results.txt','a',encoding='utf8') as f:
+                data = str(best_f)+' '+str(best_geo_n)+' '+str(best_geo)
+                f.write(data)
                 f.write('\n')
 
 
@@ -958,6 +974,7 @@ def test(args):
     p, r, f = cws_evaluate_word_PRF(y_pred_all, y_true_all)
     oov = cws_evaluate_OOV(y_pred, y_true, sentence_all, word2id)
     geo,rgeo,pgeo = cws_evaluate_geo(y_pred, y_true,sentence_all)
+    geo_n, rgeo_n, pgeo_n = cws_evaluate_geo(y_pred, y_true, sentence_all,False)
 
     now_time = datetime.datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
     with open(os.path.join('./', 'CWS_result_{0}.txt'.format(now_time)), "w") as writer:
@@ -980,7 +997,7 @@ def test(args):
             writer.write('Wrong %d %d: %s\n\n' % (wrong_num, uncoop_num, seg_wrong_str))
         uncoop_rate = uncoop_count / wrong_count
         writer.write("\n %d" % wrong_count)
-        writer.write("\nP: %f, R: %f, F: %f, OOV: %f, GEO: %f" % (p, r, f, oov,geo))
+        writer.write("\nP: %f, R: %f, F: %f, OOV: %f, GEO: %f, GEO_N: %f" % (p, r, f, oov,geo,geo_n))
         writer.write("\nPgeo: %f, Rgeo: %f, Fgeo: %f" % (pgeo, rgeo, geo))
     word_count, geo_word_count, geo_wrong_word_count,Rgeo = statistics.stat_all(args.eval_data_path,os.path.join('./','CWS_result_{0}.txt'.format(now_time)),'./')
     # with open(os.path.join('./', 'CWS_result_{0}.txt'.format(now_time)), "a") as writer:
@@ -992,9 +1009,19 @@ def test(args):
 
 def tags_select(tags,info_gain,conf,u_th,c_th):
     #选出高置信度的预测
-    conf_max=torch.max(conf,2).values
-    tags[conf_max<c_th]=1
-    tags[info_gain>=u_th]=1
+    conf_pre=info_gain.clone().detach()
+
+    for i in range(conf.shape[0]):
+        for j in range(conf.shape[1]):
+            a=conf[i][j][tags[i][j]]
+            conf_pre[i][j]=conf[i][j][tags[i][j]]
+    info_gain=1-torch.clamp(info_gain,0,1)
+    score=torch.mul(conf_pre,info_gain)
+    #conf_max=torch.max(conf,2).values
+
+    tags[score<c_th]=1
+    # tags[conf_pre<c_th]=1
+    # tags[info_gain>=u_th]=1
 
     return  tags
 
@@ -1025,7 +1052,12 @@ def uc_estimation(probs_list):
 
     info_gain = entropy_av_predict_sum + entropy_sum_predict_av
     return info_gain,probs_av
-
+    
+def confidence_estimation(logits):
+    con_probs = F.softmax(logits, dim=2)
+  
+    return  con_probs
+    
 def predict_uc(args):
     if args.local_rank == -1 or args.no_cuda:
         device = torch.device("cuda" if torch.cuda.is_available() and not args.no_cuda else "cpu")
@@ -1047,6 +1079,7 @@ def predict_uc(args):
     predict_num=6
 
     seg_model_checkpoint = torch.load(args.eval_model)
+    print(args.eval_model)
     seg_model = WMSeg.from_spec(seg_model_checkpoint['spec'], seg_model_checkpoint['state_dict'], args)
 
     eval_examples = seg_model.load_data(args.input_file, do_predict=True)
@@ -1069,10 +1102,7 @@ def predict_uc(args):
         seg_model = DDP(seg_model)
     elif n_gpu > 1:
         seg_model = torch.nn.DataParallel(seg_model)
-
     seg_model.to(device)
-
-
 
 
     y_pred = []
@@ -1094,12 +1124,12 @@ def predict_uc(args):
 
         for i in range(predict_num):
             with torch.no_grad():
-                _, _,logits = seg_model.forward_uc(input_ids, segment_ids, input_mask, labels=label_ids,
+                _, _,logits = seg_model.forward(input_ids, segment_ids, input_mask, labels=label_ids,
                                            valid_ids=valid_ids, attention_mask_label=l_mask,
                                            word_seq=word_ids, label_value_matrix=matching_matrix,
                                            word_mask=word_mask,
-                                           input_ngram_ids=ngram_ids, ngram_position_matrix=ngram_positions)
-            con_probs=seg_model.confidence_estimation(logits)
+                                           input_ngram_ids=ngram_ids, ngram_position_matrix=ngram_positions,uc_enable=True)
+            con_probs=confidence_estimation(logits)
             con_probs_list.append(con_probs)
 
         info_gain,probs_av = uc_estimation(con_probs_list)
@@ -1109,11 +1139,11 @@ def predict_uc(args):
 
         #开启预测
         seg_model.eval()
-        _, tag_seq, _ = seg_model.forward_uc(input_ids, segment_ids, input_mask, labels=label_ids,
+        _, tag_seq, _ = seg_model.forward(input_ids, segment_ids, input_mask, labels=label_ids,
                                             valid_ids=valid_ids, attention_mask_label=l_mask,
                                             word_seq=word_ids, label_value_matrix=matching_matrix,
                                             word_mask=word_mask,
-                                            input_ngram_ids=ngram_ids, ngram_position_matrix=ngram_positions)
+                                            input_ngram_ids=ngram_ids, ngram_position_matrix=ngram_positions,uc_enable=True)
         tag_seq=tags_select(tag_seq,info_gain,probs_av,u_th,c_th)
 
 

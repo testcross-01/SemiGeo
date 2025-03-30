@@ -1,0 +1,1 @@
+09/18/2023 21:03:24 - INFO - pytorch_pretrained_zen.modeling -   Better speed can be achieved with apex installed from https://www.github.com/nvidia/apex .

@@ -1,0 +1,264 @@
+10/18/2023 10:50:04 - INFO - pytorch_pretrained_zen.modeling -   Better speed can be achieved with apex installed from https://www.github.com/nvidia/apex .
+10/18/2023 10:50:04 - INFO - __main__ -   {'do_train': True, 'do_test': False, 'do_predict': False, 'do_predict_uc': False, 'train_data_path': './data/mydata/larger/train.tsv', 'self_train_data_path': './data_preprocessing/mydata/larger/self_train.tsv', 'eval_data_path': './data/mydata/larger/dev.tsv', 'input_file': None, 'output_file': None, 'output_file_tsv': None, 'use_bert': False, 'use_zen': True, 'bert_model': '/opt/Projects/Python/WMSeg/models/Zen', 'eval_model': None, 'cache_dir': '', 'max_seq_length': 300, 'max_ngram_size': 300, 'do_lower_case': False, 'train_batch_size': 16, 'eval_batch_size': 16, 'lambda_rate': 0.8, 'c_th': 0.7, 'u_th': 0.8, 'learning_rate': 1e-05, 'num_train_epochs': 50.0, 'warmup_proportion': 0.1, 'no_cuda': False, 'local_rank': -1, 'seed': 42, 'gradient_accumulation_steps': 1, 'fp16': False, 'loss_scale': 0, 'server_ip': '', 'server_port': '', 'patient': 10, 'ngram_num_threshold': 2, 'av_threshold': 3, 'max_ngram_length': 5, 'model_name': 'self_zen_memory_softmax_score_0.9_0.89', 'use_memory': True, 'use_cnn': False, 'decoder': 'softmax', 'ngram_flag': 'av', 'save_top': 1}
+10/18/2023 10:50:04 - INFO - __main__ -   device: cuda n_gpu: 1, distributed training: False, 16-bits training: False
+10/18/2023 10:50:04 - INFO - __main__ -   # of word in train: 1079: 
+10/18/2023 10:50:04 - INFO - __main__ -   # of n-gram in memory: 1187
+10/18/2023 10:50:04 - INFO - pytorch_pretrained_zen.tokenization -   loading vocabulary file /opt/Projects/Python/WMSeg/models/Zen/vocab.txt
+10/18/2023 10:50:04 - INFO - pytorch_pretrained_zen.ngram_utils -   loading ngram frequency file /opt/Projects/Python/WMSeg/models/Zen/ngram.txt
+10/18/2023 10:50:05 - INFO - pytorch_pretrained_zen.modeling -   loading weights file /opt/Projects/Python/WMSeg/models/Zen/pytorch_model.bin
+10/18/2023 10:50:05 - INFO - pytorch_pretrained_zen.modeling -   loading configuration file /opt/Projects/Python/WMSeg/models/Zen/config.json
+10/18/2023 10:50:05 - INFO - pytorch_pretrained_zen.modeling -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "num_hidden_word_layers": 6,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 21128,
+  "word_size": 104089
+}
+
+10/18/2023 10:50:07 - INFO - __main__ -   # of trainable parameters: 225663744
+10/18/2023 10:50:07 - INFO - __main__ -   ***** Running self-training *****
+10/18/2023 10:50:07 - INFO - __main__ -     Num examples = 120
+10/18/2023 10:50:07 - INFO - __main__ -     Num self-train examples = 1226
+10/18/2023 10:50:07 - INFO - __main__ -     Batch size = 16
+10/18/2023 10:50:07 - INFO - __main__ -     Num steps = 4200
+10/18/2023 10:50:55 - INFO - __main__ -   OOV: 0.596378
+10/18/2023 10:50:55 - INFO - __main__ -   GEO: 0.457858
+10/18/2023 10:50:55 - INFO - __main__ -   =======entity level========
+10/18/2023 10:50:55 - INFO - __main__ -   
+Epoch: 1, P: 0.808145, R: 0.761620, F: 0.784193, OOV: 0.596378, GEO: 0.457858
+10/18/2023 10:50:55 - INFO - __main__ -   =======entity level========
+10/18/2023 10:51:43 - INFO - __main__ -   OOV: 0.773933
+10/18/2023 10:51:43 - INFO - __main__ -   GEO: 0.840260
+10/18/2023 10:51:43 - INFO - __main__ -   =======entity level========
+10/18/2023 10:51:43 - INFO - __main__ -   
+Epoch: 2, P: 0.909444, R: 0.873667, F: 0.891197, OOV: 0.773933, GEO: 0.840260
+10/18/2023 10:51:43 - INFO - __main__ -   =======entity level========
+10/18/2023 10:52:33 - INFO - __main__ -   OOV: 0.784282
+10/18/2023 10:52:33 - INFO - __main__ -   GEO: 0.861275
+10/18/2023 10:52:33 - INFO - __main__ -   =======entity level========
+10/18/2023 10:52:33 - INFO - __main__ -   
+Epoch: 3, P: 0.922734, R: 0.883582, F: 0.902734, OOV: 0.784282, GEO: 0.861275
+10/18/2023 10:52:33 - INFO - __main__ -   =======entity level========
+10/18/2023 10:53:22 - INFO - __main__ -   OOV: 0.778461
+10/18/2023 10:53:22 - INFO - __main__ -   GEO: 0.873184
+10/18/2023 10:53:22 - INFO - __main__ -   =======entity level========
+10/18/2023 10:53:22 - INFO - __main__ -   
+Epoch: 4, P: 0.920713, R: 0.881450, F: 0.900654, OOV: 0.778461, GEO: 0.873184
+10/18/2023 10:53:22 - INFO - __main__ -   =======entity level========
+10/18/2023 10:54:10 - INFO - __main__ -   OOV: 0.802070
+10/18/2023 10:54:10 - INFO - __main__ -   GEO: 0.849351
+10/18/2023 10:54:10 - INFO - __main__ -   =======entity level========
+10/18/2023 10:54:10 - INFO - __main__ -   
+Epoch: 5, P: 0.923788, R: 0.895522, F: 0.909435, OOV: 0.802070, GEO: 0.849351
+10/18/2023 10:54:10 - INFO - __main__ -   =======entity level========
+10/18/2023 10:54:58 - INFO - __main__ -   OOV: 0.783312
+10/18/2023 10:54:58 - INFO - __main__ -   GEO: 0.875989
+10/18/2023 10:54:58 - INFO - __main__ -   =======entity level========
+10/18/2023 10:54:58 - INFO - __main__ -   
+Epoch: 6, P: 0.925893, R: 0.879104, F: 0.901892, OOV: 0.783312, GEO: 0.875989
+10/18/2023 10:54:58 - INFO - __main__ -   =======entity level========
+10/18/2023 10:55:47 - INFO - __main__ -   OOV: 0.810155
+10/18/2023 10:55:47 - INFO - __main__ -   GEO: 0.860858
+10/18/2023 10:55:47 - INFO - __main__ -   =======entity level========
+10/18/2023 10:55:47 - INFO - __main__ -   
+Epoch: 7, P: 0.927536, R: 0.900640, F: 0.913890, OOV: 0.810155, GEO: 0.860858
+10/18/2023 10:55:47 - INFO - __main__ -   =======entity level========
+10/18/2023 10:56:35 - INFO - __main__ -   OOV: 0.797542
+10/18/2023 10:56:35 - INFO - __main__ -   GEO: 0.886693
+10/18/2023 10:56:35 - INFO - __main__ -   =======entity level========
+10/18/2023 10:56:35 - INFO - __main__ -   
+Epoch: 8, P: 0.928540, R: 0.890725, F: 0.909239, OOV: 0.797542, GEO: 0.886693
+10/18/2023 10:56:35 - INFO - __main__ -   =======entity level========
+10/18/2023 10:57:25 - INFO - __main__ -   OOV: 0.798189
+10/18/2023 10:57:25 - INFO - __main__ -   GEO: 0.887863
+10/18/2023 10:57:25 - INFO - __main__ -   =======entity level========
+10/18/2023 10:57:25 - INFO - __main__ -   
+Epoch: 9, P: 0.929484, R: 0.892324, F: 0.910525, OOV: 0.798189, GEO: 0.887863
+10/18/2023 10:57:25 - INFO - __main__ -   =======entity level========
+10/18/2023 10:58:14 - INFO - __main__ -   OOV: 0.800776
+10/18/2023 10:58:14 - INFO - __main__ -   GEO: 0.884944
+10/18/2023 10:58:14 - INFO - __main__ -   =======entity level========
+10/18/2023 10:58:14 - INFO - __main__ -   
+Epoch: 10, P: 0.927930, R: 0.892217, F: 0.909723, OOV: 0.800776, GEO: 0.884944
+10/18/2023 10:58:14 - INFO - __main__ -   =======entity level========
+10/18/2023 10:59:02 - INFO - __main__ -   OOV: 0.790427
+10/18/2023 10:59:02 - INFO - __main__ -   GEO: 0.888154
+10/18/2023 10:59:02 - INFO - __main__ -   =======entity level========
+10/18/2023 10:59:02 - INFO - __main__ -   
+Epoch: 11, P: 0.926345, R: 0.890299, F: 0.907964, OOV: 0.790427, GEO: 0.888154
+10/18/2023 10:59:02 - INFO - __main__ -   =======entity level========
+10/18/2023 10:59:51 - INFO - __main__ -   OOV: 0.804981
+10/18/2023 10:59:51 - INFO - __main__ -   GEO: 0.887278
+10/18/2023 10:59:51 - INFO - __main__ -   =======entity level========
+10/18/2023 10:59:51 - INFO - __main__ -   
+Epoch: 12, P: 0.927523, R: 0.896375, F: 0.911683, OOV: 0.804981, GEO: 0.887278
+10/18/2023 10:59:51 - INFO - __main__ -   =======entity level========
+10/18/2023 11:00:38 - INFO - __main__ -   OOV: 0.797219
+10/18/2023 11:00:38 - INFO - __main__ -   GEO: 0.884641
+10/18/2023 11:00:38 - INFO - __main__ -   =======entity level========
+10/18/2023 11:00:38 - INFO - __main__ -   
+Epoch: 13, P: 0.931096, R: 0.893177, F: 0.911742, OOV: 0.797219, GEO: 0.884641
+10/18/2023 11:00:38 - INFO - __main__ -   =======entity level========
+10/18/2023 11:01:26 - INFO - __main__ -   OOV: 0.786223
+10/18/2023 11:01:26 - INFO - __main__ -   GEO: 0.879470
+10/18/2023 11:01:26 - INFO - __main__ -   =======entity level========
+10/18/2023 11:01:26 - INFO - __main__ -   
+Epoch: 14, P: 0.929658, R: 0.886247, F: 0.907434, OOV: 0.786223, GEO: 0.879470
+10/18/2023 11:01:26 - INFO - __main__ -   =======entity level========
+10/18/2023 11:02:13 - INFO - __main__ -   OOV: 0.814036
+10/18/2023 11:02:13 - INFO - __main__ -   GEO: 0.894598
+10/18/2023 11:02:13 - INFO - __main__ -   =======entity level========
+10/18/2023 11:02:13 - INFO - __main__ -   
+Epoch: 15, P: 0.928713, R: 0.901386, F: 0.914845, OOV: 0.814036, GEO: 0.894598
+10/18/2023 11:02:13 - INFO - __main__ -   =======entity level========
+10/18/2023 11:03:04 - INFO - __main__ -   OOV: 0.805627
+10/18/2023 11:03:04 - INFO - __main__ -   GEO: 0.890212
+10/18/2023 11:03:04 - INFO - __main__ -   =======entity level========
+10/18/2023 11:03:04 - INFO - __main__ -   
+Epoch: 16, P: 0.929819, R: 0.896908, F: 0.913067, OOV: 0.805627, GEO: 0.890212
+10/18/2023 11:03:04 - INFO - __main__ -   =======entity level========
+10/18/2023 11:03:51 - INFO - __main__ -   OOV: 0.803687
+10/18/2023 11:03:51 - INFO - __main__ -   GEO: 0.885375
+10/18/2023 11:03:51 - INFO - __main__ -   =======entity level========
+10/18/2023 11:03:51 - INFO - __main__ -   
+Epoch: 17, P: 0.927239, R: 0.895309, F: 0.910994, OOV: 0.803687, GEO: 0.885375
+10/18/2023 11:03:51 - INFO - __main__ -   =======entity level========
+10/18/2023 11:04:39 - INFO - __main__ -   OOV: 0.811125
+10/18/2023 11:04:39 - INFO - __main__ -   GEO: 0.883934
+10/18/2023 11:04:39 - INFO - __main__ -   =======entity level========
+10/18/2023 11:04:39 - INFO - __main__ -   
+Epoch: 18, P: 0.926880, R: 0.901386, F: 0.913955, OOV: 0.811125, GEO: 0.883934
+10/18/2023 11:04:39 - INFO - __main__ -   =======entity level========
+10/18/2023 11:05:26 - INFO - __main__ -   OOV: 0.812743
+10/18/2023 11:05:26 - INFO - __main__ -   GEO: 0.881890
+10/18/2023 11:05:26 - INFO - __main__ -   =======entity level========
+10/18/2023 11:05:26 - INFO - __main__ -   
+Epoch: 19, P: 0.927857, R: 0.899467, F: 0.913441, OOV: 0.812743, GEO: 0.881890
+10/18/2023 11:05:26 - INFO - __main__ -   =======entity level========
+10/18/2023 11:06:13 - INFO - __main__ -   OOV: 0.810479
+10/18/2023 11:06:13 - INFO - __main__ -   GEO: 0.889328
+10/18/2023 11:06:13 - INFO - __main__ -   =======entity level========
+10/18/2023 11:06:13 - INFO - __main__ -   
+Epoch: 20, P: 0.929407, R: 0.898294, F: 0.913586, OOV: 0.810479, GEO: 0.889328
+10/18/2023 11:06:13 - INFO - __main__ -   =======entity level========
+10/18/2023 11:07:01 - INFO - __main__ -   OOV: 0.809185
+10/18/2023 11:07:01 - INFO - __main__ -   GEO: 0.896233
+10/18/2023 11:07:01 - INFO - __main__ -   =======entity level========
+10/18/2023 11:07:01 - INFO - __main__ -   
+Epoch: 21, P: 0.927084, R: 0.897335, F: 0.911967, OOV: 0.809185, GEO: 0.896233
+10/18/2023 11:07:01 - INFO - __main__ -   =======entity level========
+10/18/2023 11:07:50 - INFO - __main__ -   OOV: 0.795602
+10/18/2023 11:07:50 - INFO - __main__ -   GEO: 0.890801
+10/18/2023 11:07:50 - INFO - __main__ -   =======entity level========
+10/18/2023 11:07:50 - INFO - __main__ -   
+Epoch: 22, P: 0.930693, R: 0.891898, F: 0.910882, OOV: 0.795602, GEO: 0.890801
+10/18/2023 11:07:50 - INFO - __main__ -   =======entity level========
+10/18/2023 11:08:37 - INFO - __main__ -   OOV: 0.799159
+10/18/2023 11:08:37 - INFO - __main__ -   GEO: 0.894772
+10/18/2023 11:08:37 - INFO - __main__ -   =======entity level========
+10/18/2023 11:08:37 - INFO - __main__ -   
+Epoch: 23, P: 0.931940, R: 0.893390, F: 0.912258, OOV: 0.799159, GEO: 0.894772
+10/18/2023 11:08:37 - INFO - __main__ -   =======entity level========
+10/18/2023 11:09:24 - INFO - __main__ -   OOV: 0.805951
+10/18/2023 11:09:24 - INFO - __main__ -   GEO: 0.895778
+10/18/2023 11:09:24 - INFO - __main__ -   =======entity level========
+10/18/2023 11:09:24 - INFO - __main__ -   
+Epoch: 24, P: 0.930397, R: 0.896375, F: 0.913069, OOV: 0.805951, GEO: 0.895778
+10/18/2023 11:09:24 - INFO - __main__ -   =======entity level========
+10/18/2023 11:10:12 - INFO - __main__ -   OOV: 0.806598
+10/18/2023 11:10:12 - INFO - __main__ -   GEO: 0.888889
+10/18/2023 11:10:12 - INFO - __main__ -   =======entity level========
+10/18/2023 11:10:12 - INFO - __main__ -   
+Epoch: 25, P: 0.930191, R: 0.896375, F: 0.912970, OOV: 0.806598, GEO: 0.888889
+10/18/2023 11:10:12 - INFO - __main__ -   =======entity level========
+10/18/2023 11:10:59 - INFO - __main__ -   OOV: 0.795925
+10/18/2023 11:10:59 - INFO - __main__ -   GEO: 0.896825
+10/18/2023 11:10:59 - INFO - __main__ -   =======entity level========
+10/18/2023 11:10:59 - INFO - __main__ -   
+Epoch: 26, P: 0.929277, R: 0.892324, F: 0.910426, OOV: 0.795925, GEO: 0.896825
+10/18/2023 11:10:59 - INFO - __main__ -   =======entity level========
+10/18/2023 11:11:48 - INFO - __main__ -   OOV: 0.800453
+10/18/2023 11:11:48 - INFO - __main__ -   GEO: 0.892693
+10/18/2023 11:11:48 - INFO - __main__ -   =======entity level========
+10/18/2023 11:11:48 - INFO - __main__ -   
+Epoch: 27, P: 0.931088, R: 0.895949, F: 0.913180, OOV: 0.800453, GEO: 0.892693
+10/18/2023 11:11:48 - INFO - __main__ -   =======entity level========
+10/18/2023 11:12:35 - INFO - __main__ -   OOV: 0.804010
+10/18/2023 11:12:35 - INFO - __main__ -   GEO: 0.895050
+10/18/2023 11:12:35 - INFO - __main__ -   =======entity level========
+10/18/2023 11:12:35 - INFO - __main__ -   
+Epoch: 28, P: 0.929132, R: 0.895949, F: 0.912239, OOV: 0.804010, GEO: 0.895050
+10/18/2023 11:12:35 - INFO - __main__ -   =======entity level========
+10/18/2023 11:13:23 - INFO - __main__ -   OOV: 0.802393
+10/18/2023 11:13:23 - INFO - __main__ -   GEO: 0.892999
+10/18/2023 11:13:23 - INFO - __main__ -   =======entity level========
+10/18/2023 11:13:23 - INFO - __main__ -   
+Epoch: 29, P: 0.930591, R: 0.894776, F: 0.912332, OOV: 0.802393, GEO: 0.892999
+10/18/2023 11:13:23 - INFO - __main__ -   =======entity level========
+10/18/2023 11:14:10 - INFO - __main__ -   OOV: 0.805304
+10/18/2023 11:14:10 - INFO - __main__ -   GEO: 0.893589
+10/18/2023 11:14:10 - INFO - __main__ -   =======entity level========
+10/18/2023 11:14:10 - INFO - __main__ -   
+Epoch: 30, P: 0.931390, R: 0.895842, F: 0.913270, OOV: 0.805304, GEO: 0.893589
+10/18/2023 11:14:10 - INFO - __main__ -   =======entity level========
+10/18/2023 11:14:58 - INFO - __main__ -   OOV: 0.809508
+10/18/2023 11:14:58 - INFO - __main__ -   GEO: 0.891821
+10/18/2023 11:14:58 - INFO - __main__ -   =======entity level========
+10/18/2023 11:14:58 - INFO - __main__ -   
+Epoch: 31, P: 0.931728, R: 0.899147, F: 0.915148, OOV: 0.809508, GEO: 0.891821
+10/18/2023 11:14:58 - INFO - __main__ -   =======entity level========
+10/18/2023 11:15:45 - INFO - __main__ -   OOV: 0.809185
+10/18/2023 11:15:45 - INFO - __main__ -   GEO: 0.891233
+10/18/2023 11:15:45 - INFO - __main__ -   =======entity level========
+10/18/2023 11:15:45 - INFO - __main__ -   
+Epoch: 32, P: 0.932117, R: 0.898827, F: 0.915170, OOV: 0.809185, GEO: 0.891233
+10/18/2023 11:15:45 - INFO - __main__ -   =======entity level========
+10/18/2023 11:16:32 - INFO - __main__ -   OOV: 0.802393
+10/18/2023 11:16:32 - INFO - __main__ -   GEO: 0.887129
+10/18/2023 11:16:32 - INFO - __main__ -   =======entity level========
+10/18/2023 11:16:32 - INFO - __main__ -   
+Epoch: 33, P: 0.929377, R: 0.896482, F: 0.912633, OOV: 0.802393, GEO: 0.887129
+10/18/2023 11:16:32 - INFO - __main__ -   =======entity level========
+10/18/2023 11:17:20 - INFO - __main__ -   OOV: 0.810479
+10/18/2023 11:17:20 - INFO - __main__ -   GEO: 0.892551
+10/18/2023 11:17:20 - INFO - __main__ -   =======entity level========
+10/18/2023 11:17:20 - INFO - __main__ -   
+Epoch: 34, P: 0.932530, R: 0.898827, F: 0.915368, OOV: 0.810479, GEO: 0.892551
+10/18/2023 11:17:20 - INFO - __main__ -   =======entity level========
+10/18/2023 11:18:08 - INFO - __main__ -   OOV: 0.804981
+10/18/2023 11:18:08 - INFO - __main__ -   GEO: 0.889769
+10/18/2023 11:18:08 - INFO - __main__ -   =======entity level========
+10/18/2023 11:18:08 - INFO - __main__ -   
+Epoch: 35, P: 0.930843, R: 0.895416, F: 0.912786, OOV: 0.804981, GEO: 0.889769
+10/18/2023 11:18:08 - INFO - __main__ -   =======entity level========
+10/18/2023 11:18:55 - INFO - __main__ -   OOV: 0.811449
+10/18/2023 11:18:55 - INFO - __main__ -   GEO: 0.889914
+10/18/2023 11:18:55 - INFO - __main__ -   =======entity level========
+10/18/2023 11:18:55 - INFO - __main__ -   
+Epoch: 36, P: 0.930448, R: 0.898507, F: 0.914199, OOV: 0.811449, GEO: 0.889914
+10/18/2023 11:18:55 - INFO - __main__ -   =======entity level========
+10/18/2023 11:18:55 - INFO - __main__ -   
+Early stop triggered at epoch 35
+
+10/18/2023 11:18:55 - INFO - __main__ -   
+=======best f entity level========
+10/18/2023 11:18:55 - INFO - __main__ -   
+Epoch: 26, P: 0.929277, R: 0.892324, F: 0.910426, OOV: 0.795925, GEO: 0.896825, GEO_N: 0.852853
+
+10/18/2023 11:18:55 - INFO - __main__ -   
+=======best f entity level========

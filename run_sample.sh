@@ -9,3 +9,4 @@ python wmseg_main.py --do_test --eval_data_path=./sample_data/test.tsv --eval_mo
 # predict
 python wmseg_main.py --do_predict --input_file=./sample_data/sentence.txt --output_file=./sample_data/sentece.txt.out --eval_model=./models/model_name/model.pt
 
+python wmseg_main.py --do_predict --input_file=/opt/Projects/Python/WMSeg/data/my_geo.txt  --output_file=/opt/Projects/Python/WMSeg/data/my_geo_out.txt --eval_model=/opt/Projects/Python/WMSeg/models/msr_zen_memory_crf_2023-04-05-16-20-08/model.pt

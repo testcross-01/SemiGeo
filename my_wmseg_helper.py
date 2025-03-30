@@ -258,6 +258,52 @@ def pmi(train_path, eval_path, min_freq):
 
     return words
 
+def av_sf(train_path,self_train_path ,eval_path, min_freq, av_threshold=5):
+    train_sentences, _ = read_tsv(train_path)
+    test_sentences, _ = read_tsv(eval_path)
+    self_train_sentences, _ = read_tsv(self_train_path)
+
+    all_sentences = train_sentences + test_sentences +self_train_sentences
+
+    n_gram_dict = {}
+    new_all_sentences = []
+
+    ngram2av = {}
+
+    for sen in all_sentences:
+        str_sen = ''.join(sen)
+        new_sen = re.split(u'[^\u4e00-\u9fa50-9a-zA-Z]+', str_sen)
+        for s in new_sen:
+            if len(s) > 0:
+                new_all_sentences.append(s)
+
+    for sentence in new_all_sentences:
+        for i in range(len(sentence)):
+            for n in range(1, 6):
+                if i + n > len(sentence):
+                    break
+                left_index = i - 1
+                right_index = i + n
+                n_gram = ''.join(sentence[i: i + n])
+                if n_gram not in n_gram_dict:
+                    n_gram_dict[n_gram] = 1
+                    ngram2av[n_gram] = {'l': {}, 'r': {}}
+                else:
+                    n_gram_dict[n_gram] += 1
+                if left_index >= 0:
+                    ngram2av[n_gram]['l'][sentence[left_index]] = 1
+                if right_index < len(sentence):
+                    ngram2av[n_gram]['r'][sentence[right_index]] = 1
+    remaining_ngram = {}
+    for ngram, av_dict in ngram2av.items():
+        avl = len(av_dict['l'])
+        avr = len(av_dict['r'])
+        av = min(avl, avr)
+        if av >= av_threshold and n_gram_dict[ngram] >= min_freq:
+            remaining_ngram[ngram] = n_gram_dict[ngram]
+
+    return remaining_ngram
+    
 
 def av(train_path, eval_path, min_freq, av_threshold=5):
 
@@ -364,6 +410,23 @@ def get_word2id(train_data_path):
 def construct_graph(train_data_dir, eval_data_dir,gram2id):
     print()
 
+
+def get_gram2id_sf(train_data_dir, self_train_path,eval_data_dir, threshold=0, flag='train_words', av_threshold=5):
+    if flag == 'dlg':
+        word2count = dlg(train_data_dir, eval_data_dir, threshold)
+    elif flag == 'pmi':
+        word2count = pmi(train_data_dir, eval_data_dir, threshold)
+    elif flag == 'av':
+        word2count = av_sf(train_data_dir, self_train_path,eval_data_dir, threshold, av_threshold)
+    else:
+        raise ValueError()
+
+    gram2id = {'<PAD>': 0}
+    index = 1
+    for word, count in word2count.items():
+        gram2id[word] = index
+        index += 1
+    return gram2id
 
 def get_gram2id(train_data_dir, eval_data_dir, threshold=0, flag='train_words', av_threshold=5):
     if flag == 'dlg':

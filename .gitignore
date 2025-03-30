@@ -6,6 +6,7 @@
 /data_preprocessing/icwb2-data/
 /data_preprocessing/LDC07T36/
 /data/ctb6/
+/tmp/
 /models/
 !/models/model_path.txt
 convert_model.py

@@ -1,0 +1,1 @@
+./models/self_bert_wm_av_3_score_0.7_0.820_2024-12-24-22-08-38/model.pt
